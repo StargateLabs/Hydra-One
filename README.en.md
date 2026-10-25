@@ -8,7 +8,7 @@
 
 Hydra One brings together work otherwise spread across interfaces and runtimes: chat, catalogues, documents, tools, agents, training and multimodal production. Our contribution connects those paths through component selection, visible state and process ownership. Original applications retain their contracts and attribution.
 
-<p align="center"><img src="assets/architecture-platform.en.svg" alt="The mod as a Local AI platform — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-platform.en-brand-v2-3bcfde1c.svg" alt="The mod as a Local AI platform — Stargate Labs × Hydra One" width="1440"></p>
 
 The HYDRA controller coordinates budgets, admission and adapters rather than claiming to replace every tensor engine. Performance, Benchmark and updates belong to the same development loop.
 
@@ -16,7 +16,7 @@ The HYDRA controller coordinates budgets, admission and adapters rather than cla
 
 Retrieval begins with authorized local sources. H0, H1 and H1v2 select different search paths; embeddings need compatible models and Graphify needs a repository index. Retrieved passages retain identity and source references.
 
-<p align="center"><img src="assets/architecture-context.en.svg" alt="Use documents and repositories with source provenance — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-context.en-brand-v2-395e9343.svg" alt="Use documents and repositories with source provenance — Stargate Labs × Hydra One" width="1440"></p>
 
 The compiler prepares context for the selected runtime frontend. Guards check budgets and sources before forwarding it. Retrieval alone does not establish trust: changes, scope and freshness remain explicit requirements.
 
@@ -24,7 +24,7 @@ The compiler prepares context for the selected runtime frontend. Guards check bu
 
 In the CPU scoring path, alternatives may share a prefix. An admitted native-state checkpoint can restore that prefix for the next alternative, rather than re-evaluating it as the cache-disabled path does.
 
-<p align="center"><img src="assets/architecture-memory.en.svg" alt="Evaluate alternatives with a shared CPU prefix — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-memory.en-brand-v2-c718784c.svg" alt="Evaluate alternatives with a shared CPU prefix — Stargate Labs × Hydra One" width="1440"></p>
 
 The payload is budgeted and can use RAM or temporary-file backing in its supported path. Integrity, restoration and cleanup are contractual. This is scorer prefix state, not weight offload, GPU KV cache or universal model support.
 
@@ -32,7 +32,7 @@ The payload is budgeted and can use RAM or temporary-file backing in its support
 
 The native loader work connects reads to the model consumer with observable byte counters and cleanup. Pinned Prism source and HYDRA overlays identify the compiled path.
 
-<p align="center"><img src="assets/architecture-io.en.svg" alt="Connect IOCP reads to the tensor consumer — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-io.en-brand-v2-1078dc15.svg" alt="Connect IOCP reads to the tensor consumer — Stargate Labs × Hydra One" width="1440"></p>
 
 The repository publishes source, not personal workstation binaries. Execution requires a built and attested model/runtime pair. Comparing against standard reads is a measurement task, not an assumed speedup.
 
@@ -40,7 +40,7 @@ The repository publishes source, not personal workstation binaries. Execution re
 
 The Performance/Benchmark workbench binds model, runtime, protocol and configuration to observed samples. Warmup is distinct from measurement; actual output, cancellations and failures remain in the record. HTTP latency, TTFT, decode and prefill keep separate meanings.
 
-<p align="center"><img src="assets/architecture-engineering.en.svg" alt="Measure enhancements and decide what to retain — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-engineering.en-brand-v2-19eab3ad.svg" alt="Measure enhancements and decide what to retain — Stargate Labs × Hydra One" width="1440"></p>
 
 Comparable reports and exports support decisions about changes. Response checks are separate from throughput. Candidate staging, backups, selection and rollback connect evidence to preservation of the mod while retaining execution gates.
 

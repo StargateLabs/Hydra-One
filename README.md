@@ -8,7 +8,7 @@
 
 Hydra One nasce per riunire il lavoro che altrimenti resterebbe distribuito tra interfacce e runtime diversi: chat, cataloghi, documenti, strumenti, agenti, training e produzione multimodale. Il nostro contributo è il collegamento fra questi percorsi, con selezione dei componenti, stato leggibile e proprietà dei processi. Le app originali mantengono i propri contratti e la loro attribuzione.
 
-<p align="center"><img src="assets/architecture-platform.it.svg" alt="La mod come piattaforma Local AI — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-platform.it-brand-v2-039b5d48.svg" alt="La mod come piattaforma Local AI — Stargate Labs × Hydra One" width="1440"></p>
 
 Il controller HYDRA coordina budget, ammissione e adapter; non viene presentato come sostituto universale dei motori tensoriali. Prestazioni, Benchmark e aggiornamenti sono parte dello stesso ciclo di sviluppo, non pagine decorative.
 
@@ -16,7 +16,7 @@ Il controller HYDRA coordina budget, ammissione e adapter; non viene presentato 
 
 Il percorso di retrieval parte dalle fonti locali autorizzate. H0, H1 e H1v2 scelgono modalità di ricerca differenti; gli embedding richiedono un modello compatibile, Graphify un indice del repository. I passaggi recuperati conservano identità e riferimenti per controllare da dove arriva il contenuto.
 
-<p align="center"><img src="assets/architecture-context.it.svg" alt="Usare documenti e repository senza perdere la provenienza — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-context.it-brand-v2-b2a1d820.svg" alt="Usare documenti e repository senza perdere la provenienza — Stargate Labs × Hydra One" width="1440"></p>
 
 Il compiler prepara il contesto per il frontend del runtime scelto; i guard verificano budget e sorgenti prima dell’invio. Una fonte recuperata non diventa automaticamente attendibile: modifiche, perimetro e freschezza restano condizioni esplicite.
 
@@ -24,7 +24,7 @@ Il compiler prepara il contesto per il frontend del runtime scelto; i guard veri
 
 Nel percorso di scoring CPU, più alternative possono condividere lo stesso prefisso. Il checkpoint conserva lo stato nativo ammesso per ripristinarlo prima della valutazione successiva, invece di rivalutare sempre l’intero prefisso quando la cache è disattivata.
 
-<p align="center"><img src="assets/architecture-memory.it.svg" alt="Valutare più alternative riutilizzando una base CPU — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-memory.it-brand-v2-889ec012.svg" alt="Valutare più alternative riutilizzando una base CPU — Stargate Labs × Hydra One" width="1440"></p>
 
 Il payload ha un budget; il supporto può essere RAM o file temporaneo nel percorso previsto. Integrità, ripristino e pulizia appartengono al contratto. È uno stato di prefisso dello scorer: non equivale a offload dei pesi, cache KV GPU o supporto universale di ogni modello.
 
@@ -32,7 +32,7 @@ Il payload ha un budget; il supporto può essere RAM o file temporaneo nel perco
 
 Il lavoro sul loader riguarda una connessione nativa: le letture devono consegnare byte al consumer del modello e produrre contatori e chiusura verificabili. Il sorgente Prism fissato e gli overlay HYDRA permettono di identificare il percorso compilato.
 
-<p align="center"><img src="assets/architecture-io.it.svg" alt="Portare il lettore IOCP fino al consumer dei tensori — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-io.it-brand-v2-89d15d5c.svg" alt="Portare il lettore IOCP fino al consumer dei tensori — Stargate Labs × Hydra One" width="1440"></p>
 
 La repository pubblica i sorgenti, non i binari personali già usati sul PC. Per eseguire questa via servono compilazione e attestazione del runtime e del modello. Il confronto con la lettura standard è una prova da misurare: non viene promesso un vantaggio prima del test.
 
@@ -40,7 +40,7 @@ La repository pubblica i sorgenti, non i binari personali già usati sul PC. Per
 
 Il banco Prestazioni/Benchmark collega modello, runtime, protocollo e configurazione ai campioni osservati. Il warmup viene distinto dalle misure; output effettivo, annullamenti e fallimenti rimangono parte della storia. Le metriche mantengono il proprio significato: latenza HTTP, TTFT, decode e prefill non sono intercambiabili.
 
-<p align="center"><img src="assets/architecture-engineering.it.svg" alt="Misurare i potenziamenti e decidere cosa conservare — Stargate Labs × Hydra One" width="1440"></p>
+<p align="center"><img src="assets/architecture-engineering.it-brand-v2-9d3daa34.svg" alt="Misurare i potenziamenti e decidere cosa conservare — Stargate Labs × Hydra One" width="1440"></p>
 
 I rapporti confrontabili e l’export servono a decidere se una modifica aiuta davvero. La verifica delle risposte è separata dalla velocità. Il sistema di candidati, backup, selezione e rollback collega questa evidenza alla conservazione della mod, mantenendo i blocchi dei percorsi non ancora ammessi.
 
