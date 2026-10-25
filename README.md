@@ -1,5 +1,54 @@
 <p align="center"><img src="assets/hero.svg" alt="Hydra One — logo originale e laboratorio Stargate Labs" width="1280"></p>
 
+<!-- architecture-story:start -->
+
+## Cosa abbiamo costruito e come funziona
+
+### La mod come piattaforma Local AI
+
+Hydra One nasce per riunire il lavoro che altrimenti resterebbe distribuito tra interfacce e runtime diversi: chat, cataloghi, documenti, strumenti, agenti, training e produzione multimodale. Il nostro contributo è il collegamento fra questi percorsi, con selezione dei componenti, stato leggibile e proprietà dei processi. Le app originali mantengono i propri contratti e la loro attribuzione.
+
+<p align="center"><img src="assets/architecture-platform.it.svg" alt="La mod come piattaforma Local AI — Stargate Labs × Hydra One" width="1440"></p>
+
+Il controller HYDRA coordina budget, ammissione e adapter; non viene presentato come sostituto universale dei motori tensoriali. Prestazioni, Benchmark e aggiornamenti sono parte dello stesso ciclo di sviluppo, non pagine decorative.
+
+### Usare documenti e repository senza perdere la provenienza
+
+Il percorso di retrieval parte dalle fonti locali autorizzate. H0, H1 e H1v2 scelgono modalità di ricerca differenti; gli embedding richiedono un modello compatibile, Graphify un indice del repository. I passaggi recuperati conservano identità e riferimenti per controllare da dove arriva il contenuto.
+
+<p align="center"><img src="assets/architecture-context.it.svg" alt="Usare documenti e repository senza perdere la provenienza — Stargate Labs × Hydra One" width="1440"></p>
+
+Il compiler prepara il contesto per il frontend del runtime scelto; i guard verificano budget e sorgenti prima dell’invio. Una fonte recuperata non diventa automaticamente attendibile: modifiche, perimetro e freschezza restano condizioni esplicite.
+
+### Valutare più alternative riutilizzando una base CPU
+
+Nel percorso di scoring CPU, più alternative possono condividere lo stesso prefisso. Il checkpoint conserva lo stato nativo ammesso per ripristinarlo prima della valutazione successiva, invece di rivalutare sempre l’intero prefisso quando la cache è disattivata.
+
+<p align="center"><img src="assets/architecture-memory.it.svg" alt="Valutare più alternative riutilizzando una base CPU — Stargate Labs × Hydra One" width="1440"></p>
+
+Il payload ha un budget; il supporto può essere RAM o file temporaneo nel percorso previsto. Integrità, ripristino e pulizia appartengono al contratto. È uno stato di prefisso dello scorer: non equivale a offload dei pesi, cache KV GPU o supporto universale di ogni modello.
+
+### Portare il lettore IOCP fino al consumer dei tensori
+
+Il lavoro sul loader riguarda una connessione nativa: le letture devono consegnare byte al consumer del modello e produrre contatori e chiusura verificabili. Il sorgente Prism fissato e gli overlay HYDRA permettono di identificare il percorso compilato.
+
+<p align="center"><img src="assets/architecture-io.it.svg" alt="Portare il lettore IOCP fino al consumer dei tensori — Stargate Labs × Hydra One" width="1440"></p>
+
+La repository pubblica i sorgenti, non i binari personali già usati sul PC. Per eseguire questa via servono compilazione e attestazione del runtime e del modello. Il confronto con la lettura standard è una prova da misurare: non viene promesso un vantaggio prima del test.
+
+### Misurare i potenziamenti e decidere cosa conservare
+
+Il banco Prestazioni/Benchmark collega modello, runtime, protocollo e configurazione ai campioni osservati. Il warmup viene distinto dalle misure; output effettivo, annullamenti e fallimenti rimangono parte della storia. Le metriche mantengono il proprio significato: latenza HTTP, TTFT, decode e prefill non sono intercambiabili.
+
+<p align="center"><img src="assets/architecture-engineering.it.svg" alt="Misurare i potenziamenti e decidere cosa conservare — Stargate Labs × Hydra One" width="1440"></p>
+
+I rapporti confrontabili e l’export servono a decidere se una modifica aiuta davvero. La verifica delle risposte è separata dalla velocità. Il sistema di candidati, backup, selezione e rollback collega questa evidenza alla conservazione della mod, mantenendo i blocchi dei percorsi non ancora ammessi.
+
+[Tutte le funzioni, parametri e vincoli / All features, parameters and gates](docs/FEATURES.md)
+
+<!-- architecture-story:end -->
+
+
 # Hydra One
 
 **Inferenza ibrida. Modelli locali. Un laboratorio sotto controllo.**
@@ -48,37 +97,6 @@ Le integrazioni sono descritte qui nella pagina principale. Ciascuna mantiene re
 | <img src="serve/web/brand-memory.svg" alt="MCP memory" width="52" height="52"> | **[MCP memory](https://github.com/modelcontextprotocol/servers)** | Shared memory-server contract and project-scoped MCP configuration. | Model Context Protocol contributors |
 | Headroom | **[Headroom](https://github.com/headroomlabs-ai/headroom)** | Project-scoped routing metadata, runtime contract and MCP integration. | Headroom Labs and contributors |
 
-
-<!-- lab-diagrams:start -->
-
-## Il laboratorio sperimentale, spiegato
-
-Tre percorsi della nostra implementazione, con entrambi i loghi originali. Le tavole separano i meccanismi software dalle condizioni ancora necessarie per eseguirli.
-
-### Contesto e retrieval
-
-
-<p align="center"><img src="assets/lab-context.it.svg" alt="Contesto e retrieval — Stargate Labs × Hydra One" width="1440"></p>
-
-
-
-### Checkpoint e ciclo di vita
-
-
-<p align="center"><img src="assets/lab-memory.it.svg" alt="Checkpoint e ciclo di vita — Stargate Labs × Hydra One" width="1440"></p>
-
-
-
-### Loader nativo e ammissione
-
-
-<p align="center"><img src="assets/lab-io.it.svg" alt="Loader nativo e ammissione — Stargate Labs × Hydra One" width="1440"></p>
-
-
-
-[Registro completo e stato dei controlli / Full control register and status](docs/FEATURES.md)
-
-<!-- lab-diagrams:end -->
 
 <!-- user-capabilities:start -->
 
