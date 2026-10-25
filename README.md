@@ -12,25 +12,15 @@
 
 ## Le app e gli strumenti del nostro workspace
 
-Loghi originali delle integrazioni presenti nella mod. Le funzioni e i requisiti di ogni componente sono descritti qui sotto.
-
-| | | | |
-|:---:|:---:|:---:|:---:|
-| <img src="serve/web/brand-llama.cpp.svg" alt="llama.cpp" width="64" height="64"><br><b>llama.cpp</b> | <img src="serve/web/brand-unsloth-symbol.png" alt="Unsloth" width="64" height="64"><br><b>Unsloth</b> | <img src="serve/web/brand-transformers.svg" alt="Transformers" width="64" height="64"><br><b>Transformers</b> | <img src="serve/web/brand-pytorch.svg" alt="PyTorch" width="64" height="64"><br><b>PyTorch</b> |
-| <img src="serve/web/brand-airllm.png" alt="AirLLM" width="64" height="64"><br><b>AirLLM</b> | <img src="serve/web/brand-colibri.svg" alt="Colibri" width="64" height="64"><br><b>Colibri</b> | <img src="serve/web/brand-soup.png" alt="Soup" width="64" height="64"><br><b>Soup</b> | <img src="serve/web/brand-whisper.cpp.jpeg" alt="Whisper.cpp" width="64" height="64"><br><b>Whisper.cpp</b> |
-| <img src="serve/web/brand-unsloth-symbol.png" alt="audio.cpp" width="64" height="64"><br><b>audio.cpp</b> | <img src="serve/web/brand-voicestudio.png" alt="VoiceStudio" width="64" height="64"><br><b>VoiceStudio</b> | <img src="serve/web/brand-myshell-original.svg" alt="OpenVoice" width="64" height="64"><br><b>OpenVoice</b> | <img src="serve/web/brand-meta-audio.svg" alt="AudioCraft" width="64" height="64"><br><b>AudioCraft</b> |
-| <img src="serve/web/brand-openwebui.svg" alt="Open WebUI" width="64" height="64"><br><b>Open WebUI</b> | <img src="serve/web/harness-logo-opencode.svg" alt="OpenCode" width="64" height="64"><br><b>OpenCode</b> | <img src="serve/web/harness-logo-dsh.svg" alt="DeepSeek Harness" width="64" height="64"><br><b>DeepSeek Harness</b> | <img src="serve/web/harness-logo-trueforge.svg" alt="TrueForge" width="64" height="64"><br><b>TrueForge</b> |
-| <img src="serve/web/harness-logo-hermes.svg" alt="Hermes Agent" width="64" height="64"><br><b>Hermes Agent</b> | <img src="serve/web/harness-logo-claude.png" alt="Claude Code" width="64" height="64"><br><b>Claude Code</b> | <img src="serve/web/brand-browser.svg" alt="Playwright" width="64" height="64"><br><b>Playwright</b> | <img src="serve/web/brand-memory.svg" alt="MCP memory" width="64" height="64"><br><b>MCP memory</b> |
-| <img src="serve/web/brand-antigravity.png" alt="Antigravity" width="64" height="64"><br><b>Antigravity</b> | <img src="serve/web/brand-claude-desktop.png" alt="Claude Desktop" width="64" height="64"><br><b>Claude Desktop</b> |  |  |
-
-**Headroom** — integrazione presente; identità testuale, senza logo inventato.
+<p align="center"><img src="assets/app-gallery.svg" alt="Hydra One — original application logos in centered, evenly spaced cards" width="1280"></p>
 
 <!-- logo-directory:end -->
 
 
 Hydra One è la versione beta sviluppata da **Stargate Labs** a partire da Strata. Unisce la nostra integrazione HYDRA One, un workspace web per i modelli locali e strumenti per osservare, misurare e controllare l’esecuzione. Questa pubblicazione deriva dai **nostri sorgenti locali modificati**, con base nativa 0.1.38; non è una copia dell’attuale ramo principale upstream.
 
-## App integrate: loghi, funzioni e autori
+<details>
+<summary><strong>App integrate: loghi, funzioni e autori</strong> — apri i dettagli</summary>
 
 Le integrazioni sono descritte qui nella pagina principale. Ciascuna mantiene requisiti, licenza e capacità del proprio runtime; la presenza dell’adattatore non significa parità con tutta l’app originale.
 
@@ -61,11 +51,14 @@ Le integrazioni sono descritte qui nella pagina principale. Ciascuna mantiene re
 
 <!-- user-capabilities:start -->
 
+</details>
+
 ## Un progetto personale, condiviso
 
 Hydra One nasce dalle mie esigenze e dal mio modo di lavorare con l’intelligenza artificiale locale. Le scelte, le integrazioni e le funzioni riflettono le mie priorità: possono incontrare le preferenze di altri utenti oppure rispondere a necessità diverse dalle loro. Ho scelto di condividere questo progetto per rendere disponibile il lavoro svolto, favorire il confronto e offrire una base utile a chi desidera esplorarla o adattarla alle proprie esigenze.
 
-## Cosa puoi fare con Hydra One
+<details>
+<summary><strong>Cosa puoi fare con Hydra One</strong> — apri i dettagli</summary>
 
 La mod riunisce questi flussi nello stesso workspace. Le operazioni richiedono i modelli, i runtime e le capacità indicati: la beta non li dichiara tutti già installati o universalmente validati.
 
@@ -149,6 +142,8 @@ La mod riunisce questi flussi nello stesso workspace. Le operazioni richiedono i
 
 <!-- user-capabilities:end -->
 
+</details>
+
 ## Piattaforma Local AI all-in-one
 
 | Area | Cosa contiene questa versione | Sorgente |
@@ -197,26 +192,30 @@ Il Centro aggiornamenti non è soltanto un elenco di versioni: collega inventari
 
 <!-- integrated-platform:start -->
 
-## Tutti i percorsi di inferenza e generazione
+<details>
+<summary><strong>Tutti i percorsi di inferenza e generazione</strong> — apri i dettagli</summary>
 
 | Engine | Ruolo e implementazione | Requisiti e vincoli |
 |---|---|---|
-| **HYDRA One** | Controller ibrido / Hybrid controller. Planning, budgets, sidecar, storage identity, lifecycle and graph integration. [Source](serve/hydra_one.py) | Backend-owned model residency; not a replacement tensor executor. |
-| **Native engine** | C++ / CUDA / HIP. Native model packs, expert execution, cache, speculative paths and CPU/GPU work sharing. [Source](CMakeLists.txt) | Model-pack and toolchain specific; upstream measurements remain attributed. |
-| **llama.cpp** | GGUF + local API. Owned server process, split GGUF handling, configuration, model discovery and request transport. [Source](serve/optional_backends.py) | Architecture, quantization and installed runtime must match. |
-| **Prism llama.cpp** | Specialized GGUF. Pinned Prism loader source, model-family checks and isolated native candidate. [Source](serve/gguf_runtime_compatibility.py) | Distinct runtime for compatible Prism formats; no silent generic fallback. |
-| **Transformers / PEFT** | Safetensors + LoRA. Owned Python text inference, CPU FP32, device-specific GPU paths, local adapters and thread controls. [Source](serve/safetensors_runtime.py) | Dependencies and model class required; GPU admission is gated separately. |
-| **Unsloth** | Inference / QLoRA / Studio. Python backend integration, native Studio service ownership and candidate update handling. [Source](serve/unsloth_workspace.py) | Installed Unsloth environment required; upstream authentication and frame policy preserved. |
-| **AirLLM** | Layer streaming. Project runtime selection and CPU disk-backed layer-streaming integration. [Source](serve/airllm_runtime.py) | Compatible model and runtime needed; disk streaming is not a guaranteed speedup. |
-| **Colibri** | Isolated optional engine. Official isolated launcher, controls, local endpoint validation and component updates. [Source](serve/colibri_workspace.py) | Full model assets and matching runtime required; catalogue listing is not successful inference. |
-| **Soup** | Training integration. Bundled upstream planning modules, isolated package selection and training runners. [Source](serve/soup_runtime.py) | CPU/native/GPU runner restrictions are enforced by training options. |
-| **Local API** | OpenAI-compatible transport. Attach compatible local model APIs, normalize messages, tools and response handling. [Source](serve/optional_inference.py) | Capabilities are reported by the selected model/API; tools and vision are not assumed. |
-| **Whisper.cpp** | ASR / translation. Owned local transcription, language controls, decoding parameters, segments and subtitles. [Source](serve/local_audio.py) | Whisper model and selected binary required. |
-| **audio.cpp / Kokoro** | Text-to-speech. Local CPU speech and an explicit Kokoro laboratory adapter. [Source](serve/local_speech.py) | Registered speech model/runtime required; separate from a chat-model loader. |
-| **Diffusers** | Images / video. Explicit Stable Diffusion, SDXL, inpainting, Stable Video Diffusion and TextToVideoSD worker families. [Source](serve/local_visual_generation.py) | Only implemented pipeline families and installed models; no universal media support. |
-| **AudioCraft / audio workers** | Music / effects / voice. Conditioning, native integration, local generation and managed audio workflows. [Source](serve/local_generative_audio.py) | Task-specific assets, conditioning and runtime required. |
+| <p align="center"><img src="assets/hydra-one.png" alt="HYDRA One" width="56"><br><b>HYDRA One</b></p> | Controller ibrido / Hybrid controller. Planning, budgets, sidecar, storage identity, lifecycle and graph integration. [Source](serve/hydra_one.py) | Backend-owned model residency; not a replacement tensor executor. |
+| <p align="center"><img src="assets/hydra-one.png" alt="Native engine" width="56"><br><b>Native engine</b></p> | C++ / CUDA / HIP. Native model packs, expert execution, cache, speculative paths and CPU/GPU work sharing. [Source](CMakeLists.txt) | Model-pack and toolchain specific; upstream measurements remain attributed. |
+| <p align="center"><img src="serve/web/brand-llama.cpp.svg" alt="llama.cpp" width="56"><br><b>llama.cpp</b></p> | GGUF + local API. Owned server process, split GGUF handling, configuration, model discovery and request transport. [Source](serve/optional_backends.py) | Architecture, quantization and installed runtime must match. |
+| **Prism llama.cpp**<br><sub>Specialized runtime; no separate verified logo</sub> | Specialized GGUF. Pinned Prism loader source, model-family checks and isolated native candidate. [Source](serve/gguf_runtime_compatibility.py) | Distinct runtime for compatible Prism formats; no silent generic fallback. |
+| <p align="center"><img src="serve/web/brand-transformers.svg" alt="Transformers / PEFT" width="56"><br><b>Transformers / PEFT</b></p> | Safetensors + LoRA. Owned Python text inference, CPU FP32, device-specific GPU paths, local adapters and thread controls. [Source](serve/safetensors_runtime.py) | Dependencies and model class required; GPU admission is gated separately. |
+| <p align="center"><img src="serve/web/brand-unsloth-symbol.png" alt="Unsloth" width="56"><br><b>Unsloth</b></p> | Inference / QLoRA / Studio. Python backend integration, native Studio service ownership and candidate update handling. [Source](serve/unsloth_workspace.py) | Installed Unsloth environment required; upstream authentication and frame policy preserved. |
+| <p align="center"><img src="serve/web/brand-airllm.png" alt="AirLLM" width="56"><br><b>AirLLM</b></p> | Layer streaming. Project runtime selection and CPU disk-backed layer-streaming integration. [Source](serve/airllm_runtime.py) | Compatible model and runtime needed; disk streaming is not a guaranteed speedup. |
+| <p align="center"><img src="serve/web/brand-colibri.svg" alt="Colibri" width="56"><br><b>Colibri</b></p> | Isolated optional engine. Official isolated launcher, controls, local endpoint validation and component updates. [Source](serve/colibri_workspace.py) | Full model assets and matching runtime required; catalogue listing is not successful inference. |
+| <p align="center"><img src="serve/web/brand-soup.png" alt="Soup" width="56"><br><b>Soup</b></p> | Training integration. Bundled upstream planning modules, isolated package selection and training runners. [Source](serve/soup_runtime.py) | CPU/native/GPU runner restrictions are enforced by training options. |
+| **Local API**<br><sub>API transport</sub> | OpenAI-compatible transport. Attach compatible local model APIs, normalize messages, tools and response handling. [Source](serve/optional_inference.py) | Capabilities are reported by the selected model/API; tools and vision are not assumed. |
+| <p align="center"><img src="serve/web/brand-whisper.cpp.jpeg" alt="Whisper.cpp" width="56"><br><b>Whisper.cpp</b></p> | ASR / translation. Owned local transcription, language controls, decoding parameters, segments and subtitles. [Source](serve/local_audio.py) | Whisper model and selected binary required. |
+| <p align="center"><img src="serve/web/brand-unsloth-symbol.png" alt="audio.cpp / Kokoro" width="56"><br><b>audio.cpp / Kokoro</b></p> | Text-to-speech. Local CPU speech and an explicit Kokoro laboratory adapter. [Source](serve/local_speech.py) | Registered speech model/runtime required; separate from a chat-model loader. |
+| <p align="center"><img src="serve/web/brand-transformers.svg" alt="Diffusers" width="56"><br><b>Diffusers</b></p> | Images / video. Explicit Stable Diffusion, SDXL, inpainting, Stable Video Diffusion and TextToVideoSD worker families. [Source](serve/local_visual_generation.py) | Only implemented pipeline families and installed models; no universal media support. |
+| <p align="center"><img src="serve/web/brand-meta-audio.svg" alt="AudioCraft / audio workers" width="56"><br><b>AudioCraft / audio workers</b></p> | Music / effects / voice. Conditioning, native integration, local generation and managed audio workflows. [Source](serve/local_generative_audio.py) | Task-specific assets, conditioning and runtime required. |
 
-## Funzioni del workspace, area per area
+</details>
+
+<details>
+<summary><strong>Funzioni del workspace, area per area</strong> — apri i dettagli</summary>
 
 ### Agents and coding
 
@@ -332,7 +331,10 @@ OpenAI/Anthropic-compatible server routes, structured response validation, reque
 
 [server](serve/server.py) · [structured](serve/structured.py) · [model_engine_routes](serve/model_engine_routes.py)
 
-## Registro completo dei controlli sperimentali
+</details>
+
+<details>
+<summary><strong>Registro completo dei controlli sperimentali</strong> — apri i dettagli</summary>
 
 56 funzioni di base e 3 controlli GPU separati. Sono riportati lo stato del controllo e i blocchi attuali; non sono una certificazione hardware né una promessa di supporto di ogni modello.
 
@@ -399,6 +401,8 @@ OpenAI/Anthropic-compatible server routes, structured response validation, reque
 | `runtime.cuda` | **Backend CUDA**<br>CUDA toolkit nvcc unavailable; GPU quarantine | request_only<br>QUARANTINED / CUDA toolkit nvcc unavailable; GPU quarantine |
 
 [Parametri, dipendenze e dettagli / Parameters, dependencies and details](docs/FEATURES.md) · [Crediti completi / Full credits](ACKNOWLEDGEMENTS.md)
+
+</details>
 
 <!-- integrated-platform:end -->
 
