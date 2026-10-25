@@ -12,7 +12,7 @@
 
 ## The applications and tools in our workspace
 
-<p align="center"><img src="assets/app-gallery.svg" alt="Hydra One — original application logos in centered, evenly spaced cards" width="1280"></p>
+<p align="center"><img src="assets/app-gallery-dark-7c842c345c.svg" alt="Hydra One — original application logos in centered, evenly spaced cards" width="1280"></p>
 
 <!-- logo-directory:end -->
 
@@ -48,6 +48,37 @@ Integration roles are documented here on the main page. Each retains its own run
 | <img src="serve/web/brand-memory.svg" alt="MCP memory" width="52" height="52"> | **[MCP memory](https://github.com/modelcontextprotocol/servers)** | Shared memory-server contract and project-scoped MCP configuration. | Model Context Protocol contributors |
 | Headroom | **[Headroom](https://github.com/headroomlabs-ai/headroom)** | Project-scoped routing metadata, runtime contract and MCP integration. | Headroom Labs and contributors |
 
+
+<!-- lab-diagrams:start -->
+
+## The experimental laboratory, explained
+
+Three implementation paths, carrying both original logos. The diagrams distinguish software mechanisms from outstanding execution requirements.
+
+### Context and retrieval
+
+
+<p align="center"><img src="assets/lab-context.en.svg" alt="Context and retrieval — Stargate Labs × Hydra One" width="1440"></p>
+
+
+
+### Checkpoints and lifecycle
+
+
+<p align="center"><img src="assets/lab-memory.en.svg" alt="Checkpoints and lifecycle — Stargate Labs × Hydra One" width="1440"></p>
+
+
+
+### Native loader and admission
+
+
+<p align="center"><img src="assets/lab-io.en.svg" alt="Native loader and admission — Stargate Labs × Hydra One" width="1440"></p>
+
+
+
+[Registro completo e stato dei controlli / Full control register and status](docs/FEATURES.md)
+
+<!-- lab-diagrams:end -->
 
 <!-- user-capabilities:start -->
 
@@ -333,36 +364,7 @@ OpenAI/Anthropic-compatible server routes, structured response validation, reque
 
 </details>
 
-<!-- lab-diagrams:start -->
 
-## The experimental laboratory, explained
-
-Three implementation paths, carrying both original logos. The diagrams distinguish software mechanisms from outstanding execution requirements.
-
-<details>
-<summary><strong>Context and retrieval</strong></summary>
-
-<p align="center"><img src="assets/lab-context.en.svg" alt="Context and retrieval — Stargate Labs × Hydra One" width="1440"></p>
-
-</details>
-
-<details>
-<summary><strong>Checkpoints and lifecycle</strong></summary>
-
-<p align="center"><img src="assets/lab-memory.en.svg" alt="Checkpoints and lifecycle — Stargate Labs × Hydra One" width="1440"></p>
-
-</details>
-
-<details>
-<summary><strong>Native loader and admission</strong></summary>
-
-<p align="center"><img src="assets/lab-io.en.svg" alt="Native loader and admission — Stargate Labs × Hydra One" width="1440"></p>
-
-</details>
-
-[Registro completo e stato dei controlli / Full control register and status](docs/FEATURES.md)
-
-<!-- lab-diagrams:end -->
 
 <details>
 <summary><strong>Complete experimental control register</strong> — expand details</summary>
