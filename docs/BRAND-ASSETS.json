@@ -1,0 +1,383 @@
+{
+  "scope": "Existing brand assets preserved from the owner-maintained mod. Catalogue presence is not a compatibility or endorsement claim. The application identity is Hydra One; upstream marks are attribution assets.",
+  "assets": [
+    {
+      "file": "serve/web/amd-logo.png",
+      "sha256": "6f300a5a094697d859529522c6fa02ffd6e0f2ddf36160e8bfa0518487be86fc",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-airllm.png",
+      "sha256": "e1cd9b757ba78184a4666bc03fd6c3a76e86027710b7da40a075fbf797578868",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-amd-official.svg",
+      "sha256": "68da06f37f9c334975d93cba332557f112cee98747f66529c695f0b0d675a0b8",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-antigravity.ico",
+      "sha256": "f820091cfc6192df2f826978999b73d2b5999ca905fdbaf0c0912577e914efd4",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-antigravity.png",
+      "sha256": "71aedde96ff645bc6137e9bf073280716919dc414f31fbe11a1b5282519a0a2b",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-browser.svg",
+      "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-claude-desktop.ico",
+      "sha256": "aee6a768ee13e9bfa1aa60c358864f7e7cfaa1edf1749558056d2d9a53923972",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-claude-desktop.png",
+      "sha256": "6d41f4f3425443b3b8b84ec1826ceb25ea31cc718bede879a2276025da9eb96b",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-colibri.svg",
+      "sha256": "f65d812eb596846608ba0b46eeac095b90c8b83a5ae02f8cce3cdc45d990c7d5",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-git.svg",
+      "sha256": "1080a5430edb6278dc03e4b04efc16c8bed5b943408d648ad721a28836814220",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-llama.cpp.svg",
+      "sha256": "3613677483c2bd701c3205fafe1b93345b7c66f79c829b733a68137d35e142d9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-memory.svg",
+      "sha256": "7e583e997cb39239ce764a04668e6bd93018e48ab0f7783beb9ca8e48baf0044",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-meta-audio.png",
+      "sha256": "3876b393102ffb040fbac5d953f1ec01586d91932634052c8662376e60b0ca57",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-meta-audio.svg",
+      "sha256": "9c354dc7d40f7862df2dfb34df05ae08c3e956d55a450379803d6cac6878a63e",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-meta-word.svg",
+      "sha256": "7a0430c375fc8563eafa7636869b5b132e6da4461711a81d384bc0044a20d039",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-microsoft-official.png",
+      "sha256": "112fec798b78aa02e102a724b5cb1990c0f909bc1d8b7b1fa256eab41bbc0960",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-deepseek-ai.webp",
+      "sha256": "4cd5dd62104f4bfa1caa6bfa3a13e06b1577d24ea03bfd1e78e4c5aea8ceed9f",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-google.webp",
+      "sha256": "edc0c5c2cfc7c55342343b5d5da24fe18a4deb2f70655082155c9fae3716aa36",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-huggingfacetb.webp",
+      "sha256": "911349a57721ca8b3921cd5c5971f543a917f81eee7bd47e9f9c29da55e786d2",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-meta-llama.webp",
+      "sha256": "b202ff7373a9f14706f9cd4afd55cbb4c513e0f53763675dd93552693a623bf8",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-mistralai.webp",
+      "sha256": "a3c07c1b431ee7e2038ab8a6d5b29ba366bc74aaf6ff30a4b32379efc9ab96ad",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-openbmb.webp",
+      "sha256": "a257190d2fed9b0a28adba8b86875103ede662974a7c9ef8beb89c6f622e2596",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-qwen.svg",
+      "sha256": "645b877e17e1a3ad6257c0fc999aede725ccb23b8b8b3988f56b737d6794f864",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-qwen.webp",
+      "sha256": "0c74f4f564ec24d5fd552b63efd43a9a85214ab4f6c7951e53c0d4328e5967d0",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-model-spark.png",
+      "sha256": "bcb0ea85ac0a37964c503f84f3a4111a11e99a03d9e063075624ed95f524ebc4",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-modelscope.png",
+      "sha256": "e05276901d7ce134fa0f914f5f9f3fb7eff2224dfa0d0edc3b8d71b9f84d587c",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-modelscope.svg",
+      "sha256": "f1d7da398dca7d016dd77908b7b8b4e597b14c2f2297701c2a8af46cdc9164d9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-myshell-original.svg",
+      "sha256": "94b2a75a6c3f3d1de5851401cf52758ff832f62eeb6d377a743826a091f0ebc9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-node.svg",
+      "sha256": "e4c8de546b2462ad9497679c55609701144ffacd8e18ac17a7f7f7b795de9fe7",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-npm.svg",
+      "sha256": "9213bc30403a9b536fe4c9e0b3c713f043433055a0bbcab62c83b26b18a0dcf8",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openai-black.svg",
+      "sha256": "75c1e9fffa5e8c437bec1d67197a73992bca45d166c6ff23215185dea8fae92a",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openai-white.svg",
+      "sha256": "01d158767c4eec0e47bd617e67759c33da0accd1438be1a8d29dfdb99ce87285",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openvoice-symbol.svg",
+      "sha256": "56e99ac30f9610d328acf39d93e9bbace7449cb05d4d506b5f7401a6c7c21489",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openvoice-transparent.png",
+      "sha256": "b0f448ee2e12decc218747bdc9cc088e25239329d95b9434e11a34b6798fa5df",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openvoice.jpg",
+      "sha256": "52401f47bd5a391cdc4fb4f8d764e3058b7b49b8013975d3c69708a4a540bfcc",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-openwebui.svg",
+      "sha256": "d6a1e5af2bfc77a3fe21ed2653f2fd9469c7fdd5e7fd97f9bffedcf98644b773",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-python.svg",
+      "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-pytorch.svg",
+      "sha256": "f68b2f296247f92046c58e4754bad23994fda10b29f84edb6bbd0f449c549836",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-soup.png",
+      "sha256": "734dcf248c6067545be808a94d5af7e9e0c23c841b6de2e3f1c63841c31f045f",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-strata.svg",
+      "sha256": "51a9a37beb1be2c061c7889feb7d129591cf572041bdf759f0d4fc679494b534",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-transformers.svg",
+      "sha256": "3613c73f07ccae19118bfe6d2f8cd127183d08cf99468a708e090953e116ed0a",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-unsloth-symbol.png",
+      "sha256": "e4497c15177a9fa631198719ca8ff43ff3fdf95477d69557dc867e6a0a301001",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-unsloth.png",
+      "sha256": "368c8b50082367633865450ff53aa4ffa14a63c419230c915c7c22003e22b8ce",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-uv.svg",
+      "sha256": "fc5aeabf925cbdaba99f4e86635eeef2d47a5ecd715d7994490ef9082fd12bfb",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-voicestudio.ico",
+      "sha256": "16f374c5b253af8035733c61d85b1e0f285c74218583955928505ec6275f090e",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-voicestudio.png",
+      "sha256": "03022edd0ca308a50392ece5a4f83c7fcc0d58384ea98ae218f7930bf78638bb",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-whisper-transparent.png",
+      "sha256": "fee0a6116fa0da1ae7a211bcabade38a43df3c87320ea57bd969e4357670c02c",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brand-whisper.cpp.jpeg",
+      "sha256": "74595f08ac20770fb912aa5b9d28b9ef5f4c166c400bd4814c914f877cb05bf2",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brands/llama.cpp.svg",
+      "sha256": "3613677483c2bd701c3205fafe1b93345b7c66f79c829b733a68137d35e142d9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brands/soup.png",
+      "sha256": "734dcf248c6067545be808a94d5af7e9e0c23c841b6de2e3f1c63841c31f045f",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brands/strata.svg",
+      "sha256": "51a9a37beb1be2c061c7889feb7d129591cf572041bdf759f0d4fc679494b534",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brands/unsloth.png",
+      "sha256": "368c8b50082367633865450ff53aa4ffa14a63c419230c915c7c22003e22b8ce",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/brands/whisper.cpp.jpeg",
+      "sha256": "74595f08ac20770fb912aa5b9d28b9ef5f4c166c400bd4814c914f877cb05bf2",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-claude.png",
+      "sha256": "8542b75427a124e5edb8196a494c106ad6ee4a033accb7cec6d7fa7e576aa44b",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-dsh-dark.svg",
+      "sha256": "dde7db781f41e7aeb4709ff5485af2bdcf7f4b4ea81b4500cfd5df44efdbd817",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-dsh.svg",
+      "sha256": "9e983b4f649c25c6ca0623a50be1a6e705fd8f49f756638b980fa13b40575ab6",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-hermes-dark.svg",
+      "sha256": "e1517a2d5b81108f74e938997c442eaa0562af73b7b6beecb3363f3062b8ef36",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-hermes.svg",
+      "sha256": "6c4968c1a46f104559684826ed8061fad6052711ff0af9c6b36a6ce674536684",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-opencode.svg",
+      "sha256": "e29bbe33380ad1c1ada9134b52f229d30e9776d60481512c9d81f2bb6f37def9",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-trueforge-dark.svg",
+      "sha256": "1c0e945064b9dc905fa4dd46d31996008c2b2ac723d654c7b365387b801cd5c7",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/harness-logo-trueforge.svg",
+      "sha256": "a234703ac0a62d667dfe19eb8eb212f0d6fcf74d0c8e8105e82b60f3326987b1",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/hydra-one.png",
+      "sha256": "c8a0171078d5ac06457fb7e040e73e35440d4de3bd6d7efc3fc0817c6be5ed20",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    },
+    {
+      "file": "serve/web/logos/colibri.svg",
+      "sha256": "c5ea25e66a289ebd6d3f4b147fa3453f4110447f36d7a96df94cec2d17d9d033",
+      "original_bytes": true,
+      "attribution": "See serve/web/brands/SOURCES.json and OFFICIAL-ASSETS.json; marks belong to their respective owners."
+    }
+  ]
+}

@@ -58,3 +58,9 @@ I loghi **Stargate Labs** e **Hydra One** sono le risorse originali del progetto
 [SOURCE-REFERENCES.json](SOURCE-REFERENCES.json) registra i collegamenti GitHub e Hugging Face trovati nei sorgenti e nella documentazione, con file e riga di origine. Include anche riferimenti di ricerca e test: citarli non significa includerne codice o dichiararne il supporto. L’inventario è verificabile e va aggiornato quando cambiano i componenti.
 
 [English credits](CREDITS.en.md)
+
+## Loghi originali e inventario verificato
+
+<img src="../assets/hydra-one.png" alt="Hydra One" title="Hydra One" height="42"> <img src="../serve/web/brand-llama.cpp.svg" alt="llama.cpp" title="llama.cpp" height="42"> <img src="../serve/web/brand-unsloth-symbol.png" alt="Unsloth" title="Unsloth" height="42"> <img src="../serve/web/brand-soup.png" alt="Soup" title="Soup" height="42"> <img src="../serve/web/brand-pytorch.svg" alt="PyTorch" title="PyTorch" height="42"> <img src="../serve/web/brand-transformers.svg" alt="Hugging Face" title="Hugging Face" height="42"> <img src="../serve/web/brand-python.svg" alt="Python" title="Python" height="42"> <img src="../serve/web/brand-node.svg" alt="Node.js" title="Node.js" height="42"> <img src="../serve/web/brand-git.svg" alt="Git" title="Git" height="42"> <img src="../serve/web/brand-memory.svg" alt="Model Context Protocol" title="Model Context Protocol" height="42"> <img src="../serve/web/brand-browser.svg" alt="Playwright" title="Playwright" height="42">
+
+[Inventario dei loghi con SHA-256](BRAND-ASSETS.json). Le risorse della mod sono conservate senza alterarne i byte; l’identità della nostra versione usa Hydra One. I marchi di terzi restano dei rispettivi titolari.
