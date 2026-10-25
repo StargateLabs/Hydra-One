@@ -12,6 +12,10 @@ Hydra One is the **Stargate Labs beta**, based on Strata. It brings together our
 
 <!-- user-capabilities:start -->
 
+## A personal project, shared openly
+
+Hydra One grew out of my own needs and the way I work with local AI. Its design choices, integrations and features reflect my priorities: they may resonate with other users, or serve needs different from theirs. I chose to share the project to make that work available, invite constructive discussion and offer a useful starting point for anyone who wants to explore it or adapt it to their own needs.
+
 ## What you can do with Hydra One
 
 The mod brings these workflows into one workspace. Operations require the indicated models, runtimes and capabilities; the beta does not claim they are all installed or universally qualified.

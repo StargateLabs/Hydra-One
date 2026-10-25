@@ -12,6 +12,10 @@ Hydra One è la versione beta sviluppata da **Stargate Labs** a partire da Strat
 
 <!-- user-capabilities:start -->
 
+## Un progetto personale, condiviso
+
+Hydra One nasce dalle mie esigenze e dal mio modo di lavorare con l’intelligenza artificiale locale. Le scelte, le integrazioni e le funzioni riflettono le mie priorità: possono incontrare le preferenze di altri utenti oppure rispondere a necessità diverse dalle loro. Ho scelto di condividere questo progetto per rendere disponibile il lavoro svolto, favorire il confronto e offrire una base utile a chi desidera esplorarla o adattarla alle proprie esigenze.
+
 ## Cosa puoi fare con Hydra One
 
 La mod riunisce questi flussi nello stesso workspace. Le operazioni richiedono i modelli, i runtime e le capacità indicati: la beta non li dichiara tutti già installati o universalmente validati.
