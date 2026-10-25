@@ -10,7 +10,7 @@
 
 Hydra One è la versione beta sviluppata da **Stargate Labs** a partire da Strata. Unisce la nostra integrazione HYDRA One, un workspace web per i modelli locali e strumenti per osservare, misurare e controllare l’esecuzione. Questa pubblicazione deriva dai **nostri sorgenti locali modificati**, con base nativa 0.1.38; non è una copia dell’attuale ramo principale upstream.
 
-## Dentro Hydra One
+## Piattaforma Local AI all-in-one
 
 | Area | Cosa contiene questa versione | Sorgente |
 |---|---|---|
@@ -20,6 +20,27 @@ Hydra One è la versione beta sviluppata da **Stargate Labs** a partire da Strat
 | Memoria e retrieval | Grafo locale, H0/H1/H1v2, provenienza delle fonti e budget del contesto | [Graph memory](serve/hydra_graph_memory.py) |
 | Modelli e backend | Catalogo Hugging Face, GGUF/Safetensors e integrazioni opzionali | [Catalogo](serve/catalogue.py) · [backend](serve/optional_backends.py) |
 | Workspace | Chat, MCP, monitor, benchmark e gestione dei componenti | [Interfaccia](serve/web/index.html) · [server](serve/server.py) |
+
+
+<p align="center"><img src="assets/ecosystem.svg" alt="Hydra One — inference, agents, training, multimodal, knowledge and engineering ecosystem" width="1280"></p>
+
+## La nostra integrazione all-in-one
+
+Il progetto riunisce lavoro su inferenza, chat, agenti, MCP, training e produzione multimodale. La guida completa distingue ogni tipo di integrazione e collega i sorgenti che la implementano.
+
+| Area | Componenti e lavoro incluso |
+|---|---|
+| **Inference** | HYDRA One · native C++/CUDA/HIP · llama.cpp · Prism · Transformers/PEFT · Unsloth · AirLLM · Colibri · local APIs |
+| **Agents / apps** | OpenCode · DeepSeek Harness · TrueForge · Hermes · Claude Code · native Claude/Antigravity workspace |
+| **Tools / memory** | MCP · Playwright browser · shared memory · Headroom · local graph · H0/H1/H1v2 · source provenance |
+| **Training** | LoRA · SFT · DPO · GRPO · KTO · reward · VLM · TRL CPU · Soup · Unsloth QLoRA · checkpoints · GGUF export |
+| **Multimodal** | Whisper ASR · audio.cpp / Kokoro TTS · VoiceStudio · AudioCraft · source separation · Diffusers image/video · vision projectors |
+| **Workspace services** | Open WebUI document/OCR/semantic/reranker workers · model catalogue · downloads/imports · component staging/rollback · telemetry |
+| **Research / beta** | 56 baseline experimental features + 3 GPU controls · admission · CPU scheduling · IOCP · scoring · tiering contracts · benchmark history |
+
+**[Platform guide / Guida completa](docs/PLATFORM.it.md)** · [Every source module / Tutti i moduli](docs/MODULES.md) · [Experimental register / Registro sperimentale](docs/FEATURES.md)
+
+Queste sono integrazioni e percorsi presenti nel codice: per installazione, requisiti e blocchi di ogni componente consulta la guida. Il supporto dei modelli dipende da architettura, formato, runtime e risorse; non dichiariamo compatibilità universale non verificata.
 
 ## Inizia dai sorgenti
 

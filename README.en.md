@@ -21,6 +21,27 @@ Hydra One is the **Stargate Labs beta**, based on Strata. It brings together our
 | Models and backends | Hugging Face catalogue, GGUF/Safetensors and optional integrations | [Catalogue](serve/catalogue.py) · [backends](serve/optional_backends.py) |
 | Workspace | Chat, MCP, monitor, benchmarks and component management | [Interface](serve/web/index.html) · [server](serve/server.py) |
 
+
+<p align="center"><img src="assets/ecosystem.svg" alt="Hydra One — inference, agents, training, multimodal, knowledge and engineering ecosystem" width="1280"></p>
+
+## Our all-in-one integration
+
+The project brings together inference, chat, agents, MCP, training and multimodal production. The platform guide distinguishes each integration type and links its implementation.
+
+| Area | Components and included work |
+|---|---|
+| **Inference** | HYDRA One · native C++/CUDA/HIP · llama.cpp · Prism · Transformers/PEFT · Unsloth · AirLLM · Colibri · local APIs |
+| **Agents / apps** | OpenCode · DeepSeek Harness · TrueForge · Hermes · Claude Code · native Claude/Antigravity workspace |
+| **Tools / memory** | MCP · Playwright browser · shared memory · Headroom · local graph · H0/H1/H1v2 · source provenance |
+| **Training** | LoRA · SFT · DPO · GRPO · KTO · reward · VLM · TRL CPU · Soup · Unsloth QLoRA · checkpoints · GGUF export |
+| **Multimodal** | Whisper ASR · audio.cpp / Kokoro TTS · VoiceStudio · AudioCraft · source separation · Diffusers image/video · vision projectors |
+| **Workspace services** | Open WebUI document/OCR/semantic/reranker workers · model catalogue · downloads/imports · component staging/rollback · telemetry |
+| **Research / beta** | 56 baseline experimental features + 3 GPU controls · admission · CPU scheduling · IOCP · scoring · tiering contracts · benchmark history |
+
+**[Platform guide / Guida completa](docs/PLATFORM.en.md)** · [Every source module / Tutti i moduli](docs/MODULES.md) · [Experimental register / Registro sperimentale](docs/FEATURES.md)
+
+These integrations and paths are present in source. See the guide for each component’s prerequisites and gates. Model support depends on architecture, format, runtime and resources; unverified universal compatibility is not claimed.
+
 ## Start from source
 
 Follow the [English installation guide](docs/INSTALL.en.md) or [Italian guide](docs/INSTALL.it.md). Model weights, personal Python environments, credentials and workstation-specific compiled runtimes are excluded. The HYDRA runtime bundle required by the integration is accompanied by its editable source.
