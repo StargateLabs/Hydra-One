@@ -8,7 +8,56 @@
 
 [![Beta](https://img.shields.io/badge/status-beta-16c9e8?style=flat-square)](docs/FEATURES.md) [![License](https://img.shields.io/badge/license-MIT-8faac0?style=flat-square)](LICENSE) [![Stars](https://img.shields.io/github/stars/StargateLabs/Hydra-One?style=flat-square&color=16c9e8)](https://github.com/StargateLabs/Hydra-One/stargazers)
 
+<!-- logo-directory:start -->
+
+## Le app e gli strumenti del nostro workspace
+
+Loghi originali delle integrazioni presenti nella mod. Le funzioni e i requisiti di ogni componente sono descritti qui sotto.
+
+| | | | |
+|:---:|:---:|:---:|:---:|
+| <img src="serve/web/brand-llama.cpp.svg" alt="llama.cpp" width="64" height="64"><br><b>llama.cpp</b> | <img src="serve/web/brand-unsloth-symbol.png" alt="Unsloth" width="64" height="64"><br><b>Unsloth</b> | <img src="serve/web/brand-transformers.svg" alt="Transformers" width="64" height="64"><br><b>Transformers</b> | <img src="serve/web/brand-pytorch.svg" alt="PyTorch" width="64" height="64"><br><b>PyTorch</b> |
+| <img src="serve/web/brand-airllm.png" alt="AirLLM" width="64" height="64"><br><b>AirLLM</b> | <img src="serve/web/brand-colibri.svg" alt="Colibri" width="64" height="64"><br><b>Colibri</b> | <img src="serve/web/brand-soup.png" alt="Soup" width="64" height="64"><br><b>Soup</b> | <img src="serve/web/brand-whisper.cpp.jpeg" alt="Whisper.cpp" width="64" height="64"><br><b>Whisper.cpp</b> |
+| <img src="serve/web/brand-unsloth-symbol.png" alt="audio.cpp" width="64" height="64"><br><b>audio.cpp</b> | <img src="serve/web/brand-voicestudio.png" alt="VoiceStudio" width="64" height="64"><br><b>VoiceStudio</b> | <img src="serve/web/brand-myshell-original.svg" alt="OpenVoice" width="64" height="64"><br><b>OpenVoice</b> | <img src="serve/web/brand-meta-audio.svg" alt="AudioCraft" width="64" height="64"><br><b>AudioCraft</b> |
+| <img src="serve/web/brand-openwebui.svg" alt="Open WebUI" width="64" height="64"><br><b>Open WebUI</b> | <img src="serve/web/harness-logo-opencode.svg" alt="OpenCode" width="64" height="64"><br><b>OpenCode</b> | <img src="serve/web/harness-logo-dsh.svg" alt="DeepSeek Harness" width="64" height="64"><br><b>DeepSeek Harness</b> | <img src="serve/web/harness-logo-trueforge.svg" alt="TrueForge" width="64" height="64"><br><b>TrueForge</b> |
+| <img src="serve/web/harness-logo-hermes.svg" alt="Hermes Agent" width="64" height="64"><br><b>Hermes Agent</b> | <img src="serve/web/harness-logo-claude.png" alt="Claude Code" width="64" height="64"><br><b>Claude Code</b> | <img src="serve/web/brand-browser.svg" alt="Playwright" width="64" height="64"><br><b>Playwright</b> | <img src="serve/web/brand-memory.svg" alt="MCP memory" width="64" height="64"><br><b>MCP memory</b> |
+| <img src="serve/web/brand-antigravity.png" alt="Antigravity" width="64" height="64"><br><b>Antigravity</b> | <img src="serve/web/brand-claude-desktop.png" alt="Claude Desktop" width="64" height="64"><br><b>Claude Desktop</b> |  |  |
+
+**Headroom** — integrazione presente; identità testuale, senza logo inventato.
+
+<!-- logo-directory:end -->
+
+
 Hydra One è la versione beta sviluppata da **Stargate Labs** a partire da Strata. Unisce la nostra integrazione HYDRA One, un workspace web per i modelli locali e strumenti per osservare, misurare e controllare l’esecuzione. Questa pubblicazione deriva dai **nostri sorgenti locali modificati**, con base nativa 0.1.38; non è una copia dell’attuale ramo principale upstream.
+
+## App integrate: loghi, funzioni e autori
+
+Le integrazioni sono descritte qui nella pagina principale. Ciascuna mantiene requisiti, licenza e capacità del proprio runtime; la presenza dell’adattatore non significa parità con tutta l’app originale.
+
+| Logo | App / Source | Il suo ruolo nella nostra mod | Autori e ringraziamenti |
+|---|---|---|---|
+| <img src="serve/web/brand-llama.cpp.svg" alt="llama.cpp" width="52" height="52"> | **[llama.cpp](https://github.com/ggml-org/llama.cpp)** | GGUF engine, native libraries, format tooling and optional server transport. | ggml authors and contributors |
+| <img src="serve/web/brand-unsloth-symbol.png" alt="Unsloth" width="52" height="52"> | **[Unsloth](https://github.com/unslothai/unsloth)** | Selected Python environment, inference/QLoRA integration and owned Studio service. | Unsloth team and contributors |
+| <img src="serve/web/brand-transformers.svg" alt="Transformers" width="52" height="52"> | **[Transformers](https://github.com/huggingface/transformers)** | Local Safetensors text/vision runtime and model metadata integration. | Hugging Face and contributors |
+| <img src="serve/web/brand-pytorch.svg" alt="PyTorch" width="52" height="52"> | **[PyTorch](https://github.com/pytorch/pytorch)** | Tensor execution, device/runtime integration and training dependencies. | PyTorch contributors |
+| <img src="serve/web/brand-airllm.png" alt="AirLLM" width="52" height="52"> | **[AirLLM](https://github.com/lyogavin/airllm)** | Optional local layer-streaming backend and isolated runtime selection. | lyogavin and AirLLM contributors |
+| <img src="serve/web/brand-colibri.svg" alt="Colibri" width="52" height="52"> | **[Colibri](https://github.com/JustVugg/colibri)** | Isolated engine launcher, controls, model routing and System One integration. | JustVugg and Colibri contributors |
+| <img src="serve/web/brand-soup.png" alt="Soup" width="52" height="52"> | **[Soup](https://github.com/MakazhanAlpamys/Soup)** | Bundled planning modules and managed training integration; original Apache notices retained. | Makazhan Alpamys / Soup Team |
+| <img src="serve/web/brand-whisper.cpp.jpeg" alt="Whisper.cpp" width="52" height="52"> | **[Whisper.cpp](https://github.com/ggml-org/whisper.cpp)** | Local ASR and translation. Selected distributions also use the credited Unsloth fork. | ggml authors and Whisper.cpp contributors |
+| <img src="serve/web/brand-unsloth-symbol.png" alt="audio.cpp" width="52" height="52"> | **[audio.cpp](https://github.com/unslothai/audio.cpp)** | Selected local speech runtime. Displayed mark identifies Unsloth, not a separate audio.cpp logo. | Unsloth distribution and upstream contributors |
+| <img src="serve/web/brand-voicestudio.png" alt="VoiceStudio" width="52" height="52"> | **[VoiceStudio](https://github.com/debpalash/VoiceStudio)** | Local API/MCP integration, jobs, profiles and rendering workflows. | debpalash and VoiceStudio contributors |
+| <img src="serve/web/brand-myshell-original.svg" alt="OpenVoice" width="52" height="52"> | **[OpenVoice](https://github.com/myshell-ai/OpenVoice)** | Optional voice-conversion model/runtime path; task-specific asset checks. | MyShell and OpenVoice contributors |
+| <img src="serve/web/brand-meta-audio.svg" alt="AudioCraft" width="52" height="52"> | **[AudioCraft](https://github.com/facebookresearch/audiocraft)** | Music and audio generation, conditioning and training adapters. | Meta / AudioCraft contributors |
+| <img src="serve/web/brand-openwebui.svg" alt="Open WebUI" width="52" height="52"> | **[Open WebUI](https://github.com/open-webui/open-webui)** | Original document/OCR/retrieval workers reused by our local adapter; no second dashboard claimed. | Open WebUI contributors |
+| <img src="serve/web/harness-logo-opencode.svg" alt="OpenCode" width="52" height="52"> | **[OpenCode](https://github.com/anomalyco/opencode)** | Original harness transport, workspace/session integration and candidate updates. | Anomaly and OpenCode contributors |
+| <img src="serve/web/harness-logo-dsh.svg" alt="DeepSeek Harness" width="52" height="52"> | **[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)** | Original harness integration and official package/version mapping. | DeepSeek and harness contributors |
+| <img src="serve/web/harness-logo-trueforge.svg" alt="TrueForge" width="52" height="52"> | **[TrueForge](https://github.com/truefoundry/trueforge)** | Harness integration with shared browser/memory services and candidate management. | TrueFoundry and contributors |
+| <img src="serve/web/harness-logo-hermes.svg" alt="Hermes Agent" width="52" height="52"> | **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | Original agent integration, project services and isolated source candidate workflow. | Nous Research and contributors |
+| <img src="serve/web/harness-logo-claude.png" alt="Claude Code" width="52" height="52"> | **[Claude Code](https://github.com/anthropics/claude-code)** | Native CLI/harness integration and signed official candidate checks; no claim to redistribute its implementation. | Anthropic |
+| <img src="serve/web/brand-browser.svg" alt="Playwright" width="52" height="52"> | **[Playwright](https://github.com/microsoft/playwright-mcp)** | Shared MCP browser service and verified candidate activation. | Microsoft and Playwright contributors |
+| <img src="serve/web/brand-memory.svg" alt="MCP memory" width="52" height="52"> | **[MCP memory](https://github.com/modelcontextprotocol/servers)** | Shared memory-server contract and project-scoped MCP configuration. | Model Context Protocol contributors |
+| Headroom | **[Headroom](https://github.com/headroomlabs-ai/headroom)** | Project-scoped routing metadata, runtime contract and MCP integration. | Headroom Labs and contributors |
+
 
 <!-- user-capabilities:start -->
 
@@ -147,34 +196,6 @@ La mod non tratta ogni risultato di ricerca come un modello eseguibile. I catalo
 Il Centro aggiornamenti non è soltanto un elenco di versioni: collega inventario degli ambienti, fonti ufficiali, download verificati, candidati isolati, validazione e selezione dei componenti. L’obiettivo del nostro adattatore è preservare configurazioni, sorgenti modificati e dati mentre evolve la base dei motori e delle app. Versione disponibile, pacchetto scaricato, candidato validato e runtime attivo sono stati diversi e devono rimanere distinguibili.
 
 <!-- integrated-platform:start -->
-
-## App integrate: loghi, funzioni e autori
-
-Le integrazioni sono descritte qui nella pagina principale. Ciascuna mantiene requisiti, licenza e capacità del proprio runtime; la presenza dell’adattatore non significa parità con tutta l’app originale.
-
-| Logo | App / Source | Il suo ruolo nella nostra mod | Autori e ringraziamenti |
-|---|---|---|---|
-| <img src="serve/web/brand-llama.cpp.svg" alt="llama.cpp" width="52" height="52"> | **[llama.cpp](https://github.com/ggml-org/llama.cpp)** | GGUF engine, native libraries, format tooling and optional server transport. | ggml authors and contributors |
-| <img src="serve/web/brand-unsloth-symbol.png" alt="Unsloth" width="52" height="52"> | **[Unsloth](https://github.com/unslothai/unsloth)** | Selected Python environment, inference/QLoRA integration and owned Studio service. | Unsloth team and contributors |
-| <img src="serve/web/brand-transformers.svg" alt="Transformers" width="52" height="52"> | **[Transformers](https://github.com/huggingface/transformers)** | Local Safetensors text/vision runtime and model metadata integration. | Hugging Face and contributors |
-| <img src="serve/web/brand-pytorch.svg" alt="PyTorch" width="52" height="52"> | **[PyTorch](https://github.com/pytorch/pytorch)** | Tensor execution, device/runtime integration and training dependencies. | PyTorch contributors |
-| <img src="serve/web/brand-airllm.png" alt="AirLLM" width="52" height="52"> | **[AirLLM](https://github.com/lyogavin/airllm)** | Optional local layer-streaming backend and isolated runtime selection. | lyogavin and AirLLM contributors |
-| <img src="serve/web/brand-colibri.svg" alt="Colibri" width="52" height="52"> | **[Colibri](https://github.com/JustVugg/colibri)** | Isolated engine launcher, controls, model routing and System One integration. | JustVugg and Colibri contributors |
-| <img src="serve/web/brand-soup.png" alt="Soup" width="52" height="52"> | **[Soup](https://github.com/MakazhanAlpamys/Soup)** | Bundled planning modules and managed training integration; original Apache notices retained. | Makazhan Alpamys / Soup Team |
-| <img src="serve/web/brand-whisper.cpp.jpeg" alt="Whisper.cpp" width="52" height="52"> | **[Whisper.cpp](https://github.com/ggml-org/whisper.cpp)** | Local ASR and translation. Selected distributions also use the credited Unsloth fork. | ggml authors and Whisper.cpp contributors |
-| <img src="serve/web/brand-unsloth-symbol.png" alt="audio.cpp" width="52" height="52"> | **[audio.cpp](https://github.com/unslothai/audio.cpp)** | Selected local speech runtime. Displayed mark identifies Unsloth, not a separate audio.cpp logo. | Unsloth distribution and upstream contributors |
-| <img src="serve/web/brand-voicestudio.png" alt="VoiceStudio" width="52" height="52"> | **[VoiceStudio](https://github.com/debpalash/VoiceStudio)** | Local API/MCP integration, jobs, profiles and rendering workflows. | debpalash and VoiceStudio contributors |
-| <img src="serve/web/brand-myshell-original.svg" alt="OpenVoice" width="52" height="52"> | **[OpenVoice](https://github.com/myshell-ai/OpenVoice)** | Optional voice-conversion model/runtime path; task-specific asset checks. | MyShell and OpenVoice contributors |
-| <img src="serve/web/brand-meta-audio.svg" alt="AudioCraft" width="52" height="52"> | **[AudioCraft](https://github.com/facebookresearch/audiocraft)** | Music and audio generation, conditioning and training adapters. | Meta / AudioCraft contributors |
-| <img src="serve/web/brand-openwebui.svg" alt="Open WebUI" width="52" height="52"> | **[Open WebUI](https://github.com/open-webui/open-webui)** | Original document/OCR/retrieval workers reused by our local adapter; no second dashboard claimed. | Open WebUI contributors |
-| <img src="serve/web/harness-logo-opencode.svg" alt="OpenCode" width="52" height="52"> | **[OpenCode](https://github.com/anomalyco/opencode)** | Original harness transport, workspace/session integration and candidate updates. | Anomaly and OpenCode contributors |
-| <img src="serve/web/harness-logo-dsh.svg" alt="DeepSeek Harness" width="52" height="52"> | **[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)** | Original harness integration and official package/version mapping. | DeepSeek and harness contributors |
-| <img src="serve/web/harness-logo-trueforge.svg" alt="TrueForge" width="52" height="52"> | **[TrueForge](https://github.com/truefoundry/trueforge)** | Harness integration with shared browser/memory services and candidate management. | TrueFoundry and contributors |
-| <img src="serve/web/harness-logo-hermes.svg" alt="Hermes Agent" width="52" height="52"> | **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | Original agent integration, project services and isolated source candidate workflow. | Nous Research and contributors |
-| <img src="serve/web/harness-logo-claude.png" alt="Claude Code" width="52" height="52"> | **[Claude Code](https://github.com/anthropics/claude-code)** | Native CLI/harness integration and signed official candidate checks; no claim to redistribute its implementation. | Anthropic |
-| <img src="serve/web/brand-browser.svg" alt="Playwright" width="52" height="52"> | **[Playwright](https://github.com/microsoft/playwright-mcp)** | Shared MCP browser service and verified candidate activation. | Microsoft and Playwright contributors |
-| <img src="serve/web/brand-memory.svg" alt="MCP memory" width="52" height="52"> | **[MCP memory](https://github.com/modelcontextprotocol/servers)** | Shared memory-server contract and project-scoped MCP configuration. | Model Context Protocol contributors |
-| Headroom | **[Headroom](https://github.com/headroomlabs-ai/headroom)** | Project-scoped routing metadata, runtime contract and MCP integration. | Headroom Labs and contributors |
 
 ## Tutti i percorsi di inferenza e generazione
 
