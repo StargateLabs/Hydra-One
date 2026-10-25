@@ -42,6 +42,20 @@ Il progetto riunisce lavoro su inferenza, chat, agenti, MCP, training e produzio
 
 Queste sono integrazioni e percorsi presenti nel codice: per installazione, requisiti e blocchi di ogni componente consulta la guida. Il supporto dei modelli dipende da architettura, formato, runtime e risorse; non dichiariamo compatibilità universale non verificata.
 
+## Il banco di lavoro e i servizi della mod
+
+### [Prestazioni e Benchmark](docs/WORKBENCH.it.md)
+
+Prestazioni e Benchmark sono il banco di lavoro con cui osserviamo i modelli e valutiamo i potenziamenti della mod. La prima sezione raccoglie e rende leggibili le misure; la seconda prepara ed esegue le prove sul motore selezionato. Il legame tra le due non è una classifica promozionale: serve a ricondurre un risultato al modello, al runtime, al protocollo e alla configurazione che lo hanno prodotto. Un cambiamento di cache, contesto, thread o backend deve essere confrontato con una prova coerente, non con un numero appartenente a un modello diverso.
+
+### [Cataloghi LLM e compatibilità](docs/CATALOGUES.it.md)
+
+La mod non tratta ogni risultato di ricerca come un modello eseguibile. I cataloghi collegano ricerca Hugging Face, metadati delle pubblicazioni, varianti, file, modelli locali e compatibilità dei runtime. Il percorso nativo e il catalogo opzionale hanno criteri diversi: un pack esperti del motore nativo non deve essere avviato come GGUF generico, e un formato Prism non deve essere inoltrato silenziosamente a un runtime incompatibile.
+
+### [Aggiornamenti, backup e recupero](docs/UPDATES.it.md)
+
+Il Centro aggiornamenti non è soltanto un elenco di versioni: collega inventario degli ambienti, fonti ufficiali, download verificati, candidati isolati, validazione e selezione dei componenti. L’obiettivo del nostro adattatore è preservare configurazioni, sorgenti modificati e dati mentre evolve la base dei motori e delle app. Versione disponibile, pacchetto scaricato, candidato validato e runtime attivo sono stati diversi e devono rimanere distinguibili.
+
 ## Inizia dai sorgenti
 
 Segui la [guida italiana](docs/INSTALL.it.md) oppure la [English guide](docs/INSTALL.en.md). I pesi dei modelli, gli ambienti Python personali, le credenziali e i runtime compilati della workstation non sono distribuiti. Il bundle HYDRA richiesto dall’integrazione è accompagnato dai suoi sorgenti editabili.
@@ -55,3 +69,5 @@ La [verifica di questa copia](docs/VALIDATION.json) copre i test software indica
 ## Origine e ringraziamenti
 
 Basato su **[Strata](https://github.com/Niko1221/Strata)** di **Niko1221 e collaboratori**, con modifiche e integrazione di Stargate Labs. L’origine e i copyright restano nei [crediti completi](ACKNOWLEDGEMENTS.md), nella [licenza MIT](LICENSE) e negli [avvisi originali](licenses/).
+
+[App integrate: funzioni, loghi e autori / Integrated apps: functions, logos and authors](docs/APPLICATIONS.it.md)

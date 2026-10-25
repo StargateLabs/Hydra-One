@@ -42,6 +42,20 @@ The project brings together inference, chat, agents, MCP, training and multimoda
 
 These integrations and paths are present in source. See the guide for each component’s prerequisites and gates. Model support depends on architecture, format, runtime and resources; unverified universal compatibility is not claimed.
 
+## The engineering workbench and platform services
+
+### [Performance and Benchmark](docs/WORKBENCH.en.md)
+
+Performance and Benchmark are the workbench for observing models and evaluating the mod’s enhancements. Performance organizes measurements; Benchmark configures and executes tests against the selected backend. Their purpose is to bind a result to its model, runtime, protocol and configuration, rather than publish an unqualified leaderboard. Cache, context, thread and backend changes must be compared through consistent experiments.
+
+### [LLM catalogues and compatibility](docs/CATALOGUES.en.md)
+
+Search results are not automatically executable models. The catalogues connect Hugging Face discovery, publication metadata, variants, files, local inventory and runtime compatibility. Native and optional paths have distinct requirements: an expert pack must not be launched as generic GGUF, and Prism-specific formats must not silently fall back to incompatible runtimes.
+
+### [Updates, backup and recovery](docs/UPDATES.en.md)
+
+The Update Center connects environment inventory, official sources, verified downloads, isolated candidates, validation and component selection. Our adapter is designed to preserve settings, modified sources and data while engines and integrated applications evolve. Available release, downloaded package, validated candidate and active runtime are separate states.
+
 ## Start from source
 
 Follow the [English installation guide](docs/INSTALL.en.md) or [Italian guide](docs/INSTALL.it.md). Model weights, personal Python environments, credentials and workstation-specific compiled runtimes are excluded. The HYDRA runtime bundle required by the integration is accompanied by its editable source.
@@ -55,3 +69,5 @@ The [validation record](docs/VALIDATION.json) covers the listed software tests a
 ## Origin and acknowledgements
 
 Based on **[Strata](https://github.com/Niko1221/Strata)** by **Niko1221 and contributors**, with modifications and integration by Stargate Labs. Origin and copyright are preserved in the [full credits](ACKNOWLEDGEMENTS.md), [MIT license](LICENSE) and [original notices](licenses/).
+
+[App integrate: funzioni, loghi e autori / Integrated apps: functions, logos and authors](docs/APPLICATIONS.en.md)

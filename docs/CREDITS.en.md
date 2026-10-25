@@ -64,3 +64,6 @@ Pinned direct and transitive Python dependencies are listed in [PYTHON-DEPENDENC
 <img src="../assets/hydra-one.png" alt="Hydra One" title="Hydra One" height="42"> <img src="../serve/web/brand-llama.cpp.svg" alt="llama.cpp" title="llama.cpp" height="42"> <img src="../serve/web/brand-unsloth-symbol.png" alt="Unsloth" title="Unsloth" height="42"> <img src="../serve/web/brand-soup.png" alt="Soup" title="Soup" height="42"> <img src="../serve/web/brand-pytorch.svg" alt="PyTorch" title="PyTorch" height="42"> <img src="../serve/web/brand-transformers.svg" alt="Hugging Face" title="Hugging Face" height="42"> <img src="../serve/web/brand-python.svg" alt="Python" title="Python" height="42"> <img src="../serve/web/brand-node.svg" alt="Node.js" title="Node.js" height="42"> <img src="../serve/web/brand-git.svg" alt="Git" title="Git" height="42"> <img src="../serve/web/brand-memory.svg" alt="Model Context Protocol" title="Model Context Protocol" height="42"> <img src="../serve/web/brand-browser.svg" alt="Playwright" title="Playwright" height="42">
 
 [Brand asset inventory and SHA-256](BRAND-ASSETS.json). Existing mod assets are preserved byte for byte; our edition uses Hydra One branding. Third-party marks belong to their respective owners.
+
+
+[Applications, functions, official logos and authors / App, funzioni, loghi ufficiali e autori](APPLICATIONS.en.md)

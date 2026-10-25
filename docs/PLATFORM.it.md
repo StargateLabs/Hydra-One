@@ -179,3 +179,6 @@ Il registro comprende 56 funzioni originali e tre controlli GPU separati. Includ
 [VALIDATION.json](VALIDATION.json) · [PUBLICATION-CHECKS.json](PUBLICATION-CHECKS.json) · [Credits / Ringraziamenti](../ACKNOWLEDGEMENTS.md)
 
 I controlli offline non sono benchmark e non qualificano tutte le applicazioni, modelli o GPU. I moduli e i contratti sperimentali sono pubblicati con i rispettivi blocchi, senza trasformare il progetto in una lista di promesse.
+
+
+[Applications, functions, official logos and authors / App, funzioni, loghi ufficiali e autori](APPLICATIONS.it.md)

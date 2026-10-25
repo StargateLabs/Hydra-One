@@ -1,0 +1,24 @@
+{
+  "tests": 138,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "modules": [
+    "test_benchmark_comparison",
+    "test_benchmark_state",
+    "test_benchmark_records",
+    "test_optional_benchmark_stream",
+    "test_catalogue_card_cache",
+    "test_catalogue_header_bounds",
+    "test_catalogue_lineage",
+    "test_catalogue_local_identity",
+    "test_optional_catalogue_search",
+    "test_safe_update",
+    "test_update_center",
+    "test_automatic_updates",
+    "test_harness_updates",
+    "test_customization_backup",
+    "test_hydra_feature_control"
+  ],
+  "scope": "Offline workbench, catalogue, update, backup and feature-control tests; not model execution"
+}

@@ -179,3 +179,6 @@ The register includes 56 baseline features and three separate GPU controls. It c
 [VALIDATION.json](VALIDATION.json) · [PUBLICATION-CHECKS.json](PUBLICATION-CHECKS.json) · [Credits / Ringraziamenti](../ACKNOWLEDGEMENTS.md)
 
 Offline checks are not benchmarks and do not qualify every application, model or GPU. Experimental modules and contracts retain their gates rather than becoming unsupported promises.
+
+
+[Applications, functions, official logos and authors / App, funzioni, loghi ufficiali e autori](APPLICATIONS.en.md)
