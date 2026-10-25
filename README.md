@@ -333,6 +333,37 @@ OpenAI/Anthropic-compatible server routes, structured response validation, reque
 
 </details>
 
+<!-- lab-diagrams:start -->
+
+## Il laboratorio sperimentale, spiegato
+
+Tre percorsi della nostra implementazione, con entrambi i loghi originali. Le tavole separano i meccanismi software dalle condizioni ancora necessarie per eseguirli.
+
+<details>
+<summary><strong>Contesto e retrieval</strong></summary>
+
+<p align="center"><img src="assets/lab-context.it.svg" alt="Contesto e retrieval — Stargate Labs × Hydra One" width="1440"></p>
+
+</details>
+
+<details>
+<summary><strong>Checkpoint e ciclo di vita</strong></summary>
+
+<p align="center"><img src="assets/lab-memory.it.svg" alt="Checkpoint e ciclo di vita — Stargate Labs × Hydra One" width="1440"></p>
+
+</details>
+
+<details>
+<summary><strong>Loader nativo e ammissione</strong></summary>
+
+<p align="center"><img src="assets/lab-io.it.svg" alt="Loader nativo e ammissione — Stargate Labs × Hydra One" width="1440"></p>
+
+</details>
+
+[Registro completo e stato dei controlli / Full control register and status](docs/FEATURES.md)
+
+<!-- lab-diagrams:end -->
+
 <details>
 <summary><strong>Registro completo dei controlli sperimentali</strong> — apri i dettagli</summary>
 
