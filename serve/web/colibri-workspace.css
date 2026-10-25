@@ -1,0 +1,127 @@
+/* Preserve the official wordmark aspect ratio in all existing brand slots. */
+.select-option-brands img.engine-brand-logo[data-brand="colibri"],
+.control-launch-brand img.engine-brand-logo[data-brand="colibri"],
+img.engine-brand-logo[data-brand="colibri"]{width:124px;height:28px;max-width:124px;flex:0 0 124px;object-fit:contain;object-position:left center;aspect-ratio:31/7;border-radius:0;background:transparent}
+
+.colibri-controls{margin:16px 0;min-width:0}.colibri-controls-body{padding:16px 0;display:grid;gap:14px}.colibri-controls-body label{display:grid;gap:7px}.colibri-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;border:1px solid var(--st-line);border-radius:12px;overflow:hidden;background:var(--st-line)}.colibri-facts>div{padding:13px 15px;display:grid;gap:6px;min-width:0;background:var(--st-surface)}.colibri-facts span{font-size:12px;color:var(--st-ink-muted)}.colibri-facts strong{font-size:14px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.colibri-table-scroll{overflow:auto;max-height:440px}.colibri-controls table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.colibri-controls td,.colibri-controls th{padding:9px 12px;text-align:left;border-bottom:1px solid var(--st-line);white-space:nowrap}.colibri-controls th{font-size:12px;color:var(--st-ink-muted);position:sticky;top:0;background:var(--st-surface)}#colibri-expert-map{width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.colibri-tier-legend{display:flex;gap:18px;font-size:12px}.colibri-tier-legend span:before{content:"";display:inline-block;width:9px;height:9px;margin-right:7px;border-radius:3px;background:#3a4750}.colibri-tier-legend span:nth-child(2):before{background:#5a9bd8}.colibri-tier-legend span:nth-child(3):before{background:#4ed6a5}.colibri-controls pre{max-height:420px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}.colibri-controls fieldset{margin:0 0 12px;padding:14px;border:1px solid var(--st-line);border-radius:12px;display:grid;gap:12px}.colibri-controls form{display:grid;gap:14px}.colibri-controls .st-input:focus-visible{outline:2px solid var(--st-accent);outline-offset:2px}@media(max-width:640px){.colibri-facts{grid-template-columns:1fr 1fr}.colibri-controls td,.colibri-controls th{padding:8px}.colibri-controls .training-profile-actions{flex-wrap:wrap}}
+
+body.colibri-selected #backend-configuration,body.colibri-selected .unified-resource-notice,body.colibri-selected .backend-actions,body.colibri-selected #backend-note,body.colibri-selected #backend-load-progress,body.colibri-selected #backend-model,body.colibri-selected #backend-model-facts,body.colibri-selected .backend-intro{display:none!important}
+body.colibri-selected #colibri-workspace h3,section.colibri-controls>h3{font-size:17px;margin:0;padding:0 0 16px;color:var(--st-ink)}
+body.colibri-selected [data-engine-section="run"]{display:flex;flex-direction:column}body.colibri-selected [data-engine-section="run"]>.colibri-controls{order:-1;margin-top:0}
+section.colibri-controls{border:0!important;padding:0!important}section.colibri-controls .colibri-controls-body{padding:0}.colibri-generation{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.colibri-context-control{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}.colibri-context-control p{grid-column:1/-1;color:var(--st-ink-muted);margin:0;font-size:12px}#colibri-workspace{border:0;padding-top:14px}#colibri-workspace .st-card-body{padding:0}#colibri-engine-facts{margin-bottom:4px}.colibri-selected #backend-state{display:none!important}
+@media(max-width:640px){.colibri-generation,.colibri-context-control{grid-template-columns:1fr}}
+
+.colibri-runtime{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.colibri-auto-tier{display:flex!important;align-items:center;grid-column:1/-1}body.colibri-selected #backend-runtime-diagnostic,body.colibri-selected #backend-diagnostics{display:none!important}@media(max-width:640px){.colibri-runtime{grid-template-columns:1fr}}
+
+body.colibri-selected #view-control #backend-form{grid-template-areas:"model run" "resources monitor";grid-template-rows:auto auto;align-items:start}
+body.colibri-selected #backend-form>.dash-card--model{grid-area:model}body.colibri-selected #backend-form>.dash-card--run{grid-area:run}body.colibri-selected #backend-form>.dash-card--res{grid-area:resources}body.colibri-selected #backend-form>.dash-card--pm{grid-area:monitor}
+body.colibri-selected #colibri-start,body.colibri-selected #backend-count-badge{display:none!important}body.colibri-selected #backend-form>.dash-card--run .colibri-controls{margin:0;border:0}body.colibri-selected #backend-form>.dash-card--run .colibri-controls>h3{display:none}
+.colibri-controls button{min-height:44px}.colibri-controls :is(input,select,textarea){min-width:0}.colibri-runtime,.colibri-generation{padding:16px 0;border-top:1px solid var(--st-line)}.colibri-controls-body>label{margin:0}
+@media(max-width:760px){body.colibri-selected #view-control #backend-form{grid-template-areas:"model" "run" "resources" "monitor";grid-template-columns:minmax(0,1fr)}}
+
+/* Native Colibri settings use the same content inset as the surrounding cards. */
+body.colibri-selected #backend-form>.dash-card--res>[data-engine-section="resources"],body.colibri-selected #backend-form>.dash-card--run>[data-engine-section="run"]{padding:22px 24px!important;box-sizing:border-box;min-width:0;gap:0}
+body.colibri-selected #backend-training-runtime,body.colibri-selected [data-engine-section="resources"]>.backend-diagnostics,body.colibri-selected [data-engine-section="resources"]>.backend-section-heading,body.colibri-selected [data-engine-section="resources"]>.configuration-assistant{display:none!important}
+body.colibri-selected #colibri-engine-facts{display:none}
+.colibri-context-hero{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:0 0 20px}.colibri-context-hero>div{display:grid;gap:5px;align-content:start}.colibri-context-hero span{font-size:12px;color:var(--st-ink-muted)}.colibri-context-hero strong{font-size:29px;line-height:1.2;letter-spacing:-.04em;color:var(--st-ink);font-variant-numeric:tabular-nums}.colibri-context-hero>div+div strong{font-size:15px;line-height:1.5;letter-spacing:0}.colibri-context-hero small{font-size:12px;color:var(--st-ink-muted)}
+.colibri-settings-tabs{display:flex;gap:4px;padding:4px;border:1px solid var(--st-line);border-radius:12px;background:var(--st-surface-2);margin-bottom:8px}.colibri-settings-tabs button{flex:1;border:0;border-radius:8px;background:transparent;color:var(--st-ink-muted);font:inherit;font-size:13px;font-weight:600;cursor:pointer}.colibri-settings-tabs button[aria-selected="true"]{background:var(--st-surface);color:var(--st-accent-text);box-shadow:0 1px 5px #0003}
+.colibri-settings-page{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px;padding:12px 0}.colibri-settings-page[hidden]{display:none!important}.colibri-settings-page .colibri-context-control,.colibri-settings-page .colibri-generation,.colibri-settings-page>p{grid-column:1/-1}.colibri-settings-page .colibri-generation{border:0;padding:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+body.colibri-selected #backend-form .colibri-settings-page label{padding:0!important;border:0!important;background:none!important;box-shadow:none!important;gap:8px;font-size:12px;border-radius:0}
+.colibri-settings-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;margin-top:8px;border-top:1px solid var(--st-line)}.colibri-settings-footer p{margin:0;font-size:12px;color:var(--st-ink-muted);line-height:1.6}.colibri-settings-footer button{flex-shrink:0}.colibri-settings-tabs button:focus-visible{outline:2px solid var(--st-accent);outline-offset:2px}
+@media(max-width:640px){body.colibri-selected #backend-form>.dash-card--res>[data-engine-section="resources"],body.colibri-selected #backend-form>.dash-card--run>[data-engine-section="run"]{padding:18px!important}.colibri-settings-page,.colibri-settings-page .colibri-generation{grid-template-columns:1fr}.colibri-context-hero{gap:12px}.colibri-settings-footer{align-items:stretch;flex-direction:column}}
+
+body.colibri-selected #backend-form .colibri-range{appearance:none;-webkit-appearance:none;width:100%;height:7px!important;min-height:7px;padding:0!important;margin:20px 0 13px;border:0!important;border-radius:99px;background:linear-gradient(to right,var(--st-accent) 0 var(--colibri-range-progress,0%),var(--st-surface-2) var(--colibri-range-progress,0%) 100%)!important;cursor:pointer;box-sizing:border-box}
+.colibri-range::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--st-accent);border:3px solid var(--st-surface);box-shadow:0 0 0 1px var(--st-accent),0 2px 8px #0005;cursor:ew-resize}.colibri-range::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--st-accent);border:3px solid var(--st-surface);cursor:ew-resize}.colibri-range:focus-visible{outline:2px solid var(--st-accent);outline-offset:9px}.colibri-settings-page output{font-size:16px;color:var(--st-ink);font-weight:600;font-variant-numeric:tabular-nums}.colibri-context-control label{width:100%}.colibri-context-control{grid-template-columns:minmax(0,1fr)}
+
+.colibri-resource-title{display:flex;align-items:center;justify-content:space-between;gap:18px}.colibri-resource-title>span{font-size:13px;font-weight:500;color:var(--st-ink-muted)}.colibri-context-hero>div+div strong{display:flex;align-items:center;gap:10px}.colibri-context-hero .model-brand-logo{width:30px;height:30px;object-fit:contain;flex:0 0 30px}.colibri-resource-title img.engine-brand-logo[data-brand="colibri"]{width:124px;height:28px;max-width:124px;object-fit:contain}
+
+.engine-brand-logo,.model-brand-logo{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;object-fit:contain}
+html[data-theme="dark"] img.model-brand-logo[src$="brand-model-qwen.svg"]{filter:invert(1)}
+
+.colibri-context-hero{align-items:center;padding:18px 0 24px;border-bottom:1px solid var(--st-line);margin-bottom:4px}.colibri-context-hero>div+div{padding-left:20px;border-left:1px solid var(--st-line)}.colibri-context-hero strong{font-size:32px}.colibri-context-hero small,.colibri-range-hint{line-height:1.6;font-size:12px;color:var(--st-ink-muted)}.colibri-range-scale{display:flex;justify-content:space-between;gap:8px;color:var(--st-ink-muted);font-size:11px;font-variant-numeric:tabular-nums;margin:0 0 9px}.colibri-range-hint{font-weight:400;display:block;max-width:48ch;margin-top:5px}.colibri-settings-page label:has(.colibri-range){gap:6px!important;padding-bottom:14px!important}.colibri-settings-page output{font-size:18px;line-height:1.4}.colibri-resource-title{padding-bottom:0!important}.colibri-settings-tabs{margin-top:12px;margin-bottom:12px}.colibri-settings-page{gap:22px 20px}.colibri-settings-footer{padding-top:18px}.colibri-range-scale span{white-space:nowrap}
+
+body.colibri-selected #backend-form .colibri-controls,body.colibri-selected #backend-form .colibri-controls-body,body.colibri-selected #backend-form .colibri-settings-page{box-sizing:border-box;width:100%;max-width:100%;min-width:0}body.colibri-selected #backend-form .colibri-controls-body>*{min-width:0;max-width:100%;box-sizing:border-box}.colibri-settings-page>label{min-width:0;box-sizing:border-box}.colibri-range-scale{width:100%}
+
+.colibri-range-ticks{position:relative;height:10px;width:100%;margin:-3px 0 2px;box-sizing:border-box}.colibri-range-ticks i{position:absolute;top:0;width:1px;height:5px;background:var(--st-ink-muted);opacity:.5;transform:translateX(-50%)}.colibri-range-ticks i:first-child,.colibri-range-ticks i:last-child{height:8px;opacity:.85}body.colibri-selected #backend-form .colibri-range{margin-bottom:6px!important}
+
+.colibri-range-recommended{position:absolute;top:-2px;width:3px;height:12px;background:var(--st-accent);transform:translateX(-50%);border-radius:2px;box-shadow:0 0 0 2px var(--st-surface)}.colibri-range-hint{border-left:2px solid var(--st-accent);padding-left:9px}
+
+/* The thumb is 20px wide: its centre travels between 10px and width - 10px. */
+.colibri-range-ticks,.colibri-range-scale{width:calc(100% - 20px)!important;margin-left:10px!important;margin-right:10px!important;max-width:calc(100% - 20px)!important;box-sizing:border-box}.colibri-range-scale{position:relative;height:18px;display:block}.colibri-range-scale span{position:absolute;top:0;transform:translateX(-50%)}.colibri-range-scale span:first-child{left:0;transform:none}.colibri-range-scale span:nth-child(2){left:50%}.colibri-range-scale span:last-child{left:100%;transform:translateX(-100%)}label:has(#colibri-runtime-policy) .colibri-range-scale span:nth-child(2){left:33.333333%}label:has(#colibri-runtime-policy) .colibri-range-scale span:nth-child(3){left:66.666667%}
+
+/* Stable identity row: async values do not change either column's baseline. */
+.colibri-context-hero{align-items:start;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:104px;box-sizing:border-box}
+.colibri-context-hero>div{display:grid;grid-template-rows:42px 22px;row-gap:6px;align-content:start;min-width:0;min-height:70px}
+.colibri-context-hero>div:first-child{padding-top:23px}
+.colibri-context-hero>div:first-child>strong{align-self:center;line-height:42px;font-size:32px;white-space:nowrap}
+.colibri-context-hero>div:first-child>small{align-self:start;line-height:22px;margin:0}
+.colibri-context-hero>div+div{grid-template-rows:17px 36px 22px;row-gap:6px;padding-top:0;min-height:87px}
+.colibri-context-hero>div+div>span{line-height:17px;margin:0}
+.colibri-context-hero>div+div>strong{min-height:36px;line-height:36px;align-items:center;margin:0}
+.colibri-context-hero>div+div>small{line-height:22px;margin:0}
+#colibri-active-context{min-height:42px;font-variant-numeric:tabular-nums}
+
+.colibri-context-hero>div:first-child{grid-template-rows:36px 22px}.colibri-context-hero>div:first-child>strong{line-height:36px;min-height:36px}#colibri-active-context{min-height:36px}
+
+.colibri-catalogue{padding:24px;overflow:auto;max-height:70vh}.colibri-catalogue[hidden]{display:none!important}.colibri-catalogue-card{padding:18px 0;border-top:1px solid var(--st-line)}.colibri-catalogue-card h4{display:flex;gap:12px;align-items:center;font-size:16px}.colibri-catalogue-card p{font-size:13px;line-height:1.6;color:var(--st-ink-muted)}.catalogue-dialog-tabs .engine-brand-logo{width:90px;height:24px;flex:0 0 90px}
+.colibri-runtime-panel{padding:24px;border:1px solid var(--st-line);border-radius:18px;background:var(--st-surface-1);margin:20px 0}
+.colibri-runtime-panel>h3{margin:0 0 18px;font-size:18px;line-height:1.4}
+.colibri-runtime-panel .colibri-controls-body{padding:0}
+
+/* Denser Colibri resources, with every control and recommendation retained. */
+body.colibri-selected #backend-form>.dash-card--res>[data-engine-section="resources"]{padding:18px 24px!important}
+body.colibri-selected #view-control #backend-form [data-engine-section="resources"]>.colibri-controls{margin:0;grid-column:1/-1;width:100%;min-width:0}
+body.colibri-selected [data-engine-section="resources"] .colibri-controls-body{gap:8px}
+body.colibri-selected [data-engine-section="resources"] .colibri-context-hero{padding:8px 0 14px;min-height:0;gap:20px;margin:0}
+body.colibri-selected [data-engine-section="resources"] .colibri-context-hero>div{min-height:0}
+body.colibri-selected [data-engine-section="resources"] .colibri-settings-tabs{margin:4px 0;min-height:44px}
+body.colibri-selected #backend-form .colibri-settings-page{gap:14px 24px;padding:12px 0 4px}
+body.colibri-selected #backend-form .colibri-settings-page label:has(.colibri-range){gap:4px!important;padding-bottom:0!important}
+body.colibri-selected #backend-form .colibri-range{margin-top:14px;margin-bottom:4px!important}
+body.colibri-selected [data-engine-section="resources"] .colibri-range-scale{margin-bottom:3px;height:17px}
+body.colibri-selected [data-engine-section="resources"] .colibri-range-hint{line-height:1.5;margin-top:2px;max-width:none}
+body.colibri-selected [data-engine-section="resources"] .colibri-settings-page output{font-size:17px;line-height:1.35}
+body.colibri-selected [data-engine-section="resources"] .colibri-settings-footer{padding-top:12px;margin-top:4px}
+body.colibri-selected [data-engine-section="resources"] .colibri-auto-tier{min-height:44px}
+@media(min-width:1001px){
+ body.colibri-selected #backend-form #colibri-settings-memory{grid-template-columns:repeat(4,minmax(0,1fr))}
+ body.colibri-selected #backend-form #colibri-settings-memory>.colibri-context-control{grid-column:span 2}
+ body.colibri-selected #backend-form #colibri-settings-memory>label:has(#colibri-runtime-policy),body.colibri-selected #backend-form #colibri-settings-memory>.colibri-auto-tier{grid-column:span 2}
+ body.colibri-selected #backend-form #colibri-settings-execution{grid-template-columns:repeat(4,minmax(0,1fr))}
+ body.colibri-selected #backend-form #colibri-settings-response .colibri-generation{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media(max-width:600px){body.colibri-selected #backend-form>.dash-card--res>[data-engine-section="resources"]{padding:16px!important}}
+
+#view-control #backend-form .colibri-compatible-picker{display:none}
+body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.unified-engine-picker,
+body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.colibri-compatible-picker{grid-column:span 1;align-self:start;min-width:0}
+body.colibri-selected #view-control #backend-form .colibri-compatible-picker{display:grid;gap:8px;padding:12px;border:1px solid var(--st-line);border-radius:12px;font-size:12px;line-height:1.4}
+body.colibri-selected #view-control #backend-form .colibri-compatible-picker .st-input{height:52px}
+body.colibri-selected #colibri-workspace>h3{display:none}
+@media(max-width:600px){body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.unified-engine-picker,body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.colibri-compatible-picker{grid-column:1/-1}}
+
+@media(min-width:601px){body.colibri-selected #view-control #backend-form>.dash-card--model>.dash-body:not(.unified-engine-extra){grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+body.colibri-selected #view-control #backend-form .colibri-compatible-picker{display:grid!important}
+body.colibri-selected #view-control #backend-form .unified-engine-picker,body.colibri-selected #view-control #backend-form .colibri-compatible-picker{width:100%;box-sizing:border-box;margin:0;grid-row:auto}
+
+#view-control #backend-form .unified-model-browser>#colibri-catalogue{display:none}
+body.colibri-selected #view-control #backend-form .unified-model-browser>#colibri-catalogue{display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:1;min-height:48px;margin:0}
+body.colibri-selected #view-control #backend-form .unified-model-browser>.local-model-browse{grid-column:1;grid-row:1}
+body.colibri-selected #view-control #backend-form .unified-model-browser>#backend-manage-local{grid-column:1;grid-row:2}
+body.colibri-selected #view-control #backend-form .unified-model-browser>#optional-catalogue-open{grid-column:2;grid-row:2}
+
+body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.unified-engine-picker,
+body.colibri-selected #view-control #backend-form .dash-card--model>.dash-body>.colibri-compatible-picker{display:grid!important;grid-template-rows:18px 52px minmax(20px,auto);align-self:stretch;align-content:start;gap:8px;padding:12px;border:1px solid var(--st-line);border-radius:12px;background:transparent;min-height:126px}
+body.colibri-selected #view-control #backend-form .colibri-compatible-picker>.dm__label{font-size:10px;font-weight:400;letter-spacing:.7px;text-transform:uppercase;line-height:18px;color:var(--st-ink-muted)}
+body.colibri-selected #view-control #backend-form .colibri-compatible-picker #colibri-model-note{margin:0;font-size:12px;line-height:20px;color:var(--st-ink-muted)}
+body.colibri-selected #view-control #backend-form .unified-engine-picker .premium-select-button,body.colibri-selected #view-control #backend-form .colibri-compatible-picker .premium-select-button{min-height:52px;height:52px}
+
+body.colibri-selected #view-control #backend-form #colibri-workspace{margin:0;padding:16px 0 0;border-top:1px solid var(--st-line);width:100%;box-sizing:border-box}
+body.colibri-selected #view-control #backend-form #colibri-workspace .st-card-body{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px 24px;padding:0;margin:0}
+body.colibri-selected #view-control #backend-form #colibri-status{grid-column:1/-1;margin:0;padding:12px 16px;border:1px solid var(--st-line);border-left:3px solid var(--st-accent);border-radius:10px;font-size:13px;line-height:1.6;background:var(--st-accent-tint);overflow-wrap:anywhere}
+body.colibri-selected #view-control #backend-form #colibri-workspace .training-profile-actions:empty{display:none}
+body.colibri-selected #view-control #backend-form #colibri-workspace label:has(#colibri-download-confirm){font-size:12px;line-height:1.6;grid-column:1/-1}
+@media(max-width:600px){body.colibri-selected #view-control #backend-form #colibri-workspace .st-card-body{grid-template-columns:minmax(0,1fr)}}
+
+body.colibri-selected [data-engine-section="resources"] .colibri-settings-footer{justify-content:flex-end;padding-top:14px;margin-bottom:6px}
+body.colibri-selected #view-control #backend-form .colibri-resource-feedback{display:block;box-sizing:border-box;width:100%;margin:0;padding:14px 16px;min-height:50px;border-radius:11px;background:var(--st-accent-tint);border:1px solid var(--st-line);color:var(--st-ink);font-size:12px;line-height:1.6;font-weight:500}

@@ -1,0 +1,9 @@
+{
+  "unit_tests": 73,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "python_sources_parsed": 705,
+  "syntax_errors": [],
+  "scope": "Selected offline HYDRA unit tests; no real model inference, GPU qualification or throughput benchmark."
+}

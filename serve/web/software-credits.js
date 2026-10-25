@@ -1,0 +1,28 @@
+/* Credit projects and contributor communities without inventing individual authors. */
+(()=>{
+ const foot=document.querySelector('.about-foot');if(!foot)return;
+ const t=(it,en)=>document.documentElement.lang.startsWith('en')?en:it;
+ const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
+ const host=node('section',null,'software-credits');host.setAttribute('data-i18n-ignore','');foot.append(host);
+ const groups=[
+  ['Motori e modelli','Engines and models',[
+   ['Hydra One','Niko1221 e contributori','Niko1221/Hydra One'],['Hydra One · riferimento comunitario','Comunità Hydra One','https://stratallm.org/#benchmarks'],['Unsloth','UnslothAI','unslothai/unsloth'],['llama.cpp · ggml','ggml-org e contributori','ggml-org/llama.cpp'],['AirLLM','lyogavin e contributori','lyogavin/airllm'],['Soup','MakazhanAlpamys e contributori','MakazhanAlpamys/Soup'],['PyTorch','PyTorch e contributori','pytorch/pytorch'],['ROCm · HIP','AMD e contributori','ROCm/ROCm']]],
+  ['Training e librerie AI','Training and AI libraries',[
+   ['Transformers','Hugging Face e contributori','huggingface/transformers'],['TRL','Hugging Face e contributori','huggingface/trl'],['PEFT','Hugging Face e contributori','huggingface/peft'],['Accelerate','Hugging Face e contributori','huggingface/accelerate'],['Safetensors','Hugging Face e contributori','huggingface/safetensors'],['Datasets','Hugging Face e contributori','huggingface/datasets'],['Tokenizers','Hugging Face e contributori','huggingface/tokenizers']]],
+  ['Studio multimediale','Multimedia studio',[
+   ['Diffusers','Hugging Face e contributori','huggingface/diffusers'],['ModelScope','ModelScope e contributori','modelscope/modelscope'],['Whisper','OpenAI','openai/whisper'],['whisper.cpp','ggml-org e UnslothAI','ggml-org/whisper.cpp'],['audio.cpp','UnslothAI e contributori','unslothai/audio.cpp'],['AudioCraft · MusicGen','Meta e contributori','facebookresearch/audiocraft'],['Demucs','Meta e contributori','facebookresearch/demucs'],['OpenVoice','MyShell e contributori','myshell-ai/OpenVoice'],['Kokoro','hexgrad e contributori','hexgrad/kokoro'],['Pocket TTS','Kyutai e contributori','kyutai-labs/pocket-tts'],['VoiceStudio','debpalash e contributori','debpalash/VoiceStudio'],['FFmpeg','FFmpeg e contributori','FFmpeg/FFmpeg']]],
+  ['Chat, agenti e strumenti','Chat, agents and tools',[
+   ['Open WebUI','Open WebUI e contributori','open-webui/open-webui'],['OpenCode','Anomaly e contributori','anomalyco/opencode'],['DeepSeek Harness','DeepSeek e contributori','deepseek-ai/deepseek-harness'],['TrueForge','TrueFoundry e contributori','truefoundry/trueforge'],['Hermes Agent','Nous Research e contributori','NousResearch/hermes-agent'],['Claude Code','Anthropic','anthropics/claude-code'],['Playwright · Browser MCP','Microsoft e contributori','microsoft/playwright-mcp'],['Memory MCP','Model Context Protocol e contributori','modelcontextprotocol/servers'],['Headroom','Headroom Labs e contributori','headroomlabs-ai/headroom']]],
+  ['Fondamenta e interfaccia','Foundations and interface',[
+   ['Python','Python Software Foundation e contributori','python/cpython'],['NumPy','NumPy e contributori','numpy/numpy'],['SciPy','SciPy e contributori','scipy/scipy'],['Pillow','python-pillow e contributori','python-pillow/Pillow'],['psutil','giampaolo e contributori','giampaolo/psutil'],['FastAPI','FastAPI e contributori','fastapi/fastapi'],['SQLAlchemy','SQLAlchemy e contributori','sqlalchemy/sqlalchemy'],['Sora','Sora Project Authors','google/fonts/tree/main/ofl/sora'],['Outfit','Outfit Project Authors','google/fonts/tree/main/ofl/outfit']]]
+ ];
+ function render(){const opened=new Set([...host.querySelectorAll('details[open]')].map(n=>n.dataset.group));host.replaceChildren();const heading=node('header');
+  const brand=document.querySelector('.st-header > .st-header__brand')?.cloneNode(true)||node('span','Hydra One','st-header__brand st-edition-brand');
+  brand.classList.add('software-credits__brand');
+  const intro=node('div',null,'software-credits__intro');
+  intro.append(node('h2',t('Crediti e licenze','Credits and licenses')),node('p',t('Hydra One si basa sul motore Hydra One di Niko1221 e dei suoi contributori e integra i progetti elencati di seguito. Ogni componente mantiene la propria licenza e l’attribuzione ai rispettivi autori.','Hydra One is built on the Hydra One engine by Niko1221 and its contributors and integrates the projects listed below. Each component retains its original license and author attribution.')));
+  heading.append(intro,brand);host.append(heading);
+  for(const [it,en,projects]of groups){const section=node('details',null,'software-credit-group');section.dataset.group=en;section.open=opened.has(en);const summary=node('summary');summary.append(node('strong',t(it,en)),node('span',String(projects.length)));section.append(summary);const list=node('div',null,'software-credit-list');for(const [name,authors,repo]of projects){const link=node('a');link.href=repo.startsWith('https://')?repo:'https://github.com/'+repo;link.target='_blank';link.rel='noopener noreferrer';link.append(node('strong',repo==='https://stratallm.org/#benchmarks'?t('Hydra One · riferimento comunitario','Hydra One · community reference'):name),node('small',document.documentElement.lang.startsWith('en')?(authors==='Comunità Hydra One'?'Hydra One community':authors).replaceAll(' e contributori',' and contributors').replaceAll(' e UnslothAI',' and UnslothAI'):authors),node('span','↗','software-credit-arrow'));list.append(link);}section.append(list);host.append(section);}
+ }
+ new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});render();
+})();

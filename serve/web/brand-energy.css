@@ -1,0 +1,14 @@
+/* Optical energy: the original artwork remains the visible, clickable surface. */
+.about-identity-lower .about-logo-link{isolation:isolate;overflow:visible}
+.about-logo-link::before,.about-logo-link::after{content:"";position:absolute;inset:0;pointer-events:none;mask:url('stargatelab-localai-logo.png') center/contain no-repeat;-webkit-mask:url('stargatelab-localai-logo.png') center/contain no-repeat}
+.about-logo-link::before{z-index:2;background:linear-gradient(112deg,transparent 35%,#00d9ff80 43%,#fff 49%,#b26bffb0 54%,transparent 62%);background-size:350% 100%;mix-blend-mode:screen;animation:brand-energy-scan 8s ease-in-out infinite}
+.about-logo-link::after{z-index:-1;background:conic-gradient(from 40deg,#00d9ff80,transparent 25%,#8f42ff90,transparent 70%,#00d9ff80);filter:blur(12px);opacity:.3;animation:brand-energy-breathe 6s ease-in-out infinite}
+.about-logo-link img{position:relative;z-index:1}
+.st-edition-brand__lab{isolation:isolate;animation:none!important;text-shadow:0 0 16px #ffffff18}
+html:not([data-theme=dark]) .st-edition-brand__lab{color:#163d34;text-shadow:none}
+.st-edition-brand__lab::after{background:linear-gradient(110deg,transparent 32%,#6befff 43%,#fff 49%,#bf9aff 55%,transparent 67%);background-size:350% 100%;animation:brand-energy-scan 8s ease-in-out infinite;filter:drop-shadow(0 0 4px #57dcff80)}
+.st-edition-brand__lab::before{content:"";position:absolute;pointer-events:none;left:0;right:0;bottom:-4px;height:1px;background:linear-gradient(90deg,transparent,#00dbff,#ae67ff,transparent);transform-origin:left;opacity:0;animation:brand-energy-thread 8s ease-in-out infinite}
+@keyframes brand-energy-scan{0%,25%{background-position:140% 0;opacity:0}32%{opacity:.85}64%{background-position:-40% 0;opacity:.85}72%,100%{background-position:-40% 0;opacity:0}}
+@keyframes brand-energy-breathe{0%,100%{opacity:.18;transform:scale(.97)}50%{opacity:.45;transform:scale(1.025)}}
+@keyframes brand-energy-thread{0%,25%,80%,100%{transform:scaleX(.08);opacity:0}38%{transform:scaleX(.6);opacity:.65}64%{transform:scaleX(1);opacity:.35}}
+@media(prefers-reduced-motion:reduce){.about-logo-link::before,.about-logo-link::after,.st-edition-brand__lab::before,.st-edition-brand__lab::after{animation:none!important;display:none}}

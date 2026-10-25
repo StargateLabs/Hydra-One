@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scope": "Publication source-only recovery; no executable runtimes, model weights or historical execution attestation",
+  "archive_sha256": "53f637b84eda5a498a2a0767f9b02eb319ab5a40c5eb2a7ce8ada4d998ad902e",
+  "files": [
+    {
+      "path": "cpu_fastpath_v15/protocol-v15.1.json",
+      "bytes": 4113,
+      "sha256": "8d4ef5d0f24d60b4b1a61bc07bc8f82f7be5930d4363987f58e2b220699d2654"
+    },
+    {
+      "path": "experimental_validation_v7_20261018_095534/feature-matrix.json",
+      "bytes": 39721,
+      "sha256": "3a594ac727f360918f90b471f51c791d36604f3517fab637d6bc66b0e60ea9c2"
+    },
+    {
+      "path": "hydra_lab/decision_scoring.py",
+      "bytes": 5215,
+      "sha256": "aeaca64d91f7b987620e1a2bd14368af7fdbdd1ec6c7b54b396727cb8f4a7bc6"
+    },
+    {
+      "path": "hydra_lab/graph_hybrid.py",
+      "bytes": 11217,
+      "sha256": "40edd0ab620036bd69dc1fc8e3c7ec35e9096ca4fda695426202450bc52c9391"
+    },
+    {
+      "path": "hydra_lab/graph_hybrid_v2.py",
+      "bytes": 253,
+      "sha256": "f082c68241688d008182fbe3594bf540dec6a42d7cf9499f750cbee3061dc2a0"
+    },
+    {
+      "path": "hydra_lab/system_one_semantics_contract_lab.py",
+      "bytes": 2846,
+      "sha256": "5090ecce43f54d85c8af45867d54f01d2ae6f9b40f2043c654a827b6c7d876b5"
+    },
+    {
+      "path": "native-overlays/src/CMakeLists.txt",
+      "bytes": 2330,
+      "sha256": "6b525b00dd29cca824bec3594d61f74d28d70e1790ecd2e38c6a4db0bb7ef799"
+    },
+    {
+      "path": "native-overlays/src/llama-mmap.cpp",
+      "bytes": 27563,
+      "sha256": "53527e777c590f643d0f633212ffa9de7c57238e30a9410ead3a3449f622a603"
+    },
+    {
+      "path": "native-overlays/src/llama-mmap.h",
+      "bytes": 1790,
+      "sha256": "356679f3ccfa31ed9b8e07899cd6882165512f03e1c74e91ec72aabfd7ad8c7b"
+    },
+    {
+      "path": "native-overlays/src/llama-model-loader.cpp",
+      "bytes": 77467,
+      "sha256": "b9b36d3c04b742d25177d65f99717306cbaceefc07cdab56ab068f50e27edced"
+    }
+  ]
+}

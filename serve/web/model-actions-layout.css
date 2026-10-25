@@ -1,0 +1,12 @@
+/* One model workspace: choice first, owned engine actions immediately below. */
+#view-control #backend-form[data-model-actions=embedded]{grid-template-areas:"model" "resources" "monitor"}
+#view-control #backend-form .dash-card--model>.model-actions-embedded{margin:0;border:0;border-top:1px solid var(--st-line);border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+#view-control .model-actions-embedded>.dash-head{padding:18px 24px 8px;background:transparent}
+#view-control .model-actions-embedded>.dash-body{padding:16px 24px;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px}
+#view-control .model-actions-embedded .dash-controls,#view-control .model-actions-embedded .backend-actions{gap:10px;flex-wrap:wrap}
+#view-control .model-actions-embedded button{min-height:44px}
+#view-control .model-actions-embedded>.unified-engine-shared{margin:16px 24px;max-width:calc(100% - 48px)}
+#view-control .model-actions-embedded .backend-api-access{padding-top:12px;border-top:1px solid var(--st-line)}
+#backend-form[data-launch-guide=active] .dash-card--model:has(.model-actions-embedded.control-step-current){filter:none}
+#backend-form[data-launch-guide=active] .dash-card--model.control-step-current>.model-actions-embedded:not(.control-step-current){filter:none}
+@media(max-width:600px){#view-control .model-actions-embedded>.dash-head,#view-control .model-actions-embedded>.dash-body{padding:16px}#view-control .model-actions-embedded>.dash-body{grid-template-columns:minmax(0,1fr)}#view-control .model-actions-embedded>.unified-engine-shared{margin:16px;max-width:calc(100% - 32px)}}

@@ -1,0 +1,98 @@
+/* A compact route through the existing four cards, in their established palette. */
+.control-launch-guide{--launch-color:var(--st-warning,#d8a23f);box-sizing:border-box;min-width:0;margin:0 0 20px;padding:18px;border:1px solid var(--st-line);border-radius:18px;background:var(--st-surface);color:var(--st-ink);box-shadow:0 8px 28px #00000012}
+.control-launch-guide[data-step="2"],#control-card-resources{--launch-color:var(--st-accent)}
+.control-launch-guide[data-step="3"],#control-card-thermal{--launch-color:var(--st-purple,#a791e8)}
+.control-launch-guide[data-step="4"],#control-card-run{--launch-color:var(--st-cyan,#35cbe2)}
+#control-card-model{--launch-color:var(--st-warning,#d8a23f)}
+.control-launch-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:16px}
+.control-launch-head>div{min-width:0}
+.control-launch-eyebrow{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--st-ink-muted)}
+.control-launch-head h2{font-size:20px;line-height:1.25;letter-spacing:-.025em;margin:5px 0 0;font-weight:800;text-wrap:balance}
+.control-launch-identity{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end;font-size:12px}
+.control-launch-brand{display:flex;align-items:center;flex:none}
+.control-launch-brand .engine-brand-logo{width:27px;height:27px;object-fit:contain}
+.control-launch-phase{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border:1px solid var(--st-line);border-radius:999px;color:var(--st-ink-muted);font-size:11px;line-height:1.3}
+.control-launch-phase::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.control-launch-guide[data-phase="ready"] .control-launch-phase{color:var(--st-accent);border-color:color-mix(in srgb,var(--st-accent) 35%,var(--st-line))}
+.control-launch-guide[data-phase="active"] .control-launch-phase{color:var(--st-accent)}
+.control-launch-guide[data-phase="active"] .control-launch-phase::before{animation:launch-breathe 1.8s ease-in-out infinite}
+.control-launch-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0;margin:0;list-style:none}
+.control-launch-rail>li{min-width:0}
+.control-launch-stop{box-sizing:border-box;position:relative;display:flex;align-items:center;gap:11px;min-width:0;width:100%;min-height:76px;padding:13px;border:1px solid var(--st-line);border-radius:13px;background:var(--st-surface-2);color:var(--st-ink);text-align:left;cursor:pointer;transition:border-color 160ms,background-color 160ms,box-shadow 160ms}
+.control-launch-stop[data-step="model"]{--stop-color:var(--st-warning,#d8a23f)}
+.control-launch-stop[data-step="resources"]{--stop-color:var(--st-accent)}
+.control-launch-stop[data-step="thermal"]{--stop-color:var(--st-purple,#a791e8)}
+.control-launch-stop[data-step="run"]{--stop-color:var(--st-cyan,#35cbe2)}
+.control-launch-stop[aria-current="step"]{border-color:color-mix(in srgb,var(--stop-color) 85%,white);background:color-mix(in srgb,var(--stop-color) 16%,var(--st-surface));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--stop-color) 56%,transparent),0 0 16px color-mix(in srgb,var(--stop-color) 28%,transparent),0 0 30px color-mix(in srgb,var(--stop-color) 12%,transparent)}
+.control-launch-number{display:grid;place-items:center;flex:0 0 30px;height:30px;border:1px solid color-mix(in srgb,var(--stop-color) 50%,var(--st-line));border-radius:10px;color:var(--stop-color);font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.control-launch-stop[aria-current="step"] .control-launch-number{background:var(--stop-color);color:var(--st-surface);border-color:var(--stop-color)}
+.control-launch-stop-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.control-launch-stop-copy strong{font-size:13px;line-height:1.3;overflow-wrap:anywhere}
+.control-launch-stop-copy small{font-size:11px;line-height:1.4;color:var(--st-ink-muted);overflow-wrap:anywhere}
+.control-launch-detail{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:14px;padding-top:17px;margin-top:17px;border-top:1px solid var(--st-line)}
+.control-launch-dial{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:color-mix(in srgb,var(--launch-color) 8%,var(--st-surface))}
+.control-launch-dial svg{position:absolute;inset:0;width:100%;height:100%;transition:transform 220ms ease}
+.control-launch-dial circle{stroke:var(--st-line);stroke-width:1.2}
+.control-launch-dial path{stroke:var(--launch-color);stroke-width:2.2;stroke-linecap:round}
+.control-launch-dial b{font-size:16px;font-variant-numeric:tabular-nums;color:var(--launch-color)}
+.control-launch-guide[data-step="2"] .control-launch-dial svg{transform:rotate(90deg)}
+.control-launch-guide[data-step="3"] .control-launch-dial svg{transform:rotate(180deg)}
+.control-launch-guide[data-step="4"] .control-launch-dial svg{transform:rotate(270deg)}
+.control-launch-copy{min-width:0}
+.control-launch-copy>strong{font-size:13px;line-height:1.3}
+.control-launch-copy p{font-size:12px;line-height:1.6;color:var(--st-ink-muted);margin:5px 0 0;overflow-wrap:anywhere}
+.control-launch-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;max-width:360px}
+.control-launch-actions .st-btn{min-height:44px;font-size:12px;white-space:normal}
+.control-launch-stop:focus-visible,.control-launch-actions button:focus-visible{outline:2px solid var(--st-accent);outline-offset:3px}
+.control-step-number{display:grid;place-items:center;flex:0 0 27px;width:27px;height:27px;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1;border:1px solid color-mix(in srgb,var(--launch-color) 50%,var(--st-line));border-radius:9px;color:var(--launch-color);background:color-mix(in srgb,var(--launch-color) 7%,var(--st-surface))}
+.control-step-current{outline:1px solid color-mix(in srgb,var(--launch-color) 60%,transparent);outline-offset:-1px}
+.control-step-current .control-step-number{background:var(--launch-color);color:var(--st-surface)}
+/* Keep the current configuration section in the light; keyboard focus moves it. */
+#backend-form[data-launch-guide="active"] .dash-card[data-launch-step]{transition:filter 180ms ease,box-shadow 180ms ease}
+#backend-form[data-launch-guide="active"] .dash-card[data-launch-step]:not(.control-step-current){filter:brightness(.56) saturate(.65)}
+#backend-form[data-launch-guide="active"] .dash-card[data-launch-step].control-step-current{filter:none;outline:2px solid color-mix(in srgb,var(--launch-color) 90%,white);outline-offset:-2px;box-shadow:0 0 0 1px color-mix(in srgb,var(--launch-color) 80%,transparent),0 0 18px color-mix(in srgb,var(--launch-color) 34%,transparent),0 0 42px color-mix(in srgb,var(--launch-color) 16%,transparent)}
+#backend-form[data-launch-guide="active"] .dash-card[data-launch-step]:focus-within{filter:none}
+#backend-form[data-launch-guide="active"] .control-step-current .dash-body .dm{transition:filter 180ms ease,box-shadow 180ms ease}
+#backend-form[data-launch-guide="active"] .control-step-current .dash-body .dm:not(.control-field-current){filter:brightness(.6) saturate(.7)}
+#backend-form[data-launch-guide="active"] .control-step-current .dash-body .control-field-current{filter:none;border-radius:10px;outline:1px solid color-mix(in srgb,var(--launch-color) 78%,white);outline-offset:5px;box-shadow:0 0 18px color-mix(in srgb,var(--launch-color) 20%,transparent)}
+#backend-form[data-launch-guide="active"] .control-step-current .dash-body .dm:focus-within{filter:none}
+@media(prefers-reduced-motion:reduce){#backend-form[data-launch-guide="active"] .control-step-current .dash-body .dm{transition:none}}
+@media(forced-colors:active){#backend-form[data-launch-guide="active"] .control-step-current .dash-body .dm{filter:none;box-shadow:none}.control-field-current{outline:2px solid Highlight}}
+@media(prefers-reduced-motion:reduce){#backend-form[data-launch-guide="active"] .dash-card[data-launch-step]{transition:none}}
+@media(forced-colors:active){#backend-form[data-launch-guide="active"] .dash-card[data-launch-step]{filter:none;box-shadow:none}.control-step-current{outline:2px solid Highlight}}
+.control-step-hint{display:flex;align-items:center;gap:14px;margin:0;padding:12px 20px;font-size:12px;line-height:1.6;color:var(--st-ink-muted);border-bottom:1px solid var(--st-line);background:color-mix(in srgb,var(--launch-color) 4%,var(--st-surface));overflow-wrap:anywhere}
+.control-step-hint>span{flex:1;min-width:0}
+.control-step-actions{display:flex;align-items:center;gap:8px;flex:none}
+.control-step-back{width:44px;min-height:44px;flex:none}
+.control-step-back[hidden]{display:none}
+.control-step-next{min-height:44px;max-width:150px;flex:none;font-size:12px;white-space:normal;line-height:1.4}
+.control-step-hint[hidden]{display:none}
+.control-launch-transit .control-launch-dial path{animation:launch-trace 320ms ease-out}
+#backend-form .dash-card{scroll-margin-top:16px}
+@keyframes launch-trace{from{opacity:.2;stroke-width:5}to{opacity:1;stroke-width:2.2}}
+@keyframes launch-breathe{50%{box-shadow:0 0 0 4px color-mix(in srgb,var(--st-accent) 15%,transparent)}}
+@media(max-width:1050px){.control-launch-detail{grid-template-columns:44px minmax(0,1fr)}.control-launch-actions{grid-column:2;justify-content:flex-start;max-width:none}.control-launch-head{align-items:flex-start}.control-launch-identity{max-width:44%}}
+@media(max-width:650px){.control-launch-guide{padding:14px}.control-launch-head{flex-direction:column;gap:10px}.control-launch-identity{max-width:100%;justify-content:flex-start}.control-launch-head h2{font-size:18px}.control-launch-rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.control-launch-stop{padding:10px;gap:8px;min-height:78px}.control-launch-actions{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.control-launch-actions .st-btn{width:100%}.control-step-hint{padding:11px 14px;flex-direction:column;align-items:stretch}.control-step-next{max-width:none;width:100%}}
+@media(prefers-reduced-motion:reduce){.control-launch-guide *{animation:none!important;transition:none!important}}
+
+/* Keep optional native audio controls compact inside their existing form. */
+#local-audio-panel .generation-native-audio .generation-grid{gap:12px;margin-block:12px}
+#local-audio-panel .generation-native-audio .generation-grid>label{grid-column:auto;margin:0}
+@media(max-width:700px){#local-audio-panel .generation-native-audio .generation-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){.control-step-actions{width:100%;justify-content:space-between}.control-step-actions .control-step-next{width:auto;flex:1;min-width:0}}
+.control-guide-dock{position:fixed;z-index:85;left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:18px;width:min(840px,calc(100vw - 40px));box-sizing:border-box;padding:14px 18px;border:1px solid color-mix(in srgb,var(--st-accent) 55%,var(--st-line));border-radius:15px;background:var(--st-surface);color:var(--st-ink);box-shadow:0 8px 40px #0007,0 0 18px color-mix(in srgb,var(--st-accent) 12%,transparent)}
+.control-guide-dock[hidden],body:has(dialog[open]) .control-guide-dock{display:none}.control-guide-dock>div{flex:1;min-width:0;display:grid;gap:4px}.control-guide-dock strong{font-size:14px}.control-guide-dock small{font-size:11px;line-height:1.5;color:var(--st-ink-muted)}.control-guide-dock button{min-height:46px;flex:none}.control-guide-dock .st-btn--primary{min-width:200px}.control-step-current{scroll-margin-bottom:110px}
+@media(max-width:650px){.control-guide-dock{width:calc(100vw - 20px);bottom:10px;gap:10px;padding:12px;flex-wrap:wrap}.control-guide-dock>div{order:-1;flex-basis:100%}.control-guide-dock small{display:none}.control-guide-dock button{flex:1;font-size:12px;min-width:0!important;white-space:normal;line-height:1.4}}
+@media(forced-colors:active){.control-guide-dock{border-color:Highlight;box-shadow:none}}
+/* The next action must remain unmistakable beside the configuration hint. */
+#backend-form .control-step-next:not(:disabled){background:var(--launch-color,var(--st-accent));color:#101b18;border:1px solid color-mix(in srgb,var(--launch-color,var(--st-accent)) 75%,white);box-shadow:0 0 0 2px color-mix(in srgb,var(--launch-color,var(--st-accent)) 12%,transparent),0 0 18px color-mix(in srgb,var(--launch-color,var(--st-accent)) 30%,transparent);font-size:14px;font-weight:750;line-height:1.4;min-height:52px;min-width:180px;max-width:220px;padding:12px 16px}
+#backend-form .control-step-next:not(:disabled):hover{box-shadow:0 0 0 2px color-mix(in srgb,var(--launch-color,var(--st-accent)) 25%,transparent),0 0 24px color-mix(in srgb,var(--launch-color,var(--st-accent)) 40%,transparent)}
+#backend-form .control-step-back{border-color:color-mix(in srgb,var(--launch-color,var(--st-accent)) 45%,var(--st-line));color:var(--st-ink);min-height:48px}
+@media(max-width:650px){#backend-form .control-step-next:not(:disabled){min-width:0;max-width:none;flex:1}}
+@media(forced-colors:active){#backend-form .control-step-next:not(:disabled){background:ButtonFace;color:ButtonText;border:2px solid Highlight;box-shadow:none}}
+#backend-form .control-step-actions .control-step-next:not(:disabled){white-space:nowrap;word-break:normal;overflow-wrap:normal;min-width:190px;max-width:none;width:auto;line-height:1.3;min-height:52px;font-size:14px;padding:14px 18px}
+@media(max-width:650px){#backend-form .control-step-actions .control-step-next:not(:disabled){min-width:0;white-space:normal}}
+#backend-form .control-step-actions .control-step-next:not(:disabled){min-width:120px} @media(max-width:650px){#backend-form .control-step-actions .control-step-next:not(:disabled){min-width:0}}
+.control-launch-guide .control-launch-detail{border:1px solid color-mix(in srgb,var(--launch-color) 70%,var(--st-line));border-radius:13px;padding:16px;margin-top:18px;background:color-mix(in srgb,var(--launch-color) 9%,var(--st-surface));box-shadow:inset 3px 0 var(--launch-color),0 0 20px color-mix(in srgb,var(--launch-color) 15%,transparent)}
+.control-launch-guide .control-launch-copy>strong{color:var(--st-ink);font-size:15px}.control-launch-guide .control-launch-copy>p{color:var(--st-ink-soft,var(--st-ink-muted));line-height:1.6}.control-launch-guide .control-launch-dial{color:var(--launch-color);filter:drop-shadow(0 0 7px color-mix(in srgb,var(--launch-color) 45%,transparent))}.control-launch-guide .control-launch-dial>b{color:var(--launch-color);font-weight:800}
+@media(forced-colors:active){.control-launch-guide .control-launch-detail{border-color:Highlight;box-shadow:none}.control-launch-guide .control-launch-dial{filter:none}}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "protocol_id": "hydra-cpu-recovery-20261022-v1",
+  "provenance": "Reconstructed bounded workload definitions. Not byte-identical to lost v15.1; historical performance promotion is not transferable.",
+  "supersedes_missing_sha256": "3d62d04bf15cad6bddb2d9b4fd4894c7cdeb311828470297bf56a4f2a8fac446",
+  "model_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+  "parameters": {
+    "threads": 2,
+    "affinity_cpus": 2,
+    "context": 2048,
+    "seed": 42
+  },
+  "workloads": {
+    "short": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "List consecutive integers starting at 1, separated by spaces. /no_think"
+        }
+      ],
+      "max_tokens": 16,
+      "prompt_sha256": "ca899f791505320536e35225f3e4ec70acfabf9d63f77550cc04b6e632f69a76"
+    },
+    "medium": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Describe how a local language model processes a prompt and generates tokens. /no_think"
+        }
+      ],
+      "max_tokens": 64,
+      "prompt_sha256": "4b602f5454c58007b4b6ce553918c6e9fab8442051f667fd16ca7c7786686daf"
+    },
+    "prefix-a": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. Repeat only the code. /no_think"
+        }
+      ],
+      "max_tokens": 16,
+      "prompt_sha256": "99371555e1fb21b6e4b94656d22bcaf28f6b1564f1570cd079d4470f864bb6d9"
+    },
+    "prefix-b": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. The laboratory Aurora records temperature 18 degrees, pressure 3 bar and code ALFA. Repeat only the pressure. /no_think"
+        }
+      ],
+      "max_tokens": 16,
+      "prompt_sha256": "f61531fc845d43d5a2c74c4afdad5eb66042bf9f24f3770ce0044ee810a302db"
+    }
+  },
+  "scoring": {
+    "document": "Aurora has code ALFA.",
+    "question": "What is the code?",
+    "alternatives": [
+      {
+        "id": "correct",
+        "text": "ALFA"
+      },
+      {
+        "id": "other",
+        "text": "BETA"
+      }
+    ]
+  },
+  "thresholds": {
+    "minimum_samples": 15,
+    "minimum_e2e_gain_percent": 15,
+    "maximum_other_compatible_regression_percent": 5
+  }
+}

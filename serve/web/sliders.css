@@ -1,0 +1,18 @@
+/* A defined thumb and track give the slider and its ruler one geometry. */
+.dash-controls input[type=range][data-scaled],input.st-slider[data-scaled]{
+  --range-thumb-size:16px;appearance:none;-webkit-appearance:none;height:26px;
+  padding:0;border:0;border-radius:0;background:transparent;margin:0;cursor:pointer;
+}
+input[type=range][data-scaled]::-webkit-slider-runnable-track{height:6px;border-radius:99px;background:linear-gradient(to right,var(--st-accent) 0 var(--range-fill,0%),var(--st-surface-3,var(--st-line)) var(--range-fill,0%) 100%);box-shadow:inset 0 0 0 1px var(--st-line)}
+input[type=range][data-scaled]::-webkit-slider-thumb{box-sizing:border-box;appearance:none;-webkit-appearance:none;width:var(--range-thumb-size);height:var(--range-thumb-size);margin-top:-5px;border:2px solid var(--st-surface);border-radius:50%;background:var(--st-accent);box-shadow:0 0 0 1px var(--st-accent)}
+input[type=range][data-scaled]::-moz-range-track{height:6px;border-radius:99px;background:linear-gradient(to right,var(--st-accent) 0 var(--range-fill,0%),var(--st-line) var(--range-fill,0%) 100%)}
+input[type=range][data-scaled]::-moz-range-thumb{box-sizing:border-box;width:var(--range-thumb-size);height:var(--range-thumb-size);border:2px solid var(--st-surface);border-radius:50%;background:var(--st-accent);box-shadow:0 0 0 1px var(--st-accent)}
+input[type=range][data-scaled]:focus-visible{outline:2px solid var(--st-info);outline-offset:4px;border-radius:5px}
+input[type=range][data-scaled]:disabled{opacity:.5;cursor:not-allowed}
+.range-scale{height:42px;flex-shrink:0;margin-top:2px}
+.range-scale__tick{width:1px;height:5px;transform:translateX(-50%);background:var(--st-line)}
+.range-scale__tick--major{height:8px;background:var(--st-ink-muted)}
+.range-scale__lab{top:12px;font-size:10px;color:var(--st-ink-muted)}
+.range-scale__now{top:0;width:2px;height:8px;transform:translateX(-50%);transition:none}
+.range-scale__rec{top:0;width:1px;height:8px;transform:translateX(-50%)}
+.range-scale__rec-lab{top:28px;font-size:9px;font-weight:550}

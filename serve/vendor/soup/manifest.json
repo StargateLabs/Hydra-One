@@ -1,0 +1,13 @@
+{
+  "source": "https://github.com/MakazhanAlpamys/Soup",
+  "revision": "61e8c2bf354393cea85002401d0bde803b48f614",
+  "scope": "Unmodified planning modules only; not the GPU training runtime",
+  "files": {
+    "LICENSE": "43af2c00a9061bc543cea7575c6b0889b87ae8e226f3b65b4cb4a7af42076c0d",
+    "src/soup_cli/__init__.py": "51375e55c08d257284fe4f73479338e81f5d9bc9c014f63cf6445d257cae20fb",
+    "src/soup_cli/utils/config_bounds.py": "7a116fbc9261b990a515641bf21adafed0d18841cd9aaff82df2f887b219c7e5",
+    "src/soup_cli/utils/layer_shard.py": "a2c1883c25084e1c911c07ebfedac60786cde5ef462683458b34dff61dfb90e3",
+    "src/soup_cli/utils/layer_stream.py": "6addfa11ca80c4a06b28885b36c0b2f9d5b366a98679e3f533862eea8b5cbb03",
+    "UPSTREAM-NOTICE": "036e5344007274a1994480726a4fc033018cb93de6d7f9e02dd9a39a141a2983"
+  }
+}

@@ -1,0 +1,396 @@
+2|Views
+7|Performance
+9|Connecting…
+10|Light / dark
+11|Switch between light and dark themes
+12|New conversation
+13|Conversation title
+14|Local conversation
+15|Conversations
+16|Regenerate
+17|Export JSON
+18|Search this chat
+19|Word or phrase…
+20|Close conversations
+21|Close
+22|Search conversations…
+23|Search conversations
+24|Saved in this browser. Reattach images and files when reopening a conversation; their contents are not stored in the archive.
+25|Conversation messages
+26|Where shall we start?
+27|The model processes requests on this PC. External tools may access the network when configured.
+28|Explain
+29|Clear concepts, examples and steps
+30|Analyse
+31|Critical points and improvements
+32|Write code
+33|Solutions, decisions and edge cases
+34|Revise text
+35|Clarity, accuracy and style
+36|Conversation navigation
+37|Go to the start of the chat
+38|Start of the chat
+39|Previous request
+40|Next request
+41|Go to the latest response
+42|Latest response
+43|Response in progress
+44|Write your request…
+45|Message
+46|Attach a text file or drop it here
+47|Attach a file
+48|New chat
+49|Download this chat as Markdown
+50|Download this chat
+51|Generation and reasoning
+53|Send
+54|STARGATE LAB / MONITOR
+55|System monitor
+56|Engine activity, PC resources and thermal alerts.
+57|Data source and update status
+58|Data source
+59|Automatic (includes tests)
+60|Operational service
+61|Latest test
+62|Waiting for the server
+63|Request status
+64|Unloaded
+65|Ready
+66|Reading
+67|Generating
+68|Queued
+69|Error
+71|the engine is ready
+72|request progress
+73|no request in progress
+74|Prompt processing · s
+75|Requests
+76|Tokens generated
+77|GPU and power
+78|Utilisation
+80|Temperature
+82|Power
+83|VRAM temperature
+85|Efficiency
+86|instantaneous tokens/s per watt of GPU power
+87|GPU voltage
+89|CPU and system
+90|CPU temperature
+91|CPU power
+93|Disk · read / write
+94|PCH · motherboard
+95|Cores · threads
+99|Context used
+100|Expert cache
+101|Status
+102|Experts found in cache
+103|Accepted draft tokens
+104|Thermal monitor
+106|Temperature threshold
+107|Power threshold
+108|Alert profile
+109|Thermal alert profile
+111|Balanced
+113|Custom
+114|Apply
+115|Clear alert
+118|Request log
+120|Data from this server session. Charts show the samples received; gaps without measurements stay empty. The thermal profile sets alerts and does not change GPU power limits.
+121|Time
+123|Reused
+124|Generated
+128|Duration
+129|No requests recorded
+133|Measure local models and profiles. Compare speed, total request time and response quality.
+134|Open Performance ↗
+135|Set up a test
+136|Isolated configurations: original files remain unchanged.
+137|Mode
+138|Manual
+139|Automatic campaign
+140|Local model
+141|Loading…
+142|Profile
+143|Automatic PCIe allocation
+144|PCIe share 20%
+145|PCIe share 55%
+146|Grouped sums
+147|Campaign profiles
+148|Output tokens
+149|Measurements per profile
+150|Standard prompt
+151|Short
+152|Medium
+153|Long
+154|Extended
+155|Include the 12-task quality check
+156|Custom prompt
+157|Test prompt
+158|Leave blank to use the standard prompt. Choose a request that allows a long response.
+159|The same text is used for every profile. It stays on your PC.
+160|Configuration and resources
+161|Expert RAM · GiB
+162|CPU workers
+163|Draft window
+164|VRAM reserve
+165|2.5 GiB
+168|Text generation tests. Five warm-up requests precede the measurements; prefill is 512 with a controlled cache budget. The test stops if less than 1.5 GiB remains free after loading.
+169|Campaigns test profiles sequentially. A performance gain requires ABBA confirmation and a separate quality assessment.
+170|Start test
+171|Stop
+172|Test session
+173|The next result starts with a measurement.
+174|Choose a model and profile. You can also follow activity in the system monitor.
+175|0 measurements
+176|Decode · tokens/s
+177|Request · seconds
+178|Tasks passed
+179|Results appear after the measurements have completed and been validated.
+180|System monitor ↗
+182|MEASUREMENTS / VARIABILITY
+183|The test, sample by sample
+184|Metric
+185|Prefill · tokens/s
+186|Total duration · seconds
+187|Campaign shown
+188|Current session
+189|Results from the current session
+190|Warm-up
+191|Valid measurements
+192|Profile comparison
+193|Median and observed range. Completed tests are required.
+194|Session results
+195|No completed tests.
+196|History
+197|Campaigns saved locally, including stopped and failed tests.
+198|No campaigns.
+199|PERFORMANCE / DEVELOPMENT PLAN
+200|Measurements, comparisons and development plan for the IQ3_XXS engine.
+201|Open Control ↗
+203|Performance sections
+204|Results and comparisons
+205|Plan and configuration
+206|Reports and sources
+207|LOCAL BENCHMARKS / AUTOMATIC UPDATES
+208|Best observed median
+209|Protocol
+210|Protocol for the best result
+211|Loading completed tests…
+212|Latest validated ABBA comparison
+213|Control, candidate and quality
+214|Comparison
+215|Latest validated comparison
+216|Loading the latest validated comparison…
+217|Campaign results
+218|Loading results…
+219|LOCAL TESTS
+220|Medians and variability
+221|Measurement
+222|End-to-end · tokens/s
+223|Series
+224|Data from this PC
+225|Loading tests…
+226|The point shows the median; the segment shows the observed minimum and maximum.
+227|PRIORITIES
+228|From results to configuration
+229|Target: over 100 tokens/s · not yet achieved
+230|Memory and prefill
+231|The ABBA comparison confirms faster prompt processing with resident experts. Decode speed is essentially unchanged.
+232|Measured · candidate
+233|Italian draft vocabulary and quality
+234|The first ABBA comparison was favourable; no regressions were observed in twelve tasks. Confirm with independent texts, longer contexts and sustained sessions.
+235|Partially confirmed
+236|Cache and transfers
+237|The learned cache did not improve decode speed. PCIe share 20%: +3.15% in the first ABBA and 8/12 → 9/12 tasks passed, with no regressions observed. Sustained stability still needs testing. The 55% share was not adopted.
+238|Under evaluation
+239|Kernels and stability
+240|Optimise the operations measured in the full engine, then validate sustained workloads of 30 minutes and 2 hours before adoption.
+241|Planned
+242|Loading the latest checks…
+243|Engine configuration
+244|Waiting for the engine
+245|Details
+246|Parameters from the latest startup. Changes saved in Control apply the next time the engine loads.
+247|LOCAL LOG
+248|Test reports
+249|Loading reports…
+250|Show
+251|All reports
+252|Fixed-protocol tests
+253|Exploratory tests
+254|Median · minimum–maximum · warm-up excluded
+255|Reports for the selected model, in tokens per second
+256|Test / date
+257|Outcome
+258|Decode · tokens/s
+259|End-to-end · tokens/s
+260|Prefill · tokens/s
+261|Loading results…
+262|Adoption criteria and limitations
+263|Quality, energy and stability
+264|A repeatable gain
+265|The same weights, prompts, output length and executable. Candidates stay separate from the operational profile until quality and stability have been checked.
+266|Correct responses
+267|The latest isolated RAM16 test passed 8 of 12 tasks, matching the control with the same four errors. Quality with fully resident experts still needs assessment.
+268|Power and energy
+269|Balanced sets alerts at 80 °C and 250 W; it does not cap GPU power. Instantaneous efficiency in the monitor is not the total energy per token.
+270|Experimental paths
+271|The WMMA kernel has not demonstrated a consistent gain in the full engine. Stage pin remains excluded because the official documentation reports a correctness issue.
+272|Official references
+273|Hardware, protocol and reliability
+274|Sources
+275|Documentation checked on 9 October 2026. These values guide research; different hardware and protocols require separate comparisons.
+276|External benchmarks and comparison limits
+277|Source
+278|Reported conditions
+279|Interpretation
+281|Measurements from 29 September 2026
+283|Prompt: 4,210–8,830 tokens · output: 128 tokens
+284|55.5–59.2 tokens/s
+285|Four requests
+286|The same GPU, but a different CPU, operating system, pack and workload. A published range, not the median for this PC.
+287|Strata · technical details ↗
+288|Reported estimate ±20%
+290|Short context, 1K / 4K
+292|Estimate, not a measurement
+293|A published theoretical reference. It does not establish that an AMD GPU with 24 GiB can achieve the same decode speed.
+294|Official archive ↗
+295|383 documents and configurations indexed
+296|34 Markdown pages in docs
+297|Paper and reports included in the audit
+298|Guidance distinguishes HIP, CUDA, Windows and Linux. Every port requires local validation.
+299|How to read the metrics
+300|Decode, prefill and total request time
+301|Method
+302|Generation speed reported by the engine. The 100 tokens/s target refers to this metric and has not yet been achieved.
+303|The rate at which new prompt tokens are processed. Faster prefill reduces the initial wait without necessarily improving decode speed.
+304|End-to-end
+305|Output tokens divided by the time for the entire request, including prompt processing. This represents the experience on the measured workload.
+306|Variability
+307|Minimum and maximum describe the observed runs, not confidence intervals. One ABBA series does not establish general superiority.
+309|System information
+310|Strata version, configured model, hardware and local server diagnostics.
+311|Connecting to the server…
+312|Waiting for data
+313|Open Control
+314|View the system
+317|SELECTED MODEL
+318|Configuration read from the runtime
+319|01 / CONFIGURATION AND RESOURCES
+320|Model and hardware
+321|Source: engine and local telemetry
+322|MODEL
+323|Parameters reported by the latest engine startup. They remain available after unloading; changes prepared in Control apply at the next load.
+325|Resources on this PC
+326|INTEGRATIONS
+327|API addresses
+328|Addresses for compatible clients of this instance. Copy the value and configure an API key if required.
+329|Inference runs on this PC. MCP tools and external image URLs may access the network when used.
+330|BROWSER PREFERENCES
+331|Preferences
+332|API key
+333|only if required by the server
+334|Not required
+335|Dark theme
+336|Chat and interface preferences are stored in this browser. The saved key is excluded from diagnostics; use a personal browser if the server requires authentication.
+337|Generation settings shared with other clients are saved on the server. The API monitor, when enabled, also retains requests temporarily.
+338|System diagnostics
+339|Checks and available memory
+340|02 / LIVE DIAGNOSTICS
+341|Download diagnostics JSON
+342|Server status, available memory and checks. The download excludes conversation contents and credentials.
+343|Latest request
+344|Session timings and speeds
+345|03 / SESSION MEASUREMENTS
+346|One request · no median
+347|No requests have completed in this session yet. Send a message to see the actual measurements here.
+348|Total request time · s
+349|Expert cache · %
+350|Saved results
+351|Benchmarks and protocols
+352|04 / PERSISTENT EVIDENCE
+353|All recent reports ↗
+354|Reports saved on this PC for the selected model. Median and range of measured samples; warm-up excluded. Different versions or prompts are not directly comparable.
+357|Loading evidence…
+358|Experimental optimisations stay separate from the operational profile. A faster kernel does not establish a faster full engine.
+359|Available features
+360|Capabilities and limitations
+361|CAPABILITIES AND BOUNDARIES
+362|Startup and management
+363|Operating procedure
+364|WORKFLOW
+365|Start the interface
+366|Strata-Web.bat starts the local server. The default profile in this project uses IQ3_XXS.
+367|Load when needed
+368|Send a message or select Start Strata in Control. Startup may take time while the weights are read.
+369|Observe and act
+370|Monitor shows activity. Control applies budgets at restart; Stop releases VRAM.
+372|Local engine · verifiable data · explicit control
+373|Original project ↗
+374|Community reference ↗
+375|Start / stop
+376|Engine
+377|Start Strata
+378|Stop
+379|Restart
+381|Process images with the model
+382|Images: off
+383|The model loads automatically at the next request.
+384|Model
+385|VRAM used
+386|Current decode speed
+387|Choose a model (official repository)
+388|Q2_0 · Qwen — 2-bit, fastest · 66.4 GB download · 48 GB RAM
+389|IQ2_XS · Qwen — 2-bit i-quant, somewhat better quality · 68.0 GB · 48 GB RAM
+390|IQ3_XXS · Qwen — 3-bit, slower but more accurate · 75.8 GB · 60 GB RAM
+391|IQ3_S · Qwen — 3.5-bit, highest quality (comparable to the full model) · 83.6 GB · 62 GB RAM
+392|IQ1_M · Coder — half the experts (code, tools, images), faster · 58.4 GB · 32 GB RAM
+393|UD-Q4_K_XL · Unsloth — EXPERIMENTAL 4-bit, experts loaded from SSD (7–8.5 tokens/s) · 111.3 GB · 48 GB RAM
+394|Download and configure
+395|Switch to this model now (restarts the server)
+396|Use this model
+397|Model catalogue — checking…
+398|Show catalogue
+399|Qwen3.8-Flash-Next · Swift 1.5
+400|Search Hugging Face
+402|Required (RAM + VRAM)
+403|This PC (RAM + VRAM)
+404|Free disk space
+405|Resource management
+406|System VRAM reserve (MiB)
+408|Desktop reserve: measure the appropriate value rather than minimising it
+409|Resident KV in VRAM (cells)
+410|32768 cells
+411|Higher values speed up context processing but leave less VRAM for experts
+412|Maximum context (tokens)
+413|The model window · applies at the next engine startup
+414|Apply and restart the engine
+415|GPU temperature
+416|GPU power
+417|Performance — no limit
+418|Balanced — 80°C / 250W
+419|Eco — 70°C / 150W
+420|Custom — your thresholds
+421|Temperature limit
+422|Power limit
+423|Temperature trend
+424|Power trend
+425|Reasoning
+426|Off
+427|Low
+428|High
+429|0 = choose the most likely token; useful for reproducible comparisons
+432|Maximum tokens
+433|blank = until completion
+434|Until completion
+436|blank = random
+437|Random
+438|Show reasoning
+439|expanded during generation
+440|Use MCP server tools
+441|the model can call them while responding
+442|Experimental projection
+443|The engine's control vector; off = original model. Changing this rereads the chat once
+444|Share with other applications
+445|omp and other API clients receive these settings when they do not specify their own values
+446|Reset

@@ -1,0 +1,7093 @@
+{
+  "scope": "Static references in project source and documentation; a reference is not a claim of bundled code or supported runtime.",
+  "sources": {
+    "https://github.com/0xSteph/pentest-ai-agents": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/0xsarwagya/ontoly": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/263311487-ux/falsify": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/5dive-ai/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/6figr-com/jobgpt-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/6figr-com/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/70v-Yoyo/md2video-audio-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/8144225309/SuperScalar": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AFLplusplus/AFLplusplus": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ASCIT31/darkmoon-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ASI2030/Fact-Check-X": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AccessLint/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AgriciDaniel/claude-seo": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AlmogBaku/debug-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Antheurus/anywrite": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Antheurus/sshepherd": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AntonioCardenas/generate-nanobanana": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Armur-Ai/Pentest-Swarm-AI": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/AvdLee/SwiftUI-Agent-Skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Azure-Samples/azure-cosmos-java-sql-api-samples": [
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Azure/azure-sdk-for-java": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Azure/azure-sdk-for-js": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Azure/azure-sdk-for-net": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Azure/azure-sdk-for-rust": [
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BagelHole/DevOps-Security-Agent-Skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BenedictKing/codex-review": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BenedictKing/context7-auto-research": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BenedictKing/exa-search": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BenedictKing/firecrawl-scraper": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BenedictKing/tavily-web": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BuffaloWill/burpsuite-project-file-parser": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BuyWhere/buywhere-cursor-plugin": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/BuyWhere/buywhere-mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Cerdore/gdb-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Cerdore/gdb-cli.git": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Champbreed/AegisOps-AI": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Champbreed/AegisOps-AI.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ChaosRealmsAI/agent-cli-spec": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ChrisWiles/claude-code-showcase": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/CloudAI-X/threejs-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/CodeShuX/mockhunter": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/CodeShuX/tokenwise": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Continuum-AI-Corp/OrcaPromptVault": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Continuum-AI-Corp/OrcaReplay": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/CosmoBlk/bestemaildesigns": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/CosmoBlk/email-marketing-bible": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Digidai/product-manager-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Dimillian/Skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Ducksss/codex-profiles": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/DuendeArchive/Support": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Elkidogz/technical-change-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/EmblemCompany/Agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Enreign/progressive-estimation": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/EvanBacon/expo-apple-targets": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/FlowLLM-AI/AxonX": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/FlowLLM-AI/AxonX.git": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Forward-Future/loop-library": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/FrancoStino/opencode-skills-collection": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/FuzzingLabs/mcp-security-hub": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/GPUOpen-LibrariesAndSDKs/display-library": [
+      {
+        "path": "docs/MONITOR-DATI-20261009.md",
+        "line": 7
+      }
+    ],
+    "https://github.com/Genefold/arrowspace-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Ghost011118/project-state-governor": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/HEOJUNFO/ai-film-crew": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/HMAKT99/AKF": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Hanyuyuan6/remote-gpu-trainer": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/HasData/hasdata-cli": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Instant-Expert/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Intelligent-Internet/II-Commons-Skills": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/InternLM/lmdeploy": [
+      {
+        "path": "docs/MOTORI-E-PRIORITA-20261009.md",
+        "line": 15
+      }
+    ],
+    "https://github.com/JDDavenport/context-kit.git": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/JanYork/using-lwc": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/JoshuaKGoldberg/TypeStat": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/JularDepick/user-thoughts.SKILL": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Junaid-PK/laravel-development-workflow": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/JunsW/feature-track": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/JustVugg/colibri": [
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 28
+      },
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 34
+      },
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 54
+      },
+      {
+        "path": "docs/COLIBRI-INTEGRATION-20261014.md",
+        "line": 7
+      },
+      {
+        "path": "serve/colibri_update.py",
+        "line": 18
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/K-Dense-AI/claude-scientific-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/LambdaTest/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Leonxlnx/taste-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Linji-x/spec-driven-loop": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/MakazhanAlpamys/Soup": [
+      {
+        "path": "docs/SOUP-ANALISI-INTEGRAZIONE-20261010.md",
+        "line": 3
+      },
+      {
+        "path": "serve/dependency_supervisor.py",
+        "line": 117
+      },
+      {
+        "path": "serve/local_training.py",
+        "line": 41
+      },
+      {
+        "path": "serve/vendor/soup/manifest.json",
+        "line": 2
+      },
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 5
+      },
+      {
+        "path": "serve/web/local-training.js",
+        "line": 9
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/MiniMax-AI/cli": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Modellix/modellix-plugin": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/MohamedAbdallah-14/unslop": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/MohammadHijjawi97/since-cutoff": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Natchannnn/repository-engineering-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Necmttn/ax": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Neroued/ninfer": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 915
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 68
+      }
+    ],
+    "https://github.com/NetSPI/aws_consoler": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Niko1221/Strata": [
+      {
+        "path": "bench/results/2026-09-29-rtx3090-epyc-milan/README.md",
+        "line": 3
+      },
+      {
+        "path": "docs/AI_SETUP.md",
+        "line": 62
+      },
+      {
+        "path": "docs/AI_SETUP.md",
+        "line": 190
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 48
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 50
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 51
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 62
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 66
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 67
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 69
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 74
+      },
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 82
+      },
+      {
+        "path": "docs/AMD_HIP_PERFORMANCE.md",
+        "line": 4
+      },
+      {
+        "path": "docs/AMD_HIP_PERFORMANCE.md",
+        "line": 137
+      },
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 13
+      },
+      {
+        "path": "docs/AUDIT-DOC-UFFICIALE-20261009.md",
+        "line": 68
+      },
+      {
+        "path": "docs/AUDIT-UNSLOTH-20261009.md",
+        "line": 31
+      },
+      {
+        "path": "docs/INSTALL.md",
+        "line": 32
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 9
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 10
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 11
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 12
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 13
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 14
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 15
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 16
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 17
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 18
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 19
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 20
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 21
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 22
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 23
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 24
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 25
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 26
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 27
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 28
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 29
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 30
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 31
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 32
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 33
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 34
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 35
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 36
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 37
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 38
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 39
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 40
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 41
+      },
+      {
+        "path": "docs/INVENTARIO-DOC-UFFICIALE-20261009.md",
+        "line": 42
+      },
+      {
+        "path": "docs/MCP_SERVER.md",
+        "line": 24
+      },
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 21
+      },
+      {
+        "path": "docs/MOTORI-E-PRIORITA-20261009.md",
+        "line": 15
+      },
+      {
+        "path": "docs/MOTORI-TRASFERIMENTI-20261009.md",
+        "line": 13
+      },
+      {
+        "path": "docs/NUOVI-MARGINI-20261009.md",
+        "line": 60
+      },
+      {
+        "path": "docs/PERFORMANCE-PAGES-REDESIGN.md",
+        "line": 9
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 17
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 18
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 19
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 20
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 21
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 22
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 24
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 25
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 29
+      },
+      {
+        "path": "docs/PIANO-100-TPS-20261010.md",
+        "line": 66
+      },
+      {
+        "path": "docs/PIANO-AMD-HIP-20261009.md",
+        "line": 21
+      },
+      {
+        "path": "docs/PIANO-AMD-HIP-20261009.md",
+        "line": 23
+      },
+      {
+        "path": "docs/PIANO-AMD-HIP-20261009.md",
+        "line": 85
+      },
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 9
+      },
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 10
+      },
+      {
+        "path": "docs/TRASFERIMENTI-HIP-E-PORT-BATCH-20261009.md",
+        "line": 33
+      },
+      {
+        "path": "docs/TRASFERIMENTI-HIP-E-PORT-BATCH-20261009.md",
+        "line": 47
+      },
+      {
+        "path": "docs/TROUBLESHOOTING.md",
+        "line": 70
+      },
+      {
+        "path": "docs/VERIFICA-IQ3-20261008.md",
+        "line": 7
+      },
+      {
+        "path": "README.md",
+        "line": 6
+      },
+      {
+        "path": "README.md",
+        "line": 8
+      },
+      {
+        "path": "README.md",
+        "line": 68
+      },
+      {
+        "path": "README.md",
+        "line": 77
+      },
+      {
+        "path": "README.md",
+        "line": 150
+      },
+      {
+        "path": "serve/dependency_supervisor.py",
+        "line": 117
+      },
+      {
+        "path": "serve/runtime_updates.py",
+        "line": 134
+      },
+      {
+        "path": "serve/web/_bak_index.html",
+        "line": 428
+      },
+      {
+        "path": "serve/web/_bak_index.html",
+        "line": 429
+      },
+      {
+        "path": "serve/web/_bak_index.html",
+        "line": 467
+      },
+      {
+        "path": "serve/web/_bak_index2.html",
+        "line": 428
+      },
+      {
+        "path": "serve/web/_bak_index2.html",
+        "line": 429
+      },
+      {
+        "path": "serve/web/_bak_index2.html",
+        "line": 467
+      },
+      {
+        "path": "serve/web/_bak_index3.html",
+        "line": 428
+      },
+      {
+        "path": "serve/web/_bak_index3.html",
+        "line": 429
+      },
+      {
+        "path": "serve/web/_bak_index3.html",
+        "line": 467
+      },
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 2
+      },
+      {
+        "path": "serve/web/index.html",
+        "line": 514
+      },
+      {
+        "path": "serve/web/index.html",
+        "line": 515
+      },
+      {
+        "path": "serve/web/index.html",
+        "line": 516
+      },
+      {
+        "path": "setup.py",
+        "line": 101
+      },
+      {
+        "path": "setup.py",
+        "line": 102
+      },
+      {
+        "path": "tools/archive_official_docs.py",
+        "line": 48
+      },
+      {
+        "path": "tools/index_official_docs.py",
+        "line": 40
+      },
+      {
+        "path": "UPDATE.bat",
+        "line": 28
+      },
+      {
+        "path": "update.sh",
+        "line": 24
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/Niko1221/Strata.git": [
+      {
+        "path": "docs/AI_SETUP.md",
+        "line": 59
+      }
+    ],
+    "https://github.com/NotMyself/claude-win11-speckit-update-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/NousResearch/hermes-agent": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/NousResearch/hermes-agent.git": [
+      {
+        "path": "serve/harness_updates.py",
+        "line": 213
+      }
+    ],
+    "https://github.com/NygenAnalytics/scarf": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OCA/OpenUpgrade.git": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OCA/maintainer-tools": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OData/WebApi": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OJPalenzuela/agents-generator": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OWASP/threat-dragon": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/OWNER/REPO": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Optim-Agent/optim-agent": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Orkas-AI/Orkas-VideoStudio": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Outfitio/Outfit-Fonts": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 917
+      },
+      {
+        "path": "serve/web/fonts/OFL.txt",
+        "line": 1
+      }
+    ],
+    "https://github.com/Phelan164/codex-howto": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/PhialsBasement/nmap-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Pranav-Nexus/antigravity-skill-porter": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/PrismML-Eng/llama.cpp": [
+      {
+        "path": "hydra-engine/engine_completion_v22/source-download.json",
+        "commit": "e3de715222b2667c54a267441159a5729f11155e"
+      }
+    ],
+    "https://github.com/QwenLM/qwen-code": [
+      {
+        "path": "docs/COLIBRI-INTEGRATION-20261014.md",
+        "line": 56
+      }
+    ],
+    "https://github.com/ROCm/TheRock": [
+      {
+        "path": "tools/hip/package_windows.py",
+        "line": 42
+      }
+    ],
+    "https://github.com/ROCm/TransferBench": [
+      {
+        "path": "docs/TRASFERIMENTI-HIP-E-PORT-BATCH-20261009.md",
+        "line": 33
+      }
+    ],
+    "https://github.com/ROCm/hip": [
+      {
+        "path": "docs/TRASFERIMENTI-HIP-E-PORT-BATCH-20261009.md",
+        "line": 33
+      }
+    ],
+    "https://github.com/ROCm/rocm-systems": [
+      {
+        "path": "tools/hip/package_windows.py",
+        "line": 48
+      }
+    ],
+    "https://github.com/RafalWilinski/mcp-apple-notes": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/RhinoSecurityLabs/pacu": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/SHADOWPR0/beautiful_prose": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/SHADOWPR0/security-bluebook-builder": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/SeanZoR/claude-speed-reader": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Search-3D/electron-drive-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Sharrmavishal/operating-kit": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Shpigford/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Simon-He95/markstream-vue": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Sketchjar/stipple-agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Skyvern-AI/skyvern": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Slashworks-biz/idea-os": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Spicy-API/nsfw-ai-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Suraj1235/open-dynamic-workflows": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/TerminallyLazy/Tree-Ring-Memory": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/TerminallyLazy/tree-ring-memory-codex-plugin": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/TheaDust/lore": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Tiiny-AI/PowerInfer": [
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 48
+      }
+    ],
+    "https://github.com/UrRhb/agentflow": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/UrRhb/agentflow.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/VoltAgent/awesome-agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Wolfe-Jam/faf-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Wolfe-Jam/faf-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Xquik-dev/x-twitter-scraper": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/Xquik-dev/x-twitter-scraper.git": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ZeroPointRepo/youtube-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ZeroPointRepo/zillow-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ZhangHanDong/makepad-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/abhinaykrupa/cowork-to-code-bridge": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/abhinaykrupa/cowork-to-code-bridge.git": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/acme/api": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/acme/build-system": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/actions/runner": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/addcontent/nuclei-mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/addyosmani/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/adelaidasofia/ai-brain-starter": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/advisories/GHSA-m7xq-9374-9rvx": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/agent-frontier/wgm": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/agentbody/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ai-evos/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/airbnb/ts-migrate": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alapha888/agent-skills-en": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alapha888/session-handoff-kit": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alexprivalov/boost-asio-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alexyc9381/court-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alexyc9381/shark-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alfredtech2026/shopify-app-review-brief": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/alirezarezvani/claude-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/amElnagdy/delegate-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/amElnagdy/review-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ambionics/laravel-ignition-rce": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ambionics/phpggc": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/andresriancho/enumerate-iam": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/anomalyco/opencode": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/antbotlab/blueprint": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/antbotlab/blueprint.git": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/anthony-chaudhary/dos-kernel": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/anthropics/claude-code": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/anthropics/claude-plugins-official": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/anthropics/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/antonbabenko/terraform-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/anup-a/agent-artifacts": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aomi-labs/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/apple/container": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aptratcn/skill-audit": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/argoproj/argo-cd": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aspect-build/rules_js": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/astral-sh/ruff-pre-commit": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/astral-sh/uv": [
+      {
+        "path": "serve/web/brands/OFFICIAL-ASSETS.json",
+        "line": 25
+      },
+      {
+        "path": "tools/fetch_official_brand_assets.py",
+        "line": 9
+      }
+    ],
+    "https://github.com/astropy/astropy": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/atdy/maoxuan-product-agent": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/attify/firmware-analysis-toolkit.git": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/awesome-lists/awesome-bash": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aws-observability/aws-rum-web": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/aws/mcp-proxy-for-aws": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/awslabs/git-secrets.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/awss1i/assay": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/axelfreeman/marketing-mindset": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ayghri/i-have-adhd": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/azure/azure-batch-samples": [
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/baskduf/FableCodex": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bata24/gef": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bats-core/bats-core": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bazelbuild/rules_python": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-image-generator-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-image-generator-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-logo-maker-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-logo-maker-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-media-generator-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-media-generator-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-music-generator-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-music-generator-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-podcast-voiceover-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-podcast-voiceover-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-poster-maker-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-poster-maker-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-product-photography-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-product-photography-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-voice-cloning-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-voice-cloning-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-voiceover-generator-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ai-voiceover-generator-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/beatra-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/beatra-skills.git": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ecommerce-product-images-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/ecommerce-product-images-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/lyrics-to-song-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/lyrics-to-song-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/multilingual-voiceover-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/multilingual-voiceover-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/photo-to-anime-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/photo-to-anime-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/talking-avatar-video-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/talking-avatar-video-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/viral-video-remake-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/beatra-ai/viral-video-remake-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bekservice/Famulor-Skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bin1874/before-you-build-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/biopython/biopython": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bitjaru/styleseed": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bitjaru/styleseed.git": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/blaylockbk/Herbie": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/bosmdavid-gif/dropthehassle-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/brianc/node-postgres": [
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/browser-act/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/browserbase/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/busabase/busabase": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/busabase/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/buzzbysolcex/buzz-bd-agent": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/career-ops-hq/career-ops": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/carlospolop/PEASS-ng": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cdklabs/cdk-nag": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ch040602/MdPr": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ch040602/mdpr-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/chaunsin/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/chenli-yy/entropy-box-public": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/chjj/term.js": [
+      {
+        "path": "serve/web/vendor/xterm/xterm.css",
+        "line": 4
+      },
+      {
+        "path": "serve/web/xterm-original.css",
+        "line": 4
+      }
+    ],
+    "https://github.com/christopherlhammer11-ai/recallmax": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/christopherlhammer11-ai/tool-use-guardian": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cilium/cilium-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cilium/hubble": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cilium/tetragon": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cline/cline": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cloudishai/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cohesivity-org/cohesivity-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/commitshow/cli": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/commitshow/commitshow": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/commitshow/production-audit": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/compilerla/conventional-pre-commit": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/ckw-design-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/deterministic-design-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/lookdev-auto-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/lookdev-studio-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/macos-screen-recorder-system-audio": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/mcp-apple-notes": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/screenstudio-alternative-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerkward/web-media-getter-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/connerlambden/helium-mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/conorbronsdon/avoid-ai-writing": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/coreyhaines31/marketingskills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cruisekkk/time-ledger": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/cruisekkk/trading-ledger": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/czlonkowski/n8n-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dair-ai/AI-Papers-of-the-Week": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dair-ai/dair-academy-plugins": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/danielmiessler/SecLists": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/datacurve-ai/deep-swe": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/datacurve-ai/pier": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/davidondrej/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dbhat93/job-search-os": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dbos-inc/dbos-transact-golang": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dbos-inc/dbos-transact-py": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dbos-inc/dbos-transact-ts": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/debpalash/VoiceStudio": [
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 3
+      },
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 51
+      },
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 52
+      },
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 53
+      },
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 54
+      },
+      {
+        "path": "docs/VOICESTUDIO.md",
+        "line": 55
+      },
+      {
+        "path": "serve/voicestudio.py",
+        "line": 23
+      },
+      {
+        "path": "serve/web/voicestudio.js",
+        "line": 6
+      },
+      {
+        "path": "tools/install_voicestudio.py",
+        "line": 22
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/deepseek-ai/deepseek-harness": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/django/django": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dklymentiev/mesh-memory": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dmno-dev/varlock": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/drogers0/gh-image": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/dylanaraps/pure-bash-bible": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/e-m-b-a/emba.git": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/eddoursul/Strata": [
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 66
+      },
+      {
+        "path": "docs/UNSLOTH_Q4.md",
+        "line": 195
+      },
+      {
+        "path": "docs/UNSLOTH_Q4.md",
+        "line": 240
+      }
+    ],
+    "https://github.com/efeslab/fiddler": [
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 40
+      }
+    ],
+    "https://github.com/ejentum/ejentum-mcp": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/elementalsouls/Claude-BugHunter": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/emilkowalski/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/enaqx/awesome-pentest": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/example/my-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/example/new-tool": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/expo/examples": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/expo/examples.git": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/expo/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/f/awesome-chatgpt-prompts": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/f/prompts.chat": [
+      {
+        "path": "serve/web/prompt-library.js",
+        "line": 37
+      },
+      {
+        "path": "serve/web/prompt-library.js",
+        "line": 46
+      },
+      {
+        "path": "tools/import_prompt_catalog.py",
+        "line": 15
+      }
+    ],
+    "https://github.com/facebook/react": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/facebookresearch/audiocraft": [
+      {
+        "path": "docs/AUDIOCRAFT-FUNCTION-COVERAGE-20261015.md",
+        "line": 3
+      },
+      {
+        "path": "serve/local_generative_audio.py",
+        "line": 69
+      }
+    ],
+    "https://github.com/facebookresearch/audiocraft.git": [
+      {
+        "path": "serve/audiocraft_setup.py",
+        "line": 65
+      },
+      {
+        "path": "serve/audiocraft_setup.py",
+        "line": 100
+      }
+    ],
+    "https://github.com/fal-ai-community/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/fb55/entities": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 634
+      }
+    ],
+    "https://github.com/ffuf/ffuf": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/firmadyne/firmadyne.git": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/flyingsquirrel0419/squirrel-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/fractalmind-ai/agent-manager-skill.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/frmoretto/clarity-gate": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/frohoff/ysoserial": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/fullstackcrew-alpha/privacy-mask": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/getsentry/ops": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/getsentry/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/getsops/sops": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ggml-org/llama.cpp": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 911
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 67
+      },
+      {
+        "path": "docs/MOTORI-TRASFERIMENTI-20261009.md",
+        "line": 9
+      },
+      {
+        "path": "README.md",
+        "line": 177
+      },
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 3
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "setup.py",
+        "line": 94
+      }
+    ],
+    "https://github.com/ggml-org/llama.cpp.git": [
+      {
+        "path": "CMakeLists.txt",
+        "line": 871
+      }
+    ],
+    "https://github.com/ggml-org/whisper.cpp": [
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 6
+      }
+    ],
+    "https://github.com/glukicov/slideops": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/go-rod/rod": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/goharbor/harbor": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/gokapso/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/gongdear/cline-pilot": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/google-gemini/antigravity-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/google-gemini/gemini-cli": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/google-gemini/gemini-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/google-labs-code/stitch-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/google/fonts": [
+      {
+        "path": "serve/web/fonts/sora-provenance.json",
+        "line": 3
+      },
+      {
+        "path": "serve/web/fonts/sora-provenance.json",
+        "line": 9
+      }
+    ],
+    "https://github.com/gooseworks-ai/goose-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/hafiz-actyte/idea-autopsy": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/happy520ai/unified-ai-system": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/headroomlabs-ai/headroom": [
+      {
+        "path": "docs/HEADROOM.md",
+        "line": 11
+      }
+    ],
+    "https://github.com/hermes-labs-ai/lintlang": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/heyneuron/flowhunt-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/honmashironeko/ProxyCat": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/honojs/middleware": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/huggingface/diffusers": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/huggingface/hf-mount": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/huggingface/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/huggingface/transformers": [
+      {
+        "path": "serve/transformers_integration.py",
+        "line": 26
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/huggingface/trl": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/huifer/Claude-Ally-Health": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/hyhmrright/brooks-lint": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/hyhmrright/logic-lens": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ibelick/ui-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ikawrakow/ik_llama.cpp": [
+      {
+        "path": "docs/MOTORI-TRASFERIMENTI-20261009.md",
+        "line": 10
+      }
+    ],
+    "https://github.com/incoai/splash": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 915
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 68
+      }
+    ],
+    "https://github.com/iniesohidham/idea-to-blueprint": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/inikulin/parse5": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1197
+      }
+    ],
+    "https://github.com/iradoweck/antigravity-awesome-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/itsmemeworks/adhx": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ivankoriako/viboscope": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jackjin1997/ClawForge": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jcaiagent7143-ui/linkdigest-mcp": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jeremylong/DependencyCheck": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jiawood2006/hermes-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/joaomdmoura/crewAI": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jonathimer/devmarketing-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/jthack/ffuf_claude_skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/k-kolomeitsev/data-structure-protocol": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/karpathy/hn-time-capsule": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kennyzheng-builds/seek-and-analyze-video": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kepano/obsidian-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kimtth/agent-pptify-kit": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/koalaman/shellcheck": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/koalaman/shellcheck.git": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kotobuki09/instructree": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/krabat-l/claude-debug": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kromahlusenii-ops/ham": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ksgisang/AI-Watch-Tester": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ksgisang/awt-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kubestellar/console": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/kvcache-ai/ktransformers": [
+      {
+        "path": "docs/AUDIT-COLIBRI-E-SIMILI-20261009.md",
+        "line": 44
+      },
+      {
+        "path": "docs/MOTORI-TRASFERIMENTI-20261009.md",
+        "line": 11
+      },
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 13
+      }
+    ],
+    "https://github.com/langchain-ai/langgraph": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/leonardomso/33-js-concepts": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/lijiejie/ds_store_exp": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/lognorm/lognorm-mcp": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/longbridge/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/loootai/looot-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/luoyuctl/agenttrace": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/lyogavin/airllm": [
+      {
+        "path": "docs/AIRLLM.md",
+        "line": 15
+      },
+      {
+        "path": "serve/airllm_runtime.py",
+        "line": 99
+      },
+      {
+        "path": "serve/airllm_updates.py",
+        "line": 13
+      },
+      {
+        "path": "serve/web/airllm-ui.js",
+        "line": 6
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-dotnet": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-java": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-nodejs": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-openapi": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-php": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-python": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mailtrap/mailtrap-ruby": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/makenotion/notion-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/makepad/makepad": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/makepad/makepad.git": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/maleksaadi0109/hyprfedora": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/marketplace/actions": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/marsiandeployer/vibers-action": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/masakaai/jet-browser": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/masakaai/jet-browser.git": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/matplotlib/matplotlib": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mattpocock/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/maxbaluev/accreted-intelligence": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mbenhard/unship": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mdagnolops/1human-reels": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/merc1305/findMate": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/metalbear-co/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/metrox-eth/quit-sponsor": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/Agents": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/Agents-for-python": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/ApplicationInsights-JS": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/TypeScript": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/agents": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/microsoft/playwright": [
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 8
+      }
+    ],
+    "https://github.com/microsoft/playwright-mcp": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/microsoft/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-3.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mishanefedov/skill-issue": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mistymntncop/CVE-2023-4863": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ml-explore/mlx-lm": [
+      {
+        "path": "docs/MOTORI-E-PRIORITA-20261009.md",
+        "line": 15
+      }
+    ],
+    "https://github.com/mnemoverse/agent-memory-discipline": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/modelcontextprotocol/modelcontextprotocol": [
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 9
+      }
+    ],
+    "https://github.com/modelcontextprotocol/servers": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/modelcontextprotocol/typescript-sdk": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/monte-carlo-data/mc-agent-toolkit": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/monte-carlo-data/mcd-public-resources": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/morluto/rea": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/morsechimwai/lemmaly": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/morsechimwai/lemmaly.git": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/moxin-org/moly": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mrexodia/ida-pro-mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mrexodia/ida-pro-mcp.git": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mskadu/opencode-agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mturac/recsys-pipeline-architect": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/multica-ai/andrej-karpathy-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mvdan/sh": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/my-org/backend": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/mycelos-ai/bumblebee-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/myorg/": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/myorg/backstage-templates": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/myorg/myrepo": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/myorg/software-catalog": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/myshell-ai/OpenVoice": [
+      {
+        "path": "tools/setup_local_generative_audio.py",
+        "line": 22
+      },
+      {
+        "path": "tools/setup_local_generative_audio.py",
+        "line": 25
+      }
+    ],
+    "https://github.com/n8n-io/n8n": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ndesv21/socialclaw": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/neondatabase/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/neondatabase/preview-branches-with-cloudflare": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/neondatabase/preview-branches-with-fly": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/neondatabase/preview-branches-with-vercel": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/networkx/networkx": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/niklasb/libc-database": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/njerschow/textme": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/njerschow/textme.git": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/nowork-studio/NotFair": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/npm/logos": [
+      {
+        "path": "serve/web/brands/OFFICIAL-ASSETS.json",
+        "line": 32
+      },
+      {
+        "path": "tools/fetch_official_brand_assets.py",
+        "line": 10
+      }
+    ],
+    "https://github.com/npryce/adr-tools": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/nvm-sh/nvm": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/obra/superpowers-lab": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/obsidianmd/jsoncanvas": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ohad6k/ditto": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/olgasafonova/SkillCheck-Free": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/omkamal/pypict-claude-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/onkarbadve/agy-auto": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/onkarbadve/agy-auto.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/op7418/NanoBanana-PPT-Skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/open-webui/open-webui": [
+      {
+        "path": "docs/ANALISI-OPEN-WEBUI-20261011.md",
+        "line": 18
+      },
+      {
+        "path": "docs/ANALISI-OPEN-WEBUI-20261011.md",
+        "line": 19
+      },
+      {
+        "path": "docs/ANALISI-OPEN-WEBUI-20261011.md",
+        "line": 20
+      },
+      {
+        "path": "docs/ANALISI-OPEN-WEBUI-20261011.md",
+        "line": 21
+      },
+      {
+        "path": "docs/ANALISI-OPEN-WEBUI-20261011.md",
+        "line": 22
+      }
+    ],
+    "https://github.com/openai/codex": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/openclaw/openclaw": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/openclaw/openclaw.git": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/gitops-repo": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/manifests": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/monorepo.git": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/my-app": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/myapp-chart.git": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/myapp-manifests.git": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/myapp.git": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/nodejs-app.git": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/private-repo.git": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/org/repo": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/othmanadi/planning-with-files": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/oven-sh/bun": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/owasp-modsecurity/ModSecurity": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/owner/my-repo": [
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/owner/repo": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/perplexityai/bumblebee": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/phoenixhaxor/exllamav3-rocm": [
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 75
+      },
+      {
+        "path": "docs/MOTORI-TRASFERIMENTI-20261009.md",
+        "line": 12
+      }
+    ],
+    "https://github.com/pilot-protocol/pilotprotocol": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pimps/JNDI-Exploit-Kit": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/planetscale/cli": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/playbookTV/rayden-ui-design-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/playwright-community/playwright-go": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pmndrs/zustand": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pola-rs/polars": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/prateeks367/voicemoat-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pravin-python/antigravity-awesome-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pre-commit/pre-commit-hooks": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/project-robius/robius-packaging-commands": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/project-robius/robius-packaging-commands.git": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/project-robius/robrix": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/projectdiscovery/nuclei": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/proompteng/bilig": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/provencher/codex-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/psf/black": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pwndbg/pwndbg": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pyenv/pyenv": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/pytorch/pytorch": [
+      {
+        "path": "docs/PYTORCH_INTEGRATION.md",
+        "line": 25
+      },
+      {
+        "path": "serve/pytorch_integration.py",
+        "line": 46
+      },
+      {
+        "path": "serve/web/pytorch-ui.js",
+        "line": 18
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/qinghui316/ecl-harness-engineer": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/qrxcodes/qrx-mcp": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/quantumlib/Cirq": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/quantumlib/ReCirq": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/radareorg/radare2": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/rails/rails": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/rainmanjam/poka-yoke": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ramkansal/pentestmcp": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/ramkansal/pentestmcp.git": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/rclone/rclone": [
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/reconquest/shdoc": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/remotion-dev/remotion": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/replynodes/replynodes-agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/reqable/reqable-mcp-server": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/restic/restic": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/returntocorp/semgrep": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/riffkit/skill": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/robzolkos/skill-rails-upgrade": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/romankurnovskii/etemaro": [
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/runapi-ai/cli": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/runapi-ai/cli-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sandbaseai/awesome-workbuddy": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sandbaseai/cli": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sandbaseai/sandbase-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sanjay3290/ai-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sarveshtalele/linkedin-content-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/saudademjj/luopan": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/scarletkc/vexor": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/secengjeff/rapidresetclient": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/semgrep/semgrep-docs": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sendblue-api/sendblue-cli": [
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sergebulaev/linkedin-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/shadcn-ui/ui": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/shellcheck-py/shellcheck-py": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/shellspec/shellspec": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/shitianfang/jev-use": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sickn33/agentic-awesome-skills": [
+      {
+        "path": "serve/web/prompt-library.js",
+        "line": 46
+      },
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      },
+      {
+        "path": "tools/build_skill_catalog.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/sinsinology/CVE-2023-20887": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/skylot/jadx": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/socai-io/jev-social": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sora-xor/sora-font": [
+      {
+        "path": "serve/web/fonts/Sora-OFL.txt",
+        "line": 1
+      }
+    ],
+    "https://github.com/sparklingneuronics/sparkling-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sponsors/colinhacks": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1798
+      }
+    ],
+    "https://github.com/sponsors/cyyynthia": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1595
+      }
+    ],
+    "https://github.com/sponsors/eemeli": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1789
+      }
+    ],
+    "https://github.com/sponsors/epoberezkin": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 349
+      }
+    ],
+    "https://github.com/sponsors/fastify": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 746
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1330
+      }
+    ],
+    "https://github.com/sponsors/feross": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 415
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 447
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 921
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1431
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1542
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1562
+      }
+    ],
+    "https://github.com/sponsors/isaacs": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 839
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1134
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1222
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1532
+      }
+    ],
+    "https://github.com/sponsors/ljharb": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 396
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 479
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 508
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 593
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 776
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 785
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 809
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 851
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 872
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 884
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 899
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1001
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1016
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1143
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1499
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1725
+      }
+    ],
+    "https://github.com/sponsors/panva": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1071
+      }
+    ],
+    "https://github.com/sponsors/sindresorhus": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 576
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1119
+      }
+    ],
+    "https://github.com/sponsors/uhop": [
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1622
+      },
+      {
+        "path": "tools/rea/package-lock.json",
+        "line": 1634
+      }
+    ],
+    "https://github.com/sst/opencode": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sstklen/infinite-gratitude": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/stareezy-1/frontend-architecture-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/stas4000/tastegate": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/stas4000/what-could-break": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/stefanautomateed/shipvela-codex": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-21.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sudosubin/gh-attach": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/supabase/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/supabase/cli": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/supercorp-ai/supercov": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/supernovae-st/nika-agents": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/swisskyrepo/PayloadsAllTheThings": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/sympy/sympy": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/synacktiv/php_filter_chain_generator": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/syv-ai/HyperQwen": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 916
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 69
+      }
+    ],
+    "https://github.com/taisly/agent": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/takeaseatventure/devops-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/takeaseatventure/sql-sentinel": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/takeaseatventure/sql-sentinel.git": [
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/talivia-group/agent": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/target1m/traderspy-mcp": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/tellmefrankie/news-engine": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/temporalio/samples-go": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/testdriverai/testdriverai": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thebrierfox/doc2math-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thebrierfox/intuitek-ace": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thebrierfox/moatmri-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thebrierfox/yield-intelligence-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thecsdoctor/brendangregg-use-tsa-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/thoughtbot/guides": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/timwukp/agent-skills-best-practice": [
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/tomelias10/mcp-drift-check": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/tomnomnom/gf": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/trailofbits/skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/trpc/trpc": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/truefoundry/trueforge": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      },
+      {
+        "path": "serve/harness_updates.py",
+        "line": 5
+      }
+    ],
+    "https://github.com/tsdjs/tsd": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/tubeagentkit/youtube-transcript-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/turboderp-org/exllamav3": [
+      {
+        "path": "docs/MOTORI-E-PRIORITA-20261009.md",
+        "line": 15
+      }
+    ],
+    "https://github.com/twoicewoo/awesome-copilot": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/type-challenges/type-challenges": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/uizze/uizze": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/unslothai/audio.cpp": [
+      {
+        "path": "docs/PIANO-COMPLETAMENTO-20261010.md",
+        "line": 125
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/unslothai/llama.cpp": [
+      {
+        "path": "serve/llama_gpu_update.py",
+        "line": 21
+      },
+      {
+        "path": "serve/runtime_updates.py",
+        "line": 134
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 51
+      },
+      {
+        "path": "tools/verify_llama_gpu_candidate.py",
+        "line": 13
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/unslothai/unsloth": [
+      {
+        "path": "docs/AUDIT-UNSLOTH-20261009.md",
+        "line": 9
+      },
+      {
+        "path": "docs/AUDIT-UNSLOTH-20261009.md",
+        "line": 21
+      },
+      {
+        "path": "docs/PRESTAZIONI-UNSLOTH-CONFRONTO.md",
+        "line": 7
+      },
+      {
+        "path": "docs/PRESTAZIONI-UNSLOTH-CONFRONTO.md",
+        "line": 8
+      },
+      {
+        "path": "docs/PRESTAZIONI-UNSLOTH-CONFRONTO.md",
+        "line": 9
+      },
+      {
+        "path": "docs/PRESTAZIONI-UNSLOTH-CONFRONTO.md",
+        "line": 10
+      },
+      {
+        "path": "docs/UNSLOTH-INTEGRAZIONE-E-MODELLO-20261010.md",
+        "line": 52
+      },
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 4
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "tools/audit_unsloth_sources.py",
+        "line": 39
+      },
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/unslothai/whisper.cpp": [
+      {
+        "path": "serve/update_center.py",
+        "line": 16
+      }
+    ],
+    "https://github.com/upstash/ratelimit-js": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/upstash/redis-js": [
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/user-attachments/assets": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/user/project-name": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/uulong950/qingming-gfx1100-gemv": [
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 76
+      },
+      {
+        "path": "docs/PERFORMANCE-RESEARCH-20261008.md",
+        "line": 23
+      }
+    ],
+    "https://github.com/uxkin/agent": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/uxuiprinciples/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/vanshyadav1408/Omentir": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-17.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/veorq/cryptocoding": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/vercel-labs/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/video-db/skills": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/viliawang-pm/ai-engineering-toolkit": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/viliawang-pm/ai-engineering-toolkit.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/vipin-si/article-illustrations": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/voidborne-d/lambda-lang": [
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/vostride/agent-qa": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/voygr-tech/placecall": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/warmskull/idea-darwin": [
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/weaviate/agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/websockets/ws": [
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/webzler/agentMemory": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/webzler/agentMemory.git": [
+      {
+        "path": "serve/web/skill-catalog-text-0.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/wede-wx/atlas": [
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/whatiskadudoing/fp-ts-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/woodruffw/zizmor": [
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/work0r-ai/agent-kit": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/wrsmith108/linear-claude-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/wrsmith108/varlock-claude-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/wshobson/agents": [
+      {
+        "path": "docs/CACHE-APPRESA-20261009.md",
+        "line": 33
+      }
+    ],
+    "https://github.com/wshuyi/x-article-publisher-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/wwewtech/anti-slop-design": [
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xai-org/x-algorithm": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xi-kari/crossframe-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-6.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xiehuan123/browser-extension-launch": [
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xiehuan123/dsh-deepread": [
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xwmxcz/papers-mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xwmxcz/papers-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/xyzzing/Strata": [
+      {
+        "path": "docs/AMD-MAX-PERFORMANCE-ANALYSIS.md",
+        "line": 65
+      }
+    ],
+    "https://github.com/yaojingang/yao-meta-skill": [
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/yehudalevy-collab/polis-protocol": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/yehudalevy-collab/polis-protocol.git": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/yikuansun/PhotopeaAPI": [
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/you/your-repo": [
+      {
+        "path": "serve/web/skill-catalog-text-25.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/your-repo/project.git": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/yusufkaraaslan/Skill_Seekers": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/yylo-dev/yylo-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zarazhangrui/frontend-slides": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zebbern/claude-code-guide": [
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zenlee123/routerbase-agent-skills": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zhaoxuya520/reverse-skill": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-1.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-13.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-14.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-15.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-16.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-18.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-19.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-22.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-23.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-26.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-4.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-5.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-7.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-8.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zhexulong/openreverse": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zhexulong/openreverse.git": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zrax/pycdc": [
+      {
+        "path": "serve/web/skill-catalog-text-20.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zubair-trabzada/geo-seo-claude": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-10.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://github.com/zxkane/aws-skills": [
+      {
+        "path": "serve/web/skill-catalog-data.js",
+        "line": 1
+      },
+      {
+        "path": "serve/web/skill-catalog-text-2.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/.well-known/openapi.json": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 228
+      },
+      {
+        "path": "docs/DETAILS.md",
+        "line": 907
+      },
+      {
+        "path": "docs/MODELS.md",
+        "line": 95
+      }
+    ],
+    "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 215
+      },
+      {
+        "path": "docs/DETAILS.md",
+        "line": 738
+      },
+      {
+        "path": "docs/DETAILS.md",
+        "line": 906
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 63
+      },
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 7
+      },
+      {
+        "path": "README.md",
+        "line": 176
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 279
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 286
+      }
+    ],
+    "https://huggingface.co/Nickyang/Qwen3.8-Flash-Next-RAZOR-65B-A6B-E256of512": [
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 39
+      }
+    ],
+    "https://huggingface.co/Qwen/Qwen3.8-Flash-Next": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 216
+      },
+      {
+        "path": "docs/DETAILS.md",
+        "line": 905
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 62
+      },
+      {
+        "path": "docs/MODELS.md",
+        "line": 3
+      },
+      {
+        "path": "docs/UNSLOTH_Q4.md",
+        "line": 243
+      },
+      {
+        "path": "README.md",
+        "line": 10
+      },
+      {
+        "path": "README.md",
+        "line": 175
+      }
+    ],
+    "https://huggingface.co/Serveurperso/YuE2-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 192
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 208
+      }
+    ],
+    "https://huggingface.co/WineryLabs/Winery-Qwen3.8-Flash-Next-Cuvee-GGUF": [
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 11
+      },
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 40
+      }
+    ],
+    "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 980
+      }
+    ],
+    "https://huggingface.co/agentionai/Qwen3.8-Flash-Next-Gyro-GGUF": [
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 43
+      }
+    ],
+    "https://huggingface.co/alesha-pro/Qwen3.8-Flash-Next-abliterated-GSQ-RCO-Strata-GGUF": [
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 9
+      }
+    ],
+    "https://huggingface.co/api/daily_papers": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/api/datasets": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/api/models": [
+      {
+        "path": "serve/catalogue.py",
+        "line": 163
+      },
+      {
+        "path": "serve/catalogue.py",
+        "line": 249
+      },
+      {
+        "path": "serve/catalogue_verified.py",
+        "line": 86
+      },
+      {
+        "path": "serve/catalogue_verified.py",
+        "line": 188
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 103
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 157
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 237
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 303
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 458
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 597
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 636
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 696
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 763
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 916
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1048
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1146
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1241
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1298
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 130
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 472
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 595
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 599
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 621
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 663
+      },
+      {
+        "path": "serve/optional_catalogue.py",
+        "line": 669
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "setup.py",
+        "line": 63
+      },
+      {
+        "path": "tools/download_vision_control.py",
+        "line": 3
+      },
+      {
+        "path": "tools/mtp_fetch.py",
+        "line": 29
+      },
+      {
+        "path": "tools/prepare_document_reranker.py",
+        "line": 10
+      },
+      {
+        "path": "tools/prepare_local_visual_model.py",
+        "line": 35
+      }
+    ],
+    "https://huggingface.co/api/papers": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/api/settings": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/api/spaces": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/api/validate-yaml": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/blog/zerogpu-aoti": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/cdiamond/Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 345
+      }
+    ],
+    "https://huggingface.co/datasets/linoyts": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/datasets/multimodalart": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/docs/hub": [
+      {
+        "path": "docs/CATALOGO-RICERCA-20261010.md",
+        "line": 39
+      },
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      },
+      {
+        "path": "tools/verify_optional_integrated_real.py",
+        "line": 19
+      }
+    ],
+    "https://huggingface.co/docs/huggingface_hub": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/docs/peft": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/docs/transformers": [
+      {
+        "path": "docs/MUSICGEN-INTERFACE-COVERAGE-20261014.md",
+        "line": 5
+      },
+      {
+        "path": "serve/web/update-center.js",
+        "line": 14
+      }
+    ],
+    "https://huggingface.co/docs/trl": [
+      {
+        "path": "docs/TRAINING-EXPORT-LOCALE.md",
+        "line": 3
+      },
+      {
+        "path": "serve/web/skill-catalog-text-24.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/front/assets": [
+      {
+        "path": "serve/web/brands/SOURCES.json",
+        "line": 10
+      }
+    ],
+    "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 488
+      }
+    ],
+    "https://huggingface.co/lte-ai/GLM-5.3-Flash-Strata-Q2Q3-Experts": [
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 12
+      }
+    ],
+    "https://huggingface.co/mudler/locate-anything.cpp-gguf": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 66
+      }
+    ],
+    "https://huggingface.co/myshell-ai/OpenVoiceV2": [
+      {
+        "path": "tools/setup_local_generative_audio.py",
+        "line": 28
+      },
+      {
+        "path": "tools/setup_local_generative_audio.py",
+        "line": 34
+      }
+    ],
+    "https://huggingface.co/org/name": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/papers/2602.08025": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/papers/2602.08025.md": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/peonist-ai/halogen-qwen3.8-flash-next": [
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 41
+      }
+    ],
+    "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 805
+      }
+    ],
+    "https://huggingface.co/settings/mcp": [
+      {
+        "path": "serve/web/skill-catalog-text-11.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/settings/tokens": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/shefowl/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-Hybrid-GGUF": [
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 8
+      }
+    ],
+    "https://huggingface.co/spaces/ggml-org": [
+      {
+        "path": "serve/web/skill-catalog-text-12.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/spaces/mteb": [
+      {
+        "path": "serve/web/skill-catalog-text-9.js",
+        "line": 1
+      }
+    ],
+    "https://huggingface.co/spiritfather/cyberneurova-Qwen3.8-Flash-Next-i1-GGUF": [
+      {
+        "path": "docs/RICERCA-MOTORI-E-MODELLI-20261009.md",
+        "line": 42
+      }
+    ],
+    "https://huggingface.co/tirex2001/Qwen3.8-Flash-Next-DACAN": [
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 13
+      }
+    ],
+    "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-Flash-Next-GSQ-RCO-GGUF": [
+      {
+        "path": "docs/DETAILS.md",
+        "line": 245
+      },
+      {
+        "path": "docs/DETAILS.md",
+        "line": 909
+      },
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 64
+      },
+      {
+        "path": "docs/MODELLI-HF-AMD-20261009.md",
+        "line": 10
+      },
+      {
+        "path": "docs/MODELS.md",
+        "line": 110
+      },
+      {
+        "path": "setup.py",
+        "line": 166
+      }
+    ],
+    "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 732
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 739
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 746
+      }
+    ],
+    "https://huggingface.co/unsloth/Inkling-Small-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1265
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1272
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1279
+      }
+    ],
+    "https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1078
+      }
+    ],
+    "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF": [
+      {
+        "path": "docs/HOW_IT_WORKS.md",
+        "line": 65
+      },
+      {
+        "path": "docs/UNSLOTH_Q4.md",
+        "line": 8
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 665
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 672
+      },
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 679
+      }
+    ],
+    "https://huggingface.co/unsloth/Z-Image-Turbo-GGUF": [
+      {
+        "path": "serve/hydra_lab_catalog.json",
+        "line": 1176
+      }
+    ]
+  }
+}

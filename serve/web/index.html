@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<link rel="icon" href="web/hydra-one.png" type="image/png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hydra One</title>
+<link rel="stylesheet" href="web/tokens.css?v=20261012j">
+<link rel="stylesheet" href="web/components.css?v=20261009-edition-brand">
+<link rel="stylesheet" href="web/app.css?v=20261012j">
+<link rel="stylesheet" href="web/performance.css?v=20261010-hybrid">
+<link rel="stylesheet" href="web/benchmark-lab.css?v=20261010-history-3">
+  <link rel="stylesheet" href="web/benchmark-hero.css?v=20261011-hero-webp">
+<link rel="stylesheet" href="web/sliders.css?v=20261012j">
+<link rel="stylesheet" href="web/monitor.css?v=20261016-charts">
+<link rel="stylesheet" href="web/generation-chart-v3.css?v=4">
+<link rel="stylesheet" href="web/control.css?v=20261010-export">
+<link rel="stylesheet" href="web/refinements.css?v=20261014-language-text">
+<link rel="stylesheet" href="web/catalogue.css?v=20261010-catalogue-5">
+<link rel="stylesheet" href="web/chat-workspace.css?v=20261011-mcp-restore-041506">
+<link rel="stylesheet" href="web/chat-context.css?v=20261010-ring-nav-3">
+<link rel="stylesheet" href="web/about-capabilities.css?v=20261012">
+<link rel="stylesheet" href="web/about.css?v=20261017-badge-alignment-2">
+<link rel="stylesheet" href="web/premium.css?v=20261009-chat-about-2">
+<link rel="stylesheet" href="web/workspace-layout.css?v=20261009-width-bottom-2">
+<script>
+  // the theme before the first paint: the saved choice, else the system's
+  try {
+    const t = localStorage.getItem("strata.theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<style>
+/* ===== Stargate Lab premium dashboard ===== */
+.view--control{max-width:1600px;margin:0 auto;padding:0 28px}
+.dash4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.dash-card{position:relative;border:1px solid var(--st-line);border-radius:16px;background:var(--st-surface);
+  overflow:hidden;transition:border-color .25s, box-shadow .25s}
+.dash-card:hover{border-color:var(--st-accent);box-shadow:0 6px 26px -18px var(--st-accent)}
+.dash-card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--st-accent),transparent 72%);opacity:.85}
+.dash-head{display:flex;align-items:center;gap:9px;padding:13px 16px;border-bottom:1px solid var(--st-line);
+  font:700 11.5px/1 var(--st-font);letter-spacing:.9px;text-transform:uppercase;color:var(--st-ink-muted)}
+.dash-head svg{width:16px;height:16px;flex:0 0 auto;color:var(--st-accent)}
+.dash-tag{margin-left:auto;font-size:10.5px;font-weight:500;letter-spacing:.3px;text-transform:none;
+  color:var(--st-ink-muted);max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dash-body{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px 14px;padding:16px}
+.dm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dm--wide{grid-column:span 2}
+.dm--full{grid-column:1/-1}
+.dm__label{font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--st-ink-muted);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dm__value{font-size:23px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums;letter-spacing:-.4px}
+.dm__value small{font-size:11.5px;font-weight:500;color:var(--st-ink-muted);margin-left:2px;letter-spacing:0}
+.dm__sub{font-size:10.5px;color:var(--st-ink-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dash-spark{width:100%;height:30px;display:block;margin-top:3px;color:var(--st-accent)}
+.dash-bar{height:5px;border-radius:3px;background:var(--st-surface-2);overflow:hidden;margin-top:6px}
+.dash-bar__fill{height:100%;border-radius:3px;background:var(--st-accent);transition:width .35s ease}
+.dash-bar__fill[data-tone="warn"]{background:var(--st-warn)}
+.dash-bar__fill[data-tone="danger"]{background:var(--st-danger)}
+.dash-gauge{display:flex;align-items:center;gap:12px}
+.dash-gauge svg{width:58px;height:58px;flex:0 0 auto}
+.dash-pm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:2px}
+.dash-pm-stat{padding:9px 6px;border-radius:10px;background:var(--st-surface-2);text-align:center}
+.dash-pm-stat b{display:block;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.dash-pm-stat span{font-size:9.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--st-ink-muted)}
+.dash-pm-stat[data-tone="warn"] b{color:var(--st-warn-text)}
+.dash-pm-stat[data-tone="ok"] b{color:var(--st-accent-text)}
+.dash-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.dash-controls select,.dash-controls input[type=range]{color:inherit;border:1px solid var(--st-line);
+  background:var(--st-surface-2);padding:6px 9px;border-radius:8px;font-size:12px;outline-offset:2px}
+.dash-controls input[type=range]{flex:1;min-width:120px;accent-color:var(--st-accent)}
+.dash-controls output{font-size:11px;min-width:52px;text-align:right;color:var(--st-ink-muted);
+  font-variant-numeric:tabular-nums}
+.dash-note{margin:8px 16px 0;padding:9px 12px;border-radius:9px;font-size:12px;
+  background:var(--st-warn-tint);color:var(--st-warn-text)}
+
+/* compact: each card is only as tall as its content, tiles sit tight, no internal voids */
+.dash4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:14px}
+.dash-card{display:flex;flex-direction:column}
+.dash-card .dash-body{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:8px 14px;padding:12px 16px;align-content:stretch;flex:1}
+.dm{min-height:0;gap:1px}
+.dm__label{font-size:10.5px;letter-spacing:.7px}
+.dm__value{font-size:21px;font-weight:600;line-height:1.15;letter-spacing:-.4px;font-variant-numeric:tabular-nums}
+.dm__value small{font-size:11.5px;font-weight:500;letter-spacing:0}
+.dm__sub{font-size:13.5px;line-height:1.3;white-space:normal;color:var(--st-ink-soft)}
+.dm .dash-spark{height:24px;margin-top:3px}
+.dash-bar{height:4px;margin-top:5px}
+.dash-gauge svg{width:52px;height:52px}
+/* every card is designed on its own content: the rows take exactly the height the tiles need */
+.dm{justify-content:space-between}
+.dm__label{order:0}
+.dm__value{order:1}
+.dm__sub{order:2}
+.dm .dash-spark{order:3;width:100%}
+.dash-card--gpu .dash-body{grid-template-rows:1fr 1fr 1fr auto}
+.dash-card--cpu .dash-body{grid-template-rows:1fr 1fr 1fr}
+.dash-card--inf .dash-body{grid-template-rows:1fr 1fr 1fr}
+.dash-card--pm .dash-body{grid-template-rows:auto auto 1fr}
+.dash-card--pm .dm{justify-content:flex-start;gap:6px}   /* pack label+slider+reading together */
+.dash-card--pm .dash-bar{margin-top:auto}               /* the level bar keeps the bottom edge */
+.dash-card--pm .dm__sub{margin-top:0;order:0;font-size:14px;color:var(--st-ink);font-weight:var(--st-fw-medium)}   /* right under the knob, not orphaned at the bottom of the cell */
+.dash-card--pm .dash-controls input[type=range]{flex:1;min-width:0}
+.dash-card--pm .dash-controls output{min-width:54px;text-align:right}   /* both rows then end at the same x */
+/* every stat box the same height, in every section: a two-line value can no longer
+   leave its neighbours shorter - the leftover space was already inside the card */
+.dash-pm-stat{min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.dash-pm-stat b{margin:0}
+
+/* the knob's reading sits on the label line, above the slider (the scale owns the row below) */
+.dm__label{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+output.dm__out{font-size:13px;font-weight:700;color:var(--st-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dash-hint{margin:0 16px 10px;padding:6px 12px;border-radius:10px;font-size:13.5px;line-height:1.3;display:flex;align-items:center;gap:7px;font-weight:var(--st-fw-medium);letter-spacing:.005em;background:var(--st-accent-tint);color:var(--st-accent-text);height:46px;box-sizing:border-box;overflow:hidden}   /* fixed box: the text length can no longer resize the card */
+.dash-hint span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-width:0}
+/* an empty sub-line keeps its line box: rows stop jumping when a value appears */
+.dm__sub:empty::after{content:"\00a0"}
+.state-zone__label,.state-zone__sub,.state-bar-sub{min-height:1.3em}
+.dash-hint b{font-weight:700;white-space:nowrap;font-size:15px;letter-spacing:.01em}
+.dash-hint[data-tone="warn"]{background:var(--st-warn-tint);color:var(--st-warn-text)}
+.dash-hint[hidden]{display:none}
+/* ---- one colour identity per section: the graphs take the card's own palette */
+.dash-card--gpu{--c:#fbbf24;--c2:#fb7185}
+.dash-card--cpu{--c:#38bdf8;--c2:#22d3ee}
+.dash-card--inf{--c:#34d399;--c2:#a3e635}
+.dash-card--pm{--c:#a78bfa;--c2:#f472b6}
+.dash-card--run{--c:#22d3ee;--c2:#38bdf8}
+.dash-card--model{--c:#f59e0b;--c2:#fbbf24}
+.dash-card--res{--c:#34d399;--c2:#22d3ee}
+.dash-card--pm2{--c:#a78bfa;--c2:#f472b6}
+.dash-card .dash-card::before,.dash-card::before{background:linear-gradient(90deg,var(--c),transparent 72%)}
+.dash-card .dash-head svg{color:var(--c)}
+.dash-card .dash-head{box-shadow:inset 0 -1px 0 0 var(--st-line)}
+.dash-spark{color:var(--c);filter:drop-shadow(0 0 3px currentColor)}
+.dash-spark .area{opacity:.20}
+.dash-spark .line{stroke-width:2}
+.dash-bar{background:color-mix(in srgb,var(--c) 14%,var(--st-surface-2))}
+.dash-bar__fill{background:linear-gradient(90deg,var(--c),var(--c2));box-shadow:0 0 8px -2px var(--c)}
+.dash-pm-stat{background:linear-gradient(180deg,color-mix(in srgb,var(--c) 10%,var(--st-surface-2)),var(--st-surface-2))}
+.dash-pm-stat b{color:var(--c)}
+.dash-hint{background:color-mix(in srgb,var(--c) 12%,var(--st-surface-2));color:var(--st-ink)}
+.dash-hint b{color:var(--c);font-size:15px}
+.dash-hint[data-tone="warn"]{background:var(--st-warn-tint);color:var(--st-warn-text)}
+.dash-hint[data-tone="warn"] b{color:var(--st-warn-text)}
+/* a tile whose value is running hot takes the warning colour */
+.dm[data-hot="1"] .dm__value{color:#fbbf24}
+.dm[data-hot="2"] .dm__value{color:#fb7185}
+
+
+.dash-card--gpu .dm.dm--full{justify-content:flex-start}
+
+.dash-head{padding:11px 16px}
+.dash-pm-stat{padding:7px 5px}
+.dash-pm-stat b{font-size:16px}
+.dash-pm-stat span{font-size:9.5px}
+.dash-note{margin:0 16px 11px;padding:7px 10px;font-size:11.5px}
+.dash-controls{margin-top:5px}
+@media(max-width:1180px){.dash-card .dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Slider anatomy, fixed order: label + reading ABOVE, then the bar, and only the ruler below.
+   The reading of the green knob must never sit under the scale. */
+.dm:has(.dash-controls){display:flex;flex-direction:column;justify-content:flex-start}
+.dm:has(.dash-controls) .dm__label{order:1}
+.dm:has(.dash-controls) .dm__sub{order:2;margin:2px 0 7px}
+.dm:has(.dash-controls) .dash-controls{order:3}
+.dm:has(.dash-controls) .range-scale{order:4}
+
+@media(max-width:820px){.dash4{grid-template-columns:1fr}.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Control only: the two rows take the height their content needs. The 1fr rows (Monitor) made the
+   shortest card stretch to the tallest one, leaving the void the user saw. */
+.view--control .dash4{grid-template-rows:auto auto;align-items:start}
+.view--control .dash-card{height:auto}
+.view--control .dash-body{flex:none}
+.view--control{overflow-y:auto}
+</style>
+<link rel="stylesheet" href="web/ai-lab.css?v=20261011">
+<link rel="stylesheet" href="web/brand-energy.css?v=20261011">
+<link rel="stylesheet" href="web/performance-spectrum.css?v=20261011">
+<link rel="stylesheet" href="web/prompt-library.css?v=20261011-premium">
+<link rel="stylesheet" href="web/navbar-energy.css?v=20261011">
+<script src="web/navbar-energy.js?v=20261011" defer></script>
+<link rel="stylesheet" href="web/hero-type.css?v=20261012">
+<link rel="stylesheet" href="web/software-credits.css?v=20261017-footer-centered-3">
+<link rel="stylesheet" href="web/chat-toolbar.css?v=20261017-workspace-2">
+<link rel="stylesheet" href="web/generation-unified.css?v=20261017-console-1">
+<link rel="stylesheet" href="web/benchmark-signals.css?v=20261017-premium-1">
+<link rel="stylesheet" href="web/monitor-hero.css?v=20261017-translucent-2">
+<link rel="stylesheet" href="web/range-precision.css?v=20261017-slider-graduations-6">
+<link rel="stylesheet" href="web/strata-catalogue-premium.css?v=20261015">
+<link rel="stylesheet" href="web/performance-hydra-registry.css?v=20261018">
+</head>
+<body>
+<header class="st-header">
+      <span class="st-header__brand st-edition-brand" data-i18n-ignore><span class="st-edition-brand__name"><b class="st-edition-brand__lab" data-brand-text="StargateLab™">StargateLab™</b> <span><span class="st-edition-brand__ai">LLM</span> Edition</span></span></span>
+  <nav class="st-tabs" role="tablist" aria-label="Views">
+    <button class="st-tab" role="tab" id="tab-btn-chat" aria-controls="view-chat" aria-selected="true" data-tab="chat">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-chat"/></svg>Chat</button>
+    <button class="st-tab" role="tab" id="tab-btn-monitor" aria-controls="view-monitor" aria-selected="false" data-tab="monitor">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-activity"/></svg>Monitor</button>
+    <button class="st-tab" role="tab" id="tab-btn-control" aria-controls="view-control" aria-selected="false" data-tab="control">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-settings"/></svg>Lab&trade; Ai</button>
+    <button class="st-tab" role="tab" id="tab-btn-tuning" aria-controls="view-tuning" aria-selected="false" data-tab="tuning">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-chart"/></svg>Prestazioni</button>
+
+    <button class="st-tab" role="tab" id="tab-btn-benchmark" aria-controls="view-benchmark" aria-selected="false" data-tab="benchmark"><svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-gauge"/></svg>Benchmark</button>
+    <button class="st-tab" role="tab" id="tab-btn-about" aria-controls="view-about" aria-selected="false" data-tab="about">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-info"/></svg>About</button>
+  </nav>
+  <button type="button" class="st-btn prompt-library-launch" id="prompt-library-open" data-i18n-ignore aria-haspopup="dialog"><svg class="st-icon st-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 5v15M3 4h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z"/></svg><span>Prompts e Skills</span></button>
+  <span class="st-header__spacer"></span>
+  <div class="st-language" role="group" aria-label="Seleziona la lingua"><button type="button" data-language="it" aria-label="Italiano" aria-pressed="true">IT</button><button type="button" data-language="en" aria-label="Inglese" aria-pressed="false">EN</button></div>
+  
+  <button class="st-btn st-btn--icon" id="theme-btn" title="Light / dark" aria-label="Alterna il tema chiaro e scuro">
+    <svg class="st-icon"><use id="theme-icon" href="web/sprite.svg#i-moon"/></svg></button>
+</header>
+
+<main>
+  <!-- ============================ Chat ============================ -->
+  <section class="view view--chat" id="view-chat" role="tabpanel" aria-labelledby="tab-btn-chat">
+    <div class="chat-workspace-bar">
+      <div class="chat-workspace-heading">
+        <div class="chat-workspace-title">
+          <span class="chat-workspace-mark" aria-hidden="true"><svg class="st-icon"><use href="web/sprite.svg#i-chat"/></svg></span>
+          <input id="chat-title" maxlength="80" placeholder="Nuova conversazione" aria-label="Titolo della conversazione">
+          <span id="chat-workspace-meta">Conversazione locale</span>
+        </div>
+        <div class="chat-workspace-actions">
+          <button type="button" class="st-btn st-btn--secondary" id="chat-harness-trigger" popovertarget="chat-harness" aria-controls="chat-harness" aria-expanded="false">Harness</button>
+          <button type="button" class="st-btn st-btn--secondary" id="chat-web-toggle" aria-pressed="false" data-i18n-ignore>Internet</button>
+        </div>
+      </div>
+      <div class="chat-workspace-bottom">
+        <div class="chat-find">
+          <label for="chat-find-input"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-search"/></svg><span class="chat-toolbar-sr">Cerca nella chat</span></label>
+          <input id="chat-find-input" type="search" placeholder="Cerca un messaggio…">
+          <span id="chat-find-count" role="status" aria-live="polite"></span>
+        </div>
+        <div class="chat-workspace-utilities">
+          <button type="button" class="st-btn st-btn--secondary" id="chat-history-btn" aria-expanded="false" aria-controls="chat-history-panel"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-chat"/></svg><span>Conversazioni</span></button>
+          <button type="button" class="st-btn st-btn--secondary" id="chat-backup"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-download"/></svg><span>Esporta JSON</span></button>
+          <button type="button" class="st-btn st-btn--secondary" id="chat-regenerate" data-i18n-ignore>Cancella</button>
+        </div>
+      </div>
+    </div>
+    <aside id="chat-history-panel" class="chat-history-panel" hidden><div><h2>Conversazioni</h2><button type="button" class="st-btn st-btn--secondary" id="chat-history-close" aria-label="Chiudi le conversazioni">Chiudi</button></div><input id="chat-history-search" type="search" class="st-input" placeholder="Cerca una conversazione…" aria-label="Cerca conversazioni"><label class="chat-memory-choice" data-i18n-ignore><input type="checkbox" id="chat-memory-enabled" checked><span id="chat-memory-label">Richiama messaggi pertinenti nelle nuove risposte</span></label><div id="chat-archive-list"></div><p>Salvate in questo browser. Immagini e contenuto dei file allegati vanno riallegati dopo la riapertura.</p></aside>
+    <div class="chat-scroll" id="chat-scroll" tabindex="0" role="region" aria-label="Messaggi della conversazione">
+      <div class="chat" id="chat">
+        <div class="chat-empty" id="chat-empty">
+          <div class="chat-empty__brand st-edition-brand" data-i18n-ignore><span class="st-edition-brand__name"><b class="st-edition-brand__lab" data-brand-text="StargateLab™">StargateLab™</b> <span><span class="st-edition-brand__ai">LLM</span> Edition</span></span></div>
+          <div class="chat-empty__title">Da dove iniziamo?</div>
+          <div class="chat-empty__sub" id="chat-empty-sub">Il modello elabora le richieste su questo PC. Gli strumenti esterni, se configurati, possono usare la rete.</div>
+          <div class="chat-starters"><button type="button" data-chat-starter="Spiega questo argomento con esempi e passaggi chiari:\n"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-thinking"/></svg><span><b>Spiega</b><small>Concetti chiari, esempi e passaggi</small></span><span aria-hidden="true" class="chat-starter-arrow">↗</span></button><button type="button" data-chat-starter="Analizza questo testo e individua punti critici e possibili miglioramenti:\n"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-search"/></svg><span><b>Analizza</b><small>Punti critici e miglioramenti</small></span><span aria-hidden="true" class="chat-starter-arrow">↗</span></button><button type="button" data-chat-starter="Scrivi una soluzione in codice, spiegando scelte e casi limite:\n"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-code"/></svg><span><b>Scrivi codice</b><small>Soluzioni, scelte e casi limite</small></span><span aria-hidden="true" class="chat-starter-arrow">↗</span></button><button type="button" data-chat-starter="Rivedi questo testo migliorando chiarezza e precisione, mantenendo il significato:\n"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-edit"/></svg><span><b>Rivedi testo</b><small>Chiarezza, precisione e stile</small></span><span aria-hidden="true" class="chat-starter-arrow">↗</span></button></div>
+        </div>
+      </div>
+    </div>
+    <nav class="chat-navigator" id="chat-navigator" aria-label="Navigazione della conversazione" hidden>
+      <button type="button" id="chat-nav-top" aria-label="Vai all’inizio della chat" title="Inizio della chat">↑</button>
+      <button type="button" id="chat-nav-prev" aria-label="Richiesta precedente" title="Richiesta precedente">‹</button>
+      <span class="chat-nav-position" id="chat-nav-position">1 / 1</span>
+      <button type="button" id="chat-nav-next" aria-label="Richiesta successiva" title="Richiesta successiva">›</button>
+      <button type="button" id="chat-nav-bottom" class="chat-nav-latest" aria-label="Vai all’ultima risposta" title="Ultima risposta"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="chat-nav-ring-track" cx="18" cy="18" r="14"/><circle id="chat-nav-ring" cx="18" cy="18" r="14"/></svg><span aria-hidden="true">↓</span></button>
+      <span class="chat-nav-update" id="chat-nav-update" hidden>Risposta in corso</span>
+    </nav>
+    <div class="composer-wrap">
+      
+      <form class="st-composer" id="composer">
+        <div class="chat-request-status" id="pill" data-state="idle" role="status" aria-live="polite"><span class="chat-request-orbit" aria-hidden="true"><i></i><i></i><i></i></span><span><b id="request-status-title" data-i18n-ignore>Stato della richiesta</b><span id="pill-text">Connecting&hellip;</span></span><span class="chat-request-flow" aria-hidden="true"></span></div>
+        <div class="attachments" id="attachments" hidden></div>
+        <textarea id="input" rows="2" placeholder="Scrivi la tua richiesta&hellip;" aria-label="Messaggio"></textarea>
+        <div class="st-composer__bar">
+          <button type="button" class="st-btn st-btn--icon" id="attach-btn" title="Allega testo, PDF, DOCX o immagini" aria-label="Allega un file">
+            <svg class="st-icon"><use href="web/sprite.svg#i-attach"/></svg></button>
+          <input type="file" id="file" multiple hidden>
+          <button type="button" class="st-btn st-btn--icon" id="new-btn" title="Nuova chat" aria-label="Nuova chat">
+            <svg class="st-icon"><use href="web/sprite.svg#i-new-chat"/></svg></button>
+          <button type="button" class="st-btn st-btn--icon" id="export-btn" title="Scarica questa chat in Markdown" aria-label="Scarica questa chat">
+            <svg class="st-icon"><use href="web/sprite.svg#i-download"/></svg></button>
+          <button type="button" class="chat-tool-trigger" id="chat-mcp-trigger" popovertarget="chat-integrations" aria-controls="chat-integrations" aria-expanded="false" aria-label="Strumenti MCP" title="Strumenti MCP">MCP<span class="chat-tool-trigger__n" id="chat-mcp-summary"></span></button>          <button type="button" class="st-btn st-btn--icon" id="sampling-btn" title="Generazione e ragionamento" aria-label="Generazione e ragionamento">
+            <svg class="st-icon"><use href="web/sprite.svg#i-settings"/></svg></button>
+          <label class="backend-chat-choice" hidden aria-hidden="true" data-i18n-ignore><span id="backend-chat-label">Motore</span><select id="chat-backend" aria-label="Motore della chat"><option value="strata">Hydra One</option><option value="optional" disabled>Backend locale</option></select></label>
+          <span class="spacer"></span>
+          <span class="composer-hint" id="composer-hint"></span>
+          <button type="button" class="st-btn st-btn--secondary" id="stop-btn" hidden>
+            <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-stop"/></svg>Stop</button>
+          <button type="submit" class="st-btn st-btn--primary st-btn--send" id="send-btn" aria-label="Invia">
+            <svg class="st-icon"><use href="web/sprite.svg#i-send"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================ Monitor ============================ -->
+  <section class="view view--monitor" id="view-monitor" role="tabpanel" aria-labelledby="tab-btn-monitor" hidden>
+    <div class="monitor">
+      <header class="mon-hero"><div><h1>Monitor di sistema</h1><p class="mon-lead">Attività del motore, risorse del PC e avvisi termici.</p></div>
+        <div class="mon-feed" id="monitor-feed" role="group" aria-label="Sorgente e aggiornamento dei dati">
+          <label class="mon-source-control" for="monitor-source"><svg class="st-icon" aria-hidden="true"><use href="web/sprite.svg#i-activity"/></svg><span>Sorgente dati</span><select id="monitor-source" class="st-input"><option value="auto">Automatica (test inclusi)</option><option value="operational">Servizio operativo</option><option value="benchmark">Ultimo test</option></select></label>
+          <small id="monitor-source-label">Servizio operativo</small>
+          <div class="mon-feed-freshness"><i class="mon-feed-dot" aria-hidden="true"></i><b id="monitor-freshness">In attesa del server</b></div>
+        </div>
+      </header>
+      <div class="st-card state-card state-strip">
+        <div class="state-card__head">
+          <span class="card-title">Stato della richiesta</span>
+          <span class="badges" id="state-badges">
+            <span class="st-badge" data-s="unloaded">Scaricato</span>
+            <span class="st-badge" data-s="idle">Pronto</span>
+            <span class="st-badge st-badge--reading" data-s="reading">Lettura</span>
+            <span class="st-badge st-badge--generating" data-s="generating">Generazione</span>
+            <span class="st-badge st-badge--queued" data-s="queued">In coda</span>
+            <span class="st-badge st-badge--error" data-s="error">Errore</span>
+          </span>
+        </div>
+
+        <div class="state-strip__grid">
+          <div class="state-zone">
+            <div class="state-zone__label" id="state-label">Waiting for a request</div>
+            <div class="state-zone__sub" id="state-detail">il motore è pronto</div>
+          </div>
+
+          <div class="state-zone state-zone--bar">
+            <div class="state-bar-head"><span id="state-phase">avanzamento richiesta</span><b id="state-pct">0%</b></div>
+            <div class="st-progress" id="state-progress"><div class="st-progress__bar" id="state-bar" style="width:0%"></div></div>
+            <div class="state-zone__sub" id="state-bar-sub">nessuna richiesta in corso</div>
+          </div>
+
+          <div class="state-pills">
+            <div class="state-pill"><span>Lettura prompt · s</span><b id="st-ttft">—</b></div>
+            <div class="state-pill"><span>Richieste</span><b id="st-reqs">—</b></div>
+            <div class="state-pill"><span>Token generati</span><b id="st-tokens">—</b></div>
+            <div class="state-pill"><span>In coda</span><b id="st-queue">—</b></div>
+          </div>
+        </div>
+
+        <div class="state-foot">
+          <span class="state-foot__eng" id="st-engine">—</span>
+          <span class="state-foot__warn" id="st-warn" hidden></span>
+        </div>
+      </div>
+
+      <div class="dash4" id="dash4">
+        <!-- ============ 1. GPU & POWER ============ -->
+        <div class="dash-card dash-card--gpu">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-gpu"/></svg>GPU e alimentazione<span class="dash-tag" id="ms-gpu"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Utilizzo</span><span class="dm__value" id="mv-gpu">–</span>
+              <svg class="dash-spark" id="sp-gpu" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--memory"><span class="dm__label">VRAM</span><span class="dm__value" id="mv-vram">–</span>
+              <span class="dm__sub" id="ms-vram"></span><div class="dash-bar"><div class="dash-bar__fill" id="bar-vram"></div></div></div>
+            <div class="dm"><span class="dm__label">Temperatura</span><span class="dm__value" id="mv-temp">–</span><span class="dm__sub" id="ms-temp"></span>
+              <svg class="dash-spark" id="sp-temp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Hotspot</span><span class="dm__value" id="mv-hotspot">–</span><span class="dm__sub" id="ms-hotspot"></span>
+              <svg class="dash-spark" id="sp-hotspot" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Potenza</span><span class="dm__value" id="mv-power">–</span><span class="dm__sub" id="ms-power"></span>
+              <svg class="dash-spark" id="sp-power" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Temperatura VRAM</span><span class="dm__value" id="mv-vramtemp">–</span><span class="dm__sub" id="ms-vramtemp"></span><svg class="dash-spark" id="sp-vramtemp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--wide"><span class="dm__label">PCIe</span><span class="dm__value" id="mv-pcie" style="font-size:16px">–</span><span class="dm__sub" id="ms-pcie"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Efficienza</span><span class="dm__value" id="mv-eff" style="font-size:16px">–</span><span class="dm__sub" id="ms-eff">rapporto istantaneo token/s per watt GPU</span><svg class="dash-spark" id="sp-eff" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+<div class="dm dm--wide"><span class="dm__label">Tensione GPU</span><span class="dm__value" id="mv-volt" style="font-size:16px">–</span><span class="dm__sub" id="ms-volt"></span></div>
+            <div class="dm dm--full" style="justify-content:flex-start"><span class="dm__label">GPU</span><span class="dm__sub" id="ms-gpu-name" style="font-size:12px"></span></div>
+          </div>
+        <div class="dash-hint" id="hint-gpu"></div>
+        </div>
+
+        <!-- ============ 2. CPU & SYSTEM ============ -->
+        <div class="dash-card dash-card--cpu">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-cpu"/></svg>CPU e sistema<span class="dash-tag" id="ms-cores"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Utilizzo</span><span class="dm__value" id="mv-cpu">–</span><span class="dm__sub" id="ms-cpu"></span>
+              <svg class="dash-spark" id="sp-cpu" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Temperatura CPU</span><span class="dm__value" id="mv-cpu_temp">–</span><span class="dm__sub" id="ms-cpu_temp"></span>
+              <svg class="dash-spark" id="sp-cpu_temp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Potenza CPU</span><span class="dm__value" id="mv-cpu_power">–</span><span class="dm__sub" id="ms-cpu_power"></span>
+              <svg class="dash-spark" id="sp-cpu_power" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--memory"><span class="dm__label">RAM</span><span class="dm__value" id="mv-ram" style="font-size:16px">–</span>
+              <span class="dm__sub" id="ms-ram"></span><div class="dash-bar"><div class="dash-bar__fill" id="bar-ram"></div></div></div>
+            <div class="dm dm--wide"><span class="dm__label">Disco · lettura / scrittura</span><span class="dm__value" id="mv-disk" style="font-size:16px">–</span><span class="dm__sub" id="ms-disk"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">PCH · Motherboard</span><span class="dm__value" id="mv-board" style="font-size:16px">–</span><span class="dm__sub" id="ms-board"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Core · thread</span><span class="dm__value" id="mv-corecount" style="font-size:16px">–</span><span class="dm__sub" id="ms-corecount"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Server</span><span class="dm__value" id="mv-uptime" style="font-size:16px">–</span><span class="dm__sub" id="ms-uptime"></span></div>
+          </div>
+        <div class="dash-hint" id="hint-cpu"></div>
+        </div>
+
+        <!-- ============ 3. INFERENCE ============ -->
+        <div class="dash-card dash-card--inf">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-gauge"/></svg>Generazione<span class="dash-tag" id="ms-model"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Decode</span><span class="dm__value" id="mv-speed">–</span><span class="dm__sub" id="ms-speed"></span>
+              <svg class="dash-spark" id="sp-speed" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Prefill</span><span class="dm__value" id="mv-prefill">–</span><span class="dm__sub" id="ms-prefill"></span>
+              <svg class="dash-spark" id="sp-prefill" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--wide"><span class="dm__label">Contesto utilizzato</span>
+              <div class="dash-gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="st-gauge__track" cx="60" cy="60" r="50" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="235.6 314.2" transform="rotate(135 60 60)"/>
+                  <circle class="st-gauge__fill" id="ctx-fill" cx="60" cy="60" r="50" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="0 314.2" transform="rotate(135 60 60)"/>
+                </svg>
+                <div class="dash-gauge__values"><span class="dm__value" id="ctx-pct">0%</span><span class="dm__sub" id="ctx-sub">–</span></div>
+              </div></div>
+            <div class="dm dm--wide"><span class="dm__label">Cache esperti</span><span class="dm__value" id="mv-experts" style="font-size:16px">–</span>
+              <div class="dash-bar"><div class="dash-bar__fill" id="bar-experts"></div></div><span class="dm__sub" id="ms-experts"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Stato</span><span class="dm__value" id="mv-state" style="font-size:16px">–</span><span class="dm__sub" id="ms-state"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Esperti trovati in cache</span><span class="dm__value" id="mv-hit" style="font-size:16px">–</span><span class="dm__sub" id="ms-hit"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Draft accettati</span><span class="dm__value" id="mv-draft" style="font-size:16px">–</span><span class="dm__sub" id="ms-draft"></span></div>
+            <div class="dm dm--wide model-load-chart" id="model-load-chart" aria-live="polite"><span class="dm__label" id="model-load-label">Caricamento del servizio</span><div id="model-load-phases">I tempi saranno rilevati al caricamento del modello.</div></div>
+          </div>
+        <div class="dash-hint" id="hint-inf"></div>
+        </div>
+
+        <!-- ============ 4. POWER MANAGER ============ -->
+        <div class="dash-card dash-card--pm">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-thermometer"/></svg>Monitor termico<span class="dash-tag" id="ms-pm-mode"></span></div>
+          <div class="dash-body">
+            <div class="dm dm--full monitor-thermal-overview">
+              <div class="dash-pm-grid">
+                <div class="dash-pm-stat" id="pm-stat-status"><b id="pm-status">–</b><span>Stato</span></div>
+                <div class="dash-pm-stat" id="pm-stat-eff"><b id="pm-eff">–</b><span>t/s per W</span></div>
+                <div class="dash-pm-stat"><b id="pm-tlim">–</b><span>Soglia temperatura</span></div>
+                <div class="dash-pm-stat"><b id="pm-plim">–</b><span>Soglia potenza</span></div>
+              </div>
+            </div>
+            <div class="dm dm--full monitor-thermal-profile">
+              <span class="dm__label">Profilo avvisi</span>
+              <div class="dash-controls">
+                <select id="pm-mode" aria-label="Profilo degli avvisi termici">
+                  <option value="performance">Performance</option><option value="balanced" selected>Bilanciato</option>
+                  <option value="eco">Eco</option><option value="custom">Personalizzato</option>
+                </select>
+                <button class="st-btn st-btn--secondary" id="pm-apply">Applica</button>
+                <button class="st-btn st-btn--secondary" id="pm-reset">Azzera avviso</button>
+              </div>
+            </div>
+            <div class="dm dm--wide monitor-thermal-threshold"><span class="dm__label">Soglia temperatura</span>
+              <div class="dash-controls"><input type="range" id="pm-temp" min="50" max="95" step="1" value="80"><output id="pm-temp-out">80°C</output></div>
+              <span class="dm__sub" id="ms-pm-temp">—</span><div class="dash-bar"><div class="dash-bar__fill" id="bar-pm-temp"></div></div></div>
+            <div class="dm dm--wide monitor-thermal-threshold"><span class="dm__label">Soglia potenza</span>
+              <div class="dash-controls"><input type="range" id="pm-power" min="50" max="350" step="1" value="250"><output id="pm-power-out">250W</output></div>
+              <span class="dm__sub" id="ms-pm-power">—</span><div class="dash-bar"><div class="dash-bar__fill" id="bar-pm-power"></div></div></div>
+          </div>
+          <div class="dash-note" id="pm-throttle" role="status" hidden></div>
+        <div class="dash-hint" id="hint-pm"></div>
+        </div>
+      </div>
+
+      <div class="st-card req-card">
+        <div class="req-head"><span class="card-title">Registro delle richieste</span>
+          <button class="st-btn st-btn--secondary" id="req-all" hidden>Show all</button></div>
+        <p class="mon-explainer">Dati della sessione del server. I grafici mostrano i campioni ricevuti; gli intervalli senza misure restano vuoti. Il profilo termico imposta avvisi e non modifica la potenza della scheda.</p><div class="table-wrap" id="req-wrap">
+          <table class="st-table">
+            <thead><tr><th>Ora</th><th>Stato</th><th class="num">Prompt</th><th class="num">Riutilizzati</th><th class="num">Generati</th>
+              <th class="num">Tok/s</th><th class="num" title="While writing the answer: the share of the experts looked up that were already in VRAM (experts copied over PCIe are not counted)">Hit rate</th><th class="num">Durata</th></tr></thead>
+            <tbody id="req-body"><tr><td colspan="8" class="muted">Nessuna richiesta registrata</td></tr></tbody>
+          </table>
+        </div>
+        <p class="muted req-totals" id="req-totals"></p>
+      </div>
+
+      <details class="st-card mcp-card" id="mcp-card" hidden>
+        <summary class="req-head"><span class="card-title">MCP servers</span><span class="muted small" id="mcp-sum"></span><svg class="st-icon mcp-card-chevron" aria-hidden="true"><use href="web/sprite.svg#i-chevron"/></svg></summary>
+        <div class="mcp-list" id="mcp-list"></div>
+        <p class="muted small mcp-note">Their tools run on this PC with your rights, when the model decides to call them
+          (in this page's chat only; switch it off in Sampling).</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="view view--benchmark" id="view-benchmark" role="tabpanel" aria-labelledby="tab-btn-benchmark" hidden>
+    <div class="bench-suite perf-compact">
+      <header class="perf-hero benchmark-hardware-hero"><div class="benchmark-hero-copy"><p class="perf-kicker">LABORATORIO / PRESTAZIONI</p><h1>Benchmark</h1><p class="perf-lead">Misura modelli e profili locali. Confronta velocità, tempo totale e risposte.</p></div></header>
+      <div class="bench-layout">
+        <form class="bench-panel" id="lab-form"><h2>Prepara la prova</h2><p>Configurazioni isolate: i file originali restano invariati.</p>
+          <div class="bench-modes" aria-label="Modalità"><button type="button" data-lab-mode="manual" aria-pressed="true">Manuale</button><button type="button" data-lab-mode="automatic" aria-pressed="false">Campagna automatica</button></div>
+          <div class="bench-model-fields"><label class="bench-field">Modello locale<select class="st-input" id="lab-model" required><option value="">Caricamento…</option></select></label>
+          <label class="bench-field" id="lab-single">Profilo<select class="st-input" id="lab-variant"><option value="auto">PCIe automatico</option><option value="pcie20">Quota PCIe 20%</option><option value="pcie55">Quota PCIe 55%</option><option value="tsum">Somme raggruppate</option></select></label></div>
+          <fieldset class="bench-variants" id="lab-variants" hidden><legend class="perf-sr">Profili della campagna</legend><label><input type="checkbox" value="auto" checked>PCIe automatico</label><label><input type="checkbox" value="pcie20" checked>Quota PCIe 20%</label><label><input type="checkbox" value="pcie55">Quota PCIe 55%</label><label><input type="checkbox" value="tsum">Somme raggruppate</label></fieldset>
+          <div class="bench-fields"><label>Token di uscita<select class="st-input" id="lab-tokens"><option>128</option><option selected>256</option><option>512</option></select></label><label>Misure per profilo<select class="st-input" id="lab-runs"><option selected>5</option><option>6</option><option>8</option><option>10</option><option>20</option><option>30</option></select></label><label>Testo standard<select class="st-input" id="lab-paragraphs"><option value="8">Breve</option><option value="16">Medio</option><option value="24" selected>Ampio</option><option value="48">Esteso</option></select></label></div>
+          <label class="bench-quality"><input type="checkbox" id="lab-quality">Aggiungi il controllo di 12 compiti</label>
+<label class="bench-quality"><input type="checkbox" id="lab-stream">Misura streaming del motore collegato</label>
+          <details><summary>Prompt personalizzato</summary><label class="bench-field">Testo della prova<textarea class="st-input" id="lab-prompt" maxlength="6000" placeholder="Lascia vuoto per il testo standard. Usa una richiesta che consenta una risposta lunga."></textarea></label><p>Lo stesso testo viene usato per tutti i profili. Resta sul tuo PC.</p></details>
+          <details><summary>Configurazione e risorse</summary><div class="bench-fields"><label>RAM esperti · GiB<select class="st-input" id="lab-ram"><option selected>8</option><option>12</option><option>16</option><option>20</option><option>24</option><option>28</option></select></label><label>Worker CPU<select class="st-input" id="lab-workers"><option>4</option><option>7</option><option selected>8</option><option>12</option><option>16</option><option>20</option><option>24</option></select></label><label>Finestra draft<select class="st-input" id="lab-spec"><option selected>2</option><option>3</option><option>4</option></select></label><label>Riserva VRAM<select class="st-input" id="lab-reserve"><option value="2560">2,5 GiB</option><option value="3072">3 GiB</option><option value="4096" selected>4 GiB</option></select></label></div><p>Test di generazione testuale. Cinque richieste di riscaldamento precedono le misure; prefill 512 e budget cache controllato. La prova si ferma se il margine dopo il caricamento è inferiore a 1,5 GiB.</p><p>Le campagne esplorano i profili in sequenza. Un vantaggio richiede una conferma ABBA e una valutazione di qualità separata.</p></details>
+          <div class="bench-actions"><button class="st-btn st-btn--primary" type="submit" id="lab-start">Avvia prova</button><button class="st-btn st-btn--secondary" type="button" id="lab-stop" disabled>Arresta</button></div>
+        </form>
+        <section class="bench-panel bench-session" aria-live="polite"><div class="bench-status"><span>Sessione di prova</span><b id="lab-state">Pronto</b></div><h2 id="lab-phase">Il prossimo risultato parte da una misura.</h2><p id="lab-description">Scegli un modello e un profilo. Puoi seguire l'attività anche nel Monitor di sistema.</p><div class="bench-progress"><i id="lab-progress"></i></div><div class="bench-progress-label"><span id="lab-count">0 misure</span><span id="lab-percent">0%</span></div><div class="bench-pulse"><div><strong id="lab-decode">—</strong><span>Decode · token/s</span></div><div><strong id="lab-wall">—</strong><span>Richiesta · secondi</span></div><div><strong id="lab-score">—</strong><span>Compiti corretti</span></div></div><p class="perf-copy" id="benchmark-campaign-live" aria-live="polite"></p><div class="bench-message" id="lab-message">I risultati appariranno dopo misure completate e verificate.</div><div class="bench-actions"><a class="st-btn st-btn--secondary" href="#monitor">Monitor di sistema ↗</a><a class="st-btn st-btn--secondary" href="#control">Lab&trade; Ai ↗</a></div></section>
+      </div>
+      <section class="bench-panel bench-results"><div class="perf-section-head"><div><p class="perf-kicker">MISURE / VARIABILITÀ</p><h2>La prova, campione per campione</h2></div><label class="bench-field">Metrica<select class="st-input" id="lab-chart-metric"><option value="decode_tok_s">Decode · token/s</option><option value="prefill_tok_s">Prefill · token/s</option><option value="wall_s">Durata totale · secondi</option><option value="wall_tok_s">Velocità totale · t/s</option><option value="generation_ms">Tempo modello · prompt incluso (ms)</option></select></label></div><div class="bench-history-select"><label class="bench-field">Campagna visualizzata<select class="st-input" id="lab-history-select"><option value="">Sessione corrente</option></select></label><span id="lab-view-caption">Risultati della sessione corrente</span></div><div class="bench-chart-grid"><div><div id="lab-trend" class="bench-chart"></div><div class="bench-chart-legend"><span><i class="bench-dot bench-dot--warm"></i>Riscaldamento</span><span><i class="bench-dot"></i>Misure valide</span></div></div><div><div id="lab-comparison" class="bench-chart"></div><p class="bench-chart-note" id="lab-chart-note">Mediana e intervallo osservato. Servono prove completate.</p></div></div></section>
+      <section class="bench-panel bench-results"><div class="perf-section-head"><h2>Risultati della sessione</h2><button class="st-btn st-btn--secondary" type="button" id="lab-export" disabled>Esporta JSON</button></div><div id="lab-results" class="bench-empty">Nessuna prova completata.</div></section>
+      <section class="bench-panel bench-results"><h2>Cronologia</h2><p>Campagne salvate localmente, comprese prove esterne, interrotte e fallite.</p><div id="lab-history" class="bench-history"><div>Nessuna campagna.</div></div><details class="bench-backend-history"><summary>Verifiche dei backend aggiuntivi</summary><p>Prove di avvio e risposta; non concorrono al record del modello 125B.</p><div id="lab-backend-checks" class="bench-history"></div></details><details class="bench-backend-history"><summary>Verifiche di qualità</summary><p>Compiti deterministici per modello e configurazione. La velocità resta una misura separata.</p><div id="lab-quality-checks" class="bench-history"></div></details></section>
+    </div>
+  </section>
+  <!-- Performance workspace: persistent evidence, live report registry. -->
+  <section class="view view--tuning" id="view-tuning" role="tabpanel" aria-labelledby="tab-btn-tuning" hidden><div class="perf-suite perf-compact"><header class="perf-hero performance-hardware-hero"><div class="benchmark-hero-copy"><p class="perf-kicker">PRESTAZIONI / PIANO DI SVILUPPO</p><h1>Prestazioni</h1><p class="perf-lead">Misure, confronti e piano di sviluppo del motore IQ3_XXS.</p></div></header><div class="perf-subnav" aria-label="Sezioni delle prestazioni"><button type="button" data-performance-pane="results" aria-pressed="true">Risultati e confronti</button><button type="button" data-performance-pane="plan" aria-pressed="false">Piano e configurazione</button><button type="button" data-performance-pane="archive" aria-pressed="false">Rapporti e fonti</button></div><div data-performance-pane-content="results"><section class="perf-panel perf-record-panel"><div class="perf-section-head"><div><p class="perf-kicker">BANCO LOCALE / AGGIORNAMENTO AUTOMATICO</p><h2>Migliore mediana osservata</h2></div><label class="perf-record-selector">Protocollo<select class="st-input" id="perf-record-protocol" aria-label="Protocollo del miglior risultato"></select></label></div><p class="perf-copy" id="performance-campaign-live" aria-live="polite"></p><div id="perf-record-result" class="perf-evidence">Caricamento dei test completati…</div></section><details class="perf-disclosure"><summary><span>Ultimo confronto ABBA verificato <small>Controllo, variante e qualità</small></span><span class="perf-disclosure-action">Confronto</span></summary><div class="perf-disclosure-body"><section class="perf-evidence" data-performance-evidence aria-label="Ultimo confronto verificato"><p class="perf-copy">Caricamento dell'ultimo confronto verificato…</p></section></div></details><div class="perf-alternatives" data-performance-alternatives></div><section class="perf-panel" data-performance-campaigns aria-label="Esiti delle campagne"><p class="perf-copy">Caricamento degli esiti…</p></section><section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">PROVE LOCALI</p><h2>Mediane e variabilità</h2></div><label class="perf-metric">Misura<select class="st-input" id="compare-metric"><option value="decode_tok_s">Decode · token/s</option><option value="wall_tok_s">Totale · token/s</option><option value="prefill_tok_s">Prefill · token/s</option></select></label></div>
+        <div class="perf-toolbar"><label for="compare-series">Serie</label><select class="st-input" id="compare-series"><option value="">Caricamento…</option></select><span class="cf-hero__kicker">Dati della macchina locale</span></div>
+        <div id="compare-local" class="perf-ranges" aria-live="polite">Caricamento delle prove…</div><p class="perf-note" id="compare-local-note">Il punto indica la mediana; il segmento indica minimo e massimo osservati.</p>
+      </section></div><div data-performance-pane-content="plan" hidden><section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">PRIORITÀ</p><h2>Dal risultato alla configurazione</h2></div><span>Obiettivo: oltre 100 token/s · da raggiungere</span></div>
+        <ol class="perf-roadmap">
+          <li><span class="perf-step">01</span><div><h3>Memoria e prefill</h3><p>Il confronto ABBA conferma una lettura del prompt più rapida con gli esperti residenti. Il decode resta sostanzialmente invariato.</p></div><span class="perf-state">Misurato · candidato</span></li>
+          <li><span class="perf-step">02</span><div><h3>Draft italiano e qualità</h3><p>Primo confronto ABBA favorevole; dodici compiti senza regressioni osservate. Confermare su testi indipendenti, contesti lunghi e sessioni prolungate.</p></div><span class="perf-state perf-state--pending">Conferma parziale</span></li>
+          <li><span class="perf-step">03</span><div><h3>Cache e trasferimenti</h3><p>Cache appresa senza vantaggio decode. Quota PCIe 20%: +3,15% nel primo ABBA e 8/12 → 9/12 compiti senza regressioni osservate. Stabilità prolungata da verificare. Quota 55% non adottata.</p></div><span class="perf-state perf-state--pending">In valutazione</span></li>
+          <li><span class="perf-step">04</span><div><h3>Kernel e stabilità</h3><p>Ottimizzare le operazioni misurate sul motore completo, poi verificare carichi prolungati di 30 minuti e 2 ore prima dell'adozione.</p></div><span class="perf-state perf-state--pending">Pianificato</span></li>
+        </ol>
+        <p class="perf-note" data-performance-investigations>Caricamento delle ultime verifiche…</p>
+        <details class="perf-disclosure"><summary><span>Integrazione Unsloth e modello personalizzato</span><span class="perf-disclosure-action">Avanzamento</span></summary><div class="perf-disclosure-body"><ol class="perf-roadmap">
+          <li><span class="perf-step">01</span><div><h3>Runtime e modelli locali</h3><p>Installazione esistente, GGUF rilevati senza duplicazione, avvio CPU/GPU e arresto del processo posseduto.</p></div><span class="perf-state">Implementato</span></li>
+          <li><span class="perf-step">02</span><div><h3>Chat e API per le applicazioni</h3><p>Selezione del motore, streaming, endpoint stabile, autenticazione dell’API locale e rilevamento dei suoi modelli.</p></div><span class="perf-state">Implementato</span></li>
+          <li><span class="perf-step">03</span><div><h3>Qualità e misure verificabili</h3><p>Campagne esterne, prove di avvio e compiti di qualità registrati separatamente. Un modello piccolo non sostituisce il record del 125B.</p></div><span class="perf-state">Implementato</span></li>
+          <li><span class="perf-step">04</span><div><h3>Safetensors e LoRA</h3><p id="unsloth-plan-runtime" data-i18n-ignore>Inferenza Safetensors FP16 e NF4 verificata su un modello piccolo. LoRA TRL e Soup verificati su CPU/GPU; checkpoint prequantizzati e training avanzato restano aperti.</p></div><span class="perf-state perf-state--pending">Verifiche parziali</span></li>
+          <li><span class="perf-step">05</span><div><h3>Modello su misura</h3><p>Adapter di prova addestrati ed esportati. Un modello operativo su misura richiede dati rappresentativi, valutazione indipendente e verifica della qualità; non viene promosso automaticamente.</p></div><span class="perf-state perf-state--pending">Preparato</span></li>
+        </ol><a class="st-btn st-btn--secondary" href="#control">Apri Lab&trade; Ai ↗</a></div></details>
+      </section><details class="perf-disclosure"><summary><span>Configurazione del motore <small class="perf-model">In attesa del motore</small></span><span class="perf-disclosure-action">Dettagli</span></summary><div class="perf-disclosure-body"><p class="perf-copy">Parametri dell'ultimo avvio. Le modifiche salvate in Lab&trade; Ai si applicano al caricamento successivo.</p><dl class="perf-runtime" id="tune-live"></dl></div></details></div><div data-performance-pane-content="archive" hidden><section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">REGISTRO LOCALE</p><h2>Rapporti delle prove</h2></div><span id="perf-report-count">Caricamento rapporti…</span></div>
+        <div class="perf-toolbar"><label for="perf-filter">Mostra</label><select class="st-input" id="perf-filter"><option value="all">Tutti i rapporti</option><option value="paired">Con protocollo fisso</option><option value="exploratory">Prove esplorative</option></select><span>Mediana · minimo–massimo · riscaldamento escluso</span></div>
+        <div class="table-wrap perf-log"><table class="perf-table"><caption class="perf-sr">Rapporti del modello selezionato, in token al secondo</caption><thead><tr><th>Prova / data</th><th>Esito</th><th>Decode · t/s</th><th>Totale · t/s</th><th>Prefill · t/s</th><th>Protocollo</th></tr></thead><tbody id="benchmark-results"><tr><td colspan="6">Caricamento risultati…</td></tr></tbody></table></div>
+      </section><details class="perf-disclosure"><summary><span>Criteri di adozione e limiti <small>Qualità, energia e stabilità</small></span><span class="perf-disclosure-action">Dettagli</span></summary><div class="perf-disclosure-body perf-principles"><article><h3>Un guadagno ripetibile</h3><p>Stessi pesi, prompt, uscita e binario. Le varianti rimangono separate dal profilo operativo fino alla verifica di qualità e stabilità.</p></article><article><h3>Risposte corrette</h3><p>L'ultima prova isolata RAM16 ha ottenuto 8 risposte corrette su 12, come il controllo, con gli stessi quattro errori. La qualità del residente completo resta da valutare.</p></article><article><h3>Potenza ed energia</h3><p>Bilanciato imposta avvisi a 80 °C e 250 W e non limita la GPU. L'efficienza istantanea del monitor non equivale all'energia totale per token.</p></article><article><h3>Percorsi sperimentali</h3><p>Il kernel WMMA non ha dimostrato un vantaggio stabile sul motore. Stage pin resta escluso: la documentazione ufficiale segnala un problema di correttezza.</p></article></div></details><details class="perf-disclosure"><summary><span>Riferimenti ufficiali <small>Hardware, protocollo e attendibilità</small></span><span class="perf-disclosure-action">Fonti</span></summary><div class="perf-disclosure-body"><p class="perf-copy">Documentazione verificata il 9 ottobre 2026. Questi valori orientano la ricerca; hardware e protocolli diversi richiedono confronti separati.</p><div class="table-wrap"><table class="perf-table perf-table--sources"><caption class="perf-sr">Benchmark esterni e limiti del confronto</caption><thead><tr><th>Fonte</th><th>Condizioni dichiarate</th><th>Decode</th><th>Interpretazione</th></tr></thead><tbody>
+        <tr><td><a href="https://github.com/Niko1221/Strata/blob/fb58e0dbc8399662c0e47c76578c6e878b14f6cf/docs/AMD_HIP_PERFORMANCE.md" target="_blank" rel="noopener noreferrer">Hydra One · AMD HIP ↗</a><small>Misure del 29/09/2026</small></td><td>RX 7900 XTX · Ryzen 7950X3D · Linux · Orca IQ3_XXS<small>Prompt 4.210–8.830 token · uscita 128 token</small></td><td><b>55,5–59,2 t/s</b><small>Quattro richieste</small></td><td>GPU uguale; CPU, sistema, pack e carico diversi. Intervallo pubblicato, non mediana del nostro PC.</td></tr>
+        <tr><td><a href="https://github.com/Niko1221/Strata/blob/fb58e0dbc8399662c0e47c76578c6e878b14f6cf/docs/DETAILS.md" target="_blank" rel="noopener noreferrer">Hydra One · dettagli tecnici ↗</a><small>Stima dichiarata ±20%</small></td><td>RTX 3090 · IQ3_XXS<small>Contesto breve, 1K / 4K</small></td><td><b>≈106 / 103 t/s</b><small>Stima, non misura</small></td><td>Riferimento teorico pubblicato. Non dimostra che una GPU AMD da 24 GiB raggiunga lo stesso decode.</td></tr>
+        <tr><td><a href="https://github.com/Niko1221/Strata/tree/fb58e0dbc8399662c0e47c76578c6e878b14f6cf/docs" target="_blank" rel="noopener noreferrer">Archivio ufficiale ↗</a><small>383 documenti e configurazioni indicizzati</small></td><td>34 pagine Markdown in docs<small>Paper e report inclusi nell'audit</small></td><td>—</td><td>Indicazioni distinte per HIP, CUDA, Windows e Linux. Ogni port richiede una verifica locale.</td></tr>
+      </tbody></table></div></div></details><details class="perf-disclosure"><summary><span>Come leggere le metriche <small>Decode, prefill e tempo totale</small></span><span class="perf-disclosure-action">Metodo</span></summary><div class="perf-disclosure-body perf-principles"><article><h3>Decode</h3><p>Velocità di generazione riportata dal motore. Il traguardo dei 100 token/s riguarda questa misura e resta da raggiungere.</p></article><article><h3>Prefill</h3><p>Velocità di lettura dei token nuovi. Un prefill più rapido riduce l'attesa iniziale senza implicare un decode più veloce.</p></article><article><h3>Totale</h3><p>Token prodotti divisi per il tempo dell'intera richiesta, inclusa la lettura del prompt. Descrive il tempo percepito sul carico misurato.</p></article><article><h3>Variabilità</h3><p>Minimo e massimo descrivono i giri osservati e non sono intervalli di confidenza. Una sola serie ABBA non certifica una superiorità generale.</p></article></div></details></div></div></section>
+
+  <section class="view view--about" id="view-about" role="tabpanel" aria-labelledby="tab-btn-about" hidden>
+    <div class="about about-console">
+      <header class="ab-hero">
+        <div class="ab-hero__copy">
+          <h1>Informazioni sul sistema</h1>
+          <p class="ab-lead">Versione di Hydra One, modello configurato, hardware e diagnosi del server locale.</p>
+          <div class="ab-statusline"><span class="ab-state" id="about-live-state">Connessione al server…</span><span id="about-updated">In attesa dei dati</span></div>
+          <div class="ab-actions"><a class="st-btn st-btn--primary" href="#control">Apri Lab&trade; Ai <span aria-hidden="true">↗</span></a><a class="st-btn st-btn--secondary" href="#monitor">Osserva il sistema</a></div>
+        </div>
+        <div class="ab-identity">
+
+          <div class="ab-identity__top"><span class="about-edition-title">Hydra One</span><span class="ab-chip" id="about-backend-badge">—</span></div>
+          <div class="ab-orbit" aria-hidden="true"><div class="ab-orbit__ring"></div><div class="ab-orbit__ring ab-orbit__ring--inner"></div><span class="ab-orbit__core">S</span><i></i><i></i><i></i></div>
+          <p class="ab-identity__label">MODELLO DEL SERVIZIO</p><strong id="about-model-title">In attesa del server</strong><div class="about-identity-lower"><div class="about-identity-info"><div class="about-alternative-test" id="about-alternative-test" hidden></div><p class="ab-identity__sub" id="about-model-sub">Configurazione letta dal runtime</p></div><a class="about-logo-link" id="about-logo-link" href="web/hydra-one.png" target="_blank" rel="noopener noreferrer" aria-label="Logo Stargate Labs"><img src="web/hydra-one.png" alt="Hydra One" width="1952" height="806"></a></div>
+        </div>
+      </header>
+      <dl class="about-spec ab-runtime" id="about-spec"></dl>
+      <section id="about-capabilities" class="ab-capabilities" aria-label="App e funzioni integrate"></section>
+      <div class="ab-section-title"><div><p class="ab-eyebrow">01 / CONFIGURAZIONE E RISORSE</p><h2>Modello e hardware</h2></div><span class="ab-source">Fonte: motore e telemetria locale</span></div>
+      <div class="about-grid">
+        <section class="about-card"><div class="ab-card-label"><span>MODELLO</span><svg class="st-icon"><use href="web/sprite.svg#i-settings"/></svg></div><h3 class="about-card__h">Configurazione del motore</h3><dl class="facts" id="facts-engine"></dl><p class="about-note">Parametri riportati dall'ultimo avvio del motore. Restano consultabili dopo lo scaricamento; le modifiche preparate in Lab&trade; Ai si applicano al prossimo caricamento.</p></section>
+        <section class="about-card"><div class="ab-card-label"><span>HARDWARE</span><svg class="st-icon"><use href="web/sprite.svg#i-cpu"/></svg></div><h3 class="about-card__h">Le risorse di questo PC</h3><dl class="facts" id="facts-hw"></dl></section>
+        <section class="about-card"><p class="ab-eyebrow">INTEGRAZIONI</p><h3 class="about-card__h">Indirizzi API</h3><p class="about-note">Indirizzi di questa istanza per i client compatibili. Copia il valore e configura la chiave API se richiesta.</p><dl class="facts" id="facts-api"></dl><div class="ab-callout">L'inferenza avviene sul PC. Gli strumenti MCP e gli URL di immagini esterne, se utilizzati, possono accedere alla rete.</div></section>
+        <section class="about-card"><p class="ab-eyebrow">PREFERENZE DEL BROWSER</p><h3 class="about-card__h">Preferenze</h3><div class="st-field"><label class="st-label" for="api-key">Chiave API <output>solo se richiesta dal server</output></label><input class="st-input" id="api-key" type="password" autocomplete="off" placeholder="Non necessaria"></div><div class="toggle-row"><span>Tema scuro</span><button class="st-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Tema scuro"></button></div><p class="about-note">La chat e le preferenze dell'interfaccia sono conservate in questo browser. La chiave salvata non è inclusa nella diagnosi; usa un browser personale se il server richiede autenticazione.</p><p class="about-note">Le impostazioni di generazione condivise con gli altri client vengono invece salvate sul server. Il monitor API, se attivo, conserva temporaneamente anche le richieste.</p></section>
+        <details class="ab-detail"><summary><span><b>Diagnosi del sistema</b><small>Controlli e margini di memoria</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">02 / DIAGNOSI LIVE</p><h3 class="about-card__h">Diagnosi del sistema</h3></div><button class="st-btn st-btn--secondary" id="export-diagnostics">Scarica diagnosi JSON <span aria-hidden="true">↓</span></button></div><p class="about-note">Stato, margini di memoria e controlli del server. Il download esclude il contenuto delle conversazioni e le credenziali.</p><ul class="diagnostics-checks" id="diagnostics-checks" aria-live="polite"></ul></div></details>
+        <details class="ab-detail"><summary><span><b>Ultima richiesta</b><small>Tempi e velocità della sessione</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">03 / MISURE DELLA SESSIONE</p><h3 class="about-card__h">Ultima richiesta</h3></div><span class="ab-source">Una richiesta · nessuna mediana</span></div><p class="about-empty" id="about-empty">Non ci sono ancora richieste completate in questa sessione. Invia un messaggio: qui appariranno le misure effettive.</p><div class="about-stats" id="about-stats"><div class="about-stat"><b>—</b><span>Decode · token/s</span></div><div class="about-stat"><b>—</b><span>Prefill · token/s</span></div><div class="about-stat"><b>—</b><span>Tempo totale · s</span></div><div class="about-stat"><b>—</b><span>Cache esperti · %</span></div></div><div class="about-ref" id="about-ref" hidden></div><p class="about-note" id="about-note"></p></div></details>
+        <details class="ab-detail"><summary><span><b>Risultati salvati</b><small>Benchmark e protocolli</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">04 / EVIDENZE PERSISTENTI</p><h3 class="about-card__h">Risultati salvati</h3></div><a class="ab-text-link" href="#tuning">Tutti i rapporti recenti ↗</a></div><p class="about-note">Rapporti salvati sul PC per il modello selezionato. Mediana e intervallo dei campioni misurati; riscaldamento escluso. Versioni o prompt diversi non costituiscono un confronto diretto.</p><div class="table-wrap"><table class="ab-bench-table"><thead><tr><th>Prova / data</th><th>Decode token/s</th><th>Totale token/s</th><th>Protocollo</th></tr></thead><tbody id="about-benchmarks"><tr><td colspan="4">Caricamento delle evidenze…</td></tr></tbody></table></div><p class="ab-evidence-note">Le ottimizzazioni sperimentali restano separate dal profilo operativo. Un kernel più rapido non dimostra un motore completo più rapido.</p></div></details>
+        <details class="ab-detail"><summary><span><b>Funzioni disponibili</b><small>Capacità e limiti</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><p class="ab-eyebrow">CAPACITÀ E CONFINI</p><h3 class="about-card__h">Funzioni disponibili</h3><ul class="about-limits" id="about-limits"></ul></div></details>
+        <details class="ab-detail"><summary><span><b>Avvio e gestione</b><small>Procedura operativa</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><p class="ab-eyebrow">FLUSSO OPERATIVO</p><h3 class="about-card__h">Avvio e gestione</h3><ol class="ab-steps"><li><span>01</span><div><b>Avvia l'interfaccia</b><p>Hydra One-Web.bat apre il server locale. Il profilo predefinito di questo progetto usa IQ3_XXS.</p></div></li><li><span>02</span><div><b>Carica quando serve</b><p>Invia un messaggio o scegli Avvia Hydra One in Lab&trade; Ai. L'avvio può richiedere tempo per leggere i pesi.</p></div></li><li><span>03</span><div><b>Osserva e intervieni</b><p>Monitor mostra l'attività. Lab&trade; Ai applica i budget al riavvio; Ferma restituisce la VRAM.</p></div></li></ol></div></details>
+      </div>
+      
+      <footer class="about-foot"></footer>
+    </div>
+  </section>
+
+  <!-- ============================ Control ============================ -->
+  <section class="view view--control" id="view-control" role="tabpanel" aria-labelledby="tab-btn-control" hidden>
+    <div class="control-shell">
+      <details class="backend-panel" id="backend-panel">
+        <summary><span class="backend-hub-icon" aria-hidden="true"><svg class="st-icon"><use href="web/sprite.svg#i-layers"/></svg></span><span class="backend-hub-heading"><strong id="backend-panel-title">Motori e modelli</strong><small id="backend-panel-summary">Hydra One, Unsloth e API locali</small></span><span class="backend-hub-tags"><span id="backend-install-badge"></span><span id="backend-count-badge"></span></span><span id="backend-state" class="st-badge">—</span><span class="backend-disclosure" aria-hidden="true">⌄</span></summary>
+        <div class="backend-panel-body">
+          <div class="backend-intro"><strong id="backend-model">Nessun backend collegato</strong><p id="backend-note">Prima dell’avvio, ferma Hydra One. I test e i backend condividono una prenotazione esclusiva della GPU.</p><div id="backend-last-request" aria-live="polite"></div><div id="backend-model-facts" class="backend-model-facts"></div><div class="backend-timeline"><header><strong id="backend-chart-title">Attività del modello</strong><span id="backend-chart-caption"></span></header><div id="backend-activity-chart"></div><div id="backend-transfer-chart"></div></div><section class="backend-live" aria-labelledby="backend-live-title"><header><strong id="backend-live-title">Risorse in tempo reale</strong><span id="backend-live-time"></span></header><div id="backend-live-resources"></div><small id="backend-live-scope">GPU e RAM del PC; memoria del processo solo quando gestito dalla dashboard.</small></section><div class="backend-api-access"><small id="backend-api-title">API compatibile OpenAI</small><code id="backend-endpoint"></code><button class="st-btn st-btn--secondary" id="backend-client-trigger" type="button" popovertarget="backend-client-popup">Collega un’app</button><small id="backend-endpoint-note"></small></div></div>
+          <form id="backend-form">
+            <div class="backend-section-heading" data-i18n-ignore><strong id="backend-setup-title">Scegli e avvia</strong><span id="backend-setup-caption">Modello, dispositivo e profilo</span></div>
+            <button type="button" class="st-btn st-btn--secondary" id="optional-catalogue-open" data-i18n-ignore>Catalogo Hugging Face ↗</button>
+            <label><span id="backend-mode-label">Modalità</span><select id="backend-mode"><option value="gguf">Unsloth llama.cpp · GGUF</option><option value="api">API locale · OpenAI</option></select></label>
+            <div id="backend-gguf-fields"><label><span id="backend-local-label">GGUF presenti nella cartella modelli</span><select id="backend-local-model"><option value="">Percorso manuale</option></select></label><details class="backend-manual" id="backend-manual"><summary id="backend-manual-title">Percorso manuale</summary><label><span id="backend-file-label">File GGUF locale · percorso completo</span><input id="backend-file" placeholder="C:\Models\model.gguf" autocomplete="off"></label></details><label class="backend-check"><input type="checkbox" id="backend-gpu" checked><span id="backend-gpu-label">Usa la GPU · almeno 4 GiB di margine verificato all’avvio</span></label><small id="backend-gguf-note">Profilo iniziale: file fino a 12 GiB, contesto 4K. Il riferimento 125B resta in Hydra One.</small></div>
+            <div id="backend-api-fields" hidden><label><span id="backend-url-label">Indirizzo API locale</span><input id="backend-url" value="http://127.0.0.1:8091/v1" autocomplete="off"></label><label><span id="backend-key-label">Chiave API · se richiesta</span><input id="backend-key" type="password" autocomplete="off"></label><button id="backend-probe" class="st-btn st-btn--secondary" type="button">Rileva modelli disponibili</button><label><span id="backend-id-label">ID modello esatto</span><input id="backend-id" autocomplete="off" list="backend-api-models"><datalist id="backend-api-models"></datalist></label><small id="backend-api-note">L’app esterna gestisce caricamento e memoria. Disconnettere l’API non arresta il suo modello.</small></div>
+            <div class="backend-fit" data-i18n-ignore><div><strong id="backend-fit-title">Impostazioni consigliate</strong><small id="backend-fit-description">Fit prudente per le risorse disponibili</small></div><button type="button" class="st-btn st-btn--secondary" id="backend-fit-apply">Fit automatico ↗</button><select id="backend-fit-mode" aria-label="Resource fit"><option value="auto">Fit automatico al caricamento</option><option value="manual">Parametri manuali</option></select><select id="backend-fit-goal" aria-label="Fit priority"><option value="speed" selected>Velocità · preserva VRAM e contesto scelto</option><option value="context">Massimo contesto compatibile con le risorse</option></select><p id="backend-fit-status" role="status"></p></div><label id="backend-context-field"><span id="backend-context-label">Contesto configurato</span><select id="backend-context-mode"><option value="auto">Automatico · risorse disponibili</option><option value="manual">Manuale · scegli il contesto</option></select><select id="backend-context"><option value="1024">1K</option><option value="2048">2K</option><option value="4096" selected>4K · 4.096 token</option><option value="8192">8K · 8.192 token</option><option value="16384">16K · 16.384 token</option><option value="32768">32K · 32.768 token</option><option value="65536">64K</option><option value="131072">128K</option><option value="262144">256K</option><option value="524288">512K</option><option value="1048576">1M</option></select><div id="backend-context-estimate" role="status"></div><div id="backend-memory-preview" class="backend-memory-preview"></div><small id="backend-context-note">Il massimo del modello e il margine KV vengono verificati prima dell’avvio.</small></label><label id="backend-profile-field"><span id="backend-profile-label">Profilo di inferenza</span><select id="backend-profile"><option value="balanced">Bilanciato · riferimento</option><option value="rocm">ROCm · candidato prestazioni</option></select><small id="backend-profile-note">Il candidato usa batch 512 e 8/16 thread. Nessuna modifica ai limiti di potenza.</small></label>
+            <details class="backend-configuration" id="backend-configuration" data-i18n-ignore><summary id="backend-configuration-title">Configura inferenza e strumenti</summary><div class="backend-config-grid">
+<label><span id="backend-batch-label">Batch</span><select id="backend-batch"><option>64</option><option selected>128</option><option>256</option><option>512</option></select></label>
+<label><span id="backend-micro-label">Micro batch</span><select id="backend-micro"><option>64</option><option selected>128</option><option>256</option><option>512</option></select></label>
+<label><span id="backend-python-quantization-label">Precisione dei pesi</span><select id="backend-python-quantization"><option value="none">Predefinita · FP16 GPU / FP32 CPU</option><option value="nf4">NF4 · 4-bit · Unsloth GPU</option></select></label>
+<label><span id="backend-python-cache-label">Cache KV · Transformers</span><select id="backend-python-cache"><option value="auto">Automatica · predefinita del modello</option><option value="dynamic">Dinamica · cresce con la conversazione</option><option value="off">Disattivata · diagnosi</option></select></label>
+<label><span id="backend-python-draft-label">Speculative Decoding · draft locale</span><input id="backend-python-draft" type="text" placeholder="Facoltativo · cartella Safetensors"><small>Transformers · stesso tokenizer · massimo 1 GiB · temperatura 0. Lascia vuoto per disattivare.</small></label>
+<label><span id="backend-python-attention-label">Attenzione Transformers</span><select id="backend-python-attention"><option value="auto">Automatica · scelta del modello</option><option value="sdpa">SDPA · PyTorch</option><option value="eager">Eager · compatibilità</option></select></label>
+<label><span id="backend-python-loader-label">Loader Python</span><select id="backend-python-loader"><option value="transformers">Transformers · CPU / GPU</option><option value="unsloth">Unsloth nativo · GPU</option><option value="airllm">AirLLM · streaming dei livelli · CPU</option></select></label>
+<label><span id="backend-threads-label">Thread generazione</span><input id="backend-threads" type="number" min="1" max="32" value="8"></label>
+<label><span id="backend-threads-batch-label">Thread prompt</span><input id="backend-threads-batch" type="number" min="1" max="32" value="16"></label>
+<label><span id="backend-kv-label">Formato cache KV</span><select id="backend-kv-type"><option value="f16">f16 · riferimento</option><option value="q8_0">q8_0 · meno memoria</option><option value="q4_0">q4_0 · sperimentale</option></select></label>
+<label><span id="backend-slots-label">Slot del runtime</span><select id="backend-slots"><option value="1">1</option><option value="2">2</option><option value="4">4</option></select></label>
+<label><span id="backend-cache-ram-label">Cache RAM · MiB</span><input id="backend-cache-ram" type="number" min="0" max="8192" step="256" value="1024"></label>
+<label><span id="backend-checkpoints-label">Checkpoint per slot</span><input id="backend-checkpoints" type="number" min="0" max="32" value="8"></label>
+<label><span id="backend-load-mode-label">Mmap / Mlock</span><select id="backend-load-mode"><option value="auto">Auto</option><option value="mmap">Mmap</option><option value="none">None</option><option value="mlock">Mlock</option><option value="mmap+mlock">Mmap + Mlock</option></select></label>
+<label><span id="backend-spec-label">Speculazione</span><select id="backend-spec-type"><option value="none">Off</option><option value="ngram-simple">N-gram</option><option value="draft-mtp">MTP</option><option value="draft-dspark">DSpark</option><option value="draft-dflash">DFlash</option><option value="draft-mtp,ngram-simple">MTP + N-gram</option></select></label><label><span id="backend-draft-label">Modello draft · file GGUF</span><input id="backend-draft-path" autocomplete="off"><small id="backend-draft-note">Richiesto per MTP, DSpark e DFlash. Usa il draft abbinato allo stesso modello.</small></label>
+<label><span id="backend-reasoning-budget-label">Budget ragionamento · token</span><input id="backend-reasoning-budget" type="number" min="-1" max="4096" value="-1"></label>
+<label><span id="backend-reasoning-message-label">Messaggio a fine budget</span><input id="backend-reasoning-message" type="text" maxlength="500" placeholder="Default"></label><label><span id="backend-vram-label">Budget VRAM · %</span><input id="backend-vram-percent" type="number" min="50" max="95" value="85"></label>
+<label><span>Flash Attention</span><select id="backend-flash"><option value="auto">Auto</option><option value="on">On</option><option value="off">Off</option></select></label>
+<label><span id="backend-thinking-label">Ragionamento</span><select id="backend-thinking"><option value="none">None</option><option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option></select></label>
+<label><span id="backend-temperature-label">Temperatura</span><input id="backend-temperature" type="number" min="0" max="2" step="0.1" value="0.6"></label>
+<label><span>Top-p</span><input id="backend-top-p" type="number" min="0.01" max="1" step="0.01" value="0.95"></label>
+<label><span id="backend-output-label">Token in uscita</span><input id="backend-output" type="number" min="1" max="4096" value="1024"></label>
+<label class="backend-check"><input id="backend-web" type="checkbox"><span>Internet</span></label>
+</div><div class="backend-tool-heading"><strong id="backend-tools-title">Strumenti MCP per questo profilo</strong><button type="button" class="st-btn st-btn--secondary" id="backend-tools-all">Tutti</button><button type="button" class="st-btn st-btn--secondary" id="backend-tools-none">Nessuno</button></div><div id="backend-tool-selection" class="backend-tool-selection"></div><div class="backend-config-save"><button type="button" class="st-btn st-btn--secondary" id="backend-profile-save">Salva profilo del modello</button><small id="backend-profile-saved" role="status"></small></div></details>
+            <div class="backend-actions"><button class="st-btn st-btn--primary" id="backend-start" type="submit">Avvia backend</button><button class="st-btn st-btn--secondary" id="backend-stop" type="button" disabled>Arresta</button></div>
+            <div id="backend-load-progress" role="status"></div><small id="backend-training-runtime"></small>
+            <details class="backend-diagnostics"><summary id="backend-diagnostics-title">Diagnosi del runtime</summary><pre id="backend-diagnostics-log"></pre></details>
+            <p id="backend-error" role="status"></p>
+          </form>
+        </div>
+      </details>
+    <div class="dash4" style="margin-top:18px">
+
+      <!-- 1. Avvio / Arresto -->
+      <div class="dash-card dash-card--run">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-power"/></svg>Avvio / Arresto<span class="dash-tag" id="ctrl-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <span class="dm__label">Motore</span>
+            <div class="dash-controls">
+              <button class="st-btn st-btn--primary" id="ctrl-load">Avvia Hydra One</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-unload">Ferma</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-restart">Riavvia</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-health">Health check</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-vision" title="Leggere le immagini con il modello">Immagini: off</button>
+            </div>
+            <span class="dm__sub" id="ctrl-engine-note">Il modello si ricarica da solo alla prossima richiesta.</span>
+          </div>
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat"><b id="ctrl-stat-model">—</b><span>Modello</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-state">—</b><span>Stato</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-vram">—</b><span>VRAM del PC</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-speed">—</b><span>Decode ora</span></div>
+            </div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-run"></div>
+        </div>
+
+      <!-- 2. Cambia Modello -->
+      <div class="dash-card dash-card--model">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-download"/></svg>Modello<span class="dm__label catalogue-inline-summary" id="cat-summary">Catalogo modelli — controllo in corso…</span><span class="dash-tag" id="ctrl-dl-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <span class="dm__label">Modelli preparati</span>
+            <div class="dash-controls">
+              <select id="ctrl-model" style="flex:1">
+                <option value="Q2_0">Q2_0 · Qwen — 2-bit, il più veloce · 66,4 GB da scaricare · 48 GB di RAM</option>
+                <option value="IQ2_XS">IQ2_XS · Qwen — 2-bit i-quant, qualità un po' migliore · 68,0 GB · 48 GB di RAM</option>
+                <option value="IQ3_XXS" selected>IQ3_XXS · Qwen — 3-bit, più lento ma più preciso · 75,8 GB · 60 GB di RAM</option>
+                <option value="IQ3_S">IQ3_S · Qwen — 3,5-bit, la qualità migliore (come il modello intero) · 83,6 GB · 62 GB di RAM</option>
+                <option value="IQ1_M">IQ1_M · il Coder — metà esperti (codice, strumenti, immagini), più veloce · 58,4 GB · 32 GB di RAM</option>
+                <option value="UD-Q4_K_XL">UD-Q4_K_XL · Unsloth — SPERIMENTALE 4-bit, esperti dall'SSD (7-8,5 tok/s) · 111,3 GB · 48 GB di RAM</option>
+              </select>
+              <button class="st-btn st-btn--secondary" id="cat-toggle" aria-controls="cat-block" aria-expanded="false">Mostra catalogo</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-switch" title="Passa a questo modello adesso (il server si riavvia)">Usa questo modello</button>
+            </div>
+            <span class="dm__sub" id="ms-ctrl-model-info">—</span>
+          </div>
+
+          <div class="dm dm--full catalogue-panel" id="cat-block" hidden>
+            <div class="catalogue-search">
+              <input id="cat-query" type="text" value="Qwen3.8-Flash-Next" style="flex:1"
+                     placeholder="Qwen3.8-Flash-Next · Swift 1.5">
+              <button class="st-btn st-btn--secondary" id="cat-search">Cerca su Hugging Face</button>
+            </div>
+            <div class="catalogue-resources" id="cat-disk">—</div>
+            <div class="dm__sub" id="cat-state">—</div>
+            <div id="cat-results"></div>
+          </div>
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat"><b id="ctrl-dl-size">—</b><span>Download</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-ram-req">—</b><span>Richiesti (RAM+VRAM)</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-vram-req">—</b><span>Il tuo PC (RAM + VRAM)</span></div>
+              <div class="dash-pm-stat" id="ctrl-disk-stat"><b id="ctrl-disk-free">—</b><span>Disco libero</span></div>
+            </div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-model"></div>
+        </div>
+
+      <!-- 3. Gestione Risorse -->
+      <div class="dash-card dash-card--res">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-memory"/></svg>Gestione Risorse<span class="dash-tag" id="ctrl-resources-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full"><span class="dm__label">VRAM riservata al sistema (MiB)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-vram-reserve" min="0" max="16384" step="1" value="0"><output id="ctrl-vram-out">0 MiB</output></div>
+            <span class="dm__sub" id="ms-ctrl-vram">—</span>
+            <span class="dm__sub">Riserva per il desktop: il valore ottimale va misurato, non minimizzato</span></div>
+          <div class="dm dm--full"><span class="dm__label">KV residente in VRAM (celle)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-kv-resident" min="20480" max="262144" step="1" value="32768"><output id="ctrl-kv-out">32768 celle</output></div>
+            <span class="dm__sub" id="ms-ctrl-kv">—</span>
+            <span class="dm__sub">Minimo effettivo: 20.480 celle. Aumentare la KV residente usa più VRAM e può ridurre i trasferimenti dal contesto in RAM.</span></div>
+          <div class="dm dm--full"><span class="dm__label">Contesto massimo (token)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-max-ctx" min="8192" max="262144" step="1" value="131072"><output id="ctrl-ctx-out">131072</output></div>
+            <span class="dm__sub" id="ms-ctrl-ctx">—</span>
+            <span class="dm__sub">La finestra del modello · si applica al prossimo avvio del motore</span></div>
+          <div class="dm dm--full">
+            <div class="dash-controls"><button class="st-btn st-btn--primary" id="ctrl-apply-resources" style="width:100%">Applica e riavvia il motore</button></div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-res"></div>
+        </div>
+
+      <!-- 4. Monitor termico -->
+      <div class="dash-card dash-card--pm">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-thermometer"/></svg>Monitor termico<span class="dash-tag" id="ctrl-power-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat" id="ctrl-pm-stat"><b id="ctrl-pm-mode-view">—</b><span>Modalità</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-eff">—</b><span>t/s per W</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-temp">—</b><span>Temp GPU</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-power">—</b><span>Potenza GPU</span></div>
+            </div>
+          </div>
+          <div class="dm dm--full"><span class="dm__label">Modalità</span>
+            <div class="dash-controls">
+              <select id="ctrl-power-mode" style="flex:1">
+                <option value="performance">Performance — nessun limite</option>
+                <option value="balanced" selected>Balanced — 80°C / 250W</option>
+                <option value="eco">Eco — 70°C / 150W</option>
+                <option value="custom">Custom — i tuoi limiti</option>
+              </select>
+            </div></div>
+          <div class="dm dm--wide"><span class="dm__label">Limite temperatura</span>
+            <div class="dash-controls"><input type="range" id="ctrl-temp-limit" min="50" max="95" step="1" value="80"><output id="ctrl-temp-out">80°C</output></div>
+            <span class="dm__sub" id="ms-ctrl-temp">—</span></div>
+          <div class="dm dm--wide"><span class="dm__label">Limite potenza</span>
+            <div class="dash-controls"><input type="range" id="ctrl-power-limit" min="50" max="350" step="1" value="250"><output id="ctrl-power-out">250W</output></div>
+            <span class="dm__sub" id="ms-ctrl-power">—</span></div>
+          <div class="dm dm--full">
+            <div class="ctrl-trend">
+              <div class="ctrl-trend__cell"><span class="dm__label">Andamento temperatura <b id="ctrl-trend-temp">—</b></span>
+                <svg class="dash-spark" id="ct-temp-spark" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+              <div class="ctrl-trend__cell"><span class="dm__label">Andamento potenza <b id="ctrl-trend-power">—</b></span>
+                <svg class="dash-spark" id="ct-pow-spark" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            </div>
+          </div>
+          <div class="dm dm--full"><span class="dm__sub" id="ms-ctrl-power-state">—</span></div>
+          <div class="dm dm--full"><span class="dm__sub" id="ms-ctrl-power-sensors">—</span></div>
+          <div class="dm dm--full">
+            <div class="dash-controls">
+              <button class="st-btn st-btn--primary" id="ctrl-apply-power">Applica</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-reset-throttle">Azzera avviso</button>
+            </div>
+          </div>
+        </div>
+        <div class="dash-note" id="ctrl-pm-note" role="status" hidden></div>
+      <div class="dash-hint" id="hint-ctrl-power"></div>
+        </div>
+    </div>
+      </div>
+  </section>
+</main>
+
+<!-- ============================ Sampling drawer ============================ -->
+<aside class="st-drawer" id="drawer" role="dialog" aria-modal="true" data-open="false" aria-label="Generazione e ragionamento" aria-hidden="true" inert>
+  <div class="st-drawer__head"><span class="card-title">Generazione</span>
+    <button class="st-btn st-btn--icon" id="drawer-close" aria-label="Chiudi">
+      <svg class="st-icon"><use href="web/sprite.svg#i-chevron"/></svg></button></div>
+  <div class="st-drawer__body">
+    <div class="st-field">
+      <label class="st-label" for="s-thinking">Ragionamento <output id="o-thinking"></output></label>
+      <div class="seg" id="s-thinking" role="radiogroup" aria-label="Ragionamento">
+        <button type="button" role="radio" data-v="none">Spento</button><button type="button" role="radio" data-v="low">Basso</button>
+        <button type="button" role="radio" data-v="medium">Medio</button><button type="button" role="radio" data-v="high">Alto</button>
+      </div>
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-temp">Temperatura <output id="o-temp"></output></label>
+      <input class="st-slider" type="range" id="s-temp" min="0" max="1.5" step="0.01">
+      <span class="muted small">0 = scelta del token più probabile; utile per confronti riproducibili</span>
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-topp">Top-p <output id="o-topp"></output></label>
+      <input class="st-slider" type="range" id="s-topp" min="0.05" max="1" step="0.01">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-topk">Top-k <output id="o-topk"></output></label>
+      <input class="st-slider" type="range" id="s-topk" min="1" max="64" step="1">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-max">Token massimi <output>vuoto = fino al termine</output></label>
+      <input class="st-input" id="s-max" type="number" min="1" step="1" placeholder="Fino al termine">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-seed">Seed <output>vuoto = casuale</output></label>
+      <input class="st-input" id="s-seed" type="number" min="1" step="1" placeholder="Casuale">
+    </div>
+    <div class="toggle-row"><span>Mostra il ragionamento<br><span class="muted small">espanso durante la generazione</span></span>
+      <button class="st-toggle" id="s-show" role="switch" aria-checked="true" aria-label="Mostra il ragionamento"></button></div>
+    <div class="toggle-row" id="mcp-row" hidden><span>Usa gli strumenti dei server MCP<br><span class="muted small"
+      id="mcp-row-sub">il modello può richiamarli durante la risposta</span></span>
+      <button class="st-toggle" id="s-mcp" role="switch" aria-checked="true" aria-label="Usa gli strumenti dei server MCP"></button></div>
+    <div class="toggle-row"><span data-i18n-ignore>Internet<br><span class="muted small" id="web-access-description">Ricerca web e pagine pubbliche</span></span><button class="st-toggle" id="s-web" role="switch" aria-checked="false" aria-label="Internet"></button></div>
+    <div class="toggle-row" id="esp-row" hidden><span>Proiezione sperimentale<br><span class="muted small">Il
+      vettore di controllo del motore; spento = modello originale. Il cambio rilegge la chat una volta</span></span>
+      <button class="st-toggle" id="s-esp" role="switch" aria-checked="true" aria-label="Proiezione sperimentale"></button></div>
+    <div class="toggle-row"><span>Condividi con le altre applicazioni<br><span class="muted small">omp e gli altri client API ricevono
+      queste impostazioni quando non specificano valori propri</span></span>
+      <button class="st-toggle" id="s-share" role="switch" aria-checked="false" aria-label="Condividi con le altre applicazioni"></button></div>
+    <div class="drawer-actions">
+      <button class="st-btn st-btn--secondary" id="s-reset" type="button">Ripristina</button>
+      <button class="st-btn st-btn--primary" id="s-apply" type="button">Applica</button>
+    </div>
+  </div>
+</aside>
+<div class="backend-client-popup" id="backend-client-popup" popover="auto" data-i18n-ignore><strong id="backend-client-title">Collega la tua applicazione</strong><button id="backend-copy-url" type="button">Copia endpoint API</button><button id="backend-copy-model" type="button">Copia ID modello</button><button id="backend-copy-opencode" type="button">Configurazione OpenCode</button><button id="backend-copy-http" type="button">Esempio richiesta HTTP</button></div>
+<section class="mcp-menu" id="chat-integrations" popover="auto" aria-labelledby="chat-integrations-title">
+ <header class="mcp-menu-top">
+  <div class="mcp-menu-brand"><span class="mcp-menu-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M12 12 3 7"/><path d="M12 12v10"/><path d="M12 12l9-5"/></svg></span><div><strong id="chat-integrations-title">Strumenti</strong><small>Server MCP del modello</small></div></div>
+  <div class="mcp-menu-search"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="chat-mcp-search" placeholder="Cerca fra i 47 strumenti" autocomplete="off" spellcheck="false"></div>
+  <span class="mcp-head-badge" id="chat-mcp-status">Verifica</span>
+  <button class="mcp-menu-close" type="button" id="chat-mcp-close" aria-label="Chiudi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+ </header>
+ <div class="mcp-menu-stats" id="chat-mcp-stats" aria-live="polite"></div>
+ <div class="mcp-menu-main">
+  <nav class="mcp-rail" aria-label="Server MCP" id="chat-mcp-rail"></nav>
+  <div class="mcp-detail" id="chat-mcp-detail"></div>
+ </div>
+ <footer class="mcp-menu-foot"><span id="chat-mcp-count"></span><button class="st-btn st-btn--secondary" type="button" id="chat-mcp-settings">Impostazioni strumenti</button></footer>
+ </section>
+<section class="mcp-menu harness-menu" id="chat-harness" popover="auto" aria-labelledby="chat-harness-title">
+ <header class="mcp-menu-top">
+  <div class="mcp-menu-brand"><span class="mcp-menu-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.4"/></svg></span><div><strong id="chat-harness-title">Agenti</strong><small>OpenCode e DeepSeek Harness sul tuo modello</small></div></div>
+  <span class="mcp-head-badge" id="chat-harness-status">Verifica</span>
+  <button class="mcp-menu-close" type="button" id="chat-harness-close" aria-label="Chiudi"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+ </header>
+ <div class="harness-switch" role="tablist" aria-label="Agente">
+ <button type="button" role="tab" data-harness-switch="claude" aria-selected="false">Claude Code</button>
+ <button type="button" role="tab" data-harness-switch="antigravity" aria-selected="false">Antigravity</button>
+  <button type="button" role="tab" data-harness-switch="opencode" aria-selected="true">OpenCode</button>
+  <button type="button" role="tab" data-harness-switch="dsh" aria-selected="false">DeepSeek Harness</button><button type="button" role="tab" data-harness-switch="trueforge" aria-selected="false">TrueForge</button><button type="button" role="tab" data-harness-switch="hermes" aria-selected="false">Hermes Agent</button>
+ </div>
+ <div class="harness-body">
+  <div id="harness-panel-claude" hidden></div>
+  <div id="harness-panel-antigravity" hidden></div>
+  <div id="harness-panel-opencode" aria-live="polite"><p class="harness-note">Verifica dello stato…</p></div>
+  <div id="harness-panel-hermes" aria-live="polite" hidden></div><div id="harness-panel-trueforge" aria-live="polite" hidden></div><div id="harness-panel-dsh" aria-live="polite" hidden><p class="harness-note">Verifica dello stato…</p></div>
+ </div>
+</section>
+<div class="scrim" id="scrim" hidden></div>
+<div class="st-toasts" id="toasts" aria-live="polite"></div>
+<script src="web/language-data.js?v=20261017-chat-toolbar"></script>
+<script src="web/language.js?v=20261009-languages-1"></script>
+<script src="web/catalogue.js?v=20261017-hydra-coherent-2"></script>
+<script src="web/localai-storage-migration.js?v=20261011"></script>
+<script src="web/mcp-tool-copy.js?v=20261012"></script>
+<script src="web/generation-chart-v3.js?v=20261017-unified-1"></script>
+<script src="web/build-identity.js?v=20261017-badge-alignment-2"></script>
+<script src="web/benchmark-signals.js?v=20261017-premium-1"></script>
+<script src="web/monitor-engine-identity.js?v=20261017-graph-ready"></script>
+<link rel="stylesheet" href="web/service-health.css?v=20261017-1">
+<script src="web/service-health.js?v=20261017-1"></script>
+<script src="web/app.js?v=20261017-service-health"></script>
+<link rel="stylesheet" href="web/open-webui-documents.css?v=20261015-documenti-console">
+<script src="web/open-webui-documents.js?v=20261015-documenti-console"></script>
+<link rel="stylesheet" href="web/optional-backends.css?v=20261011-author-metadata">
+<script src="web/profile-history.js"></script>
+<script src="web/optional-backends.js?context=20261017&v=20261017-vision-state-7"></script>
+<link rel="stylesheet" href="web/backend-config-premium.css?v=20261015-layout-2">
+<script src="web/backend-config-premium.js?v=20261015"></script>
+<script src="web/optional-catalogue.js?v=20261017-catalogue-access"></script>
+<link rel="stylesheet" href="web/model-catalogue-premium.css?v=20261015">
+<script src="web/local-training.js?v=20261012-integrations"></script>
+<script src="web/audiocraft-training.js?v=20261015"></script>
+<script src="web/unsloth-workspace.js?v=20261015"></script>
+<script src="web/local-audio.js"></script>
+<link rel="stylesheet" href="web/voicestudio.css">
+<script src="web/voicestudio.js?v=20261013-autostart"></script>
+<script src="web/voicestudio-controls.js?v=20261014"></script>
+<script src="web/voicestudio-library.js?v=20261014"></script>
+<script src="web/voicestudio-profiles.js?v=20261014"></script>
+<script src="web/voicestudio-jobs.js?v=20261014"></script>
+<script src="web/voicestudio-audiobook.js?v=20261014"></script>
+<script src="web/voicestudio-audiobook-options.js?v=20261014"></script>
+<script src="web/voicestudio-story.js?v=20261014-story"></script>
+<script src="web/voicestudio-audiobook-render.js?v=20261014"></script>
+<script src="web/voicestudio-batch.js?v=20261014"></script>
+<script src="web/voicestudio-native.js?v=20261015-scope-20261014"></script>
+<script src="web/local-speech.js?v=20261011-compressed-export"></script>
+<script src="web/local-separation.js?v=20261011-chunks-20261011"></script>
+<link rel="stylesheet" href="web/local-generation.css">
+<script src="web/local-generation.js"></script>
+<script src="web/openvoice-batch.js?v=20261015"></script>
+<script src="web/audiocraft-setup.js?v=20261015"></script>
+<script src="web/studio-model-import.js?v=20261015"></script>
+<script src="web/studio-model-download.js?v=20261015"></script>
+<script src="web/local-image-reference.js?v=20261014"></script>
+<script src="web/local-video-reference.js?v=20261015-video-reference"></script>
+<script src="web/local-video-interpolation.js?v=20261015"></script>
+<script src="web/training-runtime.js"></script>
+<script src="web/local-export.js?v=20261010-offline"></script>
+<script src="web/local-vision.js?v=20261017-gpu-projector"></script>
+<script src="web/multimedia-studio.js?v=20261013-autostart"></script>
+<link rel="stylesheet" href="web/media-studio-design.css">
+<script src="web/media-studio-design.js"></script>
+<script src="web/configuration-autostart.js?v=20261013"></script>
+<link rel="stylesheet" href="web/update-center.css?v=20261012-clean">
+<script src="web/chat-organization.js"></script>
+<script src="web/engine-brands.js"></script>
+<script src="web/model-brands.js"></script>
+<script src="web/pytorch-ui.js?v=20261014-guided"></script>
+<script src="web/software-credits.js?v=20261017-footer-centered-3"></script>
+<script src="web/about-capabilities.js?v=20261017-hydra-dynamic"></script>
+<script src="web/update-center.js?v=20261015-documents-20261012-integrations"></script>
+<script src="web/dependency-supervisor.js?v=20261022"></script>
+<link rel="stylesheet" href="web/update-notifications.css">
+<script src="web/component-update-flow.js?v=20261012-integrations"></script>
+<script src="web/update-notifications.js"></script>
+<link rel="stylesheet" href="web/control-section-headers.css?v=20261010-icons-2">
+<link rel="stylesheet" href="web/agent-harness.css?v=20261014-border-circuit">
+<script src="web/control-section-headers.js?v=20261012-unified-generation"></script>
+<script src="web/function-identity.js"></script>
+<link rel="stylesheet" href="web/model-setup-guide.css?v=20261015-device-icons">
+<script src="web/model-engine-routing.js"></script>
+<script src="web/model-setup-guide.js?v=20261015-device-icons"></script>
+<link rel="stylesheet" href="web/local-model-picker.css">
+<script src="web/local-model-picker.js"></script>
+<link rel="stylesheet" href="web/training-design.css">
+<script src="web/training-design.js"></script>
+<script src="web/training-methods.js?v=20261012-integrations"></script>
+<script src="web/training-native-app.js?v=20261012-integrations"></script>
+<script src="web/semantic-icons.js?v=20261010-1"></script>
+<script src="web/chat-context.js?v=20261011-payload"></script>
+<script src="web/context-compaction.js?v=20261012-manual-excerpts"></script>
+<script src="web/ai-lab.js?v=honest-tail-20261011"></script>
+<script src="web/lab-evidence.js?v=20261011"></script>
+<script src="web/performance-spectrum.js?v=20261011"></script>
+<script src="web/performance-workspace.js?v=hydra-history-20261011"></script>
+<link rel="stylesheet" href="web/xterm-original.css">
+<script src="web/xterm-original.js"></script>
+<script src="web/xterm-fit-original.js"></script>
+<link rel="stylesheet" href="web/original-harness-ui.css?v=20261014">
+<script src="web/original-harness-ui.js?v=20261014"></script>
+
+<script src="web/agent-harness.js?v=20261014-internal"></script>
+<script src="web/airllm-ui.js?v=20261011"></script>
+<script src="web/prompt-library.js?v=20261011-premium"></script>
+<script src="web/prompt-workspace.js"></script>
+<link rel="stylesheet" href="web/scrollbars.css?v=20261012-benchmark-standard">
+<script src="web/private-media.js"></script>
+<link rel="stylesheet" href="web/configuration-assistant.css">
+<script src="web/configuration-assistant.js"></script>
+<script src="web/performance-profile-guard.js"></script>
+<link rel="stylesheet" href="web/file-controls.css">
+<script src="web/file-controls.js"></script>
+<link rel="stylesheet" href="web/select-controls.css?v=20261012-readable">
+<script src="web/select-controls.js?v=20261012-readable"></script>
+<link rel="stylesheet" href="web/vision-dataset-upload.css?v=20261012">
+<script src="web/vision-dataset-upload.js?v=20261012"></script>
+<link rel="stylesheet" href="web/configuration-guide.css?v=20261014">
+<script src="web/configuration-guide.js?v=20261014"></script>
+<link rel="stylesheet" href="web/unified-engine-control.css?v=20261017-engine-model-row">
+<script src="web/hydra-engine-choice.js?v=1"></script>
+<script src="web/model-resource-summary.js?v=20261017-all-resources-3"></script>
+<script src="web/engine-power.js?v=20261017-toggle-3"></script>
+<script src="web/unified-engine-control.js?v=20261017-engine-model-row"></script>
+<script src="web/hydra-native.js?identity=20261017&v=1"></script>
+<script src="web/hydra-model-library.js?v=14-disk-components"></script>
+<link rel="stylesheet" href="web/model-actions-layout.css?v=1">
+<script src="web/model-actions-layout.js?v=1"></script>
+<link rel="stylesheet" href="web/control-launch-guide.css?v=20261015-inner-step-light">
+<script src="web/control-launch-state.js?v=20261016-hydra"></script>
+<script src="web/control-launch-guide.js?v=20261016-embedded"></script>
+<script src="web/idle-release.js?v=20261014"></script>
+<link rel="stylesheet" href="web/automatic-updates.css?v=20261014">
+<script src="web/automatic-updates.js?v=20261014"></script>
+<link rel="stylesheet" href="web/workspace-step-guide.css?v=20261015">
+<script src="web/workspace-step-guide.js?v=20261015"></script>
+<script src="web/magnet-controls.js?v=20261015"></script>
+<script src="web/conditioned-music.js?v=20261015"></script>
+<link rel="stylesheet" href="web/visual-guide-preference.css?v=20261015">
+<script src="web/visual-guide-preference.js?v=20261015"></script>
+<script src="web/watermark-controls.js?v=20261015"></script>
+<script src="web/mbd-controls.js?v=20261015-1"></script>
+<link rel="stylesheet" href="web/colibri-workspace.css?v=20261015-6">
+<script src="web/colibri-workspace.js?power=2&v=20261015-6"></script>
+<script src="web/colibri-controls.js?power=2&v=20261015-5"></script>
+<link rel="stylesheet" href="web/system-one.css?v=20261015">
+<script src="web/system-one.js?v=20261015"></script>
+<script src="web/colibri-catalogue.js?v=context-20261015"></script>
+<script src="web/catalogue-engine-context.js?v=1"></script>
+<script src="web/response-comparison.js"></script>
+<script src="web/document-folder-sync.js"></script>
+<script src="web/range-precision.js?v=20261017-general-audit-2"></script>
+<script src="web/performance-hydra-registry.js?v=20261018"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

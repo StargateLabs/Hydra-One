@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<link rel="icon" href="web/sprite.svg" type="image/svg+xml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hydra One</title>
+<link rel="stylesheet" href="web/tokens.css?v=20261008-pro">
+<link rel="stylesheet" href="web/components.css?v=20261008-pro">
+<link rel="stylesheet" href="web/app.css?v=20261008-pro">
+<link rel="stylesheet" href="web/performance.css?v=20261008-premium">
+<link rel="stylesheet" href="web/sliders.css?v=20261008-precision">
+<link rel="stylesheet" href="web/monitor.css?v=20261009-monitor-sensors-2">
+<link rel="stylesheet" href="web/control.css?v=20261008-control-aligned">
+<link rel="stylesheet" href="web/refinements.css?v=20261008-premium-1">
+<link rel="stylesheet" href="web/about.css?v=20261009-about-compact-5">
+<script>
+  // the theme before the first paint: the saved choice, else the system's
+  try {
+    const t = localStorage.getItem("strata.theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<style>
+/* ===== Stargate Lab premium dashboard ===== */
+.view--control{max-width:1600px;margin:0 auto;padding:0 28px}
+.dash4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0}
+.dash-card{position:relative;border:1px solid var(--st-line);border-radius:16px;background:var(--st-surface);
+  overflow:hidden;transition:border-color .25s, box-shadow .25s}
+.dash-card:hover{border-color:var(--st-accent);box-shadow:0 6px 26px -18px var(--st-accent)}
+.dash-card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--st-accent),transparent 72%);opacity:.85}
+.dash-head{display:flex;align-items:center;gap:9px;padding:13px 16px;border-bottom:1px solid var(--st-line);
+  font:700 11.5px/1 var(--st-font);letter-spacing:.9px;text-transform:uppercase;color:var(--st-ink-muted)}
+.dash-head svg{width:16px;height:16px;flex:0 0 auto;color:var(--st-accent)}
+.dash-tag{margin-left:auto;font-size:10.5px;font-weight:500;letter-spacing:.3px;text-transform:none;
+  color:var(--st-ink-muted);max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dash-body{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px 14px;padding:16px}
+.dm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dm--wide{grid-column:span 2}
+.dm--full{grid-column:1/-1}
+.dm__label{font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--st-ink-muted);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dm__value{font-size:23px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums;letter-spacing:-.4px}
+.dm__value small{font-size:11.5px;font-weight:500;color:var(--st-ink-muted);margin-left:2px;letter-spacing:0}
+.dm__sub{font-size:10.5px;color:var(--st-ink-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dash-spark{width:100%;height:30px;display:block;margin-top:3px;color:var(--st-accent)}
+.dash-bar{height:5px;border-radius:3px;background:var(--st-surface-2);overflow:hidden;margin-top:6px}
+.dash-bar__fill{height:100%;border-radius:3px;background:var(--st-accent);transition:width .35s ease}
+.dash-bar__fill[data-tone="warn"]{background:var(--st-warn)}
+.dash-bar__fill[data-tone="danger"]{background:var(--st-danger)}
+.dash-gauge{display:flex;align-items:center;gap:12px}
+.dash-gauge svg{width:58px;height:58px;flex:0 0 auto}
+.dash-pm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:2px}
+.dash-pm-stat{padding:9px 6px;border-radius:10px;background:var(--st-surface-2);text-align:center}
+.dash-pm-stat b{display:block;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.dash-pm-stat span{font-size:9.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--st-ink-muted)}
+.dash-pm-stat[data-tone="warn"] b{color:var(--st-warn-text)}
+.dash-pm-stat[data-tone="ok"] b{color:var(--st-accent-text)}
+.dash-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.dash-controls select,.dash-controls input[type=range]{color:inherit;border:1px solid var(--st-line);
+  background:var(--st-surface-2);padding:6px 9px;border-radius:8px;font-size:12px;outline-offset:2px}
+.dash-controls input[type=range]{flex:1;min-width:120px;accent-color:var(--st-accent)}
+.dash-controls output{font-size:11px;min-width:52px;text-align:right;color:var(--st-ink-muted);
+  font-variant-numeric:tabular-nums}
+.dash-note{margin:8px 16px 0;padding:9px 12px;border-radius:9px;font-size:12px;
+  background:var(--st-warn-tint);color:var(--st-warn-text)}
+
+/* compact: each card is only as tall as its content, tiles sit tight, no internal voids */
+.dash4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:14px}
+.dash-card{display:flex;flex-direction:column}
+.dash-card .dash-body{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:8px 14px;padding:12px 16px;align-content:stretch;flex:1}
+.dm{min-height:0;gap:1px}
+.dm__label{font-size:10.5px;letter-spacing:.7px}
+.dm__value{font-size:21px;font-weight:600;line-height:1.15;letter-spacing:-.4px;font-variant-numeric:tabular-nums}
+.dm__value small{font-size:11.5px;font-weight:500;letter-spacing:0}
+.dm__sub{font-size:13.5px;line-height:1.3;white-space:normal;color:var(--st-ink-soft)}
+.dm .dash-spark{height:24px;margin-top:3px}
+.dash-bar{height:4px;margin-top:5px}
+.dash-gauge svg{width:52px;height:52px}
+/* every card is designed on its own content: the rows take exactly the height the tiles need */
+.dm{justify-content:space-between}
+.dm__label{order:0}
+.dm__value{order:1}
+.dm__sub{order:2}
+.dm .dash-spark{order:3;width:100%}
+.dash-card--gpu .dash-body{grid-template-rows:1fr 1fr 1fr auto}
+.dash-card--cpu .dash-body{grid-template-rows:1fr 1fr 1fr}
+.dash-card--inf .dash-body{grid-template-rows:1fr 1fr 1fr}
+.dash-card--pm .dash-body{grid-template-rows:auto auto 1fr}
+.dash-card--pm .dm{justify-content:flex-start;gap:6px}   /* pack label+slider+reading together */
+.dash-card--pm .dash-bar{margin-top:auto}               /* the level bar keeps the bottom edge */
+.dash-card--pm .dm__sub{margin-top:0;order:0;font-size:14px;color:var(--st-ink);font-weight:var(--st-fw-medium)}   /* right under the knob, not orphaned at the bottom of the cell */
+.dash-card--pm .dash-controls input[type=range]{flex:1;min-width:0}
+.dash-card--pm .dash-controls output{min-width:54px;text-align:right}   /* both rows then end at the same x */
+/* every stat box the same height, in every section: a two-line value can no longer
+   leave its neighbours shorter - the leftover space was already inside the card */
+.dash-pm-stat{min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.dash-pm-stat b{margin:0}
+
+/* the knob's reading sits on the label line, above the slider (the scale owns the row below) */
+.dm__label{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+output.dm__out{font-size:13px;font-weight:700;color:var(--st-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dash-hint{margin:0 16px 10px;padding:6px 12px;border-radius:10px;font-size:13.5px;line-height:1.3;display:flex;align-items:center;gap:7px;font-weight:var(--st-fw-medium);letter-spacing:.005em;background:var(--st-accent-tint);color:var(--st-accent-text);height:46px;box-sizing:border-box;overflow:hidden}   /* fixed box: the text length can no longer resize the card */
+.dash-hint span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;min-width:0}
+/* an empty sub-line keeps its line box: rows stop jumping when a value appears */
+.dm__sub:empty::after{content:"\00a0"}
+.state-zone__label,.state-zone__sub,.state-bar-sub{min-height:1.3em}
+.dash-hint b{font-weight:700;white-space:nowrap;font-size:15px;letter-spacing:.01em}
+.dash-hint[data-tone="warn"]{background:var(--st-warn-tint);color:var(--st-warn-text)}
+.dash-hint[hidden]{display:none}
+/* ---- one colour identity per section: the graphs take the card's own palette */
+.dash-card--gpu{--c:#fbbf24;--c2:#fb7185}
+.dash-card--cpu{--c:#38bdf8;--c2:#22d3ee}
+.dash-card--inf{--c:#34d399;--c2:#a3e635}
+.dash-card--pm{--c:#a78bfa;--c2:#f472b6}
+.dash-card--run{--c:#22d3ee;--c2:#38bdf8}
+.dash-card--model{--c:#f59e0b;--c2:#fbbf24}
+.dash-card--res{--c:#34d399;--c2:#22d3ee}
+.dash-card--pm2{--c:#a78bfa;--c2:#f472b6}
+.dash-card .dash-card::before,.dash-card::before{background:linear-gradient(90deg,var(--c),transparent 72%)}
+.dash-card .dash-head svg{color:var(--c)}
+.dash-card .dash-head{box-shadow:inset 0 -1px 0 0 var(--st-line)}
+.dash-spark{color:var(--c);filter:drop-shadow(0 0 3px currentColor)}
+.dash-spark .area{opacity:.20}
+.dash-spark .line{stroke-width:2}
+.dash-bar{background:color-mix(in srgb,var(--c) 14%,var(--st-surface-2))}
+.dash-bar__fill{background:linear-gradient(90deg,var(--c),var(--c2));box-shadow:0 0 8px -2px var(--c)}
+.dash-pm-stat{background:linear-gradient(180deg,color-mix(in srgb,var(--c) 10%,var(--st-surface-2)),var(--st-surface-2))}
+.dash-pm-stat b{color:var(--c)}
+.dash-hint{background:color-mix(in srgb,var(--c) 12%,var(--st-surface-2));color:var(--st-ink)}
+.dash-hint b{color:var(--c);font-size:15px}
+.dash-hint[data-tone="warn"]{background:var(--st-warn-tint);color:var(--st-warn-text)}
+.dash-hint[data-tone="warn"] b{color:var(--st-warn-text)}
+/* a tile whose value is running hot takes the warning colour */
+.dm[data-hot="1"] .dm__value{color:#fbbf24}
+.dm[data-hot="2"] .dm__value{color:#fb7185}
+
+
+.dash-card--gpu .dm.dm--full{justify-content:flex-start}
+
+.dash-head{padding:11px 16px}
+.dash-pm-stat{padding:7px 5px}
+.dash-pm-stat b{font-size:16px}
+.dash-pm-stat span{font-size:9.5px}
+.dash-note{margin:0 16px 11px;padding:7px 10px;font-size:11.5px}
+.dash-controls{margin-top:5px}
+@media(max-width:1180px){.dash-card .dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Slider anatomy, fixed order: label + reading ABOVE, then the bar, and only the ruler below.
+   The reading of the green knob must never sit under the scale. */
+.dm:has(.dash-controls){display:flex;flex-direction:column;justify-content:flex-start}
+.dm:has(.dash-controls) .dm__label{order:1}
+.dm:has(.dash-controls) .dm__sub{order:2;margin:2px 0 7px}
+.dm:has(.dash-controls) .dash-controls{order:3}
+.dm:has(.dash-controls) .range-scale{order:4}
+
+@media(max-width:820px){.dash4{grid-template-columns:1fr}.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Control only: the two rows take the height their content needs. The 1fr rows (Monitor) made the
+   shortest card stretch to the tallest one, leaving the void the user saw. */
+.view--control .dash4{grid-template-rows:auto auto;align-items:start}
+.view--control .dash-card{height:auto}
+.view--control .dash-body{flex:none}
+.view--control{overflow-y:auto}
+</style>
+</head>
+<body>
+<header class="st-header">
+  <span class="st-header__brand">Hydra One <span style="font-size:11px;font-weight:400;opacity:.6;margin-left:6px;letter-spacing:.3px">Mixed By Stargate Lab</span></span>
+  <nav class="st-tabs" role="tablist" aria-label="Views">
+    <button class="st-tab" role="tab" id="tab-btn-chat" aria-controls="view-chat" aria-selected="true" data-tab="chat">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-chat"/></svg>Chat</button>
+    <button class="st-tab" role="tab" id="tab-btn-monitor" aria-controls="view-monitor" aria-selected="false" data-tab="monitor">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-activity"/></svg>Monitor</button>
+    <button class="st-tab" role="tab" id="tab-btn-about" aria-controls="view-about" aria-selected="false" data-tab="about">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-info"/></svg>About</button>
+    <button class="st-tab" role="tab" id="tab-btn-control" aria-controls="view-control" aria-selected="false" data-tab="control">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-settings"/></svg>Control</button>
+    <button class="st-tab" role="tab" id="tab-btn-tuning" aria-controls="view-tuning" aria-selected="false" data-tab="tuning">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-bolt"/></svg>Potenziamenti</button>
+    <button class="st-tab" role="tab" id="tab-btn-confronti" aria-controls="view-confronti" aria-selected="false" data-tab="confronti">
+      <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-gauge"/></svg>Confronti</button>
+  </nav>
+  <span class="st-header__spacer"></span>
+  <span class="st-pill" id="pill" data-state="idle" role="status" aria-live="polite">
+    <span class="st-pill__dot"></span><span id="pill-text">Connecting&hellip;</span></span>
+  <button class="st-btn st-btn--icon" id="theme-btn" title="Light / dark" aria-label="Alterna il tema chiaro e scuro">
+    <svg class="st-icon"><use id="theme-icon" href="web/sprite.svg#i-moon"/></svg></button>
+</header>
+
+<main>
+  <!-- ============================ Chat ============================ -->
+  <section class="view view--chat" id="view-chat" role="tabpanel" aria-labelledby="tab-btn-chat">
+    <div class="chat-scroll" id="chat-scroll">
+      <div class="chat" id="chat">
+        <div class="chat-empty" id="chat-empty">
+          <div class="chat-empty__title">Scrivi la tua richiesta</div>
+          <div class="chat-empty__sub" id="chat-empty-sub">Il modello elabora le richieste su questo PC. Gli strumenti esterni, se configurati, possono usare la rete.</div>
+        </div>
+      </div>
+    </div>
+    <div class="composer-wrap">
+      <form class="st-composer" id="composer">
+        <div class="attachments" id="attachments" hidden></div>
+        <textarea id="input" rows="2" placeholder="Scrivi la tua richiesta&hellip;" aria-label="Messaggio"></textarea>
+        <div class="st-composer__bar">
+          <button type="button" class="st-btn st-btn--icon" id="attach-btn" title="Allega un file di testo o trascinalo qui" aria-label="Allega un file">
+            <svg class="st-icon"><use href="web/sprite.svg#i-attach"/></svg></button>
+          <input type="file" id="file" multiple hidden>
+          <button type="button" class="st-btn st-btn--icon" id="new-btn" title="Nuova chat" aria-label="Nuova chat">
+            <svg class="st-icon"><use href="web/sprite.svg#i-new-chat"/></svg></button>
+          <button type="button" class="st-btn st-btn--icon" id="export-btn" title="Scarica questa chat in Markdown" aria-label="Scarica questa chat">
+            <svg class="st-icon"><use href="web/sprite.svg#i-download"/></svg></button>
+          <button type="button" class="st-btn st-btn--icon" id="sampling-btn" title="Generazione e ragionamento" aria-label="Generazione e ragionamento">
+            <svg class="st-icon"><use href="web/sprite.svg#i-settings"/></svg></button>
+          <span class="spacer"></span>
+          <span class="composer-hint" id="composer-hint"></span>
+          <button type="button" class="st-btn st-btn--secondary" id="stop-btn" hidden>
+            <svg class="st-icon st-icon--sm"><use href="web/sprite.svg#i-stop"/></svg>Stop</button>
+          <button type="submit" class="st-btn st-btn--primary st-btn--send" id="send-btn" aria-label="Invia">
+            <svg class="st-icon"><use href="web/sprite.svg#i-send"/></svg></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================ Monitor ============================ -->
+  <section class="view view--monitor" id="view-monitor" role="tabpanel" aria-labelledby="tab-btn-monitor" hidden>
+    <div class="monitor">
+      <header class="mon-hero"><div><p class="mon-kicker">STARGATE LAB / MONITOR</p><h1>Monitor di sistema</h1><p class="mon-lead">Attività del motore, risorse del PC e avvisi termici.</p></div><div class="mon-feed" id="monitor-feed"><span>Telemetria locale</span><b id="monitor-freshness">In attesa del server</b><label class="mon-source-control">Sorgente<select id="monitor-source" class="st-input" aria-label="Sorgente del Monitor"><option value="auto">Automatica · include test attivi</option><option value="operational">Servizio operativo</option><option value="benchmark">Ultimo test</option></select></label><small id="monitor-source-label">Servizio operativo</small></div></header>
+      <div class="st-card state-card state-strip">
+        <div class="state-card__head">
+          <span class="card-title">Stato della richiesta</span>
+          <span class="badges" id="state-badges">
+            <span class="st-badge" data-s="unloaded">Scaricato</span>
+            <span class="st-badge" data-s="idle">Pronto</span>
+            <span class="st-badge st-badge--reading" data-s="reading">Lettura</span>
+            <span class="st-badge st-badge--generating" data-s="generating">Generazione</span>
+            <span class="st-badge st-badge--queued" data-s="queued">In coda</span>
+            <span class="st-badge st-badge--error" data-s="error">Errore</span>
+          </span>
+        </div>
+
+        <div class="state-strip__grid">
+          <div class="state-zone">
+            <div class="state-zone__label" id="state-label">Waiting for a request</div>
+            <div class="state-zone__sub" id="state-detail">il motore è pronto</div>
+          </div>
+
+          <div class="state-zone state-zone--bar">
+            <div class="state-bar-head"><span id="state-phase">avanzamento richiesta</span><b id="state-pct">0%</b></div>
+            <div class="st-progress" id="state-progress"><div class="st-progress__bar" id="state-bar" style="width:0%"></div></div>
+            <div class="state-zone__sub" id="state-bar-sub">nessuna richiesta in corso</div>
+          </div>
+
+          <div class="state-pills">
+            <div class="state-pill"><span>Lettura prompt · s</span><b id="st-ttft">—</b></div>
+            <div class="state-pill"><span>Richieste</span><b id="st-reqs">—</b></div>
+            <div class="state-pill"><span>Token generati</span><b id="st-tokens">—</b></div>
+            <div class="state-pill"><span>In coda</span><b id="st-queue">—</b></div>
+          </div>
+        </div>
+
+        <div class="state-foot">
+          <span class="state-foot__eng" id="st-engine">—</span>
+          <span class="state-foot__warn" id="st-warn" hidden></span>
+        </div>
+      </div>
+
+      <div class="dash4" id="dash4">
+        <!-- ============ 1. GPU & POWER ============ -->
+        <div class="dash-card dash-card--gpu">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-gpu"/></svg>GPU e alimentazione<span class="dash-tag" id="ms-gpu"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Utilizzo</span><span class="dm__value" id="mv-gpu">–</span>
+              <svg class="dash-spark" id="sp-gpu" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">VRAM</span><span class="dm__value" id="mv-vram">–</span>
+              <div class="dash-bar"><div class="dash-bar__fill" id="bar-vram"></div></div><span class="dm__sub" id="ms-vram"></span></div>
+            <div class="dm"><span class="dm__label">Temperatura</span><span class="dm__value" id="mv-temp">–</span><span class="dm__sub" id="ms-temp"></span>
+              <svg class="dash-spark" id="sp-temp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Hotspot</span><span class="dm__value" id="mv-hotspot">–</span><span class="dm__sub" id="ms-hotspot"></span>
+              <svg class="dash-spark" id="sp-hotspot" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Potenza</span><span class="dm__value" id="mv-power">–</span><span class="dm__sub" id="ms-power"></span>
+              <svg class="dash-spark" id="sp-power" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Temperatura VRAM</span><span class="dm__value" id="mv-vramtemp">–</span><span class="dm__sub" id="ms-vramtemp"></span><svg class="dash-spark" id="sp-vramtemp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--wide"><span class="dm__label">PCIe</span><span class="dm__value" id="mv-pcie" style="font-size:16px">–</span><span class="dm__sub" id="ms-pcie"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Efficienza</span><span class="dm__value" id="mv-eff" style="font-size:16px">–</span><span class="dm__sub" id="ms-eff">rapporto istantaneo token/s per watt GPU</span><svg class="dash-spark" id="sp-eff" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+<div class="dm dm--wide"><span class="dm__label">Tensione GPU</span><span class="dm__value" id="mv-volt" style="font-size:16px">–</span><span class="dm__sub" id="ms-volt"></span></div>
+            <div class="dm dm--full" style="justify-content:flex-start"><span class="dm__label">GPU</span><span class="dm__sub" id="ms-gpu-name" style="font-size:12px"></span></div>
+          </div>
+        <div class="dash-hint" id="hint-gpu"></div>
+        </div>
+
+        <!-- ============ 2. CPU & SYSTEM ============ -->
+        <div class="dash-card dash-card--cpu">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-cpu"/></svg>CPU e sistema<span class="dash-tag" id="ms-cores"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Utilizzo</span><span class="dm__value" id="mv-cpu">–</span><span class="dm__sub" id="ms-cpu"></span>
+              <svg class="dash-spark" id="sp-cpu" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Temperatura CPU</span><span class="dm__value" id="mv-cpu_temp">–</span><span class="dm__sub" id="ms-cpu_temp"></span>
+              <svg class="dash-spark" id="sp-cpu_temp" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Potenza CPU</span><span class="dm__value" id="mv-cpu_power">–</span><span class="dm__sub" id="ms-cpu_power"></span>
+              <svg class="dash-spark" id="sp-cpu_power" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">RAM</span><span class="dm__value" id="mv-ram" style="font-size:16px">–</span>
+              <div class="dash-bar"><div class="dash-bar__fill" id="bar-ram"></div></div><span class="dm__sub" id="ms-ram"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Disco · lettura / scrittura</span><span class="dm__value" id="mv-disk" style="font-size:16px">–</span><span class="dm__sub" id="ms-disk"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">PCH · Motherboard</span><span class="dm__value" id="mv-board" style="font-size:16px">–</span><span class="dm__sub" id="ms-board"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Core · thread</span><span class="dm__value" id="mv-corecount" style="font-size:16px">–</span><span class="dm__sub" id="ms-corecount"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Server</span><span class="dm__value" id="mv-uptime" style="font-size:16px">–</span><span class="dm__sub" id="ms-uptime"></span></div>
+          </div>
+        <div class="dash-hint" id="hint-cpu"></div>
+        </div>
+
+        <!-- ============ 3. INFERENCE ============ -->
+        <div class="dash-card dash-card--inf">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-gauge"/></svg>Generazione<span class="dash-tag" id="ms-model"></span></div>
+          <div class="dash-body">
+            <div class="dm"><span class="dm__label">Decode</span><span class="dm__value" id="mv-speed">–</span><span class="dm__sub" id="ms-speed"></span>
+              <svg class="dash-spark" id="sp-speed" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm"><span class="dm__label">Prefill</span><span class="dm__value" id="mv-prefill">–</span><span class="dm__sub" id="ms-prefill"></span>
+              <svg class="dash-spark" id="sp-prefill" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="dm dm--wide"><span class="dm__label">Contesto utilizzato</span>
+              <div class="dash-gauge">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="st-gauge__track" cx="60" cy="60" r="50" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="235.6 314.2" transform="rotate(135 60 60)"/>
+                  <circle class="st-gauge__fill" id="ctx-fill" cx="60" cy="60" r="50" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="0 314.2" transform="rotate(135 60 60)"/>
+                </svg>
+                <div><span class="dm__value" id="ctx-pct">0%</span><span class="dm__sub" id="ctx-sub">–</span></div>
+              </div></div>
+            <div class="dm dm--wide"><span class="dm__label">Cache esperti</span><span class="dm__value" id="mv-experts" style="font-size:16px">–</span>
+              <div class="dash-bar"><div class="dash-bar__fill" id="bar-experts"></div></div><span class="dm__sub" id="ms-experts"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Stato</span><span class="dm__value" id="mv-state" style="font-size:16px">–</span><span class="dm__sub" id="ms-state"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Esperti trovati in cache</span><span class="dm__value" id="mv-hit" style="font-size:16px">–</span><span class="dm__sub" id="ms-hit"></span></div>
+            <div class="dm dm--wide"><span class="dm__label">Draft accettati</span><span class="dm__value" id="mv-draft" style="font-size:16px">–</span><span class="dm__sub" id="ms-draft"></span></div>
+          </div>
+        <div class="dash-hint" id="hint-inf"></div>
+        </div>
+
+        <!-- ============ 4. POWER MANAGER ============ -->
+        <div class="dash-card dash-card--pm">
+          <div class="dash-head"><svg><use href="web/sprite.svg#i-bolt"/></svg>Monitor termico<span class="dash-tag" id="ms-pm-mode"></span></div>
+          <div class="dash-body">
+            <div class="dm dm--full">
+              <div class="dash-pm-grid">
+                <div class="dash-pm-stat" id="pm-stat-status"><b id="pm-status">–</b><span>Stato</span></div>
+                <div class="dash-pm-stat" id="pm-stat-eff"><b id="pm-eff">–</b><span>t/s per W</span></div>
+                <div class="dash-pm-stat"><b id="pm-tlim">–</b><span>Soglia temperatura</span></div>
+                <div class="dash-pm-stat"><b id="pm-plim">–</b><span>Soglia potenza</span></div>
+              </div>
+            </div>
+            <div class="dm dm--full">
+              <span class="dm__label">Profilo avvisi</span>
+              <div class="dash-controls">
+                <select id="pm-mode" aria-label="Profilo degli avvisi termici">
+                  <option value="performance">Performance</option><option value="balanced" selected>Bilanciato</option>
+                  <option value="eco">Eco</option><option value="custom">Personalizzato</option>
+                </select>
+                <button class="st-btn st-btn--secondary" id="pm-apply">Applica</button>
+                <button class="st-btn st-btn--secondary" id="pm-reset">Azzera avviso</button>
+              </div>
+            </div>
+            <div class="dm dm--wide"><span class="dm__label">Soglia temperatura</span>
+              <div class="dash-controls"><input type="range" id="pm-temp" min="50" max="95" step="1" value="80"><output id="pm-temp-out">80°C</output></div>
+              <span class="dm__sub" id="ms-pm-temp">—</span><div class="dash-bar"><div class="dash-bar__fill" id="bar-pm-temp"></div></div></div>
+            <div class="dm dm--wide"><span class="dm__label">Soglia potenza</span>
+              <div class="dash-controls"><input type="range" id="pm-power" min="50" max="350" step="5" value="250"><output id="pm-power-out">250W</output></div>
+              <span class="dm__sub" id="ms-pm-power">—</span><div class="dash-bar"><div class="dash-bar__fill" id="bar-pm-power"></div></div></div>
+          </div>
+          <div class="dash-note" id="pm-throttle" role="status" hidden></div>
+        <div class="dash-hint" id="hint-pm"></div>
+        </div>
+      </div>
+
+      <div class="st-card req-card">
+        <div class="req-head"><span class="card-title">Registro delle richieste</span>
+          <button class="st-btn st-btn--secondary" id="req-all" hidden>Show all</button></div>
+        <p class="mon-explainer">Dati della sessione del server. I grafici mostrano i campioni ricevuti; gli intervalli senza misure restano vuoti. Il profilo termico imposta avvisi e non modifica la potenza della scheda.</p><div class="table-wrap" id="req-wrap">
+          <table class="st-table">
+            <thead><tr><th>Ora</th><th>Stato</th><th class="num">Prompt</th><th class="num">Riutilizzati</th><th class="num">Generati</th>
+              <th class="num">Tok/s</th><th class="num" title="While writing the answer: the share of the experts looked up that were already in VRAM (experts copied over PCIe are not counted)">Hit rate</th><th class="num">Durata</th></tr></thead>
+            <tbody id="req-body"><tr><td colspan="8" class="muted">Nessuna richiesta registrata</td></tr></tbody>
+          </table>
+        </div>
+        <p class="muted req-totals" id="req-totals"></p>
+      </div>
+
+      <div class="st-card mcp-card" id="mcp-card" hidden>
+        <div class="req-head"><span class="card-title">MCP servers</span><span class="muted small" id="mcp-sum"></span></div>
+        <div class="mcp-list" id="mcp-list"></div>
+        <p class="muted small mcp-note">Their tools run on this PC with your rights, when the model decides to call them
+          (in this page's chat only; switch it off in Sampling).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== Performance workspace ======================== -->
+  <section class="view view--tuning" id="view-tuning" role="tabpanel" aria-labelledby="tab-btn-tuning" hidden>
+    <div class="perf-suite">
+      <header class="perf-hero">
+        <div><p class="perf-kicker">STARGATE LAB / PRESTAZIONI</p><h1>Potenziamenti</h1><p class="perf-lead">Configurazione del motore, risultati dei test e opzioni di ottimizzazione.</p><div class="perf-actions"><a class="st-btn st-btn--primary" href="#control">Regola in Control ↗</a><a class="st-btn st-btn--secondary" href="#confronti">Confronta le prove</a></div></div>
+        <aside class="perf-identity"><span class="perf-tag">PROFILO OPERATIVO</span><div class="perf-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><span>↑</span></div><strong class="perf-model">In attesa del motore</strong><p>Parametri dell'ultimo avvio, risultati conservati sul tuo PC.</p><a href="#about">Identità e diagnosi del sistema ↗</a></aside>
+      </header>
+      <div class="perf-section-head"><div><p class="perf-kicker">01 / CONFIGURAZIONE</p><h2>Configurazione attuale</h2></div><span>Dati riportati dal motore</span></div>
+      <dl class="perf-runtime" id="tune-live"></dl>
+      <section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">02 / REGISTRO DELLE PROVE</p><h2>Rapporti dei test</h2></div><span id="perf-report-count">Caricamento rapporti…</span></div><p class="perf-copy">Ogni rapporto conserva il carico e il protocollo utilizzati. I valori sono mediane, accompagnate dal minimo e dal massimo dei giri misurati; il riscaldamento resta escluso. Una prova interrotta non certifica una prestazione.</p>
+        <div class="perf-toolbar"><label for="perf-filter">Mostra</label><select class="st-input" id="perf-filter"><option value="all">Tutti i rapporti</option><option value="paired">Prove appaiate</option><option value="exploratory">Prove esplorative</option></select><span>Filtro sul modello selezionato</span></div>
+        <div class="table-wrap"><table class="perf-table"><caption class="perf-sr">Rapporti locali: mediana e intervallo, in token al secondo</caption><thead><tr><th>Prova / data</th><th>Esito</th><th>Decode · t/s</th><th>Totale · t/s</th><th>Prefill · t/s</th><th>Protocollo</th></tr></thead><tbody id="benchmark-results"><tr><td colspan="6">Caricamento risultati…</td></tr></tbody></table></div><p class="perf-note">Il decode misura la scrittura nel motore. Il prefill misura la lettura dei token nuovi. Il totale include il tempo dell'intera richiesta: tre prospettive complementari sullo stesso lavoro.</p>
+      </section>
+      <div class="perf-section-head"><div><p class="perf-kicker">03 / LEVE DI OTTIMIZZAZIONE</p><h2>Opzioni di ottimizzazione</h2></div><a href="#control">Apri i controlli ↗</a></div>
+      <div class="perf-card-grid">
+        <article class="perf-card"><span class="perf-index">01</span><span class="perf-tag">CONFIGURABILE</span><h3>CPU e memoria,<br>in equilibrio.</h3><p>Il pool di worker e la cache degli esperti influenzano trasferimenti, memoria disponibile e tempo della richiesta. Un hit rate più alto è utile solo se il lavoro termina prima, con margine sufficiente per il sistema.</p><a href="#control">Verifica i budget ↗</a></article>
+        <article class="perf-card"><span class="perf-index">02</span><span class="perf-tag">DA MISURARE</span><h3>Speculazione,<br>senza scorciatoie.</h3><p>I draft anticipano i token successivi. Finestra e soglia di accettazione possono aiutare alcuni carichi e rallentarne altri: i rapporti appaiati permettono di verificare la regolazione prima di adottarla.</p><a href="#confronti">Leggi le differenze ↗</a></article>
+        <article class="perf-card"><span class="perf-index">03</span><span class="perf-tag">SPERIMENTALE</span><h3>Kernel veloci.<br>Motore da verificare.</h3><p>Il percorso di attenzione WMMA ha superato le verifiche numeriche e migliorato alcuni test isolati. Le prove sul motore completo non hanno dimostrato un vantaggio stabile. Il selettore QSA sperimentale resta disattivato.</p><p class="perf-card-note">Un successo del singolo kernel non garantisce un guadagno della chat.</p></article>
+        <article class="perf-card"><span class="perf-index">04</span><span class="perf-tag">MISURA DISTINTA</span><h3>Qualità ed energia.<br>Oltre i token.</h3><p>La velocità non certifica la correttezza di una risposta. Il costo energetico per token richiede misure sincronizzate, oggi non disponibili nei rapporti. I profili termici impostano avvisi e non modificano la potenza del driver.</p><a href="#monitor">Osserva il sistema ↗</a></article>
+      </div>
+      <section class="perf-method"><div><p class="perf-kicker">DAL TEST ALLA SCELTA</p><h2>Metodo di verifica</h2><p>Conserva un riferimento, misura la variante e ripeti il confronto. Solo un vantaggio riproducibile giustifica il cambio del profilo operativo.</p></div><ol><li><b>01 · Fissa le condizioni</b><span>Stesso modello, hardware, prompt, uscita e impostazioni compatibili.</span></li><li><b>02 · Ripeti la misura</b><span>Separa riscaldamento e giri misurati; osserva mediana e variabilità.</span></li><li><b>03 · Verifica il risultato</b><span>Controlla qualità, memoria e stabilità oltre alla velocità.</span></li></ol></section>
+      <footer class="perf-footer"><span>Prove locali · dati persistenti · scelte misurabili</span><a href="#about">Torna alla diagnosi ↗</a></footer>
+    </div>
+  </section>
+  <section class="view view--confronti" id="view-confronti" role="tabpanel" aria-labelledby="tab-btn-confronti" hidden>
+    <div class="perf-suite perf-suite--compare">
+      <header class="perf-hero"><div><p class="perf-kicker">STARGATE LAB / BENCHMARK</p><h1>Confronti</h1><p class="perf-lead">Risultati locali e benchmark pubblicati, con hardware e condizioni di prova.</p><div class="perf-actions"><a class="st-btn st-btn--primary" href="#tuning">Esplora i rapporti ↗</a><a class="st-btn st-btn--secondary" href="#about">Controlla il sistema</a></div></div><aside class="perf-identity perf-identity--compare"><span class="perf-tag">IL TUO RIFERIMENTO</span><div class="perf-comparison-art" aria-hidden="true"><i></i><i></i><i></i><span>≈</span></div><strong class="perf-model">In attesa del motore</strong><p>Mediane e intervalli osservati. Nessuna classifica costruita su hardware diversi.</p><span class="cf-hero__kicker">Dati della macchina locale</span></aside></header>
+      <section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">01 / PROVE LOCALI</p><h2>Prestazioni misurate</h2></div><label class="perf-metric">Misura<select class="st-input" id="compare-metric"><option value="decode_tok_s">Decode · token/s</option><option value="wall_tok_s">Totale · token/s</option><option value="prefill_tok_s">Prefill · token/s</option></select></label></div><p class="perf-copy">Ultime prove appaiate del modello selezionato. Il punto rappresenta la mediana; il segmento mostra minimo e massimo. La vicinanza dei risultati e la loro variazione tra ripetizioni richiedono prudenza prima di dichiarare un miglioramento.</p><div id="compare-local" class="perf-ranges" aria-live="polite">Caricamento delle prove…</div><p class="perf-note" id="compare-local-note">I risultati storici descrivono le condizioni del rapporto, non la velocità corrente del motore.</p></section>
+      <div class="perf-section-head"><div><p class="perf-kicker">02 / COME LEGGERE IL CONFRONTO</p><h2>Criteri di confronto</h2></div></div>
+      <div class="perf-card-grid perf-card-grid--three"><article class="perf-card"><span class="perf-index">01</span><h3>Stiamo misurando<br>lo stesso lavoro?</h3><p>Modello, quantizzazione, prompt e lunghezza dell'uscita definiscono il carico. Il nome del protocollo aiuta a riconoscere una serie; i rapporti completi restano necessari per verificare binario e impostazioni.</p></article><article class="perf-card"><span class="perf-index">02</span><h3>Il vantaggio<br>si ripete?</h3><p>Una singola mediana più alta non basta. Le prove di conferma locali non hanno dimostrato un vantaggio stabile delle regolazioni alternative: il profilo operativo rimane il riferimento.</p></article><article class="perf-card"><span class="perf-index">03</span><h3>La risposta<br>resta affidabile?</h3><p>Le verifiche numeriche dei kernel e i test funzionali valutano aspetti diversi. Servono anche compiti completati, conversazioni lunghe, immagini e stabilità per estendere una conclusione oltre il carico misurato.</p></article></div>
+      <section class="perf-panel"><div class="perf-section-head"><div><p class="perf-kicker">03 / FONTI ESTERNE</p><h2>Benchmark esterni</h2></div><span>Fonti consultate · 08 ottobre 2026</span></div><p class="perf-copy">I risultati pubblicati aiutano a orientarsi. Sono presentati come riferimenti distinti: CPU, GPU, sistema operativo, versione e protocollo possono cambiare il risultato.</p><div class="table-wrap"><table class="perf-table perf-table--sources"><caption class="perf-sr">Riferimenti pubblicati e differenze rispetto alla macchina locale</caption><thead><tr><th>Fonte / provenienza</th><th>Condizioni dichiarate</th><th>Decode</th><th>Limite del confronto</th></tr></thead><tbody>
+      <tr><td><a href="https://github.com/Niko1221/Strata/blob/main/docs/AMD_HIP_PERFORMANCE.md" target="_blank" rel="noopener noreferrer">Hydra One · evidenze AMD HIP ↗</a><small>Repository originale · misura 29/09/2026</small></td><td>RX 7900 XTX · Ryzen 7950X3D · Linux · Orca IQ3_XXS<small>4.210–8.830 token di prompt; 128 token in uscita</small></td><td><b>55,5–59,2</b><small>token/s · quattro richieste</small></td><td>Stessa GPU della verifica locale; CPU, sistema, pack e carico differenti. È un intervallo di osservazioni, non una mediana locale.</td></tr>
+      <tr><td><a href="https://github.com/Niko1221/Strata#how-fast-is-it" target="_blank" rel="noopener noreferrer">Hydra One · README ↗</a><small>Repository originale · tabella AMD</small></td><td>RX 9070 XT · Ryzen 3900X · Q2_0 / IQ2_XS<small>Quantizzazioni diverse da IQ3_XXS</small></td><td><b>60 / 52</b><small>token/s · valori pubblicati</small></td><td>Hardware e quantizzazioni differenti. Non misura il vantaggio della nostra configurazione.</td></tr>
+      <tr><td><a href="https://stratallm.org/#benchmarks" target="_blank" rel="noopener noreferrer">stratallm.org · hub comunitario ↗</a><small>Documentazione non ufficiale</small></td><td>RTX 4070 · 64 GB DDR5<small>Protocollo e quantizzazione non dettagliati nella tabella</small></td><td><b>21,4</b><small>token/s · valore dichiarato</small></td><td>Dato della fonte, non verificato sul nostro PC. Non costituisce un controllo A/B locale.</td></tr>
+      </tbody></table></div></section>
+      <section class="perf-method"><div><p class="perf-kicker">CONCLUSIONE OPERATIVA</p><h2>Stato delle ottimizzazioni</h2><p>Gli esperimenti rimangono separati dalla configurazione in uso finché il guadagno del motore completo non è riproducibile. I dati disponibili non dimostrano una superiorità generale sull'originale.</p></div><div class="perf-next"><a class="st-btn st-btn--primary" href="#tuning">Leggi i rapporti locali ↗</a><a class="st-btn st-btn--secondary" href="#monitor">Osserva una richiesta</a></div></section>
+      <footer class="perf-footer"><span>Fonti dichiarate · metriche distinte · limiti visibili</span><a href="#about">Identità del sistema ↗</a></footer>
+    </div>
+  </section>
+
+  <section class="view view--about" id="view-about" role="tabpanel" aria-labelledby="tab-btn-about" hidden>
+    <div class="about about-console">
+      <header class="ab-hero">
+        <div class="ab-hero__copy">
+          <p class="ab-eyebrow"><span class="ab-dot"></span> STARGATE LAB / LOCAL INTELLIGENCE</p>
+          <h1>Informazioni sul sistema</h1>
+          <p class="ab-lead">Versione di Hydra One, modello configurato, hardware e diagnosi del server locale.</p>
+          <div class="ab-statusline"><span class="ab-state" id="about-live-state">Connessione al server…</span><span id="about-updated">In attesa dei dati</span></div>
+          <div class="ab-actions"><a class="st-btn st-btn--primary" href="#control">Apri Control <span aria-hidden="true">↗</span></a><a class="st-btn st-btn--secondary" href="#monitor">Osserva il sistema</a></div>
+        </div>
+        <div class="ab-identity">
+          <div class="ab-identity__top"><span>STRATA / MIXED BY STARGATE LAB</span><span class="ab-chip" id="about-backend-badge">—</span></div>
+          <div class="ab-orbit" aria-hidden="true"><div class="ab-orbit__ring"></div><div class="ab-orbit__ring ab-orbit__ring--inner"></div><span class="ab-orbit__core">S</span><i></i><i></i><i></i></div>
+          <p class="ab-identity__label">MODELLO SELEZIONATO</p><strong id="about-model-title">In attesa del server</strong>
+          <p class="ab-identity__sub" id="about-model-sub">Configurazione letta dal runtime</p>
+        </div>
+      </header>
+      <dl class="about-spec ab-runtime" id="about-spec"></dl>
+      <div class="ab-section-title"><div><p class="ab-eyebrow">01 / CONFIGURAZIONE E RISORSE</p><h2>Modello e hardware</h2></div><span class="ab-source">Fonte: motore e telemetria locale</span></div>
+      <div class="about-grid">
+        <section class="about-card"><div class="ab-card-label"><span>MODELLO</span><svg class="st-icon"><use href="web/sprite.svg#i-settings"/></svg></div><h3 class="about-card__h">Configurazione del motore</h3><dl class="facts" id="facts-engine"></dl><p class="about-note">Parametri riportati dall'ultimo avvio del motore. Restano consultabili dopo lo scaricamento; le modifiche preparate in Control si applicano al prossimo caricamento.</p></section>
+        <section class="about-card"><div class="ab-card-label"><span>HARDWARE</span><svg class="st-icon"><use href="web/sprite.svg#i-monitor"/></svg></div><h3 class="about-card__h">Le risorse di questo PC</h3><dl class="facts" id="facts-hw"></dl></section>
+        <section class="about-card"><p class="ab-eyebrow">INTEGRAZIONI</p><h3 class="about-card__h">Indirizzi API</h3><p class="about-note">Indirizzi di questa istanza per i client compatibili. Copia il valore e configura la chiave API se richiesta.</p><dl class="facts" id="facts-api"></dl><div class="ab-callout">L'inferenza avviene sul PC. Gli strumenti MCP e gli URL di immagini esterne, se utilizzati, possono accedere alla rete.</div></section>
+        <section class="about-card"><p class="ab-eyebrow">PREFERENZE DEL BROWSER</p><h3 class="about-card__h">Preferenze</h3><div class="st-field"><label class="st-label" for="api-key">Chiave API <output>solo se richiesta dal server</output></label><input class="st-input" id="api-key" type="password" autocomplete="off" placeholder="Non necessaria"></div><div class="toggle-row"><span>Tema scuro</span><button class="st-toggle" id="dark-toggle" role="switch" aria-checked="false" aria-label="Tema scuro"></button></div><p class="about-note">La chat e le preferenze dell'interfaccia sono conservate in questo browser. La chiave salvata non è inclusa nella diagnosi; usa un browser personale se il server richiede autenticazione.</p><p class="about-note">Le impostazioni di generazione condivise con gli altri client vengono invece salvate sul server. Il monitor API, se attivo, conserva temporaneamente anche le richieste.</p></section>
+        <details class="ab-detail"><summary><span><b>Diagnosi del sistema</b><small>Controlli e margini di memoria</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">02 / DIAGNOSI LIVE</p><h3 class="about-card__h">Diagnosi del sistema</h3></div><button class="st-btn st-btn--secondary" id="export-diagnostics">Scarica diagnosi JSON <span aria-hidden="true">↓</span></button></div><p class="about-note">Stato, margini di memoria e controlli del server. Il download esclude il contenuto delle conversazioni e le credenziali.</p><ul class="diagnostics-checks" id="diagnostics-checks" aria-live="polite"></ul></div></details>
+        <details class="ab-detail"><summary><span><b>Ultima richiesta</b><small>Tempi e velocità della sessione</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">03 / MISURE DELLA SESSIONE</p><h3 class="about-card__h">Ultima richiesta</h3></div><span class="ab-source">Una richiesta · nessuna mediana</span></div><p class="about-empty" id="about-empty">Non ci sono ancora richieste completate in questa sessione. Invia un messaggio: qui appariranno le misure effettive.</p><div class="about-stats" id="about-stats"><div class="about-stat"><b>—</b><span>Decode · token/s</span></div><div class="about-stat"><b>—</b><span>Prefill · token/s</span></div><div class="about-stat"><b>—</b><span>Tempo totale · s</span></div><div class="about-stat"><b>—</b><span>Cache esperti · %</span></div></div><div class="about-ref" id="about-ref" hidden></div><p class="about-note" id="about-note"></p></div></details>
+        <details class="ab-detail"><summary><span><b>Risultati salvati</b><small>Benchmark e protocolli</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><div class="ab-card-heading"><div><p class="ab-eyebrow">04 / EVIDENZE PERSISTENTI</p><h3 class="about-card__h">Risultati salvati</h3></div><a class="ab-text-link" href="#tuning">Tutti i rapporti recenti ↗</a></div><p class="about-note">Rapporti salvati sul PC per il modello selezionato. Mediana e intervallo dei campioni misurati; riscaldamento escluso. Versioni o prompt diversi non costituiscono un confronto diretto.</p><div class="table-wrap"><table class="ab-bench-table"><thead><tr><th>Prova / data</th><th>Decode token/s</th><th>Totale token/s</th><th>Protocollo</th></tr></thead><tbody id="about-benchmarks"><tr><td colspan="4">Caricamento delle evidenze…</td></tr></tbody></table></div><p class="ab-evidence-note">Le ottimizzazioni sperimentali restano separate dal profilo operativo. Un kernel più rapido non dimostra un motore completo più rapido.</p></div></details>
+        <details class="ab-detail"><summary><span><b>Funzioni disponibili</b><small>Capacità e limiti</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><p class="ab-eyebrow">CAPACITÀ E CONFINI</p><h3 class="about-card__h">Funzioni disponibili</h3><ul class="about-limits" id="about-limits"></ul></div></details>
+        <details class="ab-detail"><summary><span><b>Avvio e gestione</b><small>Procedura operativa</small></span><span class="ab-detail-arrow" aria-hidden="true">+</span></summary><div class="ab-detail-body"><p class="ab-eyebrow">FLUSSO OPERATIVO</p><h3 class="about-card__h">Avvio e gestione</h3><ol class="ab-steps"><li><span>01</span><div><b>Avvia l'interfaccia</b><p>Hydra One-Web.bat apre il server locale. Il profilo predefinito di questo progetto usa IQ3_XXS.</p></div></li><li><span>02</span><div><b>Carica quando serve</b><p>Invia un messaggio o scegli Avvia Hydra One in Control. L'avvio può richiedere tempo per leggere i pesi.</p></div></li><li><span>03</span><div><b>Osserva e intervieni</b><p>Monitor mostra l'attività. Control applica i budget al riavvio; Ferma restituisce la VRAM.</p></div></li></ol></div></details>
+      </div>
+      <footer class="about-foot"><div><b>Hydra One × Stargate Lab</b><p id="about-foot-txt">Motore locale · dati verificabili · controllo esplicito</p></div><div class="about-foot__links"><a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener noreferrer">Progetto originale ↗</a><a href="https://stratallm.org/#benchmarks" target="_blank" rel="noopener noreferrer">Riferimento comunitario ↗</a></div></footer>
+    </div>
+  </section>
+
+  <!-- ============================ Control ============================ -->
+  <section class="view view--control" id="view-control" role="tabpanel" aria-labelledby="tab-btn-control" hidden>
+    <div class="dash4" style="margin-top:18px">
+
+      <!-- 1. Avvio / Arresto -->
+      <div class="dash-card dash-card--run">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-activity"/></svg>Avvio / Arresto<span class="dash-tag" id="ctrl-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <span class="dm__label">Motore</span>
+            <div class="dash-controls">
+              <button class="st-btn st-btn--primary" id="ctrl-load">Avvia Hydra One</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-unload">Ferma</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-restart">Riavvia</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-health">Health check</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-vision" title="Leggere le immagini con il modello">Immagini: off</button>
+            </div>
+            <span class="dm__sub" id="ctrl-engine-note">Il modello si ricarica da solo alla prossima richiesta.</span>
+          </div>
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat"><b id="ctrl-stat-model">—</b><span>Modello</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-state">—</b><span>Stato</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-vram">—</b><span>VRAM usata</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-stat-speed">—</b><span>Decode ora</span></div>
+            </div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-run"></div>
+        </div>
+
+      <!-- 2. Cambia Modello -->
+      <div class="dash-card dash-card--model">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-download"/></svg>Modello<span class="dash-tag" id="ctrl-dl-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <span class="dm__label">Scegli il modello (repo ufficiale)</span>
+            <div class="dash-controls">
+              <select id="ctrl-model" style="flex:1">
+                <option value="IQ2_XS">IQ2_XS — 68 GB · 2-bit, profilo compatto</option>
+                <option value="IQ3_XXS" selected>IQ3_XXS — 76 GB · 3-bit, bilanciato</option>
+                <option value="IQ3_S">IQ3_S — variante 3-bit più ampia</option>
+                <option value="coder">Coder — variante per il codice</option>
+                <option value="swift-1.5">Swift 1.5 — fine-tune</option>
+                <option value="UD-Q4_K_XL">UD-Q4_K_XL — 111,3 GB · 4-bit</option>
+              </select>
+              <button class="st-btn st-btn--primary" id="ctrl-download">Scarica e configura</button>
+            </div>
+            <span class="dm__sub" id="ms-ctrl-model-info">—</span>
+          </div>
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat"><b id="ctrl-dl-size">—</b><span>Download</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-ram-req">—</b><span>Richiesti (RAM+VRAM)</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-vram-req">—</b><span>Il tuo PC (RAM + VRAM)</span></div>
+              <div class="dash-pm-stat" id="ctrl-disk-stat"><b id="ctrl-disk-free">—</b><span>Disco libero</span></div>
+            </div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-model"></div>
+        </div>
+
+      <!-- 3. Gestione Risorse -->
+      <div class="dash-card dash-card--res">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-settings"/></svg>Gestione Risorse<span class="dash-tag" id="ctrl-resources-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full"><span class="dm__label">VRAM riservata al sistema (MiB)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-vram-reserve" min="0" max="4096" step="64" value="0"><output id="ctrl-vram-out">0 MiB</output></div>
+            <span class="dm__sub" id="ms-ctrl-vram">—</span>
+            <span class="dm__sub">Riserva per il desktop: il valore ottimale va misurato, non minimizzato</span></div>
+          <div class="dm dm--full"><span class="dm__label">KV residente in VRAM (celle)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-kv-resident" min="2048" max="65536" step="1024" value="32768"><output id="ctrl-kv-out">32768 celle</output></div>
+            <span class="dm__sub" id="ms-ctrl-kv">—</span>
+            <span class="dm__sub">Più alto = contesto più veloce, meno VRAM per gli esperti</span></div>
+          <div class="dm dm--full"><span class="dm__label">Contesto massimo (token)</span>
+            <div class="dash-controls"><input type="range" id="ctrl-max-ctx" min="8192" max="262144" step="8192" value="131072"><output id="ctrl-ctx-out">131072</output></div>
+            <span class="dm__sub" id="ms-ctrl-ctx">—</span>
+            <span class="dm__sub">La finestra del modello · si applica al prossimo avvio del motore</span></div>
+          <div class="dm dm--full">
+            <div class="dash-controls"><button class="st-btn st-btn--primary" id="ctrl-apply-resources" style="width:100%">Applica e riavvia il motore</button></div>
+          </div>
+        </div>
+      <div class="dash-hint" id="hint-ctrl-res"></div>
+        </div>
+
+      <!-- 4. Monitor termico -->
+      <div class="dash-card dash-card--pm">
+        <div class="dash-head"><svg><use href="web/sprite.svg#i-bolt"/></svg>Monitor termico<span class="dash-tag" id="ctrl-power-status">—</span></div>
+        <div class="dash-body">
+          <div class="dm dm--full">
+            <div class="dash-pm-grid">
+              <div class="dash-pm-stat" id="ctrl-pm-stat"><b id="ctrl-pm-mode-view">—</b><span>Modalità</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-eff">—</b><span>t/s per W</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-temp">—</b><span>Temp GPU</span></div>
+              <div class="dash-pm-stat"><b id="ctrl-pm-power">—</b><span>Potenza GPU</span></div>
+            </div>
+          </div>
+          <div class="dm dm--full"><span class="dm__label">Modalità</span>
+            <div class="dash-controls">
+              <select id="ctrl-power-mode" style="flex:1">
+                <option value="performance">Performance — nessun limite</option>
+                <option value="balanced" selected>Balanced — 80°C / 250W</option>
+                <option value="eco">Eco — 70°C / 150W</option>
+                <option value="custom">Custom — i tuoi limiti</option>
+              </select>
+            </div></div>
+          <div class="dm dm--wide"><span class="dm__label">Limite temperatura</span>
+            <div class="dash-controls"><input type="range" id="ctrl-temp-limit" min="50" max="95" step="1" value="80"><output id="ctrl-temp-out">80°C</output></div>
+            <span class="dm__sub" id="ms-ctrl-temp">—</span></div>
+          <div class="dm dm--wide"><span class="dm__label">Limite potenza</span>
+            <div class="dash-controls"><input type="range" id="ctrl-power-limit" min="50" max="350" step="5" value="250"><output id="ctrl-power-out">250W</output></div>
+            <span class="dm__sub" id="ms-ctrl-power">—</span></div>
+          <div class="dm dm--full">
+            <div class="ctrl-trend">
+              <div class="ctrl-trend__cell"><span class="dm__label">Andamento temperatura <b id="ctrl-trend-temp">—</b></span>
+                <svg class="dash-spark" id="ct-temp-spark" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+              <div class="ctrl-trend__cell"><span class="dm__label">Andamento potenza <b id="ctrl-trend-power">—</b></span>
+                <svg class="dash-spark" id="ct-pow-spark" viewBox="0 0 100 32" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".12"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+            </div>
+          </div>
+          <div class="dm dm--full"><span class="dm__sub" id="ms-ctrl-power-state">—</span></div>
+          <div class="dm dm--full"><span class="dm__sub" id="ms-ctrl-power-sensors">—</span></div>
+          <div class="dm dm--full">
+            <div class="dash-controls">
+              <button class="st-btn st-btn--primary" id="ctrl-apply-power">Applica</button>
+              <button class="st-btn st-btn--secondary" id="ctrl-reset-throttle">Azzera avviso</button>
+            </div>
+          </div>
+        </div>
+        <div class="dash-note" id="ctrl-pm-note" role="status" hidden></div>
+      <div class="dash-hint" id="hint-ctrl-power"></div>
+        </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ Sampling drawer ============================ -->
+<aside class="st-drawer" id="drawer" role="dialog" aria-modal="true" data-open="false" aria-label="Generazione e ragionamento" aria-hidden="true" inert>
+  <div class="st-drawer__head"><span class="card-title">Generazione</span>
+    <button class="st-btn st-btn--icon" id="drawer-close" aria-label="Chiudi">
+      <svg class="st-icon"><use href="web/sprite.svg#i-chevron"/></svg></button></div>
+  <div class="st-drawer__body">
+    <div class="st-field">
+      <label class="st-label" for="s-thinking">Ragionamento <output id="o-thinking"></output></label>
+      <div class="seg" id="s-thinking" role="radiogroup" aria-label="Ragionamento">
+        <button type="button" role="radio" data-v="none">Spento</button><button type="button" role="radio" data-v="low">Basso</button>
+        <button type="button" role="radio" data-v="medium">Medio</button><button type="button" role="radio" data-v="high">Alto</button>
+      </div>
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-temp">Temperatura <output id="o-temp"></output></label>
+      <input class="st-slider" type="range" id="s-temp" min="0" max="1.5" step="0.05">
+      <span class="muted small">0 = scelta del token più probabile; utile per confronti riproducibili</span>
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-topp">Top-p <output id="o-topp"></output></label>
+      <input class="st-slider" type="range" id="s-topp" min="0.05" max="1" step="0.05">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-topk">Top-k <output id="o-topk"></output></label>
+      <input class="st-slider" type="range" id="s-topk" min="1" max="64" step="1">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-max">Token massimi <output>vuoto = fino al termine</output></label>
+      <input class="st-input" id="s-max" type="number" min="1" step="1" placeholder="Fino al termine">
+    </div>
+    <div class="st-field">
+      <label class="st-label" for="s-seed">Seed <output>vuoto = casuale</output></label>
+      <input class="st-input" id="s-seed" type="number" min="1" step="1" placeholder="Casuale">
+    </div>
+    <div class="toggle-row"><span>Mostra il ragionamento<br><span class="muted small">espanso durante la generazione</span></span>
+      <button class="st-toggle" id="s-show" role="switch" aria-checked="true" aria-label="Mostra il ragionamento"></button></div>
+    <div class="toggle-row" id="mcp-row" hidden><span>Usa gli strumenti dei server MCP<br><span class="muted small"
+      id="mcp-row-sub">il modello può richiamarli durante la risposta</span></span>
+      <button class="st-toggle" id="s-mcp" role="switch" aria-checked="true" aria-label="Usa gli strumenti dei server MCP"></button></div>
+    <div class="toggle-row" id="esp-row" hidden><span>Proiezione sperimentale<br><span class="muted small">the
+      vettore di controllo del motore; spento = modello originale. Il cambio rilegge la chat una volta</span></span>
+      <button class="st-toggle" id="s-esp" role="switch" aria-checked="true" aria-label="Proiezione sperimentale"></button></div>
+    <div class="toggle-row"><span>Condividi con le altre applicazioni<br><span class="muted small">omp e gli altri client API ricevono
+      queste impostazioni quando non specificano valori propri</span></span>
+      <button class="st-toggle" id="s-share" role="switch" aria-checked="false" aria-label="Condividi con le altre applicazioni"></button></div>
+    <div class="drawer-actions">
+      <button class="st-btn st-btn--secondary" id="s-reset" type="button">Ripristina</button>
+      <button class="st-btn st-btn--primary" id="s-apply" type="button">Applica</button>
+    </div>
+  </div>
+</aside>
+<div class="scrim" id="scrim" hidden></div>
+<div class="st-toasts" id="toasts" aria-live="polite"></div>
+<script src="web/app.js?v=20261009-efficiency-4"></script>
+</body>
+</html>

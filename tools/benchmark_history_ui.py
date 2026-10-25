@@ -1,0 +1,14 @@
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+p=ROOT/'serve/benchmark_lab.py';s=p.read_text();s=s.replace("('id','status','model','mode','started_at','results','error')", "('id','status','model','mode','started_at','finished_at','protocol','prompt_sha256','variant','sample_series','completed_samples','total_samples','results','error')")
+p.write_text(s)
+p=ROOT/'serve/web/index.html';s=p.read_text(encoding='utf-8');anchor='<div class="bench-chart-grid">';s=s.replace(anchor,'''<div class="bench-history-select"><label class="bench-field">Campagna visualizzata<select class="st-input" id="lab-history-select"><option value="">Sessione corrente</option></select></label><span id="lab-view-caption">Risultati della sessione corrente</span></div>'''+anchor,1);p.write_text(s,encoding='utf-8')
+p=ROOT/'serve/web/app.js';s=p.read_text(encoding='utf-8');s=s.replace("labChartMetric='decode_tok_s';", "labChartMetric='decode_tok_s',labViewedId='';")
+s=s.replace("    const results=job.results||[],last=results.at(-1);", "    const historySelect=$('lab-history-select');historySelect.innerHTML='<option value=\"\">Sessione corrente</option>'+data.history.filter(h=>h.results?.length).map(h=>`<option value=\"${esc(h.id)}\">${esc(h.id)} · ${h.results.length} profili</option>`).join('');if(data.history.some(h=>h.id===labViewedId))historySelect.value=labViewedId;else labViewedId='';\n    const viewed=labViewedJob();const results=viewed.results||[],last=results.at(-1);\n    $('lab-view-caption').textContent=labViewedId?`Storico · ${viewed.id} · ${viewed.protocol?.tokens??'—'} output`: 'Risultati della sessione corrente';")
+s=s.replace("renderLabCharts((last?.variant===job.variant?last.series:job.sample_series)||[],results);", "renderLabCharts((last?.variant===viewed.variant?last.series:viewed.sample_series)||last?.series||[],results);")
+s=s.replace("    $('lab-export').disabled=!job.id;", "    $('lab-export').disabled=!viewed.id;")
+s=s.replace("const job=labData?.job||{},last=job.results?.at(-1);renderLabCharts", "const job=labViewedJob(),last=job.results?.at(-1);renderLabCharts")
+s=s.replace("(last?.variant===job.variant?last.series:job.sample_series)||[],job.results||[]);", "(last?.variant===job.variant?last.series:job.sample_series)||last?.series||[],job.results||[]);")
+s=s.replace("$('lab-export').onclick=()=>{if(!labData?.job.id)return;const url=URL.createObjectURL(new Blob([JSON.stringify(labData.job,null,2)]", "function labViewedJob(){return labData?.history.find(h=>h.id===labViewedId)||labData?.job||{};}\n$('lab-history-select').onchange=()=>{labViewedId=$('lab-history-select').value;loadBenchmarkLab();};\n$('lab-export').onclick=()=>{const viewed=labViewedJob();if(!viewed.id)return;const url=URL.createObjectURL(new Blob([JSON.stringify(viewed,null,2)]")
+s=s.replace('link.download=`benchmark-${labData.job.id}.json`','link.download=`benchmark-${viewed.id}.json`')
+p.write_text(s,encoding='utf-8')

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<link rel="icon" href="/web/sprite.svg" type="image/svg+xml">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hydra One Control Center</title>
+<link rel="stylesheet" href="/web/tokens.css?v=20261008-pro">
+<style>
+*{box-sizing:border-box}body{margin:0;background:var(--st-bg);color:var(--st-ink);font:14px/1.5 var(--st-font)}
+button,input,select{font:inherit}button{cursor:pointer;color:inherit;background:var(--st-surface-2);border:1px solid var(--st-line);border-radius:8px;padding:7px 12px;font-size:13px}button:hover{border-color:var(--st-accent)}button:disabled{opacity:.4;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--st-focus);outline-offset:2px}[hidden]{display:none!important}
+header{height:60px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--st-line);background:var(--st-surface)}.brand{font-size:20px;font-weight:700;letter-spacing:-.5px}.brand span{font-size:11px;font-weight:400;opacity:.55;margin-left:8px;letter-spacing:.3px}
+main{max-width:1600px;margin:auto;padding:20px 28px}
+.dash{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{border:1px solid var(--st-line);border-radius:12px;background:var(--st-surface);overflow:hidden;display:flex;flex-direction:column}
+.card-head{padding:12px 16px;border-bottom:1px solid var(--st-line);display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--st-ink-muted)}
+.card-head svg{width:16px;height:16px;opacity:.7}
+.card-body{padding:14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}
+.metric{display:flex;flex-direction:column;gap:2px}
+.metric.full{grid-column:1/-1}
+.metric-label{font-size:11px;color:var(--st-ink-muted);text-transform:uppercase;letter-spacing:.5px}
+.metric-value{font-size:22px;font-weight:600;line-height:1.2}
+.metric-value small{font-size:12px;font-weight:400;color:var(--st-ink-muted);margin-left:2px}
+.metric-sub{font-size:11px;color:var(--st-ink-muted)}
+.spark{width:100%;height:28px;margin-top:2px}
+.bar{height:4px;border-radius:2px;background:var(--st-surface-2);margin-top:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;background:var(--st-accent);transition:width .3s}
+.bar-fill.warn{background:var(--st-warn)}.bar-fill.danger{background:var(--st-danger)}
+.gauge{display:flex;align-items:center;gap:10px}
+.gauge svg{width:52px;height:52px;flex-shrink:0}
+.gauge-info{flex:1}
+.notice{padding:8px 12px;border-radius:8px;font-size:12px;margin-top:8px}
+.notice.warn{background:var(--st-warn-tint);color:var(--st-warn-text)}
+.controls-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+select,input[type=range]{color:inherit;border:1px solid var(--st-line);background:var(--st-bg);padding:5px 8px;border-radius:6px;font-size:12px}
+input[type=range]{padding:0;flex:1}
+.slider-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+.slider-row output{font-size:11px;min-width:48px;text-align:right;color:var(--st-ink-muted)}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pm-stat{text-align:center;padding:8px;background:var(--st-bg);border-radius:8px}
+.pm-stat .val{font-size:18px;font-weight:600}
+.pm-stat .lbl{font-size:10px;color:var(--st-ink-muted);text-transform:uppercase;letter-spacing:.4px}
+footer{margin-top:12px;font-size:11px;color:var(--st-ink-muted);display:flex;justify-content:space-between}
+@media(max-width:1100px){.dash{grid-template-columns:1fr}.card-body{grid-template-columns:1fr 1fr}}
+
+/* ---- tick marks under every slider: the range a knob can travel, read at a glance */
+
+/* the knob's reading sits on the label line, above the slider (the scale owns the row below) */
+.dm__label{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+output.dm__out{font-size:13px;font-weight:700;color:var(--st-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.range-scale{position:relative;height:33px;margin:-6px 0 0;font-size:10.5px;line-height:1;color:var(--st-ink-soft);
+  font-variant-numeric:tabular-nums;pointer-events:none;user-select:none}
+.range-scale__tick{position:absolute;top:0;width:2px;height:6px;border-radius:1px;background:color-mix(in srgb,var(--st-ink-soft) 70%,transparent);transform:translateX(-1px)}
+.range-scale__tick--major{height:11px;background:var(--st-ink-soft)}
+.range-scale__lab{position:absolute;top:7px;white-space:nowrap;font-size:10px;color:var(--st-ink-soft)}
+.range-scale__lab--min{left:0}
+.range-scale__lab--mid{left:50%;transform:translateX(-50%)}
+.range-scale__lab--max{right:0}
+.range-scale__rec{position:absolute;top:-2px;width:2px;height:13px;border-radius:1px;background:var(--st-info);transform:translateX(-1px)}
+.range-scale__rec-lab{position:absolute;top:22px;font-size:9.5px;font-weight:700;color:var(--st-info-text);white-space:nowrap;transform:translateX(-50%)}
+.range-scale__now{position:absolute;top:-2px;width:2.5px;height:12px;border-radius:1.5px;background:var(--st-accent);transform:translateX(-1px);transition:left .15s ease}
+
+/* Slider anatomy, fixed order: label + reading ABOVE, then the bar, and only the ruler below.
+   The reading of the green knob must never sit under the scale. */
+.dm:has(.dash-controls){display:flex;flex-direction:column;justify-content:flex-start}
+.dm:has(.dash-controls) .dm__label{order:1}
+.dm:has(.dash-controls) .dm__sub{order:2;margin:2px 0 7px}
+.dm:has(.dash-controls) .dash-controls{order:3}
+.dm:has(.dash-controls) .range-scale{order:4}
+
+</style>
+<script defer src="/web/monitor.js?v=20261008-pro"></script>
+</head>
+<body>
+<header><div class="brand">Hydra One <span>StargateLab™ Edition</span></div><div class="controls"><button id="key">API key</button><button id="theme" aria-label="Switch color theme">Light / dark</button></div></header>
+<main>
+<div id="error" class="notice warn" role="status" hidden></div>
+<form id="auth" class="card" hidden style="margin-bottom:14px"><div class="card-body"><label for="api-key" style="font-size:13px">API key</label><input id="api-key" type="password" autocomplete="off" placeholder="Only needed if the server has a key" style="flex:1"><button class="primary" type="submit">Connect</button></div></form>
+
+<div class="dash">
+  <div class="card">
+    <div class="card-head"><svg class="st-icon"><use href="web/sprite.svg#i-gpu"/></svg>GPU & Power</div>
+    <div class="card-body">
+      <div class="metric"><span class="metric-label">GPU Load</span><span class="metric-value" id="m-gpu-util">–</span><svg class="spark" id="s-gpu-util" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">VRAM</span><span class="metric-value" id="m-vram">–</span><div class="bar"><div class="bar-fill" id="b-vram"></div></div><span class="metric-sub" id="m-vram-sub"></span></div>
+      <div class="metric"><span class="metric-label">Temp GPU</span><span class="metric-value" id="m-temp">–</span><svg class="spark" id="s-temp" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">Hotspot</span><span class="metric-value" id="m-hotspot">–</span><svg class="spark" id="s-hotspot" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">Power</span><span class="metric-value" id="m-power">–</span><svg class="spark" id="s-power" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">VRAM temp</span><span class="metric-value" id="m-vramtemp">–</span><span class="metric-sub" id="m-vramtemp-sub"></span></div>
+      <div class="metric full"><span class="metric-label">PCIe</span><span class="metric-value" id="m-pcie" style="font-size:16px">–</span><span class="metric-sub" id="m-pcie-sub"></span></div>
+      <div class="metric"><span class="metric-label">Voltage</span><span class="metric-value" id="m-volt">–</span><span class="metric-sub" id="m-volt-sub"></span></div>
+      <div class="metric"><span class="metric-label">Efficiency</span><span class="metric-value" id="m-eff">–</span><span class="metric-sub">tok/s per watt</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><svg class="st-icon"><use href="web/sprite.svg#i-cpu"/></svg>CPU & System</div>
+    <div class="card-body">
+      <div class="metric"><span class="metric-label">CPU Load</span><span class="metric-value" id="m-cpu">–</span><svg class="spark" id="s-cpu" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">CPU Temp</span><span class="metric-value" id="m-cpu-temp">–</span><svg class="spark" id="s-cpu-temp" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">CPU Power</span><span class="metric-value" id="m-cpu-power">–</span><svg class="spark" id="s-cpu-power" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">Cores</span><span class="metric-value" id="m-cores" style="font-size:16px">–</span><span class="metric-sub" id="m-cores-sub"></span></div>
+      <div class="metric full"><span class="metric-label">RAM</span><span class="metric-value" id="m-ram">–</span><div class="bar"><div class="bar-fill" id="b-ram"></div></div><span class="metric-sub" id="m-ram-sub"></span></div>
+      <div class="metric full"><span class="metric-label">Disk I/O</span><span class="metric-value" id="m-disk" style="font-size:16px">–</span><span class="metric-sub" id="m-disk-sub"></span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><svg class="st-icon"><use href="web/sprite.svg#i-gauge"/></svg>Inference</div>
+    <div class="card-body">
+      <div class="metric"><span class="metric-label">Decode Speed</span><span class="metric-value" id="m-speed">–</span><svg class="spark" id="s-speed" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric"><span class="metric-label">Prefill Speed</span><span class="metric-value" id="m-prefill">–</span><svg class="spark" id="s-prefill" viewBox="0 0 100 28" preserveAspectRatio="none"><path class="area" fill="currentColor" opacity=".1"/><path class="line" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <div class="metric full"><span class="metric-label">Context Fill</span><div class="gauge"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="var(--st-surface-2)" stroke-width="5"/><circle id="g-ctx" cx="30" cy="30" r="24" fill="none" stroke="var(--st-accent)" stroke-width="5" stroke-dasharray="0 150.8" stroke-linecap="round" transform="rotate(-90 30 30)"/></svg><div class="gauge-info"><span class="metric-value" id="m-ctx-pct">–</span><span class="metric-sub" id="m-ctx-sub"></span></div></div></div>
+      <div class="metric"><span class="metric-label">Expert Cache</span><span class="metric-value" id="m-experts">–</span><div class="bar"><div class="bar-fill" id="b-experts"></div></div><span class="metric-sub" id="m-experts-sub"></span></div>
+      <div class="metric"><span class="metric-label">Model State</span><span class="metric-value" id="m-state" style="font-size:16px">–</span><span class="metric-sub" id="m-state-sub"></span></div>
+      <div class="metric"><span class="metric-label">Max Context</span><span class="metric-value" id="m-max-ctx" style="font-size:16px">–</span><span class="metric-sub" id="m-max-ctx-sub"></span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><svg class="st-icon"><use href="web/sprite.svg#i-bolt"/></svg>Monitor termico</div>
+    <div class="card-body">
+      <div class="metric full"><span class="metric-label">Mode</span><div class="controls-row"><select id="pm-mode" aria-label="Power mode"><option value="performance">Performance</option><option value="balanced" selected>Balanced</option><option value="eco">Eco</option><option value="custom">Custom</option></select><button id="pm-reset">Reset Throttle</button></div></div>
+      <div class="metric"><span class="metric-label">Temp Limit</span><div class="slider-row"><input type="range" id="pm-temp" min="50" max="95" step="1" value="80"><output id="pm-temp-out">80°C</output></div><span class="metric-sub" id="pm-temp-sub">—</span></div>
+      <div class="metric"><span class="metric-label">Power Limit</span><div class="slider-row"><input type="range" id="pm-power" min="50" max="350" step="5" value="250"><output id="pm-power-out">250W</output></div><span class="metric-sub" id="pm-power-sub">—</span></div>
+      <div class="metric full"><div class="pm-grid"><div class="pm-stat"><div class="val" id="pm-status">—</div><div class="lbl">Status</div></div><div class="pm-stat"><div class="val" id="pm-eff">—</div><div class="lbl">Efficiency</div></div><div class="pm-stat"><div class="val" id="pm-tlim">—</div><div class="lbl">Temp Limit</div></div><div class="pm-stat"><div class="val" id="pm-plim">—</div><div class="lbl">Power Limit</div></div></div></div>
+      <div class="metric full"><div id="pm-throttle" class="notice warn" role="status" hidden></div></div>
+      <div class="metric full"><button id="pm-apply" style="width:100%">Apply Settings</button></div>
+    </div>
+  </div>
+</div>
+
+<footer><span>Hydra One Control Center · StargateLab™ Edition</span><span id="updated">Connecting…</span></footer>
+</main>
+</body></html>

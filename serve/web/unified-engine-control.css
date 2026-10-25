@@ -1,0 +1,313 @@
+/* Preserve the four existing cards: only reuse their interior layout. */
+#view-control>.control-shell>form.dash4.unified-engine-control{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;gap:20px;align-items:stretch;padding:0;border:0;grid-column:auto;grid-row:auto}
+#view-control .dash-body.unified-engine-extra{display:flex;flex-direction:column;align-items:stretch;align-content:start;gap:16px;min-width:0;flex:0}
+#view-control .unified-engine-extra>*{min-width:0;max-width:100%;width:100%;box-sizing:border-box}
+#view-control .unified-engine-extra>.backend-setup-step{display:flex;flex-direction:column;gap:16px}
+#view-control .unified-engine-extra .backend-intro{display:block}
+#view-control .unified-engine-extra .backend-api-access{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+#view-control .unified-engine-extra .backend-api-access code{white-space:normal;overflow-wrap:anywhere;word-break:normal;max-width:100%}
+#view-control .unified-engine-shared{margin:16px 20px;padding:0;min-width:0;max-width:calc(100% - 40px)}
+#view-control .unified-engine-shared .backend-api-access{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0;margin:0}
+#view-control .unified-engine-shared code{white-space:normal;overflow-wrap:anywhere;word-break:normal}
+#view-control .unified-model-browser>.local-model-browse{flex-basis:100%}
+#view-control #backend-form .dash-body>.unified-model-browser{display:flex!important;flex-direction:column;align-items:stretch;gap:8px;grid-column:1/-1;min-width:0}
+#view-control #backend-form .unified-model-browser>.st-btn{width:100%;min-width:0;flex:0 0 auto;min-height:44px;white-space:normal;overflow-wrap:anywhere}
+#view-control #backend-form .unified-engine-extra label{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0;max-width:100%;font-size:13px;line-height:1.6}
+#view-control #backend-form #backend-api-fields,#view-control #backend-form #backend-gguf-fields{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-width:0;border:0;padding:0;margin:0}
+#view-control #backend-form #backend-api-fields[hidden],#view-control #backend-form #backend-gguf-fields[hidden]{display:none!important}
+#view-control #backend-form #backend-manual>label{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:12px 0}
+#view-control #backend-form #backend-manual input,#view-control #backend-form #backend-api-fields input{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+#view-control #backend-form .unified-engine-extra small{display:block;font-size:12px;line-height:1.6;color:var(--st-ink-muted);overflow-wrap:anywhere}
+#view-control #backend-form .unified-engine-extra .backend-api-access,#view-control #backend-form .unified-engine-extra .backend-model-facts{grid-column:auto;grid-row:auto}
+#view-control #backend-form .backend-actions .st-btn{width:auto;min-width:120px;min-height:44px;white-space:normal}
+.unified-engine-extra[hidden]{display:none!important}
+.unified-engine-control [hidden]{display:none!important}
+.unified-engine-extra>.backend-intro,.unified-engine-extra>.backend-model-facts,.unified-engine-extra>.backend-setup-step{min-width:0;width:100%}
+.unified-engine-extra .backend-setup-step{margin:0;border:0;padding:0;background:transparent}
+.unified-engine-extra .backend-config-guide,.unified-engine-extra .configuration-assistant{grid-column:1/-1;min-width:0}
+.unified-engine-extra .backend-actions{display:flex;flex-wrap:wrap;gap:8px}
+.unified-engine-extra .backend-model-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.unified-engine-extra input,.unified-engine-extra select{max-width:100%}
+@media(max-width:760px){#view-control>.control-shell>form.dash4.unified-engine-control{grid-template-columns:minmax(0,1fr);grid-template-rows:none}.unified-engine-extra .backend-model-facts{grid-template-columns:minmax(0,1fr)}}
+/* Each card follows its content; paired cards never stretch into empty columns. */
+#view-control>.control-shell>form.dash4.unified-engine-control{align-items:start}
+#view-control #backend-form>.dash-card{min-width:0;height:auto;align-self:start}
+#view-control #backend-form>.dash-card>.dash-body{flex:none;grid-auto-rows:auto;align-content:start;gap:14px;padding:18px}
+#view-control #backend-form .dash-card--model>.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}
+#view-control #backend-form .unified-model-browser{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+#view-control #backend-form .unified-model-browser>.local-model-browse{grid-column:1/-1;min-height:48px}
+#view-control #backend-form input.st-input,#view-control #backend-form select{height:46px;padding:0 14px;border:1px solid var(--st-line);border-radius:12px;background:var(--st-surface-2);color:var(--st-ink);font:inherit;box-sizing:border-box;width:100%;min-width:0}
+#view-control #backend-form input.st-input:focus,#view-control #backend-form select:focus{outline:2px solid var(--st-focus);outline-offset:2px}
+#view-control #backend-form .unified-engine-extra label{border:0;background:none;padding:0;border-radius:0}
+#view-control #backend-form label.backend-check{display:flex;align-items:center;gap:10px}
+#view-control #backend-form .backend-check input{width:auto;flex:none}
+#view-control #backend-form .unified-resource-notice{margin:0;padding:14px 16px;border-left:3px solid var(--st-accent);background:var(--st-accent-tint);border-radius:0 10px 10px 0;font-size:13px;line-height:1.7}
+#view-control #backend-form .unified-monitor-details{margin:12px 18px;border-top:1px solid var(--st-line);min-width:0}
+#view-control #backend-form .unified-monitor-details>summary{cursor:pointer;padding:14px 0;font-size:13px;font-weight:600;color:var(--st-ink-soft)}
+#view-control #backend-form .unified-monitor-details .unified-engine-shared{margin:0;max-width:100%;padding-bottom:12px}
+#view-control #backend-form .backend-guide-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#view-control #backend-form .configuration-assistant{margin:0;min-width:0}
+#view-control #backend-form .backend-section-heading{display:none}
+@media(max-width:760px){#view-control #backend-form .dash-card--model>.dash-body{grid-template-columns:minmax(0,1fr)}#view-control #backend-form .unified-model-browser{grid-template-columns:minmax(0,1fr)!important}}
+@media(prefers-reduced-motion:reduce){#backend-form *{scroll-behavior:auto;transition:none!important}}
+#view-control #backend-form .dash-body>.unified-model-browser{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+#view-control #backend-form>.dash-card>.dash-body{grid-template-rows:none}
+#view-control #backend-form .dash-card--model .unified-engine-extra{gap:12px;padding-top:0}
+#view-control #backend-form .backend-setup-step>header{display:none}
+#view-control #backend-form .backend-config-guide{padding:16px;gap:12px;flex-direction:column;align-items:stretch}
+#view-control #backend-form .backend-guide-path button{min-width:0;white-space:normal}
+@media(max-width:760px){#view-control #backend-form .dash-body>.unified-model-browser{grid-template-columns:minmax(0,1fr)}}
+#view-control #backend-form .unified-model-details{margin:0 18px 18px;border-top:1px solid var(--st-line)}
+#view-control #backend-form .unified-model-details>summary{padding:14px 0;cursor:pointer;font-size:13px;color:var(--st-ink-soft)}
+#view-control #backend-form .backend-model-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#view-control #backend-form .backend-model-facts>div{padding:10px 0;min-width:0}
+#view-control #backend-form .backend-setup-step>.backend-engine-brand{margin-bottom:0;padding:12px}
+#view-control #backend-form .dash-body.unified-engine-extra{gap:12px}
+/* Cards follow their content. The page owns scrolling; cards never scroll internally. */
+#view-control #backend-form>.dash-card{max-height:none;overflow:visible}
+#view-control #backend-form>.dash-card>.dash-head{position:static}
+#view-control #backend-form .backend-guide-path button[aria-current=step]{border-color:var(--st-accent);background:var(--st-accent-tint);color:var(--st-ink)}
+#view-control #backend-form .backend-guide-path button:focus-visible,#view-control #backend-form summary:focus-visible{outline:2px solid var(--st-focus);outline-offset:3px}
+/* Restore the original paired-card alignment, without nested scrolling. */
+#view-control>.control-shell>form.dash4.unified-engine-control{gap:14px;align-items:stretch}
+#view-control #backend-form>.dash-card{align-self:stretch;height:auto;max-height:none;overflow:visible}
+#view-control #backend-form>.dash-card>.dash-body:not(.unified-engine-extra){padding:12px 16px;gap:8px 14px}
+#view-control #backend-form .dash-card--model>.dash-body:not(.unified-engine-extra){grid-template-columns:repeat(4,minmax(0,1fr))}
+#view-control #backend-form .unified-engine-shared{margin:12px 16px;max-width:calc(100% - 32px)}
+@media(max-width:1180px){#view-control #backend-form .dash-card--model>.dash-body:not(.unified-engine-extra){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#view-control #backend-form .dash-card--model>.dash-body:not(.unified-engine-extra){grid-template-columns:minmax(0,1fr)}}
+/* Keep accents inside rounded corners; thermal warnings remain owned by live telemetry. */
+#view-control #backend-form>.dash-card::before{inset:0 16px auto;height:2px;border-radius:999px;background:linear-gradient(90deg,transparent 0%,color-mix(in srgb,var(--c) 35%,transparent) 8%,var(--c) 24%,color-mix(in srgb,var(--c) 65%,transparent) 60%,transparent 100%);pointer-events:none}
+#view-control #backend-form #ctrl-pm-note[hidden]{display:none!important}
+#view-control #backend-form #ctrl-pm-note:empty{display:none}
+/* Restore rounded visual guidance after rehoming the original fields. */
+#view-control #backend-form .unified-engine-extra label[data-config-state]{border:1px solid var(--st-line);border-radius:12px;padding:12px;box-sizing:border-box}
+#view-control #backend-form .unified-engine-extra label[data-config-current=true]{border-radius:12px;outline:2px solid var(--st-accent);outline-offset:3px}
+#view-control #backend-form .unified-engine-extra label[data-config-state=invalid]{border-color:#ff526f}
+#view-control #backend-form .config-section-guide,#view-control #backend-form .unified-resource-notice{border-radius:12px}
+/* Compact model workspace, preserving every original field, hint and action. */
+#view-control #backend-form .dash-card--model>.dash-body{gap:8px;padding:12px 16px}
+#view-control #backend-form .dash-card--model .unified-engine-picker{padding:8px 10px;gap:6px}
+#view-control #backend-form .dash-card--model .unified-engine-picker .dm__sub{font-size:12px;line-height:1.5;margin:0}
+#view-control #backend-form .dash-card--model .unified-engine-extra{gap:8px;padding-top:0}
+#view-control #backend-form .dash-card--model .backend-setup-step{gap:8px}
+#view-control #backend-form .dash-card--model #backend-gguf-fields,#view-control #backend-form .dash-card--model #backend-api-fields{gap:10px}
+#view-control #backend-form .dash-card--model label[data-config-state]{gap:6px;padding:10px}
+#view-control #backend-form .dash-card--model .backend-engine-brand{padding:10px;min-height:0;margin-bottom:0}
+#view-control #backend-form .dash-card--model .backend-engine-brand img{width:32px;height:32px}
+#view-control #backend-form .dash-card--model .model-vision-options{padding:12px;border-radius:12px;margin:0}
+#view-control #backend-form .dash-card--model .model-vision-options>label{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:8px;align-items:center;padding:0;border:0}
+#view-control #backend-form .dash-card--model .model-vision-options>label>input{margin:0;width:18px;height:18px}
+#view-control #backend-form .dash-card--model .model-vision-options>label>small{justify-self:end}
+#view-control #backend-form .dash-card--model .model-vision-options>p{margin:8px 0 0;font-size:12px;line-height:1.6}
+#view-control #backend-form .dash-card--model #backend-manual{margin:0;padding:8px 10px}
+#view-control #backend-form .dash-card--model .unified-model-details{margin:0}
+#view-control #backend-form .dash-card--model .unified-model-details>summary{padding:10px 0}
+#view-control #backend-form .dash-card--model .unified-model-browser>.local-model-browse{min-height:44px}
+/* Native controllers may update hidden flags while a different engine is selected. */
+#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--model>.dash-hint{display:none!important}
+#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--model>.dash-body:not(.unified-engine-extra)>:not(.unified-model-browser):not(.unified-engine-picker):not(.colibri-compatible-picker):not(.unified-model-selectors):not(#hydra-model-library){display:none!important}
+#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--run>.dash-body:not(.unified-engine-extra),#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--run>.dash-hint,#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--res>.dash-body:not(.unified-engine-extra),#view-control #backend-form:not([data-engine=strata]):not([data-engine=hydra-strata]) .dash-card--res>.dash-hint{display:none!important}
+@media(min-width:761px){
+#view-control #backend-form .dash-card--model #backend-api-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+#view-control #backend-form #backend-api-fields>small{grid-column:1/-1}
+#view-control #backend-form #backend-manual[open]:has(#backend-adapter){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#view-control #backend-form #backend-manual[open]:has(#backend-adapter)>summary,#view-control #backend-form #backend-manual[open]:has(#backend-adapter)>small{grid-column:1/-1}
+#view-control #backend-form #backend-manual[open]:has(#backend-adapter)>label{margin:4px 0}
+}
+#view-control #backend-form .dash-card--model #backend-manual>small{display:block;margin:6px 0 0;grid-column:1/-1;font-size:12px;line-height:1.6}
+#view-control #backend-form .dash-card--model #backend-manual[open]{grid-auto-rows:auto;align-items:start}
+#view-control #backend-form .dash-card--model #backend-manual[open]{display:block}
+#view-control #backend-form .dash-card--model .unified-manual-fields{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
+#view-control #backend-form .dash-card--model .unified-manual-fields>label{margin:0;min-width:0}
+#view-control #backend-form .dash-card--model .unified-manual-fields>small{grid-column:1/-1;margin:0;font-size:12px;line-height:1.6}
+@media(min-width:761px){#view-control #backend-form .dash-card--model .unified-manual-fields:has(#backend-adapter-field:not([hidden])){grid-template-columns:repeat(2,minmax(0,1fr))}}
+#view-control #backend-form .dash-body>.unified-model-browser>.st-btn{margin:0!important;min-height:44px;align-self:stretch;display:flex;align-items:center;justify-content:center;gap:8px}
+#view-control #backend-form .unified-model-browser>.st-btn .engine-brand-logo{width:24px;height:24px;flex:0 0 24px;object-fit:contain}
+
+#view-control #backend-form .dash-card--model .function-identity{margin:0;padding:10px;min-height:0;gap:10px}
+#view-control #backend-form .dash-card--model .function-identity img{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
+.unified-compute-portal>.backend-config-group{margin:12px 0 0;min-width:0;padding:0;border:0}
+.unified-compute-portal>.backend-config-group>legend{display:none}
+.unified-compute-portal .backend-config-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.unified-compute-portal label{display:grid;gap:7px;min-width:0;font-size:13px}
+.unified-compute-portal .backend-config-grid>div[data-airllm-runtime]{grid-column:1/-1;min-width:0}
+.unified-compute-portal small{overflow-wrap:anywhere}
+@media(max-width:700px){.unified-compute-portal .backend-config-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Landscape Lab: keep the existing sections and all controller identities. */
+#view-control>.control-shell>form#backend-form.dash4.unified-engine-control{grid-template-columns:minmax(0,1fr);grid-template-areas:"model" "resources" "monitor" "run";grid-template-rows:none;gap:18px}
+#view-control #backend-form>.dash-card--model{grid-area:model}
+#view-control #backend-form>.dash-card--res{grid-area:resources}
+#view-control #backend-form>.dash-card--pm{grid-area:monitor}
+#view-control #backend-form>.dash-card--run{grid-area:run}
+#view-control #backend-form>.dash-card>.dash-body{padding:20px 24px;gap:16px 24px}
+#view-control #backend-form>.dash-card>.dash-head{padding:18px 24px}
+#view-control #backend-form .dash-card--model>.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}
+#view-control #backend-form .dash-card--res>.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}
+#view-control #backend-form .dash-card--res>.dash-body>.dm--full{grid-column:auto;min-width:0}
+#view-control #backend-form .dash-card--pm>.dash-body{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px}
+#view-control #backend-form .dash-card--pm>.dash-body>.dm{grid-column:span 1;min-width:0}
+#view-control #backend-form .dash-card--pm>.dash-body>.dm:first-child,
+#view-control #backend-form .dash-card--pm>.dash-body>.dm:has(.ctrl-trend){grid-column:1/-1}
+#view-control #backend-form .dash-card--pm .dash-pm-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+#view-control #backend-form .dash-card--pm .dash-pm-stat{min-height:76px;padding:12px;gap:8px}
+#view-control #backend-form .dash-card--pm .ctrl-trend{gap:28px}
+#view-control #backend-form .dash-card--pm .ctrl-trend .dash-spark{height:72px;max-height:72px}
+#view-control #backend-form .dash-card--pm .dash-controls{flex-wrap:wrap;gap:10px}
+#view-control #backend-form .dash-card--pm button{min-height:44px}
+#view-control #backend-form .dash-card--run .training-profile-actions{gap:12px;flex-wrap:wrap}
+@media(max-width:800px){
+ #view-control #backend-form .dash-card--pm>.dash-body{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #view-control #backend-form .dash-card--pm>.dash-body>.dm:nth-child(2){grid-column:1/-1}
+}
+@media(max-width:600px){
+ #view-control #backend-form>.dash-card>.dash-body{padding:16px;gap:16px}
+ #view-control #backend-form>.dash-card>.dash-head{padding:16px}
+ #view-control #backend-form .dash-card--model>.dash-body,#view-control #backend-form .dash-card--res>.dash-body,#view-control #backend-form .dash-card--pm>.dash-body{grid-template-columns:minmax(0,1fr)}
+ #view-control #backend-form .dash-card--pm .dash-pm-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #view-control #backend-form .dash-card--pm .ctrl-trend{grid-template-columns:minmax(0,1fr);gap:20px}
+}
+#hydra-model-library{grid-column:1/-1;padding:20px;border:1px solid var(--border,#2b383c);border-radius:18px;background:linear-gradient(135deg,rgba(37,209,158,.08),transparent 65%);display:grid;gap:16px;min-width:0}
+#hydra-model-library[hidden]{display:none}
+#hydra-model-library header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+#hydra-model-library header small{color:var(--accent,#36dba8);letter-spacing:.1em;font-size:11px;font-weight:700}
+#hydra-model-library h3{margin:6px 0 0;font-size:20px;text-wrap:balance}
+.hydra-library-count{font-size:12px;border:1px solid var(--border,#2b383c);padding:7px 10px;border-radius:24px}
+.hydra-library-tools{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px}
+#hydra-model-library label{display:grid;gap:8px;min-width:0;font-size:12px}
+#hydra-model-library input,#hydra-model-library select{box-sizing:border-box;width:100%;min-width:0;min-height:44px;border-radius:10px;padding:10px 12px;background:var(--bg-input,#1b2327);color:inherit;border:1px solid var(--border,#354149);font:inherit}
+#hydra-model-library :is(input,select):focus-visible{outline:2px solid var(--accent,#36dba8);outline-offset:3px}
+.hydra-library-plan{display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid var(--border,#2b383c);padding-top:14px;font-size:13px;line-height:1.5}
+.hydra-library-plan strong{color:var(--accent,#36dba8)}
+.hydra-library-help{font-size:12px;line-height:1.6;margin:0;opacity:.8}
+#view-control #backend-form .dash-card--model>.shared-model-summary{display:flex;flex-direction:column;gap:12px;min-width:0;padding:16px 24px 24px}
+#view-control .shared-model-summary>.dm{width:100%;margin:0;padding:0;min-width:0}
+#view-control .shared-model-summary .dash-pm-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:100%}
+#view-control .shared-model-summary #hint-ctrl-model{width:100%;margin:0;padding:12px;box-sizing:border-box;min-height:64px}
+@media(max-width:760px){#view-control #backend-form .dash-card--model>.shared-model-summary{padding:16px}#view-control .shared-model-summary .dash-pm-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+#backend-form[data-engine^="hydra-"] .premium-select:has(>#ctrl-model),#backend-form[data-engine^="hydra-"] label:has(#backend-local-model){display:none}
+@media(max-width:600px){.hydra-library-tools{grid-template-columns:minmax(0,1fr)}#hydra-model-library{padding:16px}}
+
+#backend-form[data-engine^="hydra-"] #cat-summary,#backend-form[data-engine^="hydra-"] #cat-toggle,#backend-form[data-engine^="hydra-"] .dm:has(#ctrl-model)>.dm__label{display:none!important}
+
+.hydra-library-unavailable{font-size:12px;line-height:1.6}.hydra-library-unavailable summary{cursor:pointer;min-height:44px;display:flex;align-items:center}.hydra-library-unavailable p{white-space:pre-line;overflow-wrap:anywhere}
+
+.hydra-library-identity{display:flex;align-items:center;gap:22px;margin-top:10px}.hydra-library-identity img{display:block;width:60px;height:60px;object-fit:contain;flex:none}#hydra-model-library .hydra-library-identity h3{margin:0;line-height:1.35}@media(max-width:600px){.hydra-library-identity{gap:14px}.hydra-library-identity img{width:48px;height:48px}}
+
+#hydra-model-library header>div{flex:1;min-width:0}.hydra-library-identity{justify-content:space-between;gap:28px}.hydra-library-identity h3{order:0;flex:1}.hydra-library-identity img{order:1;width:112px;height:112px}#hydra-model-library header{align-items:center}@media(max-width:600px){.hydra-library-identity{gap:14px}.hydra-library-identity img{width:84px;height:84px}}
+
+#hydra-model-library .hydra-library-identity{justify-content:flex-start;gap:20px}#hydra-model-library .hydra-library-identity h3{flex:0 1 auto}#hydra-model-library .hydra-library-identity img{margin:0;flex:0 0 auto}
+
+#hydra-model-library .hydra-library-identity img{width:160px;height:160px}@media(max-width:600px){#hydra-model-library .hydra-library-identity{gap:12px}#hydra-model-library .hydra-library-identity img{width:112px;height:112px}}
+
+#hydra-model-library .hydra-library-identity{height:80px;min-height:0;margin-top:4px;gap:20px}#hydra-model-library .hydra-library-identity img{width:104px;height:104px;max-height:none;position:relative}#hydra-model-library header{min-height:0;padding:0;margin:0}@media(max-width:600px){#hydra-model-library .hydra-library-identity{height:72px;gap:12px}#hydra-model-library .hydra-library-identity img{width:88px;height:88px}}
+
+#hydra-model-library .hydra-library-identity{height:80px}#hydra-model-library .hydra-library-identity img{width:160px;height:160px;transform:translateY(-28px)}#hydra-model-library .hydra-library-identity h3{transform:translateY(-28px)}@media(max-width:600px){#hydra-model-library .hydra-library-identity img{width:128px;height:128px;transform:translateY(-12px)}#hydra-model-library .hydra-library-identity h3{transform:translateY(-12px)}}
+
+#hydra-model-library .hydra-library-identity img{transform:translateY(-20px)}@media(max-width:600px){#hydra-model-library .hydra-library-identity img{transform:translateY(-4px)}}
+
+.catalogue-engine-context{display:flex;align-items:center;gap:12px;min-width:0;padding:10px 14px;border:1px solid var(--st-line);border-radius:12px;background:var(--st-surface)}.catalogue-engine-context .engine-brand-logo{width:44px;height:44px;object-fit:contain}.catalogue-engine-context>div{display:grid;gap:4px}.catalogue-engine-context small{font-size:11px;color:var(--st-ink-muted)}.catalogue-engine-context strong{font-size:13px;overflow-wrap:anywhere}.catalogue-dialog-head{flex-wrap:wrap}.catalogue-dialog-head .catalogue-engine-context{flex-basis:100%;order:2}.catalogue-dialog [data-catalogue-engine][hidden]{display:none!important}
+
+/* Center branding against the whole section, independently of side content. */
+#hydra-model-library header{display:grid;grid-template-columns:minmax(0,1fr) 160px minmax(0,1fr);grid-template-rows:1fr 1fr;column-gap:20px;row-gap:6px;min-height:120px}
+#hydra-model-library header>div,#hydra-model-library .hydra-library-identity{display:contents}
+#hydra-model-library header small{grid-column:1;grid-row:1;align-self:end}
+#hydra-model-library .hydra-library-identity h3{grid-column:1;grid-row:2;align-self:start;transform:none}
+#hydra-model-library .hydra-library-identity img{grid-column:2;grid-row:1/3;width:160px;height:160px;justify-self:center;align-self:center;transform:none}
+#hydra-model-library .hydra-library-count{grid-column:3;grid-row:1/3;justify-self:end;align-self:center;text-align:center}
+@media(max-width:760px){#hydra-model-library header{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto;gap:8px}#hydra-model-library .hydra-library-identity img{grid-column:1;grid-row:1;width:128px;height:128px}#hydra-model-library header small{grid-column:1;grid-row:2;text-align:center}#hydra-model-library .hydra-library-identity h3{grid-column:1;grid-row:3;text-align:center}#hydra-model-library .hydra-library-count{grid-column:1;grid-row:4;justify-self:center}}
+/* A single shared lifecycle action; original handlers remain available internally. */
+#view-control :is(#ctrl-load,#ctrl-unload,#backend-start,#backend-stop,#colibri-engine-connect,#colibri-engine-stop){display:none!important}
+#view-control #backend-form #engine-power-toggle{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:48px;min-width:204px;max-width:100%;width:auto;flex:0 0 auto;padding:12px 22px;border-radius:14px;border:1px solid transparent;font-weight:750;letter-spacing:.01em;transition:background .16s,border-color .16s,box-shadow .16s}
+#view-control #backend-form #engine-power-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round}
+#view-control #backend-form #engine-power-toggle[data-tone="start"]{background:linear-gradient(145deg,#40dfaf,#21bb8e);color:#052b24;border-color:#69eac3;box-shadow:0 5px 18px #20c99726}
+#view-control #backend-form #engine-power-toggle[data-tone="stop"]{background:linear-gradient(145deg,#e25260,#bb3040);color:#fff;border-color:#f17983;box-shadow:0 5px 18px #de43552b}
+#view-control #backend-form #engine-power-toggle[data-tone="pending"]{background:#29363a;color:#dce6e8;border-color:#45585e}
+#view-control #backend-form #engine-power-toggle:focus-visible{outline:3px solid var(--accent,#36dba8);outline-offset:4px}
+#view-control #backend-form #engine-power-toggle:disabled{opacity:.65;cursor:not-allowed;box-shadow:none}
+#view-control #backend-form #engine-power-toggle:not(:disabled):hover{filter:brightness(1.08)}
+@media(prefers-reduced-motion:reduce){#view-control #backend-form #engine-power-toggle{transition:none}}
+
+/* One catalogue entry; legacy controllers remain available to their callers. */
+#view-control #backend-form .dash-card--model>.dash-body>.unified-model-browser{display:none!important}
+#view-control #backend-form .dash-card--model>.dash-head{flex-wrap:wrap;gap:8px}
+#view-control #backend-form #optional-catalogue-open.model-catalogue-access{display:inline-flex;align-items:center;justify-content:center;gap:7px;width:auto;min-width:0;min-height:36px;margin:0 0 0 auto;padding:6px 12px;border:1px solid var(--st-line,#35464b);border-radius:10px;background:transparent;color:var(--st-ink);font-size:12px;line-height:1.3;white-space:nowrap;box-shadow:none}
+#view-control #backend-form #optional-catalogue-open.model-catalogue-access:hover{border-color:var(--st-accent);background:color-mix(in srgb,var(--st-accent) 8%,transparent)}
+#view-control #backend-form #optional-catalogue-open.model-catalogue-access:focus-visible{outline:2px solid var(--st-accent);outline-offset:3px}
+#view-control #backend-form #optional-catalogue-open.model-catalogue-access .engine-brand-logo{width:20px;height:20px;object-fit:contain}
+@media(pointer:coarse){#view-control #backend-form #optional-catalogue-open.model-catalogue-access{min-height:44px}}
+
+/* One engine/model pair for every route; original controller-owned fields remain intact. */
+#view-control #backend-form .unified-model-selectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;grid-column:1/-1;align-items:stretch;min-width:0;width:100%}
+#view-control #backend-form .unified-model-selectors[hidden]{display:none!important}
+#view-control #backend-form .unified-model-selectors>.unified-engine-picker,
+#view-control #backend-form .unified-model-selectors>.dm,
+#view-control #backend-form .unified-model-selectors>label{display:grid;grid-column:auto;grid-template-columns:minmax(0,1fr);grid-template-rows:18px 52px auto;align-content:start;align-self:stretch;gap:8px;min-width:0;max-width:100%;width:100%;margin:0;padding:12px;border:1px solid var(--st-line);border-radius:12px;box-sizing:border-box;background:transparent}
+#view-control #backend-form .unified-model-selectors>label>.dm__label,
+#view-control #backend-form .unified-model-selectors>.dm>.dm__label,
+#view-control #backend-form .unified-model-selectors>label>span:first-child{font-size:10px;font-weight:400;letter-spacing:.7px;text-transform:uppercase;line-height:18px;color:var(--st-ink-muted)}
+#view-control #backend-form .unified-model-selectors .premium-select-button,
+#view-control #backend-form .unified-model-selectors .st-input,
+#view-control #backend-form .unified-model-selectors #backend-id{height:52px;min-height:52px;min-width:0;width:100%;box-sizing:border-box}
+#view-control #backend-form .unified-model-selectors>.dm>.dash-controls{display:flex;flex-wrap:wrap;align-content:start;gap:8px;min-width:0}
+#view-control #backend-form .unified-model-selectors>.dm>.dash-controls>.premium-select{flex:1 0 100%;min-width:0}
+#view-control #backend-form .unified-model-selectors .dm__sub{font-size:12px;line-height:20px;margin:0}
+#view-control #backend-form .dash-card--model>.dash-body>.unified-model-selectors:not([hidden]){display:grid!important}
+@media(max-width:600px){#view-control #backend-form .unified-model-selectors{grid-template-columns:minmax(0,1fr)}}
+
+#view-control #backend-form .dash-card--model .unified-model-selectors>:is(label,.dm){padding:12px;gap:8px}
+#view-control #backend-form .unified-model-selectors>.dm>.dm__label{grid-row:1;order:0}
+#view-control #backend-form .unified-model-selectors>.dm>.dash-controls{grid-row:2;order:0}
+#view-control #backend-form .unified-model-selectors>.dm>.dm__sub{grid-row:3;order:0}
+#view-control #backend-form .unified-model-selectors>.dm:not(.unified-engine-picker){grid-template-rows:18px minmax(52px,auto) auto}
+
+#view-control #backend-form .unified-model-selectors>.dm>.dash-controls{margin:0}
+
+/* Commands and the existing API connection share one responsive toolbar. */
+#view-control #backend-form .unified-run-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;grid-column:1/-1;min-width:0;width:100%}
+#view-control #backend-form .unified-run-toolbar[hidden]{display:none!important}
+#view-control #backend-form .unified-run-toolbar>*{min-width:0;max-width:100%;grid-column:auto}
+#view-control #backend-form .unified-run-toolbar>.unified-engine-shared{margin:0;padding:0 0 0 24px;border-left:1px solid var(--st-line);width:100%;max-width:100%;box-sizing:border-box}
+#view-control #backend-form .unified-run-toolbar .backend-api-access{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:center}
+#view-control #backend-form .unified-run-toolbar #backend-api-title,#view-control #backend-form .unified-run-toolbar #backend-endpoint-note{grid-column:1/-1}
+#view-control #backend-form .unified-run-toolbar #backend-endpoint{grid-column:1;min-width:0;overflow-wrap:anywhere}
+#view-control #backend-form .unified-run-toolbar #backend-client-trigger{grid-column:2;min-height:44px;margin:0;white-space:nowrap}
+#view-control #backend-form .unified-run-toolbar>.dm:not(.unified-engine-shared)>.dm__label{order:0}
+#view-control #backend-form .unified-run-toolbar>.dm:not(.unified-engine-shared)>.dash-controls{order:1}
+#view-control #backend-form .unified-run-toolbar>.dm:not(.unified-engine-shared)>.dm__sub{order:2}
+#view-control #backend-form .unified-run-toolbar .colibri-controls>h3{margin-top:0}
+@media(max-width:800px){
+ #view-control #backend-form .unified-run-toolbar{grid-template-columns:minmax(0,1fr);gap:16px}
+ #view-control #backend-form .unified-run-toolbar>.unified-engine-shared{padding:16px 0 0;border-left:0;border-top:1px solid var(--st-line)}
+}
+@media(max-width:480px){#view-control #backend-form .unified-run-toolbar .backend-api-access{grid-template-columns:minmax(0,1fr)}#view-control #backend-form .unified-run-toolbar #backend-client-trigger{grid-column:1;justify-self:start}}
+
+#view-control #backend-form .unified-run-toolbar #backend-api-title{grid-row:1}
+#view-control #backend-form .unified-run-toolbar #backend-endpoint,#view-control #backend-form .unified-run-toolbar #backend-client-trigger{grid-row:2}
+#view-control #backend-form .unified-run-toolbar #backend-endpoint-note{grid-row:3}
+@media(max-width:480px){#view-control #backend-form .unified-run-toolbar #backend-client-trigger{grid-row:3}#view-control #backend-form .unified-run-toolbar #backend-endpoint-note{grid-row:4}}
+
+#view-control #backend-form .unified-run-toolbar .backend-api-access{padding:0;border:0;grid-template-rows:20px auto auto}
+#view-control #backend-form .unified-run-toolbar>.colibri-controls{display:grid;grid-template-rows:20px auto;gap:8px}
+#view-control #backend-form .unified-run-toolbar>.colibri-controls>h3{padding:0;margin:0;line-height:20px}
+#view-control #backend-form .unified-run-toolbar .colibri-controls-body{gap:0}
+#view-control #backend-form .unified-run-toolbar .training-profile-actions{margin:0}
+#view-control #backend-form .unified-run-toolbar #colibri-operation-state{margin:8px 0 0}
+#view-control #backend-form .unified-run-toolbar #colibri-operation-state:empty{margin:0}
+#view-control #backend-form .unified-run-toolbar>.dm:not(.unified-engine-shared){grid-template-rows:20px auto auto}
+#view-control #backend-form .unified-run-toolbar>.dm:not(.unified-engine-shared)>.dash-controls{margin:0}
+#view-control #backend-form .unified-run-toolbar>.backend-actions{margin:0;align-self:center}
+
+/* Keep optional engine status and commands together beside the endpoint. */
+#view-control #backend-form .unified-run-command{display:grid;gap:12px;align-content:start}
+#view-control #backend-form .unified-run-command[hidden]{display:none!important}
+#view-control #backend-form .unified-run-command .backend-intro{grid-column:auto;grid-row:auto;padding:0;border:0}
+#view-control #backend-form .unified-run-command .backend-intro>p{margin:6px 0 0}
+#view-control #backend-form .unified-run-command .backend-intro>p:empty{margin:0}
+#view-control #backend-form .unified-run-command .backend-actions{margin:0;padding:0}
+
+#hydra-model-library .hydra-library-native-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;border-top:1px solid var(--border,#2b383c);padding-top:16px}
+#hydra-model-library .hydra-library-native-actions[hidden]{display:none}
+#hydra-model-library .hydra-library-native-actions #ms-ctrl-model-info{flex:1 1 250px;margin:0;line-height:1.6}
+#hydra-model-library .hydra-library-native-actions #ctrl-switch{flex:0 0 auto;margin:0;min-height:44px}

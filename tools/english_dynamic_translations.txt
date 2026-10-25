@@ -1,0 +1,533 @@
+Lingua|Language
+Italiano|Italian
+Inglese|English
+Seleziona la lingua|Select a language
+Copiato negli appunti|Copied to clipboard
+Chiave API salvata|API key saved
+Conservata soltanto in questo browser.|Stored only in this browser.
+Dato non disponibile|Data unavailable
+Dati non disponibili|Data unavailable
+Dati non aggiornati|Data not up to date
+Stato non disponibile|Status unavailable
+Modello non disponibile|Model unavailable
+Modello non pronto|Model not ready
+Server non raggiungibile|Server unreachable
+Server non raggiungibile · dati precedenti|Server unreachable · previous data
+In attesa di una richiesta|Waiting for a request
+in attesa di una richiesta|waiting for a request
+Lettura del prompt|Processing the prompt
+lettura del prompt|processing the prompt
+Generazione in corso|Generation in progress
+generazione|generation
+in coda|queued
+in corso|in progress
+in corso ora|in progress now
+lettura del prompt in corso|prompt processing in progress
+Generazione in corso · il tempo di lettura indicato appartiene all'ultima richiesta conclusa|Generation in progress · the prompt processing time belongs to the latest completed request
+Motore scaricato|Engine unloaded
+Motore spento|Engine off
+Motore pronto|Engine ready
+Motore attivo|Engine active
+Errore del motore|Engine error
+Si caricherà alla prossima richiesta. Le misure precedenti non descrivono un motore attivo.|It will load at the next request. Previous measurements do not describe an active engine.
+Consulta la diagnosi del sistema prima di riprovare.|Check the system diagnostics before trying again.
+Risposta|Response
+Decodifica|Decoding
+Bozza|Draft
+Verifica|Verification
+Aggiornato alle {0}|Updated at {0}
+Terminato alle {0}|Finished at {0}
+Test in corso|Test in progress
+Ultimo test · dati conservati|Latest test · retained data
+Nessun test disponibile|No test available
+Servizio operativo · porta {0}|Operational service · port {0}
+prompt letto a {0} tok/s|prompt processed at {0} tokens/s
+ultima richiesta: prompt letto in {0} s|latest request: prompt processed in {0} s
+ultima richiesta: {0} token in {1} s|latest request: {0} tokens in {1} s
+limite raggiunto|limit reached
+fallita|failed
+annullata|cancelled
+terminata|completed
+{0} di {1} token ({2}%)|{0} of {1} tokens ({2}%)
+{0} token generati|{0} tokens generated
+motore {0}|engine {0}
+immagini sì|images enabled
+immagini no|images disabled
+solo {0} MiB di VRAM liberi — le richieste possono rallentare|only {0} MiB of VRAM free — requests may slow down
+media {0}%|average {0}%
+picco {0}%|peak {0}%
+media {0}°|average {0}°
+picco {0}°|peak {0}°
+media {0} W|average {0} W
+picco {0} W|peak {0} W
+di {0} W|of {0} W
+collegamento attuale|current link
+{0} GB/s RAM → GPU · prova all'avvio|{0} GB/s RAM → GPU · startup probe
+prova all'avvio|startup probe
+Lettura PCIe non disponibile|PCIe reading unavailable
+Ultimo campione|Latest sample
+Ultimo campione · {0}|Latest sample · {0}
+In attesa di una misura durante la generazione|Waiting for a measurement during generation
+Manca la lettura della potenza GPU|GPU power reading unavailable
+Tensione GPU rilevata|Measured GPU voltage
+{0} thread del pool|{0} pool threads
+fisici / logici|physical / logical
+nessuna richiesta ancora|no requests yet
+{0} richieste|{0} requests
+{0} token scritti|{0} output tokens
+ultima richiesta|latest request
+in attesa della prima richiesta|waiting for the first request
+legge il prompt ora|processing the prompt now
+questa richiesta|this request
+In attesa della generazione|Waiting for generation
+Disponibile al termine della richiesta|Available when the request completes
+Disponibile durante la generazione|Available during generation
+esperti in VRAM · ultima richiesta|experts in VRAM · latest request
+nessun draft ancora|no draft tokens yet
+Stato|Status
+Consigliato|Recommended
+Da sistemare|Needs attention
+non disponibile|unavailable
+non disponibili|unavailable
+VRAM {0}% in uso|VRAM {0}% used
+RAM {0}% in uso|RAM {0}% used
+sensori temperatura/potenza GPU non disponibili|GPU temperature/power sensors unavailable
+sensori GPU disponibili|GPU sensors available
+{0} worker configurati|{0} configured workers
+pool non rilevato|pool not detected
+Motore scaricato · invia una richiesta o seleziona i dati di un test|Engine unloaded · send a request or select a test data source
+cache {0}|cache {0}
+draft accettati {0}|accepted draft tokens {0}
+Soglie di avviso software · nessuna modifica ai limiti del driver|Software alert thresholds · driver limits unchanged
+Lascia che carichi alla prima richiesta; “Ferma” libera la VRAM senza perdere la configurazione.|Let the engine load at the first request; Stop releases VRAM without losing the configuration.
+Balanced segnala oltre 80°C o 250 W. Eco usa soglie inferiori; nessun profilo modifica il driver.|Balanced warns above 80°C or 250 W. Eco uses lower thresholds; no profile changes driver settings.
+Bilanciato segnala oltre 80°C o 250 W. Eco usa soglie inferiori; nessun profilo modifica il driver.|Balanced warns above 80°C or 250 W. Eco uses lower thresholds; no profile changes driver settings.
+nessuna lettura GPU|no GPU reading
+avviso assente|no active alert
+Monitoraggio|Monitoring
+in attesa di una richiesta|waiting for a request
+in attesa della telemetria|waiting for telemetry
+avviso {0}|alert {0}
+cooldown {0} s|cooldown {0} s
+limiti {0}|thresholds {0}
+Il tuo spazio di lavoro.|Your workspace.
+Immagini|Images
+Immagini: on|Images: on
+Immagini: off|Images: off
+Contesto|Context
+KV cache|KV cache
+Esperti in VRAM|Experts in VRAM
+Speculazione|Speculation
+Pool CPU|CPU pool
+Arena|Arena
+encoder spento · attivazione in Control|encoder disabled · enable it in Control
+encoder acceso|encoder enabled
+Stato del motore|Engine status
+API OpenAI|OpenAI API
+API Anthropic|Anthropic API
+fisici|physical
+logici|logical
+Temp. e potenza|Temperature and power
+RAM in uso|RAM in use
+Core|Cores
+PCIe / probe avvio|PCIe / startup probe
+{0} al caricamento|{0} at load time
+Modello caricato|Model loaded
+Modello scaricato|Model unloaded
+Caricamento del motore|Loading the engine
+Scaricato · configurazione conservata|Unloaded · configuration retained
+Connessione al server|Connecting to the server
+Pronto · motore caricato|Ready · engine loaded
+In attesa della prima richiesta|Waiting for the first request
+Scaricato · ultima configurazione|Unloaded · latest configuration
+Misure precedenti · motore scaricato|Previous measurements · engine unloaded
+Ultima richiesta completata|Latest completed request
+Nessuna misura salvata|No saved measurements
+Diagnosi non disponibile|Diagnostics unavailable
+Nessuna richiesta completata|No completed requests
+Una richiesta alla volta.|One request at a time.
+Una richiesta alla volta|One request at a time
+Il server serializza l'inferenza. Le richieste concorrenti attendono in coda; l'annullamento del client interrompe la generazione.|The server serialises inference. Concurrent requests wait in a queue; client cancellation stops generation.
+Monitor termico.|Thermal monitor.
+Balanced, Eco e Custom impostano avvisi. Non modificano clock o potenza del driver. Un dato mancante non viene interpretato come una lettura zero.|Balanced, Eco and Custom set alerts. They do not change driver clocks or power. Missing data is not treated as a zero reading.
+Output strutturato.|Structured output.
+JSON e schemi JSON vengono richiesti al modello e validati prima della consegna. Non è una decodifica vincolata da grammatica: una risposta non conforme può essere rifiutata.|JSON and JSON schemas are requested from the model and validated before delivery. Decoding is not grammar-constrained: a non-compliant response may be rejected.
+Prompt riutilizzato.|Reused prompt.
+Cache del prompt|Prompt cache
+Immagini e allegati.|Images and attachments.
+Tu|You
+Modifica|Edit
+Copia|Copy
+Copia la risposta|Copy the response
+Ragionamento|Reasoning
+Scrittura|Writing
+Esecuzione|Running
+Completato|Completed
+Non eseguito|Not run
+Interrotto|Stopped
+Richiesta non riuscita|Request failed
+Risposta in corso|Response in progress
+Arresta la risposta prima.|Stop the response first.
+Arresta la risposta prima di cambiare conversazione.|Stop the response before switching conversations.
+Archivio pieno|Archive full
+Esporta la conversazione o elimina un elemento dell’archivio prima di aprirne una nuova.|Export the conversation or delete an archived item before starting a new one.
+La precedente è nell’archivio.|The previous conversation is in the archive.
+Annulla|Undo
+Nessuna conversazione archiviata.|No archived conversations.
+Conversazione|Conversation
+Conversazione eliminata|Conversation deleted
+Archivio non aggiornato|Archive not updated
+Riallega i file|Reattach the files
+Il contenuto degli allegati non è conservato nell’archivio.|Attachment contents are not stored in the archive.
+Nessun messaggio da esportare|No messages to export
+{0} messaggi|{0} messages
+{0} risultati|{0} results
+{0} messaggi · {1}|{0} messages · {1}
+Elimina {0}|Delete {0}
+Richiesta {0} di {1} · {2}% della conversazione|Request {0} of {1} · {2}% of the conversation
+Questo server richiede una chiave API: aggiungila in About > Impostazioni.|This server requires an API key: add it in About > Settings.
+Chiave API richiesta|API key needed
+Le immagini sono disattivate|Pictures are off
+Questo modello è configurato solo per il testo.|This model was set up for text only.
+Immagine troppo grande|Picture too large
+Allega un file di testo o un’immagine, oppure trascinali qui|Attach a text file or image, or drop them here
+Allegato|Attachment
+File troppo grande|File too large
+Formato non supportato|Unsupported format
+Nessun modello verificato per questa ricerca.|No verified models found for this search.
+Strata richiede architettura qwen4exp, formato HIP supportato e risorse sufficienti.|Strata requires the qwen4exp architecture, a supported HIP format and sufficient resources.
+File pronti|Files ready
+Disponibile per questo PC|Available for this PC
+Scarica e prepara|Download and prepare
+Nascondi catalogo|Hide catalogue
+Cerca altri modelli|Find more models
+Ricerca su Hugging Face e verifica della compatibilità…|Searching Hugging Face and checking compatibility…
+Ricerca non completata: {0}|Search did not complete: {0}
+{0} modelli verificati · {1} installati|{0} verified models · {1} installed
+{0} modelli installati · ricerca Hugging Face verificata|{0} installed models · verified Hugging Face search
+{0} repository controllati. Mostrati solo i modelli compatibili con Strata e questo PC.|{0} repositories checked. Only models compatible with Strata and this PC are shown.
+RAM {0} GiB · VRAM {1} GiB · disco libero {2} GiB|RAM {0} GiB · VRAM {1} GiB · free disk space {2} GiB
+RAM minima {0} GiB|minimum RAM {0} GiB
+{0} esperti|{0} experts
+Preparazione fallita: {0}|Preparation failed: {0}
+Preparazione: {0}|Preparing: {0}
+Modello preparato. Aggiorna l’elenco installato per selezionarlo.|Model prepared. Refresh the installed model list to select it.
+Catalogo non aggiornato: {0}|Catalogue not updated: {0}
+Seleziono il modello…|Selecting the model…
+Questa configurazione è già selezionata. Avvia Strata per caricare il motore.|This configuration is already selected. Start Strata to load the engine.
+Cambio modello in corso. La pagina si riconnette alla configurazione selezionata.|Switching models. The page will reconnect to the selected configuration.
+Il nuovo server non risponde ancora. Consulta lo stato in Control.|The new server is not responding yet. Check its status in Control.
+Cambio non avviato: {0}|Model switch did not start: {0}
+Preparazione avviata sulla revisione verificata.|Preparation started using the verified revision.
+Preparazione non avviata: {0}|Preparation did not start: {0}
+Originale · PCIe automatico|Original · automatic PCIe allocation
+In preparazione|Preparing
+In corso|Running
+Arresto|Stopping
+Completata|Completed
+Fallita|Failed
+Interrotta|Stopped
+Controllo GPU|Checking GPU
+Preparazione|Preparing
+Caricamento|Loading
+Misurazione|Measuring
+Controllo risposte|Checking responses
+Campagna completata|Campaign complete
+Arresto in corso|Stopping
+Prova interrotta|Test stopped
+Prova interrotta dopo la richiesta in corso|Test stopped after the active request completed
+Prova interrotta dopo il compito in corso|Test stopped after the active task completed
+Avvio fallito|Startup failed
+Prova fallita|Test failed
+Un test esterno è in corso|An external test is running
+La GPU è occupata dal motore|The engine is using the GPU
+Attendi la conclusione prima di avviare una campagna.|Wait for the test to finish before starting a campaign.
+Apri Control e ferma il motore per liberare la GPU.|Open Control and stop the engine to release the GPU.
+campagna automatica|automatic campaign
+prova manuale|manual test
+Scegli un modello locale e un profilo.|Choose a local model and profile.
+{0} / {1} richieste, incluso riscaldamento|{0} / {1} requests, including warm-up
+Nessuna richiesta|No requests
+{0} profili|{0} profiles
+Storico|History
+Misure completate. Confronto esplorativo: conferma i vantaggi con ABBA e stabilità prolungata.|Measurements complete. Exploratory comparison: confirm gains with ABBA and sustained stability testing.
+Puoi arrestare la campagna. Il banco libera le proprie risorse e conserva gli esiti già completati.|You can stop the campaign. The benchmark releases its resources and keeps the results already completed.
+I dati mancanti restano non disponibili. I file originali non vengono modificati.|Missing data stays unavailable. Original files are not modified.
+Tempo totale|Total request time
+Qualità|Quality
+Non valutata|Not assessed
+Nessuna misura completata.|No completed measurements.
+{0} misure|{0} measurements
+{0} profili completati|{0} completed profiles
+Nessuna campagna salvata.|No saved campaigns.
+Aggiornamento non disponibile: {0}|Update unavailable: {0}
+In attesa delle misure|Waiting for measurements
+Il grafico si aggiorna con i campioni reali.|The chart updates with actual samples.
+Confronto in preparazione|Preparing the comparison
+Comparirà dopo il primo profilo completato.|It will appear when the first profile has completed.
+Un tempo minore è migliore.|A shorter time is better.
+Una velocità maggiore è migliore.|A higher speed is better.
+Il punto è la mediana; il segmento è l’intervallo osservato.|The point shows the median; the segment shows the observed range.
+Andamento di {0}: {1} campioni|Trend for {0}: {1} samples
+Confronto delle mediane dei profili|Comparison of profile medians
+Riscaldamento {0}: {1}|Warm-up {0}: {1}
+Misura {0}: {1}|Measurement {0}: {1}
+Richiesta {0}|Request {0}
+Mediana {0}; intervallo {1}|Median {0}; range {1}
+Avvia campagna|Start campaign
+Avvio non riuscito|Startup failed
+Arresto non riuscito|Unable to stop
+Miglior test · esplorativo|Best test · exploratory
+{0} profili completati nelle stesse condizioni di prova|{0} profiles completed under the same test conditions
+{0} misure + {1} riscaldamenti|{0} measurements + {1} warm-ups
+{0} output|{0} output tokens
+{0} paragrafi|{0} paragraphs
+qualità {0}|quality {0}
+Si aggiorna dopo un test completo migliore. Confronto tra mediane osservate; conferma ABBA e stabilità richieste.|Updates after a better complete test. Comparison of observed medians; ABBA confirmation and stability testing are required.
+Nessun test completo e valido per questo modello. I risultati compariranno automaticamente dopo il completamento nel Benchmark.|No complete, valid tests for this model. Results will appear automatically when a benchmark completes.
+Risultato migliore non aggiornato: {0}|Best result not updated: {0}
+Nessun confronto verificato per il modello selezionato|No validated comparison for the selected model
+Statistiche non valide|Invalid statistics
+Velocità di generazione|Generation speed
+Lettura dei token nuovi|New prompt token processing
+Durata totale|Total duration
+Tempo dell’intera richiesta|Time for the entire request
+Quota PCIe automatica → {0}%|Automatic PCIe allocation → {0}%
+Profilo originale → cache appresa|Original profile → learned cache
+Vocabolario draft originale → italiano|Original draft vocabulary → Italian vocabulary
+RAM16 → esperti residenti|RAM16 → resident experts
+automatico|automatic
+originale|original
+italiano|Italian
+appreso|learned
+quota {0}%|share {0}%
+Nessuna regressione osservata nei 12 compiti.|No regressions observed in the 12 tasks.
+Regressioni osservate: {0}.|Regressions observed: {0}.
+Una sola valutazione; qualità generale non certificata.|One assessment; overall quality is not certified.
+Stabilità prolungata: da verificare.|Sustained stability: not yet verified.
+Qualità appaiata e stabilità prolungata: da verificare|Paired quality and sustained stability: not yet verified
+Compiti corretti: {0} {1}/12 · {2} {3}/12.|Tasks passed: {0} {1}/12 · {2} {3}/12.
+Da confermare · profilo operativo invariato|Needs confirmation · operational profile unchanged
+Non adottato · profilo operativo invariato|Not adopted · operational profile unchanged
+Non adottato · nessun vantaggio decode|Not adopted · no decode gain
+Candidato · profilo operativo invariato|Candidate · operational profile unchanged
+Ultimo confronto verificato|Latest validated comparison
+{0} esperti in VRAM in entrambi i profili|{0} experts in VRAM in both profiles
+Sostanzialmente invariato|Essentially unchanged
+{0}% rispetto al riferimento {1}|{0}% compared with the {1} reference
+riferimento {0}|reference {0}
+{0} misure + {1} riscaldamento|{0} measurements + {1} warm-ups
+uscita {0} token|{0} output tokens
+Esiti delle prove|Test results
+Profili operativi invariati|Operational profiles unchanged
+Confronti appaiati con il rispettivo controllo|Paired comparisons with their own control
+Variante|Candidate
+Variazione|Change
+Da verificare|Not yet verified
+{0} regressioni osservate|{0} regressions observed
+Ogni riga ha un controllo proprio: i guadagni non si sommano. Dodici compiti non certificano la qualità generale; stabilità prolungata da verificare.|Each row has its own control: gains cannot be added together. Twelve tasks do not certify overall quality; sustained stability still needs verification.
+Esperti residenti in RAM|Experts resident in RAM
+Vocabolario draft italiano|Italian draft vocabulary
+Cache appresa|Learned cache
+Non adottata|Not adopted
+Da confermare|Needs confirmation
+Beneficio sul prefill|Prefill improvement
+Confronto verificato non disponibile|Validated comparison unavailable
+I rapporti del registro restano consultabili.|Reports in the log remain available.
+Aggiornamento delle verifiche non disponibile; consulta il registro delle prove.|Checks could not be updated; consult the test log.
+Esiti non disponibili; consulta il registro delle prove.|Results unavailable; consult the test log.
+Le nuove varianti appariranno dopo il completamento e la validazione dei rapporti.|New candidates will appear after reports complete and are validated.
+Il flag host-core last conserva il primo P-core su questo i9.|The host-core last flag retains the first P-core on this i9.
+Ultime verifiche: {0}|Latest checks: {0}
+Scambi ritardati|Delayed swaps
+Scambi asincroni|Asynchronous swaps
+Draft italiano|Italian draft
+Somme raggruppate · ABBA|Grouped sums · ABBA
+Cache appresa · ABBA|Learned cache · ABBA
+non adottato|not adopted
+Prova singola|Single test
+nessuna regressione nei 12 compiti|no regressions in the 12 tasks
+da raggiungere|not yet achieved
+Non disponibile|Unavailable
+Data non disponibile|Date unavailable
+Prova senza nome|Unnamed test
+Completato|Completed
+Incompleto|Incomplete
+Escluso|Excluded
+Fallito|Failed
+Esplorativo · prompt variabili|Exploratory · varying prompts
+{0} di {1} rapporti · modello selezionato|{0} of {1} reports · selected model
+Nessun rapporto per questo filtro. Seleziona Tutti i rapporti.|No reports match this filter. Select All reports.
+Nessuna prova salvata per il modello selezionato. Il registro si popolerà con i rapporti del banco locale.|No tests saved for the selected model. The log fills with reports from local benchmarks.
+Nessuna prova appaiata completa per questa misura e questo modello. Consulta il registro in Prestazioni.|No complete paired tests for this metric and model. Consult the log in Performance.
+I valori mancanti non vengono sostituiti con zero.|Missing values are not replaced with zero.
+stesso binario e protocollo|same executable and protocol
+Punto: mediana; segmento: minimo–massimo.|Point: median; segment: minimum–maximum.
+Le impostazioni possono differire tra varianti; i rapporti conservano le condizioni.|Settings may differ between candidates; reports retain the conditions.
+Risultati storici, non velocità corrente.|Historical results, not current speed.
+Nessun rapporto disponibile per il modello selezionato. Le misure appariranno dopo un banco completato.|No reports for the selected model. Measurements appear when a benchmark completes.
+Prompt appaiati: {0}|Paired prompts: {0}
+Esplorativo: prompt variabili|Exploratory: varying prompts
+Evidenze non disponibili: {0}|Evidence unavailable: {0}
+Rapporti non disponibili: {0}|Reports unavailable: {0}
+Controlla il server e la chiave API in About.|Check the server and the API key in About.
+Prove non disponibili. Controlla il server e la chiave API in About.|Tests unavailable. Check the server and the API key in About.
+questa macchina|this PC
+Attendi la fine della campagna Benchmark|Wait for the benchmark campaign to finish
+Attendi la fine della campagna Benchmark.|Wait for the benchmark campaign to finish.
+GPU riservata al benchmark|GPU reserved for benchmarking
+Una campagna è già in corso|A campaign is already running
+Scarica il motore da Control prima di avviare la prova|Unload the engine in Control before starting a test
+Un altro benchmark sta usando la GPU|Another benchmark is using the GPU
+Seleziona profili di prova validi|Select valid test profiles
+La prova manuale usa un solo profilo|A manual test uses one profile
+Prompt o opzione qualità non validi|Invalid prompt or quality option
+Valore non valido: {0}|Invalid value: {0}
+Parametri del benchmark non validi|Invalid benchmark parameters
+Attendi la preparazione del catalogo|Wait for the catalogue preparation to finish
+Una preparazione è già in corso|Preparation is already running
+Configurazione già presente; non viene sovrascritta|The configuration already exists; it will not be overwritten
+Pack già presente; non viene sovrascritto|The pack already exists; it will not be overwritten
+Repository non valido|Invalid repository
+Risorse della macchina non verificabili|Host resources could not be verified
+RAM o VRAM sotto i requisiti|RAM or VRAM below requirements
+Margine RAM insufficiente|Insufficient free RAM
+Spazio disco insufficiente|Insufficient disk space
+Architettura o geometria non supportata da Strata|Architecture or model geometry not supported by Strata
+Quantizzazione GGUF non disponibile o non supportata|GGUF quantisation unavailable or unsupported
+Quantizzazioni dinamiche non validate per il backend HIP corrente|Dynamic quantisation has not been validated for the current HIP backend
+Architettura, formato HIP e requisiti host verificati|Architecture, HIP format and host requirements verified
+LABORATORIO / PRESTAZIONI|LAB / PERFORMANCE
+{0} elabora le richieste su questo PC.|{0} processes requests on this PC.
+Gli strumenti esterni, se configurati, possono usare la rete.|External tools may access the network when configured.
+Maiusc+Invio: nuova riga|Shift+Enter: new line
+consigliato|recommended
+{0} ora|{0} now
+{0} di margine|{0} remaining
+{0} di margine su {1}|{0} remaining below {1}
+caricamento a richiesta|loads on demand
+Dati aggiornati alle {0}|Data updated at {0}
+Aggiornamento non disponibile|Update unavailable
+{0} token di contesto|{0} context tokens
+immagini spente|images disabled
+immagini abilitate|images enabled
+Target compilati|Compiled targets
+Piattaforma|Platform
+{0} fisici|{0} physical
+{0} thread|{0} threads
+Scaricato: la prossima richiesta può caricarlo.|Unloaded: the next request can load it.
+Encoder spento; attivalo da Control quando serve.|Encoder disabled; enable it in Control when needed.
+Tabella hipBLASLt|hipBLASLt table
+Tabella configurata e presente; l'accettazione dipende dal runtime.|The configured table is present; its acceptance depends on the runtime.
+{0} GiB disponibili|{0} GiB available
+{0}% in uso.|{0}% used.
+{0}% in uso|{0}% used
+Soglie termiche|Thermal thresholds
+Avvisi software: non modificano potenza, clock o limiti del driver.|Software alerts: they do not change driver power, clocks or limits.
+Informazione|Information
+Verificato|Verified
+Attenzione|Warning
+Totale token/s|End-to-end tokens/s
+completato|completed
+cancelled|cancelled
+Immagini.|Images.
+Encoder spento. Attivalo in Control quando serve: il motore viene scaricato e si ricarica con il supporto immagini alla prossima richiesta.|Encoder disabled. Enable it in Control when needed: the engine unloads and reloads with image support at the next request.
+Speculazione.|Speculative decoding.
+Parametri non ancora riportati dal motore. Consulta Control e i rapporti salvati.|The engine has not reported these parameters yet. Check Control and the saved reports.
+Memoria.|Memory.
+Gli esperti vengono conservati in VRAM e letti dai file mappati quando necessario.|Experts are cached in VRAM and read from memory-mapped files when needed.
+La telemetria e la diagnosi mostrano il margine effettivo; i budget si applicano al successivo avvio.|Telemetry and diagnostics show the actual available memory; budgets apply at the next startup.
+pronto|ready
+installato|installed
+Scaricato in Strata-data · il motore si riconfigura da solo|Downloaded to Strata-data · the engine reconfigures automatically
+Profilo richiesto: {0}.|Requested profile: {0}.
+La stima è {0} fra RAM e VRAM; controlla la memoria libera e lascia spazio alle altre applicazioni.|The estimate is {0} across RAM and VRAM; check available memory and leave room for other applications.
+{0} usati ora|{0} currently used
+riserva {0} MiB al desktop|{0} MiB reserved for the desktop
+al contesto attuale la KV in RAM pesa ~{0} GB (13,7 KB per token)|at the current context size, KV in RAM uses approximately {0} GB (13.7 KB per token)
+finestra: {0} / {1} token usati ({2}%)|window: {0} / {1} tokens used ({2}%)
+Su questa macchina: VRAM riservata {0} MiB|On this PC: VRAM reserve {0} MiB
+contesto {0}.|context {0}.
+Applica e riavvia per attivarli.|Apply and restart to activate them.
+avviso assente|no active alert
+memorie {0}|memory {0}
+ventola {0} rpm|fan {0} rpm
+{0} token|{0} tokens
+{0} prove|{0} tests
+esperti in VRAM in entrambi i profili|experts in VRAM in both profiles
+Serie: {0}|Series: {0}
+Punto: mediana; segmento: minimo–massimo.|Point: median; segment: minimum–maximum.
+Le impostazioni possono differire tra varianti; i rapporti conservano le condizioni.|Settings may differ between candidates; reports retain the conditions.
+Soglia min-p|Min-p threshold
+Lookup prompt|Prompt lookup
+Pool worker|Worker pool
+conferma {0}|confirmation {0}
+variante {0}|candidate {0}
+vs controllo|vs control
+vs controllo {0} t/s|vs control {0} tokens/s
+non adottato|not adopted
+nessuna regressione nei 12 compiti|no regressions in the 12 tasks
+Ultime verifiche:|Latest checks:
+{0}: {1} t/s|{0}: {1} tokens/s
+{0} esperti in VRAM in entrambi i profili|{0} experts in VRAM in both profiles
+Compiti corretti: {0} {1}/12|Tasks passed: {0} {1}/12
+quota {0}% {1}/12.|share {0}% {1}/12.
+Compiti corretti:|Tasks passed:
+{0} profili completati nelle stesse condizioni di prova|Profiles completed under the same test conditions: {0}
+{0} profili completati|Completed profiles: {0}
+{0} profili|Profiles: {0}
+{0} profili completati nelle stesse condizioni di prova|Profiles completed under the same test conditions: {0}
+Generazione|Generation
+Ultime verifiche|Latest checks
+{0}% vs controllo|{0}% vs control
+{0}% vs controllo {1} t/s|{0}% vs control {1} tokens/s
+1 prove|1 test
+1 token|1 token
+1 profili|1 profile
+Speculazione|Speculative decoding
+{0} configurazioni con file verificati|{0} configurations with verified files
+in servizio: {0}|in service: {0}
+Nomi conservati; contenuti da riallegare|Names retained; contents must be reattached
+Ragionamento…|Reasoning…
+Ragionamento per {0} s|Reasoned for {0} s
+Fine ragionamento|Reasoning complete
+Questo server richiede una chiave API: aggiungila in About > Impostazioni.|This server requires an API key: add it in About > Settings.
+
+Ragionamento per {0} s|Thought for {0} s
+Connessione…|Connecting…
+Sezioni|Views
+Tema chiaro / scuro|Light / dark
+di {0} GB|of {0} GB
+{0}° sopra la temperatura GPU|{0}° above GPU temperature
+Moduli VRAM|VRAM modules
+scrittura {0} MB/s|write {0} MB/s
+{0}% usata|{0}% used
+1 prova|1 test
+quota|share
+Pack non disponibile|Pack unavailable
+Pesi GGUF non disponibili|GGUF weights unavailable
+Pesi GGUF non validi|Invalid GGUF weights
+Shard PLE non disponibile|PLE shard unavailable
+Pack incompleto|Incomplete pack
+Pack troncato o indice non valido|Truncated pack or invalid index
+Tokenizer incompleto|Incomplete tokenizer
+Motore non disponibile|Engine unavailable
+Formato non verificato per questo backend|Format not validated for this backend
+Questo catalogo richiede il backend HIP verificato|This catalogue requires the validated HIP backend
+Pack Swift Q2_0 non supportato|Swift Q2_0 pack unsupported
+Dimensione del download non verificabile|Download size could not be verified
+Checkpoint oltre il profilo di memoria verificato|Checkpoint exceeds the validated memory profile
+Revisioni diverse richiedono una verifica separata.|Different revisions require separate validation.
+Scegli il modello|Choose a model
+Copia indirizzo|Copy address
+Nessun server MCP configurato.|No MCP servers configured.
+MCP non disponibile|MCP unavailable
+Profilo degli avvisi applicato|Alert profile applied
+Soglie salvate|Thresholds saved
+Risorse salvate|Resource settings saved
+Si applicano al prossimo avvio del motore.|They apply at the next engine startup.
+Motore riavviato|Engine restarted
+Modello cambiato|Model changed
+Soglie degli avvisi|Alert thresholds
+Da confermare su carichi indipendenti|Needs confirmation on independent workloads
+Eco|Eco

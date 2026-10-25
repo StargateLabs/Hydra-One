@@ -1,0 +1,30 @@
+/* Equal columns and row heights, with actions and guidance sharing a baseline. */
+#view-control{max-width:1440px;margin:0 auto;padding:0 28px 32px;box-sizing:border-box}
+#view-control>.control-shell>.dash4{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;align-items:stretch;gap:20px}
+#view-control .dash-card{min-width:0;height:100%;box-sizing:border-box}
+#view-control .dash-head{min-height:56px;box-sizing:border-box;flex-shrink:0}
+#view-control .dash-body{flex:1;min-width:0;grid-template-rows:none;grid-auto-rows:auto;align-content:stretch}
+#view-control .dash-hint{height:auto;min-height:64px;flex-shrink:0;align-items:center;overflow:visible;box-sizing:border-box}
+#view-control .dash-hint span{display:block;-webkit-line-clamp:unset;overflow:visible;overflow-wrap:anywhere}
+#view-control .dash-controls select{min-width:0;max-width:100%;box-sizing:border-box}
+#view-control .dash-pm-grid{min-width:0}
+#view-control .dash-pm-stat{min-width:0;overflow-wrap:anywhere}
+#view-control .dash-card--res .dash-body>.dm:last-child,#view-control .dash-card--pm .dash-body>.dm:last-child{align-self:end}
+#view-control .dash-card--res .dash-body>.dm:last-child .dash-controls,#view-control .dash-card--pm .dash-body>.dm:last-child .dash-controls{margin-top:0}
+#view-control .dash-card--res .dash-body>.dm:last-child .st-btn,#view-control .dash-card--pm .dash-body>.dm:last-child .st-btn{min-height:44px}
+@media(max-width:1050px){#view-control .dash-pm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#view-control{padding:0 16px 24px}#view-control>.control-shell>.dash4{grid-template-columns:1fr;grid-template-rows:none}#view-control .dash-card{height:auto}#view-control .dash-body{align-content:start}#view-control .dash-hint{align-items:flex-start;flex-direction:column;gap:5px}}
+.training-export-workspace{margin-top:22px;border:1px solid var(--st-line);border-radius:18px;background:linear-gradient(135deg,rgba(91,161,241,.055),rgba(151,121,230,.035));overflow:visible;}.training-export-workspace>summary{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;cursor:pointer;gap:12px;font-weight:650;}.training-export-workspace>summary small{font-weight:400;color:var(--st-info-text);}.training-export-workspace .training-layout{padding:0 20px 20px;}.training-export-workspace label{display:grid;gap:8px;margin:16px 0;}.training-export-workspace small,.training-export-workspace p{color:var(--st-ink-muted);line-height:1.6;}.training-export-workspace #export-result p{overflow-wrap:anywhere;font-size:12px;}.training-export-workspace progress{width:100%;accent-color:var(--st-info);}
+.model-vision-options{margin-top:16px;padding:14px;border:1px solid var(--st-line);border-radius:14px;background:linear-gradient(120deg,rgba(116,160,230,.07),rgba(168,120,228,.05));}.model-vision-options>label{display:flex;gap:9px;align-items:center;}.model-vision-options>label small{margin-left:auto;color:var(--st-info-text);}.model-vision-options p{font-size:12px;line-height:1.6;color:var(--st-ink-muted);margin:10px 0 0;}.model-vision-options #vision-fields label{display:grid;gap:8px;margin-top:12px;font-size:13px;}
+
+#view-control .dash-card--model .dash-controls{flex-wrap:wrap}
+#view-control .dash-card--model .dash-head .catalogue-inline-summary{flex:1 1 auto;min-width:0;margin:0 0 0 auto;text-align:right;font-size:9px;line-height:1.3;white-space:normal;overflow-wrap:anywhere}
+#view-control .dash-card--run .dash-body>.dm:last-child,#view-control .dash-card--model .dash-body>.dm:last-child{align-self:end}
+#view-control .dash-card--run .dash-pm-stat,#view-control .dash-card--model .dash-pm-stat{height:112px;min-height:112px;box-sizing:border-box;display:grid;grid-template-rows:minmax(0,1fr) auto;align-items:center;padding:12px 8px;gap:6px}
+#view-control .dash-card--run .dash-pm-stat b,#view-control .dash-card--model .dash-pm-stat b{line-height:1.4}
+#view-control .dash-card--run .dash-pm-stat span,#view-control .dash-card--model .dash-pm-stat span{align-self:end;line-height:1.3;font-size:9.5px;letter-spacing:.5px}
+
+#view-control .dash-card--res .dm:has(#ctrl-vram-reserve)>.dash-controls,
+#view-control .dash-card--res .dm:has(#ctrl-kv-resident)>.dash-controls{margin-top:auto;padding-top:8px}
+#view-control .dash-card--res .dm:has(#ctrl-vram-reserve),
+#view-control .dash-card--res .dm:has(#ctrl-kv-resident){align-self:stretch;justify-content:flex-start}

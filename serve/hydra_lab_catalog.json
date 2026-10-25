@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "local/Qwen3-0.6B-Q8_0",
+    "modality": "testo / chat",
+    "status": "ASSET_MISSING",
+    "adapter": "HYDRA ONE HydraClient → llama.cpp CPU/ROCm",
+    "reason": "Benchmark storico reale e modello canonico attestato; nuove esecuzioni registrate dal pannello.",
+    "assets": [
+      {
+        "path": "models/optional/Qwen3-0.6B-Q8_0.gguf",
+        "name": "Qwen3-0.6B-Q8_0.gguf",
+        "bytes": 639446688
+      }
+    ],
+    "asset_hash": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "architecture": "Qwen3 — attestazione storica del runtime",
+    "quantization": "Q8_0",
+    "provenance": "Manifest canonico locale + benchmark PERFORMANCE OPTIMIZATION E2E v1",
+    "metrics_applicable": [
+      "prefill_tps",
+      "decode_tps",
+      "ttft",
+      "latency_e2e",
+      "tokens",
+      "memory"
+    ],
+    "metrics_not_applicable": [
+      "audio_real_time_factor",
+      "image_dimensions"
+    ],
+    "support_verified": true,
+    "exact_variant": "Qwen3-0.6B-Q8_0.gguf",
+    "license_status": "UNKNOWN",
+    "lab_profiles": [
+      {
+        "id": "hydra-fastpath-v1",
+        "label": "Fast Path v1 · BLOCCATO dopo errore del runtime Vulkan",
+        "disabled": true,
+        "reason": "Qwen short gate passed; app verification failed with ErrorDeviceLost; no model-wide promotion",
+        "evidence": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA\\performance_fastpath_v8_20261018_101550\\gpu-runtime-safety-stop.json"
+      }
+    ],
+    "historical_status": "SMOKE_TESTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "mudler/locate-anything.cpp-gguf",
+    "modality": "visione / grounding",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "LocateAnything CPU CLI",
+    "reason": "Asset e runtime isolati verificati; ammissione CPU e test applicativo richiesti.",
+    "assets": [
+      {
+        "path": "models/optional/locate-anything-q4_k.gguf",
+        "sha256": "894088a00a2cd2bbb7f34b12893988dd0376c8ed92213a9f2cf6420f1e3901da",
+        "bytes": 4716320320
+      }
+    ],
+    "provenance": {
+      "repo": "mudler/locate-anything.cpp-gguf",
+      "revision": "4e50db5b836dd876f5e464734ef5484cae754a52",
+      "license": "other",
+      "use_scope": "isolated research/evaluation only; no operational promotion",
+      "url": "https://huggingface.co/mudler/locate-anything.cpp-gguf/resolve/4e50db5b836dd876f5e464734ef5484cae754a52/locate-anything-q4_k.gguf?download=true",
+      "expected_bytes": 4716320320,
+      "expected_sha256": "894088a00a2cd2bbb7f34b12893988dd0376c8ed92213a9f2cf6420f1e3901da",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\mudler--locate-anything.cpp-gguf\\locate-anything-q4_k.gguf",
+      "space_free_before": 129530343424,
+      "reserve_os_bytes": 32212254720,
+      "status": "VERIFIED",
+      "bytes": 4716320320,
+      "sha256": "894088a00a2cd2bbb7f34b12893988dd0376c8ed92213a9f2cf6420f1e3901da",
+      "download_s": 27.593000000000757
+    },
+    "asset_hash": "894088a00a2cd2bbb7f34b12893988dd0376c8ed92213a9f2cf6420f1e3901da",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q4_K",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "runtime_path": "engine/locate-anything-cli.exe",
+    "runtime_hash": "df15806f4c9ad5c459ea27147400a01e58cf23b1d498ce47d54974a0ad9459ad",
+    "revision": "4e50db5b836dd876f5e464734ef5484cae754a52",
+    "license_status": "research/evaluation only",
+    "exact_variant": "locate-anything-q4_k.gguf",
+    "capabilities": [
+      "grounding_boxes"
+    ],
+    "runtime_manifest": {
+      "locate-anything-cli.exe": "df15806f4c9ad5c459ea27147400a01e58cf23b1d498ce47d54974a0ad9459ad"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/mudler/locate-anything.cpp-gguf?blobs=true",
+      "revision": "4e50db5b836dd876f5e464734ef5484cae754a52",
+      "license_declared": "other",
+      "pipeline_tag": "object-detection",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "audio-cpp/audio.cpp-gguf",
+    "modality": "audio",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "HYDRA LAB → LocalSpeech → audio.cpp CPU (Kokoro TTS)",
+    "reason": "Asset Kokoro locale identificato con hash conforme. Adapter CPU per sintesi WAV; riconoscimento audio e generazione musicale non verificati.",
+    "assets": [
+      {
+        "path": "models/optional/kokoro-82m-q8_0.gguf",
+        "bytes": 189549408,
+        "sha256": "5d800fd204029302c10313daeafdb31c875c7c29ae31974d0d156cc7f512d1d0"
+      }
+    ],
+    "provenance": {
+      "repo": "audio-cpp/audio.cpp-gguf",
+      "revision": "e479ac197bae727f69574261a8025696bc51de48",
+      "file": "Kokoro-82M-GGUF/kokoro-82m-q8_0.gguf",
+      "sha256": "5d800fd204029302c10313daeafdb31c875c7c29ae31974d0d156cc7f512d1d0",
+      "bytes": 189549408
+    },
+    "asset_hash": "5d800fd204029302c10313daeafdb31c875c7c29ae31974d0d156cc7f512d1d0",
+    "architecture": "Kokoro 82M, declared audiocpp model spec",
+    "quantization": "Q8_0",
+    "metrics_applicable": [
+      "latency_e2e",
+      "audio_seconds",
+      "real_time_factor",
+      "audio_bytes"
+    ],
+    "metrics_not_applicable": [
+      "prefill_tps",
+      "decode_tps",
+      "ttft",
+      "generated_text_tokens"
+    ],
+    "support_verified": false,
+    "runtime_path": "engine/audiocpp_server.exe",
+    "runtime_hash": "3a24b308200714ba0540b633385f2e1fd01fcd36c0ce86436cc01c27534f8048",
+    "capabilities": [
+      "text_to_speech_wav"
+    ],
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/audio-cpp/audio.cpp-gguf?blobs=true",
+      "revision": "661a224e9d9adbd49c01626f85e426f5f425d771",
+      "license_declared": "other",
+      "pipeline_tag": "text-to-speech",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "kokoro-82m-q8_0.gguf",
+    "license_status": "Apache-2.0 for Kokoro package, publisher README table; catalogue itself contains different per-model licenses",
+    "package_variant": "Kokoro-82M-GGUF/kokoro-82m-q8_0.gguf",
+    "license_evidence": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA\\benchmark_app_v4_20261018_082101\\audio-cpp--audio.cpp-gguf.md",
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "Serveurperso/YuE2-GGUF",
+    "modality": "musica",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "yue2.cpp CPU CLI, isolated 2-thread build",
+    "reason": "Pipeline musicale completa compilata in laboratorio; modello/VAE attestati. Test CPU breve separato, nessuna promozione commerciale.",
+    "assets": [
+      {
+        "path": "models/optional/YuE2-3B-Q5_K_M.gguf",
+        "bytes": 2622936832,
+        "sha256": "cd3efd250b734a229172800f08f33a893ad1f66b521666e176cdae4a0729b281"
+      }
+    ],
+    "provenance": {
+      "model": {
+        "repo": "Serveurperso/YuE2-GGUF",
+        "revision": "e630f2b8f6aedf8254c3186438633c1b5eeaf80a",
+        "license": "cc-by-nc-4.0",
+        "scope": "non-commercial laboratory evaluation only; no deployment",
+        "url": "https://huggingface.co/Serveurperso/YuE2-GGUF/resolve/e630f2b8f6aedf8254c3186438633c1b5eeaf80a/YuE2-3B-Q5_K_M.gguf?download=true",
+        "expected_bytes": 2622936832,
+        "expected_sha256": "cd3efd250b734a229172800f08f33a893ad1f66b521666e176cdae4a0729b281",
+        "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\Serveurperso--YuE2-GGUF\\YuE2-3B-Q5_K_M.gguf",
+        "space_free_before": 74701631488,
+        "os_reserve_bytes": 32212254720,
+        "status": "VERIFIED",
+        "sha256": "cd3efd250b734a229172800f08f33a893ad1f66b521666e176cdae4a0729b281",
+        "bytes": 2622936832,
+        "download_s": 16.92199999999866
+      },
+      "vae": {
+        "repo": "Serveurperso/YuE2-GGUF",
+        "revision": "e630f2b8f6aedf8254c3186438633c1b5eeaf80a",
+        "license": "cc-by-nc-4.0",
+        "scope": "non-commercial laboratory evaluation only; no deployment",
+        "url": "https://huggingface.co/Serveurperso/YuE2-GGUF/resolve/e630f2b8f6aedf8254c3186438633c1b5eeaf80a/YuE2-Vae-F32.gguf?download=true",
+        "expected_bytes": 530497344,
+        "expected_sha256": "93e49dfb1970e89ad64cacb17cf13b5d05f6bb30ef7ed3adae3050bcb728638a",
+        "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\Serveurperso--YuE2-GGUF\\YuE2-Vae-F32.gguf",
+        "space_free_before": 72077139968,
+        "os_reserve_bytes": 32212254720,
+        "status": "VERIFIED",
+        "sha256": "93e49dfb1970e89ad64cacb17cf13b5d05f6bb30ef7ed3adae3050bcb728638a",
+        "bytes": 530497344,
+        "download_s": 8.594000000004598
+      },
+      "source": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA\\benchmark_app_v4_20261018_082101\\yue-source-attestation.json",
+      "thread_patch": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA\\benchmark_app_v4_20261018_082101\\yue-thread-budget-patch.json"
+    },
+    "asset_hash": "cd3efd250b734a229172800f08f33a893ad1f66b521666e176cdae4a0729b281",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q5_K_M",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/Serveurperso/YuE2-GGUF?blobs=true",
+      "revision": "e630f2b8f6aedf8254c3186438633c1b5eeaf80a",
+      "license_declared": "cc-by-nc-4.0",
+      "pipeline_tag": null,
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "YuE2-3B-Q5_K_M.gguf",
+    "license_status": "CC BY-NC 4.0; isolated non-commercial evaluation only, no deployment/distribution",
+    "lab_task": "music",
+    "lab_profile": "yue2-cpu-q5-v4",
+    "components": [
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\Serveurperso--YuE2-GGUF\\YuE2-Vae-F32.gguf",
+        "sha256": "93e49dfb1970e89ad64cacb17cf13b5d05f6bb30ef7ed3adae3050bcb728638a",
+        "role": "YuE2 VAE F32"
+      }
+    ],
+    "runtime_path": "engine/yue-synth.exe",
+    "runtime_hash": "3d913f34dff7d2a50c1abc87860052f008bfcc568ea1a75bb7d8450e1ed1ebfa",
+    "runtime_manifest": {},
+    "capabilities": [
+      "text_to_music",
+      "symbolic_ABC"
+    ],
+    "scope_note": "Non-commercial laboratory evaluation; not enabled for commercial deployment or redistribution.",
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "modality": "testo / MoE",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "RESOURCE_BLOCKED"
+    ],
+    "adapter": "Strata hybrid; budget memoria non attestato",
+    "reason": "Variante completa Q2_0: 61.86 GiB; disco libero 66.63 GiB con riserva OS 30 GiB. Nessun budget di caricamento dimostrato; nessuna inferenza effettuata.",
+    "assets": [
+      {
+        "remote_file": "Q2_0/Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00001-of-00002.gguf",
+        "bytes": 37623740192,
+        "expected_sha256": "69820c02ec7d0b45ef2ebb19d6620299db749fe2aded7f39f93c6b88b199b720",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/Q2_0/Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00001-of-00002.gguf"
+      },
+      {
+        "remote_file": "Q2_0/Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00002-of-00002.gguf",
+        "bytes": 28800138432,
+        "expected_sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF/resolve/ed59f92082b1e93c0e96d60a8b11aab089b52f09/Q2_0/Qwen3.8-Flash-Next-GSQ-RCO-Q2_0-00002-of-00002.gguf"
+      }
+    ],
+    "provenance": "Identificativo richiesto dall’utente; repository remoto non interrogato",
+    "asset_hash": "NOT_COMPUTED",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q2_0",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF?blobs=true",
+      "revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "image-text-to-text",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "Q2_0",
+    "resource_gate": {
+      "status": "BLOCKED",
+      "complete_variant_bytes": 66423878624,
+      "disk_free_bytes": 71546982400,
+      "os_reserve_bytes": 32212254720,
+      "download_required_with_reserve_bytes": 98636133344,
+      "model_memory_upper_bound": "NOT_VERIFIED",
+      "reason": "Complete shard set plus OS reserve exceeds free cache volume; no verified full-load memory budget. Existing large packs not reloaded."
+    },
+    "runtime_candidate": "llama.cpp local and isolated Prism CPU; source architecture inventory available, exact large variant NOT_TESTED",
+    "license_status": "apache-2.0 (declared; variant not acquired)",
+    "historical_status": "RESOURCE_BLOCKED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "cdiamond/Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF",
+    "modality": "testo / MoE",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "Prism llama.cpp CPU; base generation without MTP",
+    "reason": "NVFP4 base candidato su CPU. MTP non attivato né attestato; compatibilità dimostrabile solo dalla prova reale.",
+    "assets": [
+      {
+        "path": "models/optional/Qwen3.8-27B-iMatrix-NVFP4-MTP.gguf",
+        "sha256": "15b6bb8d0eb15cb6b081c562f8daea86330ec64174cb0f9e1655f3d467484007",
+        "bytes": 17125207136
+      }
+    ],
+    "provenance": {
+      "repo": "cdiamond/Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF",
+      "revision": "ac343e8f44caef0896f79d372ecc07ef7ab34ec8",
+      "license": "apache-2.0",
+      "scope": "research/evaluation only",
+      "url": "https://huggingface.co/cdiamond/Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF/resolve/ac343e8f44caef0896f79d372ecc07ef7ab34ec8/Qwen3.8-27B-iMatrix-NVFP4-MTP.gguf?download=true",
+      "expected_bytes": 17125207136,
+      "expected_sha256": "15b6bb8d0eb15cb6b081c562f8daea86330ec64174cb0f9e1655f3d467484007",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\cdiamond--Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF\\Qwen3.8-27B-iMatrix-NVFP4-MTP.gguf",
+      "space_free_before": 91896365056,
+      "os_reserve_bytes": 32212254720,
+      "status": "VERIFIED",
+      "sha256": "15b6bb8d0eb15cb6b081c562f8daea86330ec64174cb0f9e1655f3d467484007",
+      "bytes": 17125207136,
+      "download_s": 174.84399999999732
+    },
+    "asset_hash": "15b6bb8d0eb15cb6b081c562f8daea86330ec64174cb0f9e1655f3d467484007",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "NVFP4",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "lab_task": "text",
+    "lab_profile": "nvfp4-base-cpu-no-mtp-v4",
+    "exact_variant": "Qwen3.8-27B-iMatrix-NVFP4-MTP.gguf",
+    "runtime_path": "engine/llama-completion.exe",
+    "runtime_hash": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+    "runtime_manifest": {
+      "ggml-base.dll": "a815d3085fb74d62bfac75ba02ebc0ac708d8f69ef8f5346c48ede27ba37f279",
+      "ggml-cpu-alderlake.dll": "08160e547646c899c9304211828fb3568057e1eab0ad3f7895534ddb697e9040",
+      "ggml-cpu-cannonlake.dll": "71ec58ed0feaf9c49b1d2249b159f44f77d7bbc657ae511e9018ccedd8e9b8be",
+      "ggml-cpu-cascadelake.dll": "dd6c09981a174b6efa9b14d61ae1074f9e7cd6815d7f4df06b74b1a26f16547c",
+      "ggml-cpu-cooperlake.dll": "dc6e1622ce55dbfae31afca354137d516967a7b84738e7cf099e691f9df208b8",
+      "ggml-cpu-haswell.dll": "50d2b9a4314a73eb7b166ef9d1612b593d92d4df48b8b36eb35d5eeca47be060",
+      "ggml-cpu-icelake.dll": "5cf0f642a894922d8a67ef562274e0a29d4bb5c0355a3ce3c1ff1aa6ee616cee",
+      "ggml-cpu-ivybridge.dll": "3d0bcbdc35f13d0fe63d75e845b05b44227f3f14ec8e717f634795532da4d728",
+      "ggml-cpu-piledriver.dll": "9187fcdca4e91d1abd14dd39b298fecb78b8758e01183c707ca2b91e0e9799cc",
+      "ggml-cpu-sandybridge.dll": "4eb92ba9e35064185af21a31a1fc76dffdd526970d63d3df96d9633325021ac1",
+      "ggml-cpu-sapphirerapids.dll": "4be486c35e60adfe4cd3790e61fa69030db4b8d1f04405331e0b629765edae34",
+      "ggml-cpu-skylakex.dll": "81e835c60b73ad797a143f311ed2d6ded43b1a498039bb21c13cd0d691105ecf",
+      "ggml-cpu-sse42.dll": "26b69f50b4d00f13424ba1b4c0488c1dd5277f44fd2100cc1f3970d52f27e839",
+      "ggml-cpu-ssse3.dll": "de06e504c26165afbf962a0141e5bf925d9face6c31992c0e048376c03d09c3e",
+      "ggml-cpu-x64.dll": "6c95b86670c2058aa1fc853b1fa604f20fac585250babf17d2c40202080e5757",
+      "ggml-cpu-zen4.dll": "27c194d2165204fc93af83de8e5bce20dc57c9603efc52c05d01169983778380",
+      "ggml-rpc-server.exe": "2bc2c1ea323b115caca127bcabefad376a5b3e2d256a69c34ae6a734d41ad062",
+      "ggml-rpc.dll": "1550b4325789791d9e470a323bdb21c6c9937e050cc5e552afda66c24d205be9",
+      "ggml.dll": "5c88fd75e3e70fcd8feba685625033f2b422a08d9c55446d47853527cfeebd4f",
+      "libomp140.x86_64.dll": "4a20c1e5c115c29771a12324513eb109badac72180f79481527ad79d996ffb33",
+      "llama-batched-bench-impl.dll": "d81fc1257af76e35c774a1e83f0f7e595da4121644a128b37f5936b99aeb2283",
+      "llama-batched-bench.exe": "26c9c24d0c758827425eec024e61697df251e5e8544233348658440d220f6ec2",
+      "llama-batched.exe": "576990d8cbcb5072882f0ca3f40b7f9d0cc742ebaa0cd4b84f7a6cfe8daf0dd6",
+      "llama-bench-impl.dll": "3ef1749fcc52e9e1b9f30884fd7b50fd6cf4ec5323340c007cb4ec3d63122bb0",
+      "llama-bench.exe": "87b1123fb1bca95991df74bcd2663e6555329f2046670cb3cbfa95044287afe3",
+      "llama-cli-impl.dll": "281ea871397f09bebd2d1cc3da164059be899fce82e02a231460897bf1991a8e",
+      "llama-cli.exe": "5316da9e11db7e5431fe0842e46e8ab9c7daa888aad5de31c55913030b443fc1",
+      "llama-common.dll": "e2e3c4a9c9d9d81ec8b86c640cc1ffc982902e085fa002370f43a99f4312e439",
+      "llama-completion-impl.dll": "85a9808cdca9a735447cac59acc48b8b5018c4c887dbc1696232ccda1a12d376",
+      "llama-completion.exe": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+      "llama-debug.exe": "ea743e1d35f1aee12d6be9e531ceb1c9bd381d57cc44598f26ba17a6e117eebd",
+      "llama-diffusion-cli.exe": "1d0da9b3e1d77d385222f3012798d7d2bed49796437fa566b9b797c0859e89bc",
+      "llama-embedding.exe": "9f54c0a01916c35f07e600f6dca0776caafb714d05f6ecbd784a083f4c7cdd92",
+      "llama-eval-callback.exe": "bf30a96307ede9dad94d762b4e4b4a96ba475a469d172c36465981bfa7c04a84",
+      "llama-finetune.exe": "3fceb8a3aaab05ffce057a4866a14cdbb0dd8e8d416bf87cb24ad23d1dca85ed",
+      "llama-fit-params-impl.dll": "df02287b55c42f4d1081c7181132fe1d58084552f79cd17f739a0b46af029e3b",
+      "llama-fit-params.exe": "1cf6b0520ca0bf0dcabdedc274aedd225ca0a664d4d19e408e1aecb50b097165",
+      "llama-gemma3-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-gen-docs.exe": "1b76c2904411708869dcbe4b8f6b177590886a9253d1bef6b3046e6234da046a",
+      "llama-gguf-hash.exe": "64d4a97b83c391336f72171137d8498e11a879958e59b433f053a0407790b443",
+      "llama-gguf-split.exe": "037d9d54c0efffa519432ceac33ad5aeaf933174f96060c7fe6540490cbae36e",
+      "llama-gguf.exe": "6cb03699a23d0e8982f3caefed4ea2588105b9bb8731e4848698db1897371b5d",
+      "llama-idle.exe": "2b072792e37d1e873f5dd3bfe04c18a257614a28a0a4e3daee1d2da7f0b6af48",
+      "llama-imatrix.exe": "64234fb26d78674ac43ece407b5845e04f4ccca25c90d4eea8fe496e0f772ab6",
+      "llama-kv-mean-center.exe": "adc2d4c74bfda509e770f24428e0768b40959e1ffab1aee5830d211248f0ca95",
+      "llama-llava-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-lookahead.exe": "f949feb62ee569e871450d3690f47345900b716ffbfbdda31c94c0dab2389590",
+      "llama-lookup-create.exe": "0ce3b9593bf4150134ff72fe33cfee0e84e202703089e653e4d90acb46ddd7f7",
+      "llama-lookup-merge.exe": "3e3830fe535d69e3c743eba5e1e263db95400a3b1050930505275093d78716b0",
+      "llama-lookup-stats.exe": "c37f5110697c200229388c04eea2f3f692266555f02cff5b989952d847205163",
+      "llama-lookup.exe": "a3f98d575ab3ee6807c93ed705f2395e44532e2b956ead5476a589f3fe77db22",
+      "llama-minicpmv-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-mtmd-cli.exe": "2ef0ee45ed0cce5275a31295b87c5ddf8ede9bc61e79c33283f4aca73df1d5f0",
+      "llama-mtmd-debug.exe": "88fcd6d4518c09707845b60986998ff1b5f32af04250ed335ff2eb8632d2a6eb",
+      "llama-mtp-export.exe": "b5b065d58185d50170a1d4f8513f4656939019c82bbb37b5fb672a2646267ffb",
+      "llama-parallel.exe": "857f17733f705fda3663ee0b167a6f9addd082fd4e6badfe23f7507b680c0932",
+      "llama-passkey.exe": "459ea4031054c615b249d9adf86d1445fdf26e59f79c29dbafccf5b01e39c315",
+      "llama-perplexity-impl.dll": "8230d3712b4de342e088d9601b1b2cca6a16a673725bf9b83474466c22c25080",
+      "llama-perplexity.exe": "4f57df245d624c9f9e68555bca67b1a4fd9a425dc8b2636ea6b2d661aad539fd",
+      "llama-quantize-impl.dll": "ed9d2d9d5b103f6ae7dac7bff6d415283122f7e260e930462600ec29e90f2248",
+      "llama-quantize.exe": "d198bf9071a9de205f40801f2c3e2197c04d7a5bdd8ebbe6b8e740fed1d1fe5f",
+      "llama-qwen2vl-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-results.exe": "b11d328e7e5f97ccb3a29a4af46f4d7d975324687d1af36115a3c5df23461357",
+      "llama-retrieval.exe": "32101d8cc0a4a6eb037f5fccaf38b01210e5057c1e4b195a1f5ea512162ffa17",
+      "llama-rs-rollback-multi.exe": "d3b938657e482ce34294f8073a92d83e320f4f5154ea50f77b8291f07c30634e",
+      "llama-rs-rollback.exe": "903fcc205e52c3758764a32d781a34ffe5aba6cf95e57ae653557adcc316a7d4",
+      "llama-server-impl.dll": "d8bd26a0803413ae85ab74940e1088403a333daaadfd4d0a3e851c7cc3e0eec6",
+      "llama-server.exe": "42373a44d8847f014337eb152094d44692ddd690d45a0b2c8f13e16244b5ff4b",
+      "llama-simple-chat.exe": "8f4c05488c1f9d7b5f4927e50d908ee8ee3c7a364677ee2d3f23a6c9c0f7df5e",
+      "llama-simple.exe": "c9bac5717052a0e2ba7ebaae059da0e0edf151adcb91e7cd5b1bb3de74cb5550",
+      "llama-speculative-simple.exe": "397f27c67c379c7d82413eb7582d35391181a10ee6293a9ec09214882683aac2",
+      "llama-speculative.exe": "f4472646fccd4661ab68e0cbeef5fb4dd8bb24ee1b90d7e8dff76d1e1529412c",
+      "llama-tokenize.exe": "32d40dbbac9ffec1750ef32a0a40dd4899c072a3ab950fcbc971ebf8decb64a6",
+      "llama-tts.exe": "f28896b0a7fe233611fa76e14dc69072d83c9787dcf1642fa45c41387a4d89ed",
+      "llama.dll": "83fee7eed177e0a22c5c27afca34d56c908d1e58ded928ef38c81869407ed9e9",
+      "llama.exe": "08869cc9f87920761270794f5269309e3e68ef084eeab185416fef4924a3369c",
+      "mtmd.dll": "5638529f04ecb3d1067917b6fe4f128e03eb2cca70f5c87d9d94aef3d5536b5f"
+    },
+    "license_status": "Apache-2.0",
+    "capabilities": [
+      "text_generation_base"
+    ],
+    "mtp_status": "NOT_TESTED",
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/cdiamond/Qwen3.8-27B-iMatrix-NVFP4-MTP-GGUF?blobs=true",
+      "revision": "ac343e8f44caef0896f79d372ecc07ef7ab34ec8",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "image-text-to-text",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+    "modality": "testo",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "Prism llama.cpp CPU; no MTP requested",
+    "reason": "Variante ternaria pubblicata e runtime Prism CPU attestati; test distinto richiesto.",
+    "assets": [
+      {
+        "path": "models/optional/Huihui-Qwen3.8-27B-abliterated-Ternary-Bonsai-PTQ1_0.gguf",
+        "sha256": "b27e1d4be4d93e86308a0138f6157fee89dd5a67304632ddb6032bf2719e5f6e",
+        "bytes": 6608603616
+      }
+    ],
+    "provenance": {
+      "repo": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+      "revision": "1c69098e9c32db6dc06fc48f1d6cc75ad07da89e",
+      "license": "apache-2.0",
+      "scope": "research/evaluation only",
+      "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF/resolve/1c69098e9c32db6dc06fc48f1d6cc75ad07da89e/Huihui-Qwen3.8-27B-abliterated-Ternary-Bonsai-PTQ1_0.gguf?download=true",
+      "expected_bytes": 6608603616,
+      "expected_sha256": "b27e1d4be4d93e86308a0138f6157fee89dd5a67304632ddb6032bf2719e5f6e",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\huihui-ai--Huihui-Qwen3.8-27B-abliterated-GGUF\\Huihui-Qwen3.8-27B-abliterated-Ternary-Bonsai-PTQ1_0.gguf",
+      "space_free_before": 98501038080,
+      "os_reserve_bytes": 32212254720,
+      "status": "VERIFIED",
+      "sha256": "b27e1d4be4d93e86308a0138f6157fee89dd5a67304632ddb6032bf2719e5f6e",
+      "bytes": 6608603616,
+      "download_s": 41.93699999999808
+    },
+    "asset_hash": "b27e1d4be4d93e86308a0138f6157fee89dd5a67304632ddb6032bf2719e5f6e",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "PTQ1_0",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "lab_task": "text",
+    "lab_profile": "huihui-ternary-ptq1-cpu-v4",
+    "exact_variant": "Huihui-Qwen3.8-27B-abliterated-Ternary-Bonsai-PTQ1_0.gguf",
+    "runtime_path": "engine/llama-completion.exe",
+    "runtime_hash": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+    "license_status": "Apache-2.0",
+    "runtime_manifest": {
+      "ggml-base.dll": "a815d3085fb74d62bfac75ba02ebc0ac708d8f69ef8f5346c48ede27ba37f279",
+      "ggml-cpu-alderlake.dll": "08160e547646c899c9304211828fb3568057e1eab0ad3f7895534ddb697e9040",
+      "ggml-cpu-cannonlake.dll": "71ec58ed0feaf9c49b1d2249b159f44f77d7bbc657ae511e9018ccedd8e9b8be",
+      "ggml-cpu-cascadelake.dll": "dd6c09981a174b6efa9b14d61ae1074f9e7cd6815d7f4df06b74b1a26f16547c",
+      "ggml-cpu-cooperlake.dll": "dc6e1622ce55dbfae31afca354137d516967a7b84738e7cf099e691f9df208b8",
+      "ggml-cpu-haswell.dll": "50d2b9a4314a73eb7b166ef9d1612b593d92d4df48b8b36eb35d5eeca47be060",
+      "ggml-cpu-icelake.dll": "5cf0f642a894922d8a67ef562274e0a29d4bb5c0355a3ce3c1ff1aa6ee616cee",
+      "ggml-cpu-ivybridge.dll": "3d0bcbdc35f13d0fe63d75e845b05b44227f3f14ec8e717f634795532da4d728",
+      "ggml-cpu-piledriver.dll": "9187fcdca4e91d1abd14dd39b298fecb78b8758e01183c707ca2b91e0e9799cc",
+      "ggml-cpu-sandybridge.dll": "4eb92ba9e35064185af21a31a1fc76dffdd526970d63d3df96d9633325021ac1",
+      "ggml-cpu-sapphirerapids.dll": "4be486c35e60adfe4cd3790e61fa69030db4b8d1f04405331e0b629765edae34",
+      "ggml-cpu-skylakex.dll": "81e835c60b73ad797a143f311ed2d6ded43b1a498039bb21c13cd0d691105ecf",
+      "ggml-cpu-sse42.dll": "26b69f50b4d00f13424ba1b4c0488c1dd5277f44fd2100cc1f3970d52f27e839",
+      "ggml-cpu-ssse3.dll": "de06e504c26165afbf962a0141e5bf925d9face6c31992c0e048376c03d09c3e",
+      "ggml-cpu-x64.dll": "6c95b86670c2058aa1fc853b1fa604f20fac585250babf17d2c40202080e5757",
+      "ggml-cpu-zen4.dll": "27c194d2165204fc93af83de8e5bce20dc57c9603efc52c05d01169983778380",
+      "ggml-rpc-server.exe": "2bc2c1ea323b115caca127bcabefad376a5b3e2d256a69c34ae6a734d41ad062",
+      "ggml-rpc.dll": "1550b4325789791d9e470a323bdb21c6c9937e050cc5e552afda66c24d205be9",
+      "ggml.dll": "5c88fd75e3e70fcd8feba685625033f2b422a08d9c55446d47853527cfeebd4f",
+      "libomp140.x86_64.dll": "4a20c1e5c115c29771a12324513eb109badac72180f79481527ad79d996ffb33",
+      "llama-batched-bench-impl.dll": "d81fc1257af76e35c774a1e83f0f7e595da4121644a128b37f5936b99aeb2283",
+      "llama-batched-bench.exe": "26c9c24d0c758827425eec024e61697df251e5e8544233348658440d220f6ec2",
+      "llama-batched.exe": "576990d8cbcb5072882f0ca3f40b7f9d0cc742ebaa0cd4b84f7a6cfe8daf0dd6",
+      "llama-bench-impl.dll": "3ef1749fcc52e9e1b9f30884fd7b50fd6cf4ec5323340c007cb4ec3d63122bb0",
+      "llama-bench.exe": "87b1123fb1bca95991df74bcd2663e6555329f2046670cb3cbfa95044287afe3",
+      "llama-cli-impl.dll": "281ea871397f09bebd2d1cc3da164059be899fce82e02a231460897bf1991a8e",
+      "llama-cli.exe": "5316da9e11db7e5431fe0842e46e8ab9c7daa888aad5de31c55913030b443fc1",
+      "llama-common.dll": "e2e3c4a9c9d9d81ec8b86c640cc1ffc982902e085fa002370f43a99f4312e439",
+      "llama-completion-impl.dll": "85a9808cdca9a735447cac59acc48b8b5018c4c887dbc1696232ccda1a12d376",
+      "llama-completion.exe": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+      "llama-debug.exe": "ea743e1d35f1aee12d6be9e531ceb1c9bd381d57cc44598f26ba17a6e117eebd",
+      "llama-diffusion-cli.exe": "1d0da9b3e1d77d385222f3012798d7d2bed49796437fa566b9b797c0859e89bc",
+      "llama-embedding.exe": "9f54c0a01916c35f07e600f6dca0776caafb714d05f6ecbd784a083f4c7cdd92",
+      "llama-eval-callback.exe": "bf30a96307ede9dad94d762b4e4b4a96ba475a469d172c36465981bfa7c04a84",
+      "llama-finetune.exe": "3fceb8a3aaab05ffce057a4866a14cdbb0dd8e8d416bf87cb24ad23d1dca85ed",
+      "llama-fit-params-impl.dll": "df02287b55c42f4d1081c7181132fe1d58084552f79cd17f739a0b46af029e3b",
+      "llama-fit-params.exe": "1cf6b0520ca0bf0dcabdedc274aedd225ca0a664d4d19e408e1aecb50b097165",
+      "llama-gemma3-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-gen-docs.exe": "1b76c2904411708869dcbe4b8f6b177590886a9253d1bef6b3046e6234da046a",
+      "llama-gguf-hash.exe": "64d4a97b83c391336f72171137d8498e11a879958e59b433f053a0407790b443",
+      "llama-gguf-split.exe": "037d9d54c0efffa519432ceac33ad5aeaf933174f96060c7fe6540490cbae36e",
+      "llama-gguf.exe": "6cb03699a23d0e8982f3caefed4ea2588105b9bb8731e4848698db1897371b5d",
+      "llama-idle.exe": "2b072792e37d1e873f5dd3bfe04c18a257614a28a0a4e3daee1d2da7f0b6af48",
+      "llama-imatrix.exe": "64234fb26d78674ac43ece407b5845e04f4ccca25c90d4eea8fe496e0f772ab6",
+      "llama-kv-mean-center.exe": "adc2d4c74bfda509e770f24428e0768b40959e1ffab1aee5830d211248f0ca95",
+      "llama-llava-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-lookahead.exe": "f949feb62ee569e871450d3690f47345900b716ffbfbdda31c94c0dab2389590",
+      "llama-lookup-create.exe": "0ce3b9593bf4150134ff72fe33cfee0e84e202703089e653e4d90acb46ddd7f7",
+      "llama-lookup-merge.exe": "3e3830fe535d69e3c743eba5e1e263db95400a3b1050930505275093d78716b0",
+      "llama-lookup-stats.exe": "c37f5110697c200229388c04eea2f3f692266555f02cff5b989952d847205163",
+      "llama-lookup.exe": "a3f98d575ab3ee6807c93ed705f2395e44532e2b956ead5476a589f3fe77db22",
+      "llama-minicpmv-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-mtmd-cli.exe": "2ef0ee45ed0cce5275a31295b87c5ddf8ede9bc61e79c33283f4aca73df1d5f0",
+      "llama-mtmd-debug.exe": "88fcd6d4518c09707845b60986998ff1b5f32af04250ed335ff2eb8632d2a6eb",
+      "llama-mtp-export.exe": "b5b065d58185d50170a1d4f8513f4656939019c82bbb37b5fb672a2646267ffb",
+      "llama-parallel.exe": "857f17733f705fda3663ee0b167a6f9addd082fd4e6badfe23f7507b680c0932",
+      "llama-passkey.exe": "459ea4031054c615b249d9adf86d1445fdf26e59f79c29dbafccf5b01e39c315",
+      "llama-perplexity-impl.dll": "8230d3712b4de342e088d9601b1b2cca6a16a673725bf9b83474466c22c25080",
+      "llama-perplexity.exe": "4f57df245d624c9f9e68555bca67b1a4fd9a425dc8b2636ea6b2d661aad539fd",
+      "llama-quantize-impl.dll": "ed9d2d9d5b103f6ae7dac7bff6d415283122f7e260e930462600ec29e90f2248",
+      "llama-quantize.exe": "d198bf9071a9de205f40801f2c3e2197c04d7a5bdd8ebbe6b8e740fed1d1fe5f",
+      "llama-qwen2vl-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-results.exe": "b11d328e7e5f97ccb3a29a4af46f4d7d975324687d1af36115a3c5df23461357",
+      "llama-retrieval.exe": "32101d8cc0a4a6eb037f5fccaf38b01210e5057c1e4b195a1f5ea512162ffa17",
+      "llama-rs-rollback-multi.exe": "d3b938657e482ce34294f8073a92d83e320f4f5154ea50f77b8291f07c30634e",
+      "llama-rs-rollback.exe": "903fcc205e52c3758764a32d781a34ffe5aba6cf95e57ae653557adcc316a7d4",
+      "llama-server-impl.dll": "d8bd26a0803413ae85ab74940e1088403a333daaadfd4d0a3e851c7cc3e0eec6",
+      "llama-server.exe": "42373a44d8847f014337eb152094d44692ddd690d45a0b2c8f13e16244b5ff4b",
+      "llama-simple-chat.exe": "8f4c05488c1f9d7b5f4927e50d908ee8ee3c7a364677ee2d3f23a6c9c0f7df5e",
+      "llama-simple.exe": "c9bac5717052a0e2ba7ebaae059da0e0edf151adcb91e7cd5b1bb3de74cb5550",
+      "llama-speculative-simple.exe": "397f27c67c379c7d82413eb7582d35391181a10ee6293a9ec09214882683aac2",
+      "llama-speculative.exe": "f4472646fccd4661ab68e0cbeef5fb4dd8bb24ee1b90d7e8dff76d1e1529412c",
+      "llama-tokenize.exe": "32d40dbbac9ffec1750ef32a0a40dd4899c072a3ab950fcbc971ebf8decb64a6",
+      "llama-tts.exe": "f28896b0a7fe233611fa76e14dc69072d83c9787dcf1642fa45c41387a4d89ed",
+      "llama.dll": "83fee7eed177e0a22c5c27afca34d56c908d1e58ded928ef38c81869407ed9e9",
+      "llama.exe": "08869cc9f87920761270794f5269309e3e68ef084eeab185416fef4924a3369c",
+      "mtmd.dll": "5638529f04ecb3d1067917b6fe4f128e03eb2cca70f5c87d9d94aef3d5536b5f"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF?blobs=true",
+      "revision": "1c69098e9c32db6dc06fc48f1d6cc75ad07da89e",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "image-text-to-text",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/MiniMax-H3-GGUF",
+    "modality": "text/image-to-video",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "stable-diffusion.cpp video pipeline candidate; NOT_TESTED",
+    "reason": "La licenza publisher esclude espressamente UE, Regno Unito, Corea e USA. Nessun modello scaricato o caricato; richiesta licenza distinta al titolare per uso in UE.",
+    "assets": [
+      {
+        "remote_file": "minimax_h3_fl2va_pruned-Q2_K.gguf",
+        "bytes": 6724190304,
+        "expected_sha256": "696866a3c98ea0bb7e96b8a273aafb7c588ca8e6fb669303956eb270cedb68aa"
+      }
+    ],
+    "provenance": "Identificativo richiesto dall’utente; repository remoto non interrogato",
+    "asset_hash": null,
+    "architecture": "NOT_VERIFIED",
+    "quantization": "NOT_VERIFIED",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/MiniMax-H3-GGUF?blobs=true",
+      "revision": "babc040eff0084465460ead58fdb8ec44296f8dd",
+      "license_declared": "other",
+      "pipeline_tag": "image-text-to-video",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "minimax_h3_fl2va_pruned-Q2_K.gguf",
+    "license_status": "BLOCKED: MiniMax H3 excludes European Union; workstation timezone Europe/Rome, no separate authorization attested",
+    "resource_gate": {
+      "status": "NOT_TESTED: license gate precedes acquisition"
+    },
+    "license_evidence": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA\\benchmark_app_v4_20261018_082101\\minimax-license.txt",
+    "historical_status": "LICENSE_REVIEW_REQUIRED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+    "modality": "testo / MoE",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "RESOURCE_BLOCKED"
+    ],
+    "adapter": "Strata hybrid; budget memoria non attestato",
+    "reason": "Variante completa UD-IQ1_S: 67.56 GiB; disco libero 66.63 GiB con riserva OS 30 GiB. Nessun budget di caricamento dimostrato; nessuna inferenza effettuata.",
+    "assets": [
+      {
+        "remote_file": "UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00001-of-00003.gguf",
+        "bytes": 10946624,
+        "expected_sha256": "88a1420825a9304063e882ada29d438263617f51ac8923d438d927496693bafd",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/766911a6b7369840a91dbcd95f9f997acaab6cd6/UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00001-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00002-of-00003.gguf",
+        "bytes": 49990818368,
+        "expected_sha256": "3a62e35bbf9add4733bd1438ebd3a67649d5edd6cb0e72bb78e33c913992b2b6",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/766911a6b7369840a91dbcd95f9f997acaab6cd6/UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00002-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00003-of-00003.gguf",
+        "bytes": 22544696352,
+        "expected_sha256": "0e25ceaeb89b8a80aa973c6c0c7448943682f7408c2855b2ebd016b7643a861a",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF/resolve/766911a6b7369840a91dbcd95f9f997acaab6cd6/UD-IQ1_S/Qwen3.8-Flash-Next-UD-IQ1_S-00003-of-00003.gguf"
+      }
+    ],
+    "provenance": "Identificativo richiesto dall’utente; repository remoto non interrogato",
+    "asset_hash": "NOT_COMPUTED",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "UD-IQ1_S",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/Qwen3.8-Flash-Next-GGUF?blobs=true",
+      "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+      "license_declared": "other",
+      "pipeline_tag": "image-text-to-text",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "UD-IQ1_S",
+    "resource_gate": {
+      "status": "BLOCKED",
+      "complete_variant_bytes": 72546461344,
+      "disk_free_bytes": 71546982400,
+      "os_reserve_bytes": 32212254720,
+      "download_required_with_reserve_bytes": 104758716064,
+      "model_memory_upper_bound": "NOT_VERIFIED",
+      "reason": "Complete shard set plus OS reserve exceeds free cache volume; no verified full-load memory budget. Existing large packs not reloaded."
+    },
+    "runtime_candidate": "llama.cpp local and isolated Prism CPU; source architecture inventory available, exact large variant NOT_TESTED",
+    "license_status": "other (declared; variant not acquired)",
+    "historical_status": "RESOURCE_BLOCKED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/GLM-5.3-Flash-GGUF",
+    "modality": "testo / MoE",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "loader architettura da attestare",
+    "reason": "Variante completa UD-IQ1_S: 86.69 GiB; disco libero 66.63 GiB con riserva OS 30 GiB. Nessun budget di caricamento dimostrato; nessuna inferenza effettuata.",
+    "assets": [
+      {
+        "remote_file": "UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00001-of-00003.gguf",
+        "bytes": 9429984,
+        "expected_sha256": "909a8a2dedb493c5a694facfd1e0e9a3309ac66fbb9d270c024ff5d12e0d565f",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF/resolve/a38483c8cd5df544f53d70fb281afe97369d5ab6/UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00001-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00002-of-00003.gguf",
+        "bytes": 49621122496,
+        "expected_sha256": "b99c4dd929601884ff95d9ddeb581a5ef93fd281c37c162e48b2981bf23c0830",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF/resolve/a38483c8cd5df544f53d70fb281afe97369d5ab6/UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00002-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00003-of-00003.gguf",
+        "bytes": 43456692608,
+        "expected_sha256": "9bb0ff754968d588793d795c715cc2a7d5292280ff9d0df46b7e1edd57da34a1",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF/resolve/a38483c8cd5df544f53d70fb281afe97369d5ab6/UD-IQ1_S/GLM-5.3-Flash-UD-IQ1_S-00003-of-00003.gguf"
+      }
+    ],
+    "provenance": "Identificativo richiesto dall’utente; repository remoto non interrogato",
+    "asset_hash": "NOT_AVAILABLE",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "UD-IQ1_S",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/GLM-5.3-Flash-GGUF?blobs=true",
+      "revision": "a38483c8cd5df544f53d70fb281afe97369d5ab6",
+      "license_declared": "mit",
+      "pipeline_tag": "text-generation",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "UD-IQ1_S",
+    "resource_gate": {
+      "status": "BLOCKED",
+      "complete_variant_bytes": 93087245088,
+      "disk_free_bytes": 71546982400,
+      "os_reserve_bytes": 32212254720,
+      "download_required_with_reserve_bytes": 125299499808,
+      "model_memory_upper_bound": "NOT_VERIFIED",
+      "reason": "Complete shard set plus OS reserve exceeds free cache volume; no verified full-load memory budget. Existing large packs not reloaded."
+    },
+    "runtime_candidate": "llama.cpp local and isolated Prism CPU; source architecture inventory available, exact large variant NOT_TESTED",
+    "license_status": "mit (declared; variant not acquired)",
+    "historical_status": "RESOURCE_BLOCKED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+    "modality": "testo / quantizzazione ternaria",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "Prism llama.cpp CPU CLI",
+    "reason": "Asset e runtime isolati verificati; ammissione CPU e test applicativo richiesti.",
+    "assets": [
+      {
+        "path": "models/optional/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+        "sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+        "bytes": 5946648928
+      }
+    ],
+    "provenance": {
+      "repo": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "revision": "b072e1d3b35a0a630cece372c2127528e0994386",
+      "license": "apache-2.0",
+      "use_scope": "isolated research/evaluation only; no operational promotion",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/resolve/b072e1d3b35a0a630cece372c2127528e0994386/Ternary-Bonsai-2-27B-PTQ1_0.gguf?download=true",
+      "expected_bytes": 5946648928,
+      "expected_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\prism-ml--Ternary-Bonsai-2-27B-gguf\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+      "space_free_before": 124576993280,
+      "reserve_os_bytes": 32212254720,
+      "status": "VERIFIED",
+      "bytes": 5946648928,
+      "sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+      "download_s": 26.703999999997905
+    },
+    "asset_hash": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "PTQ1_0",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "prefill_tps",
+      "decode_tps",
+      "ttft"
+    ],
+    "metrics_not_applicable": [],
+    "support_verified": false,
+    "runtime_path": "engine/llama-completion.exe",
+    "runtime_hash": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+    "revision": "b072e1d3b35a0a630cece372c2127528e0994386",
+    "license_status": "Apache-2.0",
+    "exact_variant": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+    "capabilities": [
+      "text_generation"
+    ],
+    "runtime_manifest": {
+      "ggml-base.dll": "a815d3085fb74d62bfac75ba02ebc0ac708d8f69ef8f5346c48ede27ba37f279",
+      "ggml-cpu-alderlake.dll": "08160e547646c899c9304211828fb3568057e1eab0ad3f7895534ddb697e9040",
+      "ggml-cpu-cannonlake.dll": "71ec58ed0feaf9c49b1d2249b159f44f77d7bbc657ae511e9018ccedd8e9b8be",
+      "ggml-cpu-cascadelake.dll": "dd6c09981a174b6efa9b14d61ae1074f9e7cd6815d7f4df06b74b1a26f16547c",
+      "ggml-cpu-cooperlake.dll": "dc6e1622ce55dbfae31afca354137d516967a7b84738e7cf099e691f9df208b8",
+      "ggml-cpu-haswell.dll": "50d2b9a4314a73eb7b166ef9d1612b593d92d4df48b8b36eb35d5eeca47be060",
+      "ggml-cpu-icelake.dll": "5cf0f642a894922d8a67ef562274e0a29d4bb5c0355a3ce3c1ff1aa6ee616cee",
+      "ggml-cpu-ivybridge.dll": "3d0bcbdc35f13d0fe63d75e845b05b44227f3f14ec8e717f634795532da4d728",
+      "ggml-cpu-piledriver.dll": "9187fcdca4e91d1abd14dd39b298fecb78b8758e01183c707ca2b91e0e9799cc",
+      "ggml-cpu-sandybridge.dll": "4eb92ba9e35064185af21a31a1fc76dffdd526970d63d3df96d9633325021ac1",
+      "ggml-cpu-sapphirerapids.dll": "4be486c35e60adfe4cd3790e61fa69030db4b8d1f04405331e0b629765edae34",
+      "ggml-cpu-skylakex.dll": "81e835c60b73ad797a143f311ed2d6ded43b1a498039bb21c13cd0d691105ecf",
+      "ggml-cpu-sse42.dll": "26b69f50b4d00f13424ba1b4c0488c1dd5277f44fd2100cc1f3970d52f27e839",
+      "ggml-cpu-ssse3.dll": "de06e504c26165afbf962a0141e5bf925d9face6c31992c0e048376c03d09c3e",
+      "ggml-cpu-x64.dll": "6c95b86670c2058aa1fc853b1fa604f20fac585250babf17d2c40202080e5757",
+      "ggml-cpu-zen4.dll": "27c194d2165204fc93af83de8e5bce20dc57c9603efc52c05d01169983778380",
+      "ggml-rpc-server.exe": "2bc2c1ea323b115caca127bcabefad376a5b3e2d256a69c34ae6a734d41ad062",
+      "ggml-rpc.dll": "1550b4325789791d9e470a323bdb21c6c9937e050cc5e552afda66c24d205be9",
+      "ggml.dll": "5c88fd75e3e70fcd8feba685625033f2b422a08d9c55446d47853527cfeebd4f",
+      "libomp140.x86_64.dll": "4a20c1e5c115c29771a12324513eb109badac72180f79481527ad79d996ffb33",
+      "llama-batched-bench-impl.dll": "d81fc1257af76e35c774a1e83f0f7e595da4121644a128b37f5936b99aeb2283",
+      "llama-batched-bench.exe": "26c9c24d0c758827425eec024e61697df251e5e8544233348658440d220f6ec2",
+      "llama-batched.exe": "576990d8cbcb5072882f0ca3f40b7f9d0cc742ebaa0cd4b84f7a6cfe8daf0dd6",
+      "llama-bench-impl.dll": "3ef1749fcc52e9e1b9f30884fd7b50fd6cf4ec5323340c007cb4ec3d63122bb0",
+      "llama-bench.exe": "87b1123fb1bca95991df74bcd2663e6555329f2046670cb3cbfa95044287afe3",
+      "llama-cli-impl.dll": "281ea871397f09bebd2d1cc3da164059be899fce82e02a231460897bf1991a8e",
+      "llama-cli.exe": "5316da9e11db7e5431fe0842e46e8ab9c7daa888aad5de31c55913030b443fc1",
+      "llama-common.dll": "e2e3c4a9c9d9d81ec8b86c640cc1ffc982902e085fa002370f43a99f4312e439",
+      "llama-completion-impl.dll": "85a9808cdca9a735447cac59acc48b8b5018c4c887dbc1696232ccda1a12d376",
+      "llama-completion.exe": "b828938be7b025ddba50b0d0d7cd64cf53f260667abd118853538e8e791b29c2",
+      "llama-debug.exe": "ea743e1d35f1aee12d6be9e531ceb1c9bd381d57cc44598f26ba17a6e117eebd",
+      "llama-diffusion-cli.exe": "1d0da9b3e1d77d385222f3012798d7d2bed49796437fa566b9b797c0859e89bc",
+      "llama-embedding.exe": "9f54c0a01916c35f07e600f6dca0776caafb714d05f6ecbd784a083f4c7cdd92",
+      "llama-eval-callback.exe": "bf30a96307ede9dad94d762b4e4b4a96ba475a469d172c36465981bfa7c04a84",
+      "llama-finetune.exe": "3fceb8a3aaab05ffce057a4866a14cdbb0dd8e8d416bf87cb24ad23d1dca85ed",
+      "llama-fit-params-impl.dll": "df02287b55c42f4d1081c7181132fe1d58084552f79cd17f739a0b46af029e3b",
+      "llama-fit-params.exe": "1cf6b0520ca0bf0dcabdedc274aedd225ca0a664d4d19e408e1aecb50b097165",
+      "llama-gemma3-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-gen-docs.exe": "1b76c2904411708869dcbe4b8f6b177590886a9253d1bef6b3046e6234da046a",
+      "llama-gguf-hash.exe": "64d4a97b83c391336f72171137d8498e11a879958e59b433f053a0407790b443",
+      "llama-gguf-split.exe": "037d9d54c0efffa519432ceac33ad5aeaf933174f96060c7fe6540490cbae36e",
+      "llama-gguf.exe": "6cb03699a23d0e8982f3caefed4ea2588105b9bb8731e4848698db1897371b5d",
+      "llama-idle.exe": "2b072792e37d1e873f5dd3bfe04c18a257614a28a0a4e3daee1d2da7f0b6af48",
+      "llama-imatrix.exe": "64234fb26d78674ac43ece407b5845e04f4ccca25c90d4eea8fe496e0f772ab6",
+      "llama-kv-mean-center.exe": "adc2d4c74bfda509e770f24428e0768b40959e1ffab1aee5830d211248f0ca95",
+      "llama-llava-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-lookahead.exe": "f949feb62ee569e871450d3690f47345900b716ffbfbdda31c94c0dab2389590",
+      "llama-lookup-create.exe": "0ce3b9593bf4150134ff72fe33cfee0e84e202703089e653e4d90acb46ddd7f7",
+      "llama-lookup-merge.exe": "3e3830fe535d69e3c743eba5e1e263db95400a3b1050930505275093d78716b0",
+      "llama-lookup-stats.exe": "c37f5110697c200229388c04eea2f3f692266555f02cff5b989952d847205163",
+      "llama-lookup.exe": "a3f98d575ab3ee6807c93ed705f2395e44532e2b956ead5476a589f3fe77db22",
+      "llama-minicpmv-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-mtmd-cli.exe": "2ef0ee45ed0cce5275a31295b87c5ddf8ede9bc61e79c33283f4aca73df1d5f0",
+      "llama-mtmd-debug.exe": "88fcd6d4518c09707845b60986998ff1b5f32af04250ed335ff2eb8632d2a6eb",
+      "llama-mtp-export.exe": "b5b065d58185d50170a1d4f8513f4656939019c82bbb37b5fb672a2646267ffb",
+      "llama-parallel.exe": "857f17733f705fda3663ee0b167a6f9addd082fd4e6badfe23f7507b680c0932",
+      "llama-passkey.exe": "459ea4031054c615b249d9adf86d1445fdf26e59f79c29dbafccf5b01e39c315",
+      "llama-perplexity-impl.dll": "8230d3712b4de342e088d9601b1b2cca6a16a673725bf9b83474466c22c25080",
+      "llama-perplexity.exe": "4f57df245d624c9f9e68555bca67b1a4fd9a425dc8b2636ea6b2d661aad539fd",
+      "llama-quantize-impl.dll": "ed9d2d9d5b103f6ae7dac7bff6d415283122f7e260e930462600ec29e90f2248",
+      "llama-quantize.exe": "d198bf9071a9de205f40801f2c3e2197c04d7a5bdd8ebbe6b8e740fed1d1fe5f",
+      "llama-qwen2vl-cli.exe": "7d255ccd41236c4c375923540c49bcb6afb74959b5a4fb7b98e9843650b6e7ab",
+      "llama-results.exe": "b11d328e7e5f97ccb3a29a4af46f4d7d975324687d1af36115a3c5df23461357",
+      "llama-retrieval.exe": "32101d8cc0a4a6eb037f5fccaf38b01210e5057c1e4b195a1f5ea512162ffa17",
+      "llama-rs-rollback-multi.exe": "d3b938657e482ce34294f8073a92d83e320f4f5154ea50f77b8291f07c30634e",
+      "llama-rs-rollback.exe": "903fcc205e52c3758764a32d781a34ffe5aba6cf95e57ae653557adcc316a7d4",
+      "llama-server-impl.dll": "d8bd26a0803413ae85ab74940e1088403a333daaadfd4d0a3e851c7cc3e0eec6",
+      "llama-server.exe": "42373a44d8847f014337eb152094d44692ddd690d45a0b2c8f13e16244b5ff4b",
+      "llama-simple-chat.exe": "8f4c05488c1f9d7b5f4927e50d908ee8ee3c7a364677ee2d3f23a6c9c0f7df5e",
+      "llama-simple.exe": "c9bac5717052a0e2ba7ebaae059da0e0edf151adcb91e7cd5b1bb3de74cb5550",
+      "llama-speculative-simple.exe": "397f27c67c379c7d82413eb7582d35391181a10ee6293a9ec09214882683aac2",
+      "llama-speculative.exe": "f4472646fccd4661ab68e0cbeef5fb4dd8bb24ee1b90d7e8dff76d1e1529412c",
+      "llama-tokenize.exe": "32d40dbbac9ffec1750ef32a0a40dd4899c072a3ab950fcbc971ebf8decb64a6",
+      "llama-tts.exe": "f28896b0a7fe233611fa76e14dc69072d83c9787dcf1642fa45c41387a4d89ed",
+      "llama.dll": "83fee7eed177e0a22c5c27afca34d56c908d1e58ded928ef38c81869407ed9e9",
+      "llama.exe": "08869cc9f87920761270794f5269309e3e68ef084eeab185416fef4924a3369c",
+      "mtmd.dll": "5638529f04ecb3d1067917b6fe4f128e03eb2cca70f5c87d9d94aef3d5536b5f"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/prism-ml/Ternary-Bonsai-2-27B-gguf?blobs=true",
+      "revision": "b072e1d3b35a0a630cece372c2127528e0994386",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "text-generation",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "lab_profiles": [
+      {
+        "id": "prism-bonsai27b-vulkan-verified-v1",
+        "label": "Prism Bonsai PTQ1_0 · Vulkan verificato · opt-in",
+        "lab_only": true,
+        "default": false,
+        "evidence_run_id": "51733110eee74112b5fccfda396ab30f",
+        "backend": "Vulkan",
+        "threads": 2,
+        "actual_layers": 65,
+        "quality_gate": "TEXT_IDENTICAL"
+      },
+      {
+        "id": "prism-v6-control",
+        "label": "v6 · controllo v1 · 3 workload × 7 campioni",
+        "lab_only": true,
+        "default": false,
+        "status": "EXPERIMENTAL_NOT_PROMOTED"
+      },
+      {
+        "id": "prism-v6-fa-off",
+        "label": "v6 · Flash Attention off · sperimentale",
+        "lab_only": true,
+        "default": false,
+        "status": "EXPERIMENTAL_NOT_PROMOTED"
+      },
+      {
+        "id": "prism-v6-ub128",
+        "label": "v6 · ubatch 128 · sperimentale",
+        "lab_only": true,
+        "default": false,
+        "status": "EXPERIMENTAL_NOT_PROMOTED"
+      }
+    ],
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "modality": "immagini",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "stable-diffusion.cpp Vulkan; CPU text encoder and VAE",
+    "reason": "Transformer, encoder e VAE attestati. Test immagine Vulkan opt-in a 256×256 e due passi.",
+    "assets": [
+      {
+        "path": "models/optional/qwen-image-2.1-UC-Q4_0.gguf",
+        "bytes": 4151573280,
+        "sha256": "13f59f20656efc0aa385d03c1fcac1a9dc2ad6e5ccc0ea9bfe1d6ac636f2c5b9"
+      }
+    ],
+    "provenance": {
+      "repo": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+      "revision": "7959e658915f52274897fb573ffeda49de8dc16b",
+      "license": "other",
+      "scope": "research/evaluation only",
+      "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized/resolve/7959e658915f52274897fb573ffeda49de8dc16b/qwen-image-2.1-UC-Q4_0.gguf?download=true",
+      "expected_bytes": 4151573280,
+      "expected_sha256": "13f59f20656efc0aa385d03c1fcac1a9dc2ad6e5ccc0ea9bfe1d6ac636f2c5b9",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\abenzerps--Qwen-Image-2.1-Uncensored-Quantized\\qwen-image-2.1-UC-Q4_0.gguf",
+      "space_free_before": 109376118784,
+      "os_reserve_bytes": 32212254720,
+      "status": "VERIFIED",
+      "sha256": "13f59f20656efc0aa385d03c1fcac1a9dc2ad6e5ccc0ea9bfe1d6ac636f2c5b9",
+      "bytes": 4151573280,
+      "download_s": 20.421000000002095
+    },
+    "asset_hash": "13f59f20656efc0aa385d03c1fcac1a9dc2ad6e5ccc0ea9bfe1d6ac636f2c5b9",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q4_0",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "lab_task": "image",
+    "components": [
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen3-VL-8B-Instruct-GGUF\\Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf",
+        "sha256": "e3d1a6e87c5cb31e054f2c3bc0dd82ffde052f613de5eef3665b7bd33c9b703e",
+        "role": "Qwen3-VL-8B Dynamic Q4 text encoder"
+      },
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen-Image-2.1-FP8\\qwen_image_2.1_vae_bf16.safetensors",
+        "sha256": "71879ffd5321e6d10c3c87513e2b474b1252efa7f3dec2969214a9bf06a6dd5c",
+        "role": "Qwen Image2.1 VAE BF16"
+      }
+    ],
+    "runtime_path": "engine/sd-cli.exe",
+    "runtime_hash": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+    "exact_variant": "qwen-image-2.1-UC-Q4_0.gguf",
+    "revision": "7959e658915f52274897fb573ffeda49de8dc16b",
+    "license_status": "Qwen Research — isolated evaluation only",
+    "capabilities": [
+      "text_to_image"
+    ],
+    "runtime_manifest": {
+      "ggml-base.dll": "01d87f9332a5140afd84cf9a466dd401526bb4ea7368da17dd04b5ab75580185",
+      "ggml-cpu-alderlake.dll": "fce380d5dc8928c112d7b2078495a948f59d9867d8b595217e14b79d600889fc",
+      "ggml-cpu-cannonlake.dll": "2ccf2fd9704458820ff55d2edc657596907fba27025a394c18948cd29a87b904",
+      "ggml-cpu-cascadelake.dll": "17753fd0120bad93ac9a0e510bdb0292f34d838c4b2fe9ec33e4f0d77dcdfce7",
+      "ggml-cpu-haswell.dll": "5e42cfe0e1eac2bd519a71747a707ce6d7047374d9c00ce3f2c08c743fef33ec",
+      "ggml-cpu-icelake.dll": "166a970758830375724d9cf69425d8bdaf17c8011cad9f1078aa77e4583b6695",
+      "ggml-cpu-sandybridge.dll": "2bebb4d3e7ba1abeb23f8725162b333ed4b64b18231577ecabf6df2914817a33",
+      "ggml-cpu-skylakex.dll": "2ee64cb5b86ae3d96d52b384263e5e371b9962304b432db6ebca5727ed3aa1cd",
+      "ggml-cpu-sse42.dll": "717375184c624a46fe8328c54d647727e650c4966cf331c4bdf52e2ae2fbc20b",
+      "ggml-cpu-x64.dll": "dda1877c79c54a37249703498abcfc25bf6b5ed206051fa39a80ff12789b3ed0",
+      "ggml-vulkan.dll": "56af1208e9c3dcaced00ea6b9a3b5d4d36fa85fc1641f3be92d41bb2be153216",
+      "ggml.dll": "1868d47bec762b893defe6d0194b853a4e4db0b89fbb25678daaf6599bfee34d",
+      "libsharpyuv.dll": "b132e73fb2702761e5c92718e4e46a8a1128a16ddfab5a2a4682b1d4188c9077",
+      "libwebp.dll": "9bf1395b62aee114b1b91880eb24cd3050cd49c98450a345c4d16c7c48bb2c02",
+      "libwebpmux.dll": "9a98e36478e2251e45cc211e046e7cf3f579ac14cba4b5ba36c9a450b8a7a055",
+      "sd-cli.exe": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+      "sd-server.exe": "77fe9891823b8cfaf192b578f850d2cdde3e0cd54493677658b2a1c11bd2df5e",
+      "stable-diffusion.dll": "10ba7a66bc4b6d2533e866562b2f2d6bfef9e7c3e7436be075e41ba68077e019",
+      "webm.dll": "4f7a42e535c7a7632fd6a7325ac5e1259d862c149d3b8cf0e5576a2a2801fad7"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/abenzerps/Qwen-Image-2.1-Uncensored-Quantized?blobs=true",
+      "revision": "7959e658915f52274897fb573ffeda49de8dc16b",
+      "license_declared": "other",
+      "pipeline_tag": "text-to-image",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/Qwen-Image-2.1-GGUF",
+    "modality": "immagini",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "stable-diffusion.cpp Vulkan; CPU text encoder and VAE",
+    "reason": "Transformer, encoder e VAE attestati. Test immagine Vulkan opt-in a 256×256 e due passi.",
+    "assets": [
+      {
+        "path": "models/optional/qwen-image-2.1-Q2_K.gguf",
+        "bytes": 2466137824,
+        "sha256": "053e2cf11059e9f5091c03853025b18bc64d18fff4426b1a17da09ed29cc09c9"
+      }
+    ],
+    "provenance": {
+      "repo": "unsloth/Qwen-Image-2.1-GGUF",
+      "revision": "2c31ccd392b367a6637841a143813320a02dff55",
+      "license": "other",
+      "scope": "research/evaluation only",
+      "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/2c31ccd392b367a6637841a143813320a02dff55/qwen-image-2.1-Q2_K.gguf?download=true",
+      "expected_bytes": 2466137824,
+      "expected_sha256": "053e2cf11059e9f5091c03853025b18bc64d18fff4426b1a17da09ed29cc09c9",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen-Image-2.1-GGUF\\qwen-image-2.1-Q2_K.gguf",
+      "space_free_before": 117905895424,
+      "os_reserve_bytes": 32212254720,
+      "status": "VERIFIED",
+      "sha256": "053e2cf11059e9f5091c03853025b18bc64d18fff4426b1a17da09ed29cc09c9",
+      "bytes": 2466137824,
+      "download_s": 28.25
+    },
+    "asset_hash": "053e2cf11059e9f5091c03853025b18bc64d18fff4426b1a17da09ed29cc09c9",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q2_K",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "lab_task": "image",
+    "components": [
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen3-VL-8B-Instruct-GGUF\\Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf",
+        "sha256": "e3d1a6e87c5cb31e054f2c3bc0dd82ffde052f613de5eef3665b7bd33c9b703e",
+        "role": "Qwen3-VL-8B Dynamic Q4 text encoder"
+      },
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen-Image-2.1-FP8\\qwen_image_2.1_vae_bf16.safetensors",
+        "sha256": "71879ffd5321e6d10c3c87513e2b474b1252efa7f3dec2969214a9bf06a6dd5c",
+        "role": "Qwen Image2.1 VAE BF16"
+      }
+    ],
+    "runtime_path": "engine/sd-cli.exe",
+    "runtime_hash": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+    "exact_variant": "qwen-image-2.1-Q2_K.gguf",
+    "revision": "2c31ccd392b367a6637841a143813320a02dff55",
+    "license_status": "Qwen Research — isolated evaluation only",
+    "capabilities": [
+      "text_to_image"
+    ],
+    "runtime_manifest": {
+      "ggml-base.dll": "01d87f9332a5140afd84cf9a466dd401526bb4ea7368da17dd04b5ab75580185",
+      "ggml-cpu-alderlake.dll": "fce380d5dc8928c112d7b2078495a948f59d9867d8b595217e14b79d600889fc",
+      "ggml-cpu-cannonlake.dll": "2ccf2fd9704458820ff55d2edc657596907fba27025a394c18948cd29a87b904",
+      "ggml-cpu-cascadelake.dll": "17753fd0120bad93ac9a0e510bdb0292f34d838c4b2fe9ec33e4f0d77dcdfce7",
+      "ggml-cpu-haswell.dll": "5e42cfe0e1eac2bd519a71747a707ce6d7047374d9c00ce3f2c08c743fef33ec",
+      "ggml-cpu-icelake.dll": "166a970758830375724d9cf69425d8bdaf17c8011cad9f1078aa77e4583b6695",
+      "ggml-cpu-sandybridge.dll": "2bebb4d3e7ba1abeb23f8725162b333ed4b64b18231577ecabf6df2914817a33",
+      "ggml-cpu-skylakex.dll": "2ee64cb5b86ae3d96d52b384263e5e371b9962304b432db6ebca5727ed3aa1cd",
+      "ggml-cpu-sse42.dll": "717375184c624a46fe8328c54d647727e650c4966cf331c4bdf52e2ae2fbc20b",
+      "ggml-cpu-x64.dll": "dda1877c79c54a37249703498abcfc25bf6b5ed206051fa39a80ff12789b3ed0",
+      "ggml-vulkan.dll": "56af1208e9c3dcaced00ea6b9a3b5d4d36fa85fc1641f3be92d41bb2be153216",
+      "ggml.dll": "1868d47bec762b893defe6d0194b853a4e4db0b89fbb25678daaf6599bfee34d",
+      "libsharpyuv.dll": "b132e73fb2702761e5c92718e4e46a8a1128a16ddfab5a2a4682b1d4188c9077",
+      "libwebp.dll": "9bf1395b62aee114b1b91880eb24cd3050cd49c98450a345c4d16c7c48bb2c02",
+      "libwebpmux.dll": "9a98e36478e2251e45cc211e046e7cf3f579ac14cba4b5ba36c9a450b8a7a055",
+      "sd-cli.exe": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+      "sd-server.exe": "77fe9891823b8cfaf192b578f850d2cdde3e0cd54493677658b2a1c11bd2df5e",
+      "stable-diffusion.dll": "10ba7a66bc4b6d2533e866562b2f2d6bfef9e7c3e7436be075e41ba68077e019",
+      "webm.dll": "4f7a42e535c7a7632fd6a7325ac5e1259d862c149d3b8cf0e5576a2a2801fad7"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/Qwen-Image-2.1-GGUF?blobs=true",
+      "revision": "2c31ccd392b367a6637841a143813320a02dff55",
+      "license_declared": "other",
+      "pipeline_tag": "text-to-image",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/Z-Image-Turbo-GGUF",
+    "modality": "immagini",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "stable-diffusion.cpp Vulkan / CPU text+VAE",
+    "reason": "Pipeline Z-Image: transformer, encoder e VAE attestati; test immagine distinto richiesto.",
+    "assets": [
+      {
+        "path": "models/optional/z-image-turbo-Q2_K.gguf",
+        "sha256": "b0c126881789f8c2cf3fd0d2a7dd25edcfe413f87dd51544d3c29e0713cd5e64",
+        "bytes": 3639683136
+      }
+    ],
+    "provenance": {
+      "repo": "unsloth/Z-Image-Turbo-GGUF",
+      "revision": "6c80814333b7b6a70a2e5b469a7c6437ce65de0f",
+      "license": "apache-2.0",
+      "scope": "research/evaluation only",
+      "url": "https://huggingface.co/unsloth/Z-Image-Turbo-GGUF/resolve/6c80814333b7b6a70a2e5b469a7c6437ce65de0f/z-image-turbo-Q2_K.gguf?download=true",
+      "expected_bytes": 3639683136,
+      "expected_sha256": "b0c126881789f8c2cf3fd0d2a7dd25edcfe413f87dd51544d3c29e0713cd5e64",
+      "destination": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Z-Image-Turbo-GGUF\\z-image-turbo-Q2_K.gguf",
+      "space_free_before": 104981778432,
+      "os_reserve_bytes": 32212254720,
+      "status": "VERIFIED",
+      "sha256": "b0c126881789f8c2cf3fd0d2a7dd25edcfe413f87dd51544d3c29e0713cd5e64",
+      "bytes": 3639683136,
+      "download_s": 20.735000000000582
+    },
+    "asset_hash": "b0c126881789f8c2cf3fd0d2a7dd25edcfe413f87dd51544d3c29e0713cd5e64",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "Q2_K",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "lab_task": "image",
+    "lab_profile": "z-image-vulkan-v4",
+    "exact_variant": "z-image-turbo-Q2_K.gguf",
+    "runtime_path": "engine/sd-cli.exe",
+    "runtime_hash": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+    "license_status": "Apache-2.0",
+    "components": [
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\unsloth--Qwen3-4B-Instruct-2507-GGUF\\Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+        "sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+        "role": "Qwen3-4B text encoder"
+      },
+      {
+        "path": "C:\\Users\\Stargate\\Desktop\\Strata-main\\HYDRA-LAB-CACHE-v4\\models\\Comfy-Org--z_image_turbo\\ae.safetensors",
+        "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+        "role": "AE VAE"
+      }
+    ],
+    "runtime_manifest": {
+      "ggml-base.dll": "01d87f9332a5140afd84cf9a466dd401526bb4ea7368da17dd04b5ab75580185",
+      "ggml-cpu-alderlake.dll": "fce380d5dc8928c112d7b2078495a948f59d9867d8b595217e14b79d600889fc",
+      "ggml-cpu-cannonlake.dll": "2ccf2fd9704458820ff55d2edc657596907fba27025a394c18948cd29a87b904",
+      "ggml-cpu-cascadelake.dll": "17753fd0120bad93ac9a0e510bdb0292f34d838c4b2fe9ec33e4f0d77dcdfce7",
+      "ggml-cpu-haswell.dll": "5e42cfe0e1eac2bd519a71747a707ce6d7047374d9c00ce3f2c08c743fef33ec",
+      "ggml-cpu-icelake.dll": "166a970758830375724d9cf69425d8bdaf17c8011cad9f1078aa77e4583b6695",
+      "ggml-cpu-sandybridge.dll": "2bebb4d3e7ba1abeb23f8725162b333ed4b64b18231577ecabf6df2914817a33",
+      "ggml-cpu-skylakex.dll": "2ee64cb5b86ae3d96d52b384263e5e371b9962304b432db6ebca5727ed3aa1cd",
+      "ggml-cpu-sse42.dll": "717375184c624a46fe8328c54d647727e650c4966cf331c4bdf52e2ae2fbc20b",
+      "ggml-cpu-x64.dll": "dda1877c79c54a37249703498abcfc25bf6b5ed206051fa39a80ff12789b3ed0",
+      "ggml-vulkan.dll": "56af1208e9c3dcaced00ea6b9a3b5d4d36fa85fc1641f3be92d41bb2be153216",
+      "ggml.dll": "1868d47bec762b893defe6d0194b853a4e4db0b89fbb25678daaf6599bfee34d",
+      "libsharpyuv.dll": "b132e73fb2702761e5c92718e4e46a8a1128a16ddfab5a2a4682b1d4188c9077",
+      "libwebp.dll": "9bf1395b62aee114b1b91880eb24cd3050cd49c98450a345c4d16c7c48bb2c02",
+      "libwebpmux.dll": "9a98e36478e2251e45cc211e046e7cf3f579ac14cba4b5ba36c9a450b8a7a055",
+      "sd-cli.exe": "2db8ba58e5cace257337d852ebc46a7c942e86b39442207b501898db7bfc897c",
+      "sd-server.exe": "77fe9891823b8cfaf192b578f850d2cdde3e0cd54493677658b2a1c11bd2df5e",
+      "stable-diffusion.dll": "10ba7a66bc4b6d2533e866562b2f2d6bfef9e7c3e7436be075e41ba68077e019",
+      "webm.dll": "4f7a42e535c7a7632fd6a7325ac5e1259d862c149d3b8cf0e5576a2a2801fad7"
+    },
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/Z-Image-Turbo-GGUF?blobs=true",
+      "revision": "6c80814333b7b6a70a2e5b469a7c6437ce65de0f",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "text-to-image",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "historical_status": "ADAPTER_IMPLEMENTED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "unsloth/Inkling-Small-GGUF",
+    "modality": "multimodale",
+    "status": "ASSET_MISSING",
+    "blockers": [
+      "ASSET_MISSING",
+      "RUNTIME_MISSING"
+    ],
+    "adapter": "adapter multimodale e proiettori da attestare",
+    "reason": "Variante completa UD-IQ1_S: 69.64 GiB; disco libero 66.63 GiB con riserva OS 30 GiB. Nessun budget di caricamento dimostrato; nessuna inferenza effettuata.",
+    "assets": [
+      {
+        "remote_file": "UD-IQ1_S/Inkling-Small-UD-IQ1_S-00001-of-00003.gguf",
+        "bytes": 12986592,
+        "expected_sha256": "eb600cf15a361c70fcb31adc14b4bb5d8ebe3056acff252f1aa210e49fe8ad98",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Inkling-Small-GGUF/resolve/1a19ef82883cb7b9c581b93c30ea252dabbf658d/UD-IQ1_S/Inkling-Small-UD-IQ1_S-00001-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/Inkling-Small-UD-IQ1_S-00002-of-00003.gguf",
+        "bytes": 49664952256,
+        "expected_sha256": "3577440036e65e2209f735cf50d5bcfbb872365ae15f3b86139c296f0a6c42f3",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Inkling-Small-GGUF/resolve/1a19ef82883cb7b9c581b93c30ea252dabbf658d/UD-IQ1_S/Inkling-Small-UD-IQ1_S-00002-of-00003.gguf"
+      },
+      {
+        "remote_file": "UD-IQ1_S/Inkling-Small-UD-IQ1_S-00003-of-00003.gguf",
+        "bytes": 25092142880,
+        "expected_sha256": "da1f2395aea71a475623231d42801f3d997d1186e9c728c73ec307ae283d4d6b",
+        "sha256_status": "NOT_DOWNLOADED",
+        "url": "https://huggingface.co/unsloth/Inkling-Small-GGUF/resolve/1a19ef82883cb7b9c581b93c30ea252dabbf658d/UD-IQ1_S/Inkling-Small-UD-IQ1_S-00003-of-00003.gguf"
+      }
+    ],
+    "provenance": "Identificativo richiesto dall’utente; repository remoto non interrogato",
+    "asset_hash": "NOT_AVAILABLE",
+    "architecture": "NOT_VERIFIED",
+    "quantization": "UD-IQ1_S",
+    "metrics_applicable": [
+      "latency_e2e",
+      "memory",
+      "output_artifact",
+      "validity"
+    ],
+    "metrics_not_applicable": [
+      "LLM_prefill_tps",
+      "LLM_decode_tps"
+    ],
+    "support_verified": false,
+    "publisher_metadata": {
+      "url": "https://huggingface.co/api/models/unsloth/Inkling-Small-GGUF?blobs=true",
+      "revision": "1a19ef82883cb7b9c581b93c30ea252dabbf658d",
+      "license_declared": "apache-2.0",
+      "pipeline_tag": "image-text-to-text",
+      "discovery_status": "METADATA_RETRIEVED",
+      "inference_executed": false
+    },
+    "exact_variant": "UD-IQ1_S",
+    "resource_gate": {
+      "status": "BLOCKED",
+      "complete_variant_bytes": 74770081728,
+      "disk_free_bytes": 71546982400,
+      "os_reserve_bytes": 32212254720,
+      "download_required_with_reserve_bytes": 106982336448,
+      "model_memory_upper_bound": "NOT_VERIFIED",
+      "reason": "Complete shard set plus OS reserve exceeds free cache volume; no verified full-load memory budget. Existing large packs not reloaded."
+    },
+    "runtime_candidate": "llama.cpp local and isolated Prism CPU; source architecture inventory available, exact large variant NOT_TESTED",
+    "license_status": "apache-2.0 (declared; variant not acquired)",
+    "historical_status": "RESOURCE_BLOCKED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  },
+  {
+    "id": "local/Colibri-Qwen3.6-35B-A3B-i4-gs64",
+    "modality": "decisione / testo",
+    "status": "ASSET_MISSING",
+    "adapter": "Colibri GS64, nessun bridge System One",
+    "reason": "Gate memoria BLOCKED; tokenizer live UNKNOWN e confini prefix/continuazione non dimostrati. Nessun caricamento autorizzato.",
+    "assets": [],
+    "asset_hash": "NOT_AVAILABLE",
+    "provenance": "Audit locali precedenti; servizio live non interrogato",
+    "support_verified": false,
+    "metrics_not_applicable": [
+      "immagini",
+      "audio"
+    ],
+    "resource_gate": {
+      "status": "BLOCKED",
+      "job_memory_accounting": "UNRESOLVED",
+      "boundary": "NOT_VERIFIED",
+      "live_tokenizer_identity": "UNKNOWN",
+      "native_scoring": "NOT_AUTHORIZED"
+    },
+    "license_status": "UNCHANGED; no model load attempted",
+    "exact_variant": "UNKNOWN",
+    "historical_status": "RESOURCE_BLOCKED",
+    "publication_note": "Source-only beta: install model assets and verify the runtime locally before admission. Historical results are not a new validation."
+  }
+]

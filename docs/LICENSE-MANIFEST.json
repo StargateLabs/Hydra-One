@@ -1,0 +1,57 @@
+[
+  {
+    "file": "licenses/Strata-MIT.txt",
+    "source_path": "LICENSE",
+    "sha256": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0"
+  },
+  {
+    "file": "licenses/ggml-MIT.txt",
+    "source_path": "third_party/ggml/LICENSE",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+  },
+  {
+    "file": "licenses/llama.cpp-MIT.txt",
+    "source_path": "third_party/llama.cpp/LICENSE",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+  },
+  {
+    "file": "licenses/Prism-llama.cpp-MIT.txt",
+    "source_path": "hydra-engine/engine_completion_v22/prism-source/LICENSE",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+  },
+  {
+    "file": "licenses/Soup-Apache-2.0.txt",
+    "source_path": "serve/vendor/soup/LICENSE",
+    "sha256": "43af2c00a9061bc543cea7575c6b0889b87ae8e226f3b65b4cb4a7af42076c0d"
+  },
+  {
+    "file": "licenses/Soup-NOTICE.txt",
+    "source_path": "serve/vendor/soup/NOTICE",
+    "sha256": "07bc28b0c40faed537cce3b673f31f6a77065633010ac37f05e3f052bc6fc3e4"
+  },
+  {
+    "file": "licenses/Soup-UPSTREAM-NOTICE.txt",
+    "source_path": "serve/vendor/soup/UPSTREAM-NOTICE",
+    "sha256": "036e5344007274a1994480726a4fc033018cb93de6d7f9e02dd9a39a141a2983"
+  },
+  {
+    "file": "licenses/xterm-MIT.txt",
+    "source_path": "serve/web/vendor/xterm/LICENSE",
+    "sha256": "b569f629d00f2626a8100df2a1798210535621e42164dfd426a6fe5aac7b0ccd"
+  },
+  {
+    "file": "licenses/Lucide-Feather-LICENSE.txt",
+    "source_path": "serve/web/build-icons-LICENSE.txt",
+    "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+  },
+  {
+    "file": "licenses/Outfit-OFL-1.1.txt",
+    "source_path": "serve/web/fonts/OFL.txt",
+    "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+  },
+  {
+    "file": "licenses/Sora-OFL-1.1.txt",
+    "source_path": "serve/web/fonts/Sora-OFL.txt",
+    "sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299"
+  }
+]

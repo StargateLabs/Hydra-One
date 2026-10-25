@@ -1,0 +1,59 @@
+/* Shared native catalogue: denser knowledge, clear decisions, preserved actions. */
+#optional-catalogue-dialog{width:min(1560px,calc(100vw - 28px));max-width:none;max-height:96dvh;border-radius:22px;border-color:color-mix(in srgb,var(--st-accent) 25%,var(--st-line));box-shadow:0 32px 110px #0009}
+#optional-catalogue-dialog[open]{height:min(1120px,96dvh);grid-template-rows:auto auto auto minmax(0,1fr)!important;overflow:hidden}
+#optional-catalogue-dialog .catalogue-dialog-head{padding:24px 28px 16px;background:linear-gradient(115deg,color-mix(in srgb,var(--st-accent) 7%,var(--st-surface)),var(--st-surface))}
+#optional-catalogue-dialog h2{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.04em;margin:0 0 8px}
+#optional-catalogue-description{font-size:13px;line-height:1.6;max-width:95ch}
+#optional-catalogue-dialog .catalogue-dialog-tabs{padding:0 28px;gap:24px}
+#optional-catalogue-dialog .catalogue-dialog-tabs button{min-height:44px;font-size:13px}
+#optional-catalogue-dialog .optional-catalogue-controls{padding:16px 28px;background:var(--st-surface-2);border-bottom:1px solid var(--st-line);gap:12px}
+#optional-catalogue-dialog .catalogue-search{gap:10px;grid-template-columns:190px 210px minmax(180px,1fr) auto}
+#optional-catalogue-dialog .catalogue-search input,#optional-catalogue-dialog .catalogue-search select{min-height:44px;border-radius:10px}
+#optional-catalogue-dialog .optional-resource-strip{border:1px solid var(--st-line);border-radius:11px;background:var(--st-surface);padding:12px 16px;gap:16px}
+#optional-catalogue-dialog .optional-resource-strip b{font-size:20px;font-variant-numeric:tabular-nums}
+#optional-catalogue-dialog .optional-catalogue-toolbar{gap:12px;flex-wrap:wrap}
+#optional-catalogue-dialog .catalogue-dialog-scroll{min-height:0;padding:16px 28px 24px;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--st-accent) transparent}
+#optional-catalogue-dialog .optional-model-workspace{grid-template-columns:minmax(280px,.39fr) minmax(0,.61fr);gap:22px;min-height:0}
+#optional-catalogue-dialog .optional-model-list{padding-right:10px;scrollbar-width:thin}
+#optional-catalogue-dialog .optional-model-list>button{padding:16px 14px;gap:12px;margin-bottom:10px;border:1px solid var(--st-line);border-radius:13px;background:var(--st-surface-2)}
+#optional-catalogue-dialog .optional-model-list>button[aria-pressed=true]{border-color:var(--st-accent);background:color-mix(in srgb,var(--st-accent) 8%,var(--st-surface));box-shadow:inset 3px 0 var(--st-accent),0 0 18px color-mix(in srgb,var(--st-accent) 9%,transparent)}
+#optional-catalogue-dialog .optional-list-body>b{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+#optional-catalogue-dialog .optional-list-body>small{font-size:12px;line-height:1.55}
+#optional-catalogue-dialog .optional-list-facts{gap:5px;margin-top:8px;flex-wrap:wrap}
+#optional-catalogue-dialog .optional-list-facts>span{border-radius:5px;padding:3px 6px;font-size:10px;line-height:1.4;border:1px solid var(--st-line)}
+#optional-catalogue-dialog .optional-model-detail{border:1px solid var(--st-line);border-radius:15px;background:var(--st-surface-2);min-width:0;overflow:hidden}
+#optional-catalogue-dialog .optional-detail-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding:8px;background:var(--st-surface);border-bottom:1px solid var(--st-line)}
+#optional-catalogue-dialog .optional-detail-nav button{min-height:48px;padding:8px 7px;border-radius:8px;font-size:12px;line-height:1.35;white-space:normal}
+#optional-catalogue-dialog .optional-detail-nav button[aria-pressed=true]{color:var(--st-accent);background:color-mix(in srgb,var(--st-accent) 9%,var(--st-surface-2));box-shadow:inset 0 -2px var(--st-accent)}
+#optional-catalogue-dialog .optional-overview,#optional-catalogue-dialog .optional-version-panel,#optional-catalogue-dialog .optional-model-documentation,#optional-catalogue-dialog .optional-requirements{padding:20px;overflow:auto;min-height:0;scrollbar-width:thin}
+#optional-catalogue-dialog [hidden]{display:none!important}
+#optional-catalogue-dialog .catalogue-entry{border-radius:12px;background:var(--st-surface);border:1px solid var(--st-line);overflow:hidden}
+#optional-catalogue-dialog .catalogue-heading{gap:14px;padding:20px 20px 12px}
+#optional-catalogue-dialog .catalogue-identity h3{font-size:clamp(20px,1.8vw,27px);line-height:1.25;letter-spacing:-.035em;overflow-wrap:anywhere}
+#optional-catalogue-dialog .catalogue-byline{font-size:12px;line-height:1.7}
+#optional-catalogue-dialog .catalogue-release-tag{padding:3px 7px;border:1px solid color-mix(in srgb,var(--st-accent) 25%,transparent);border-radius:6px}
+#optional-catalogue-dialog .catalogue-description{padding-inline:20px;overflow-wrap:anywhere;font-size:12px;line-height:1.5}
+#optional-catalogue-dialog .catalogue-metrics{padding:18px 20px;gap:16px;background:color-mix(in srgb,var(--st-accent) 3%,var(--st-surface))}
+#optional-catalogue-dialog .catalogue-metrics b{font-size:24px;font-variant-numeric:tabular-nums}
+#optional-catalogue-dialog .catalogue-actions{padding:18px 20px;gap:15px;flex-wrap:wrap}
+#optional-catalogue-dialog .catalogue-fit{font-size:12px;line-height:1.55}
+#optional-catalogue-dialog .catalogue-actions button{min-height:44px;border-radius:10px}
+#optional-catalogue-dialog .optional-publication-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:16px}
+#optional-catalogue-dialog .optional-publication-facts>span{padding:11px 12px;background:var(--st-surface);border:1px solid var(--st-line);border-radius:9px;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.optional-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.optional-info-card{display:flex;flex-direction:column;gap:8px;padding:15px;border:1px solid var(--st-line);border-radius:11px;background:var(--st-surface);min-width:0}
+.optional-info-card>span{font-size:12px;color:var(--st-ink-muted);line-height:1.5}.optional-info-card strong{font-size:16px;line-height:1.5;overflow-wrap:anywhere;color:var(--st-accent)}
+.optional-info-card.tone-blue strong{color:var(--catalogue-format)}.optional-info-card.tone-purple strong{color:var(--catalogue-author)}.optional-info-card.tone-amber strong{color:var(--catalogue-size)}
+.optional-requirements>p,.optional-capability-note{font-size:12px;line-height:1.75;color:var(--st-ink-muted)}
+.optional-requirements h3{font-size:21px;letter-spacing:-.025em;line-height:1.3;margin:0 0 12px}.optional-requirements h4{font-size:14px;margin-top:24px}
+.optional-integrity{display:grid;gap:8px;font-size:12px}.optional-integrity dt{color:var(--st-ink-muted)}.optional-integrity dd{margin:0 0 10px;padding:12px;border:1px solid var(--st-line);border-radius:8px;background:var(--st-surface);overflow-wrap:anywhere}.optional-integrity code{font-size:11px}
+#optional-catalogue-dialog .optional-version-panel>button{padding:15px;border-radius:10px;margin-bottom:9px;min-height:65px;border:1px solid var(--st-line);background:var(--st-surface)}
+#optional-catalogue-dialog .optional-version-panel>button[aria-pressed=true]{border-color:var(--st-accent)}
+#optional-catalogue-dialog .optional-model-documentation p,#optional-catalogue-dialog .optional-model-documentation pre{font-size:12px;line-height:1.75;overflow-wrap:anywhere;white-space:pre-wrap}
+#optional-catalogue-dialog button:focus-visible{outline:2px solid var(--st-accent);outline-offset:3px}
+@media(max-width:850px){#optional-catalogue-dialog .catalogue-search{grid-template-columns:1fr 1fr}#optional-catalogue-dialog .catalogue-search input{grid-column:1}#optional-catalogue-dialog .optional-model-workspace{grid-template-columns:minmax(220px,.4fr) minmax(0,.6fr);gap:12px}#optional-catalogue-dialog .catalogue-dialog-head,#optional-catalogue-dialog .optional-catalogue-controls{padding-inline:18px}#optional-catalogue-dialog .catalogue-dialog-scroll{padding:14px 18px}#optional-catalogue-dialog .optional-overview,#optional-catalogue-dialog .optional-requirements{padding:12px}#optional-catalogue-dialog .optional-detail-nav{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){#optional-catalogue-dialog{width:calc(100vw - 12px);border-radius:15px}#optional-catalogue-dialog .optional-model-workspace{display:flex;flex-direction:column}#optional-catalogue-dialog .optional-model-list{max-height:220px;flex:none}#optional-catalogue-dialog .optional-model-detail{overflow:visible;flex:none}#optional-catalogue-dialog .optional-resource-strip{gap:8px;padding:10px}#optional-catalogue-dialog .optional-resource-strip b{font-size:17px}#optional-catalogue-dialog .optional-publication-facts,.optional-info-grid{grid-template-columns:1fr}#optional-catalogue-dialog .catalogue-metrics{gap:10px;padding:14px}#optional-catalogue-dialog .catalogue-metrics b{font-size:20px}#optional-catalogue-dialog .catalogue-heading{padding:16px 14px 10px}}
+@media(forced-colors:active){#optional-catalogue-dialog button[aria-pressed=true]{outline:2px solid Highlight}.optional-info-card strong{color:CanvasText}}
+
+@media(min-width:851px){#optional-catalogue-dialog .optional-catalogue-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.62fr);gap:12px 18px}#optional-catalogue-dialog .catalogue-search{grid-column:1/-1;margin:0}#optional-catalogue-dialog .optional-resource-strip{grid-column:2;grid-row:2;margin:0;padding:9px 12px}#optional-catalogue-dialog .optional-catalogue-toolbar{grid-column:1;grid-row:2;margin:0}#optional-catalogue-dialog .optional-resource-strip b{font-size:18px}}
+@media(max-height:800px) and (min-width:851px){#optional-catalogue-dialog .catalogue-dialog-head{padding:18px 24px 10px}#optional-catalogue-dialog .optional-catalogue-controls{padding:12px 24px}#optional-catalogue-dialog .catalogue-dialog-scroll{padding:12px 24px 18px}#optional-catalogue-dialog .catalogue-heading{padding:16px 16px 10px}#optional-catalogue-dialog .catalogue-metrics{padding:14px 16px}#optional-catalogue-dialog .catalogue-actions{padding:14px 16px}}

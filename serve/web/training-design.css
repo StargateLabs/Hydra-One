@@ -1,0 +1,15 @@
+#local-training-panel .training-function-guide{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:26px 0 22px;border-bottom:1px solid var(--border,#2c3838);margin-bottom:24px}
+#local-training-panel .training-function-guide h2{font-size:clamp(21px,2vw,28px);line-height:1.25;margin:9px 0 10px;letter-spacing:-.025em}
+#local-training-panel .training-function-guide p{max-width:660px;line-height:1.65;margin:0;color:var(--muted,#9aa9af)}
+#local-training-panel .training-guide-eyebrow{font-size:10px;letter-spacing:.12em;color:var(--accent,#29d498);font-weight:700}
+#local-training-panel .training-function-guide img{object-fit:contain;flex-shrink:0;background:transparent}
+#local-training-panel .training-navigation{display:flex;flex-wrap:wrap;gap:8px}
+#local-training-panel .training-navigation button{min-height:44px;border-radius:10px;padding:10px 16px}
+#local-training-panel .training-navigation button[aria-pressed=true]{box-shadow:inset 0 -2px var(--accent,#29d498)}
+#local-training-panel .training-editor{min-width:0}
+#local-training-panel .training-function-guide+[hidden]{display:none}
+#local-training-panel [data-training-page] h3{font-size:18px}
+#local-training-panel .training-runtime-workspace .st-card-body{padding:0}
+@media(max-width:600px){#local-training-panel .training-function-guide{gap:14px;padding-top:20px}#local-training-panel .training-function-guide img{width:36px;height:36px}#local-training-panel .training-navigation button{flex:1 1 42%}}
+
+#audiocraft-training{margin:24px;padding:24px;border:1px solid var(--st-line);border-radius:16px;background:var(--st-surface)}#audiocraft-training header{display:flex;align-items:start;justify-content:space-between;gap:20px}#audiocraft-training h3{margin:0 0 8px;font-size:22px}#audiocraft-training p{font-size:12px;line-height:1.65;color:var(--st-ink-muted)}.act-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px}.act-layout>section{min-width:0}.act-audio-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;padding:12px 0;border-bottom:1px solid var(--st-line);font-size:12px}.act-audio-row .st-input{grid-column:1/-1}.act-audio-row>input[type=checkbox]{width:18px;height:18px}#act-library{max-height:360px;overflow:auto;margin-bottom:16px}#act-result{white-space:pre-wrap;overflow:auto;max-height:260px;font-size:11px;line-height:1.5;overflow-wrap:anywhere}#audiocraft-training .training-profile-actions{display:flex;gap:10px;flex-wrap:wrap}#audiocraft-training button{min-height:44px}@media(max-width:800px){.act-layout{grid-template-columns:minmax(0,1fr)}#audiocraft-training{margin:16px;padding:18px}}
