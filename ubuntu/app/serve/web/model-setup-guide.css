@@ -1,0 +1,46 @@
+.model-setup-guide{width:min(900px,calc(100vw - 32px));max-height:85dvh;overflow:auto;border:1px solid var(--st-line);border-radius:22px;padding:30px;background:var(--st-surface,#161b1d);color:var(--st-ink);box-shadow:0 24px 100px #0006}
+.model-setup-guide::backdrop{background:#0009;backdrop-filter:blur(5px)}
+.model-setup-guide header{display:flex;justify-content:space-between;align-items:start;gap:20px}.model-setup-guide h2{font-size:28px;margin:8px 0 16px}.model-setup-guide small{color:var(--st-accent);letter-spacing:.1em}.model-setup-guide p{line-height:1.65;color:var(--st-muted)}
+.setup-options{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.setup-options article{border:1px solid var(--st-line);border-radius:16px;padding:22px}.setup-options h3{margin-top:0}.model-setup-guide footer{border-top:1px solid var(--st-line);padding-top:20px}
+.assisted-configuration fieldset[data-setup-state=complete]{border-color:#27dc91;box-shadow:0 0 0 1px #27dc9130,0 0 14px #27dc9115}.assisted-configuration fieldset[data-setup-state=incomplete]{border-color:#ff5570;box-shadow:0 0 0 1px #ff557040,0 0 16px #ff557025}.assisted-configuration fieldset[data-setup-current=true]{outline:2px solid #ff5570;outline-offset:4px}
+@media(max-width:650px){.setup-options{grid-template-columns:1fr}.model-setup-guide{padding:20px}.model-setup-guide h2{font-size:23px}}
+.model-engine-target{display:flex;align-items:center;gap:16px;padding:20px;margin:20px 0;border:1px solid var(--st-accent);border-radius:14px;background:color-mix(in srgb,var(--st-accent) 8%,var(--st-surface))}.model-engine-target img{width:44px;height:44px;object-fit:contain}.model-engine-target strong{overflow-wrap:anywhere}.assisted-configuration fieldset[data-setup-state=incomplete]{border-color:var(--st-line);box-shadow:none}.assisted-configuration fieldset[data-setup-current=true]{outline-color:var(--st-accent)}
+
+/* Two comparable proposals, with measured availability separate from estimates. */
+.model-setup-guide{width:min(1040px,calc(100vw - 32px));padding:28px;--setup-blue:#80c9ff;--setup-green:#50dfac;--setup-amber:#f5c46b;--setup-purple:#c7a5ff;background:linear-gradient(135deg,color-mix(in srgb,var(--st-accent) 4%,var(--st-surface)),var(--st-surface) 48%);box-shadow:0 28px 100px #0008,0 0 0 1px color-mix(in srgb,var(--st-accent) 10%,transparent)}
+.model-setup-guide>header{padding-bottom:18px;border-bottom:1px solid var(--st-line)}
+.model-setup-guide>header h2{font-size:clamp(23px,3vw,31px);letter-spacing:-.035em;margin:8px 0 0;line-height:1.18}
+.model-setup-guide>header small{letter-spacing:.08em;font-size:11px;font-weight:700}
+.model-setup-guide>header button{flex:none;min-height:44px;min-width:44px}
+.model-setup-guide .setup-intro{font-size:14px;line-height:1.65;color:var(--st-ink-muted);max-width:78ch;margin:18px 0 12px}
+.setup-model-context{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 14px;background:var(--st-surface-2);border:1px solid var(--st-line);border-radius:12px}
+.setup-model-context>strong{font-size:13px;margin-right:auto;overflow-wrap:anywhere;min-width:0}
+.setup-badges{display:flex;flex-wrap:wrap;gap:7px}
+.setup-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:7px;font-size:11px;font-weight:650;line-height:1.3;border:1px solid color-mix(in srgb,var(--badge-color) 35%,transparent);color:var(--badge-color);background:color-mix(in srgb,var(--badge-color) 8%,var(--st-surface))}
+.setup-badge--ready{--badge-color:var(--setup-green)}.setup-badge--estimate{--badge-color:var(--setup-amber)}.setup-badge--format{--badge-color:var(--setup-purple)}.setup-badge--warning{--badge-color:var(--setup-amber)}
+.setup-options{gap:16px;margin:20px 0}
+.setup-options .setup-proposal{--device-color:var(--setup-blue);display:flex;flex-direction:column;gap:18px;min-width:0;padding:22px;border-radius:16px;border-color:color-mix(in srgb,var(--device-color) 30%,var(--st-line));background:linear-gradient(160deg,color-mix(in srgb,var(--device-color) 7%,var(--st-surface-2)),var(--st-surface-2) 40%);box-shadow:inset 0 3px 0 color-mix(in srgb,var(--device-color) 75%,transparent)}
+.setup-options .setup-proposal[data-device=gpu]{--device-color:var(--setup-green)}
+.setup-proposal>header{display:flex;align-items:center;justify-content:flex-start;gap:12px}
+.setup-device-symbol{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:12px;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--device-color);border:1px solid color-mix(in srgb,var(--device-color) 40%,transparent);background:color-mix(in srgb,var(--device-color) 10%,var(--st-surface))}
+.setup-device-symbol svg{width:28px;height:28px;display:block;flex:none}
+.setup-proposal h3{font-size:17px;letter-spacing:-.02em;margin:0;line-height:1.25}
+.model-setup-guide .setup-device-description{font-size:12px;color:var(--st-ink-muted);margin:5px 0 0;line-height:1.45}
+.setup-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0}
+.setup-metric{padding:13px 14px;min-width:0;border:1px solid var(--st-line);border-radius:10px;background:var(--st-surface)}
+.setup-metric:first-child{grid-column:1/-1;border-color:color-mix(in srgb,var(--device-color) 25%,var(--st-line))}
+.setup-metric dt{font-size:11px;color:var(--st-ink-muted);line-height:1.45}
+.setup-metric dd{margin:6px 0 0;font-size:24px;line-height:1.2;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-.035em}
+.setup-metric:first-child dd{font-size:30px;color:var(--device-color)}
+.model-setup-guide .setup-metric dd small{font-size:11px;font-weight:500;color:var(--st-ink-muted);letter-spacing:0;margin-left:6px}
+.setup-budget{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;font-size:11px;align-items:center;color:var(--st-ink-muted)}
+.setup-budget strong{color:var(--st-ink);font-variant-numeric:tabular-nums}.setup-budget meter{grid-column:1/-1;width:100%;height:8px;accent-color:var(--device-color)}
+.setup-native-details{border-top:1px solid var(--st-line);padding-top:12px;font-size:12px}.setup-native-details summary{cursor:pointer;color:var(--st-ink-muted);padding:4px 0}
+.setup-settings{display:grid;gap:9px;margin:14px 0 0}.setup-settings>div{display:flex;justify-content:space-between;gap:12px}.setup-settings dt{color:var(--st-ink-muted)}.setup-settings dd{margin:0;font-weight:650;overflow-wrap:anywhere;text-align:right}
+.setup-proposal-action{margin-top:auto;display:grid;gap:9px}.setup-proposal-action button{width:100%;min-height:44px}.model-setup-guide .setup-proposal-action small{color:var(--st-ink-muted);font-size:11px;letter-spacing:0;text-align:center}
+.model-setup-guide .setup-proposal-error{border-left:3px solid var(--setup-amber);padding:10px 12px;color:var(--st-ink);background:color-mix(in srgb,var(--setup-amber) 7%,var(--st-surface));border-radius:0 8px 8px 0;font-size:13px;margin:0;overflow-wrap:anywhere}
+.model-setup-guide footer{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:18px}.model-setup-guide footer p{flex:1;min-width:230px;margin:0;font-size:12px;color:var(--st-ink-muted)}
+html[data-theme=light] .model-setup-guide{--setup-blue:#086da2;--setup-green:#087c54;--setup-amber:#986215;--setup-purple:#7750af}
+@media(max-width:650px){.model-setup-guide{padding:18px;width:calc(100vw - 20px);max-height:90dvh}.setup-options .setup-proposal{padding:18px;gap:15px}.setup-model-context>strong{flex-basis:100%}.model-setup-guide footer{gap:12px}.model-setup-guide footer button{width:100%}.model-setup-guide footer p{min-width:0}.setup-proposal h3{font-size:16px}}
+@media(forced-colors:active){.setup-badge,.setup-device-symbol,.setup-proposal{border-color:CanvasText!important;background:Canvas!important;color:CanvasText!important;box-shadow:none!important}}
+@media(min-width:651px){.model-setup-guide{padding:22px;max-height:calc(100dvh - 32px)}.model-setup-guide>header{padding-bottom:12px}.model-setup-guide>header h2{font-size:27px;margin-top:5px}.model-setup-guide .setup-intro{margin:12px 0 10px;font-size:13px}.setup-model-context{padding:9px 12px}.setup-options{margin:16px 0;gap:14px}.setup-options .setup-proposal{padding:18px;gap:12px}.setup-device-symbol{width:40px;height:40px;border-radius:10px}.setup-proposal h3{font-size:15px}.setup-metric{padding:10px 12px}.setup-metric:first-child{grid-column:auto}.setup-metric dt{font-size:10px}.setup-metric dd,.setup-metric:first-child dd{font-size:24px;margin-top:4px}.setup-native-details{padding-top:8px}.setup-proposal-action{gap:6px}.model-setup-guide footer{padding-top:14px;gap:14px}}

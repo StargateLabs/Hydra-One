@@ -1,0 +1,2041 @@
+{
+  "schema_version": 1,
+  "model": "qwen3.8-flash-next-iq3_xxs",
+  "measured_at": "2026-10-09T01:22:52Z",
+  "comparison": {
+    "status": "complete",
+    "stamp": "20261009-012250",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "arm_medians": {
+      "ram16-auto-a1": {
+        "decode_tok_s": 45.5,
+        "prefill_tok_s": 188.9,
+        "wall_tok_s": 21.888335425607462,
+        "wall_s": 11.695727199999965
+      },
+      "full-resident-b1": {
+        "decode_tok_s": 46.6,
+        "prefill_tok_s": 199.0,
+        "wall_tok_s": 22.79204836002488,
+        "wall_s": 11.231987400000435
+      },
+      "full-resident-b2": {
+        "decode_tok_s": 49.9,
+        "prefill_tok_s": 199.5,
+        "wall_tok_s": 23.575654283804322,
+        "wall_s": 10.85865940000076
+      },
+      "ram16-auto-a2": {
+        "decode_tok_s": 49.7,
+        "prefill_tok_s": 185.9,
+        "wall_tok_s": 22.753971474623803,
+        "wall_s": 11.250783200001024
+      }
+    },
+    "pooled": {
+      "decode_tok_s": {
+        "ram16": 47.55,
+        "full_resident": 47.5,
+        "change_percent": -0.1051524710830698
+      },
+      "prefill_tok_s": {
+        "ram16": 186.3,
+        "full_resident": 199.25,
+        "change_percent": 6.951154052603314
+      },
+      "wall_tok_s": {
+        "ram16": 22.226462438013897,
+        "full_resident": 23.023212702425127,
+        "change_percent": 3.5846921957699784
+      },
+      "wall_s": {
+        "ram16": 11.519596000000092,
+        "full_resident": 11.119215149999945,
+        "change_percent": -3.4756501009249208
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "limitations": [
+      "One ABBA cycle; no statistical significance claim",
+      "Functional quality and endurance require separate checks",
+      "Decode differs from end-to-end throughput"
+    ]
+  },
+  "source": "output/verification/20261009-012250-full-resident-abba-summary.json",
+  "decision": "candidate",
+  "quality": "pending",
+  "endurance": "pending",
+  "investigations": [
+    {
+      "title": "Scambi ritardati",
+      "decode": 47.8,
+      "status": "Prova singola · non adottato",
+      "source": "data/benchmarks/20261009-014654-iq3-memory-adapt-lag2-measure.json"
+    },
+    {
+      "title": "Scambi asincroni",
+      "decode": 48.9,
+      "status": "Prova singola · non adottato",
+      "source": "data/benchmarks/20261009-015141-iq3-memory-adapt-async-measure.json"
+    },
+    {
+      "title": "Draft italiano",
+      "decode": 50.4,
+      "status": "Prova singola · non adottato",
+      "source": "data/benchmarks/20261009-015726-iq3-memory-draft-it-measure.json"
+    },
+    {
+      "title": "Somme raggruppate · ABBA",
+      "decode": 57.95,
+      "status": "+2.39% vs controllo · non adottato · qualità 8/12 → 8/12 · nessuna regressione nei 12 compiti",
+      "source": "output/verification/20261009-024314-tsum-abba-summary.json"
+    },
+    {
+      "title": "Cache appresa · ABBA",
+      "decode": 56.099999999999994,
+      "status": "-1.23% vs controllo 56.80 t/s · non adottato · qualità 8/12 → 9/12 · nessuna regressione nei 12 compiti",
+      "source": "output/verification/20261009-030858-learned-profile-abba-summary.json"
+    }
+  ],
+  "draft_comparison": {
+    "status": "complete",
+    "stamp": "20261010-004659",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-10T00:47:38Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "draft_candidate_sha256": "2217b18ec8bc4b4d6642b8f2a6d2371fd3b47de3dd090873e80338148b942fb3",
+    "expert_slots": 8706,
+    "uniform_blob_budget": 6500,
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "pooled": {
+      "decode_tok_s": {
+        "control": 58.7,
+        "candidate": 62.15,
+        "change_percent": 5.877342419080067
+      },
+      "prefill_tok_s": {
+        "control": 176.55,
+        "candidate": 175.45,
+        "change_percent": -0.6230529595015688
+      },
+      "wall_tok_s": {
+        "control": 23.70835094532577,
+        "candidate": 24.07305253561116,
+        "change_percent": 1.5382832451166228
+      },
+      "wall_s": {
+        "control": 10.79852789999859,
+        "candidate": 10.63436300000103,
+        "change_percent": -1.5202525892217267
+      }
+    },
+    "arm_medians": {
+      "draft-base-a1": {
+        "decode_tok_s": 57.3,
+        "prefill_tok_s": 176.0,
+        "wall_tok_s": 23.160109555641306,
+        "wall_s": 11.053488300000026
+      },
+      "draft-it-b1": {
+        "decode_tok_s": 62.8,
+        "prefill_tok_s": 174.3,
+        "wall_tok_s": 24.13284217091285,
+        "wall_s": 10.60795070000313
+      },
+      "draft-it-b2": {
+        "decode_tok_s": 61.5,
+        "prefill_tok_s": 176.1,
+        "wall_tok_s": 24.013262900309478,
+        "wall_s": 10.660775299998932
+      },
+      "draft-base-a2": {
+        "decode_tok_s": 59.6,
+        "prefill_tok_s": 177.6,
+        "wall_tok_s": 23.89156551676751,
+        "wall_s": 10.715078499997617
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "limitations": [
+      "One ABBA cycle, no statistical significance claim",
+      "Static technical Italian task; quality and other workloads require separate checks"
+    ],
+    "control_drift_percent": {
+      "decode_tok_s": 4.013961605584648,
+      "prefill_tok_s": 0.9090909090909038
+    },
+    "confounded": false,
+    "promotion": false
+  },
+  "tsum_comparison": {
+    "status": "complete",
+    "stamp": "20261009-024314",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 56.599999999999994,
+        "candidate": 57.95,
+        "change_percent": 2.3851590106007237
+      },
+      "prefill_tok_s": {
+        "control": 176.8,
+        "candidate": 177.7,
+        "change_percent": 0.5090497737556543
+      },
+      "wall_s": {
+        "control": 10.942040300000372,
+        "candidate": 10.83827999999994,
+        "change_percent": -0.9482719598503664
+      },
+      "wall_tok_s": {
+        "control": 23.3960392492683,
+        "candidate": 23.619984678338845,
+        "change_percent": 0.9571937655111773
+      }
+    },
+    "arm_medians": {
+      "tsum-base-a1": {
+        "decode_tok_s": 55.8,
+        "prefill_tok_s": 176.4,
+        "wall_s": 11.075359299997217,
+        "wall_tok_s": 23.114374266852394
+      },
+      "tsum-b1": {
+        "decode_tok_s": 58.1,
+        "prefill_tok_s": 177.6,
+        "wall_s": 10.836419999999634,
+        "wall_tok_s": 23.624038197117557
+      },
+      "tsum-b2": {
+        "decode_tok_s": 57.5,
+        "prefill_tok_s": 177.8,
+        "wall_s": 10.85871870000119,
+        "wall_tok_s": 23.57552553598906
+      },
+      "tsum-base-a2": {
+        "decode_tok_s": 57.1,
+        "prefill_tok_s": 177.2,
+        "wall_s": 10.907056899999588,
+        "wall_tok_s": 23.471042862168407
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "promotion": false,
+    "limitations": "One ABBA campaign; task quality and endurance require separate validation"
+  },
+  "tsum_quality": {
+    "status": "complete",
+    "optimization": "STRATA_TSUM",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 8,
+    "candidate_correct": 8,
+    "regressed_cases": [],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261009-025332-iq3-memory-quality-tsum-base-tasks.json",
+      "output/verification/20261009-025332-iq3-memory-quality-tsum-it-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One pair of twelve tasks; no general quality or endurance claim"
+  },
+  "learned_comparison": {
+    "status": "complete",
+    "stamp": "20261009-030858",
+    "measured_at": "2026-10-09T03:09:31Z",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "candidate_sha256": "eeb9b0c6c74762ff437145f743881623ca5a5e87b0a466fc2d494028643c6ed5",
+    "pooled": {
+      "decode_tok_s": {
+        "control": 56.8,
+        "candidate": 56.099999999999994,
+        "change_percent": -1.232394366197187
+      },
+      "prefill_tok_s": {
+        "control": 175.85,
+        "candidate": 176.55,
+        "change_percent": 0.39806653397782554
+      },
+      "wall_s": {
+        "control": 10.959662849998494,
+        "candidate": 10.99799560000065,
+        "change_percent": 0.34976212796691275
+      },
+      "wall_tok_s": {
+        "control": 23.358397328987216,
+        "candidate": 23.276969938382436,
+        "change_percent": -0.34860007498772605
+      }
+    },
+    "arm_medians": {
+      "profile-base-a1": {
+        "decode_tok_s": 57.6,
+        "prefill_tok_s": 176.6,
+        "wall_s": 10.845380199996725,
+        "wall_tok_s": 23.60452056812884
+      },
+      "profile-learn-b1": {
+        "decode_tok_s": 56.3,
+        "prefill_tok_s": 176.8,
+        "wall_s": 11.00047049999921,
+        "wall_tok_s": 23.271731877288193
+      },
+      "profile-learn-b2": {
+        "decode_tok_s": 55.9,
+        "prefill_tok_s": 176.4,
+        "wall_s": 10.99552070000209,
+        "wall_tok_s": 23.282207999476675
+      },
+      "profile-base-a2": {
+        "decode_tok_s": 55.2,
+        "prefill_tok_s": 175.0,
+        "wall_s": 11.290941399998701,
+        "wall_tok_s": 22.67304301127889
+      }
+    },
+    "actual_expert_slots": [
+      8706,
+      8706,
+      8706,
+      8706
+    ],
+    "uniform_blob_budget": 6500,
+    "training_requests": 8,
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "promotion": false,
+    "limitations": "Small synthetic training corpus; independent evaluation prompts; one ABBA; quality and endurance pending"
+  },
+  "latest_comparison": {
+    "status": "complete",
+    "stamp": "20261010-103801",
+    "optimization": "STRATA_TSUM",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-10T10:38:42Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 62.3,
+        "candidate": 62.8,
+        "change_percent": 0.8025682182985605
+      },
+      "prefill_tok_s": {
+        "control": 178.35000000000002,
+        "candidate": 178.5,
+        "change_percent": 0.0841042893187316
+      },
+      "wall_s": {
+        "control": 10.486813099996652,
+        "candidate": 10.472878549997404,
+        "change_percent": -0.1328768794330193
+      },
+      "wall_tok_s": {
+        "control": 24.41166561139086,
+        "candidate": 24.444125871949137,
+        "change_percent": 0.13297028181120663
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "tsum-draft-base-a1": {
+        "decode_tok_s": 62.3,
+        "prefill_tok_s": 177.8,
+        "wall_s": 10.471100299997488,
+        "wall_tok_s": 24.448242559577185
+      },
+      "tsum-draft-b1": {
+        "decode_tok_s": 62.7,
+        "prefill_tok_s": 179.4,
+        "wall_s": 10.485323999993852,
+        "wall_tok_s": 24.41507768383219
+      },
+      "tsum-draft-b2": {
+        "decode_tok_s": 63.8,
+        "prefill_tok_s": 178.2,
+        "wall_s": 10.345589400007157,
+        "wall_tok_s": 24.74484440681774
+      },
+      "tsum-draft-base-a2": {
+        "decode_tok_s": 62.3,
+        "prefill_tok_s": 178.5,
+        "wall_s": 10.502525899995817,
+        "wall_tok_s": 24.37508866320453
+      }
+    },
+    "exact_response_pairs": 0,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": 0.0,
+      "prefill_tok_s": 0.3937007874015741
+    },
+    "confounded": false
+  },
+  "latest_kind": "tsum-draft",
+  "latest_decision": "not_adopted",
+  "learned_quality": {
+    "status": "complete",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "candidate_sha256": "eeb9b0c6c74762ff437145f743881623ca5a5e87b0a466fc2d494028643c6ed5",
+    "total": 12,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "control_correct": 8,
+    "candidate_correct": 9,
+    "regressed_cases": [],
+    "improved_cases": [
+      "trace_loop"
+    ],
+    "sources": [
+      "output/verification/20261009-031908-iq3-memory-quality-profile-base-tasks.json",
+      "output/verification/20261009-031908-iq3-memory-quality-profile-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired set of twelve tasks; no general quality or endurance claim"
+  },
+  "pcie55_comparison": {
+    "status": "complete",
+    "stamp": "20261009-033015",
+    "measured_at": "2026-10-09T03:30:47Z",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 57.2,
+        "candidate": 54.849999999999994,
+        "change_percent": -4.108391608391626
+      },
+      "prefill_tok_s": {
+        "control": 176.2,
+        "candidate": 177.3,
+        "change_percent": 0.6242905788876429
+      },
+      "wall_s": {
+        "control": 10.912475099999938,
+        "candidate": 11.125933450000957,
+        "change_percent": 1.9560947268600914
+      },
+      "wall_tok_s": {
+        "control": 23.459396352220338,
+        "candidate": 23.009305368238763,
+        "change_percent": -1.9185957610498128
+      }
+    },
+    "arm_medians": {
+      "pcie-auto-a1": {
+        "decode_tok_s": 58.5,
+        "prefill_tok_s": 177.7,
+        "wall_s": 10.776755099999718,
+        "wall_tok_s": 23.754831359210037
+      },
+      "pcie55-b1": {
+        "decode_tok_s": 55.1,
+        "prefill_tok_s": 176.5,
+        "wall_s": 11.125580399999308,
+        "wall_tok_s": 23.010035503407618
+      },
+      "pcie55-b2": {
+        "decode_tok_s": 54.8,
+        "prefill_tok_s": 177.6,
+        "wall_s": 11.126286500002607,
+        "wall_tok_s": 23.008575233069905
+      },
+      "pcie-auto-a2": {
+        "decode_tok_s": 55.3,
+        "prefill_tok_s": 175.8,
+        "wall_s": 11.098520999999892,
+        "wall_tok_s": 23.06613646989563
+      }
+    },
+    "effective_pcie_share": [
+      "0.36",
+      "0.55",
+      "0.55",
+      "0.36"
+    ],
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "split_diagnostics": {
+      "pcie-auto-a1": {
+        "window_ms_per_output_token": 17.091370558375637,
+        "gpu_reach_wait_ms_per_output_token": 9.878172588832488,
+        "host_ms_per_output_token": 2.6483516483516483,
+        "job_dispatch_ms_per_output_token": 0.8274111675126903,
+        "cpu_experts_ms_per_output_token": 1.164835164835165
+      },
+      "pcie55-b1": {
+        "window_ms_per_output_token": 18.140625,
+        "gpu_reach_wait_ms_per_output_token": 10.603092783505154,
+        "host_ms_per_output_token": 3.161290322580645,
+        "job_dispatch_ms_per_output_token": 0.7239583333333333,
+        "cpu_experts_ms_per_output_token": 0.9270833333333334
+      },
+      "pcie55-b2": {
+        "window_ms_per_output_token": 18.216346153846153,
+        "gpu_reach_wait_ms_per_output_token": 10.387434554973822,
+        "host_ms_per_output_token": 3.1497326203208553,
+        "job_dispatch_ms_per_output_token": 0.8010471204188482,
+        "cpu_experts_ms_per_output_token": 0.9162303664921466
+      },
+      "pcie-auto-a2": {
+        "window_ms_per_output_token": 18.078534031413614,
+        "gpu_reach_wait_ms_per_output_token": 9.910994764397905,
+        "host_ms_per_output_token": 3.3717277486910997,
+        "job_dispatch_ms_per_output_token": 0.8691099476439791,
+        "cpu_experts_ms_per_output_token": 1.198952879581152
+      }
+    },
+    "split_diagnostics_note": "Overlapping timings; never add host and GPU waits. Normalized by rounded useful tokens/window.",
+    "promotion": false,
+    "limitations": "One ABBA; allocation can change CPU/GPU rounding; independent quality and endurance pending",
+    "candidate_percent": 55
+  },
+  "pcie20_comparison": {
+    "status": "complete",
+    "stamp": "20261009-175635",
+    "measured_at": "2026-10-09T17:57:25Z",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 50.849999999999994,
+        "candidate": 59.05,
+        "change_percent": 16.12586037364798
+      },
+      "prefill_tok_s": {
+        "control": 142.45,
+        "candidate": 171.1,
+        "change_percent": 20.112320112320113
+      },
+      "wall_s": {
+        "control": 13.63437200000044,
+        "candidate": 10.959731449999708,
+        "change_percent": -19.61689581302788
+      },
+      "wall_tok_s": {
+        "control": 18.776160348050446,
+        "candidate": 23.358282329848194,
+        "change_percent": 24.403935079695426
+      }
+    },
+    "arm_medians": {
+      "pcie-auto-a1": {
+        "decode_tok_s": 50.4,
+        "prefill_tok_s": 124.5,
+        "wall_s": 14.275366299998495,
+        "wall_tok_s": 17.93298992264927
+      },
+      "pcie20-b1": {
+        "decode_tok_s": 59.2,
+        "prefill_tok_s": 172.2,
+        "wall_s": 10.94439229999989,
+        "wall_tok_s": 23.390974389688367
+      },
+      "pcie20-b2": {
+        "decode_tok_s": 58.9,
+        "prefill_tok_s": 170.5,
+        "wall_s": 11.052106200000708,
+        "wall_tok_s": 23.163005798838924
+      },
+      "pcie-auto-a2": {
+        "decode_tok_s": 51.3,
+        "prefill_tok_s": 166.2,
+        "wall_s": 11.839746999999988,
+        "wall_tok_s": 21.62208364756445
+      }
+    },
+    "effective_pcie_share": [
+      "0.37",
+      "0.20",
+      "0.20",
+      "0.37"
+    ],
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "split_diagnostics": {
+      "pcie-auto-a1": {
+        "window_ms_per_output_token": 19.86,
+        "gpu_reach_wait_ms_per_output_token": 9.34848484848485,
+        "host_ms_per_output_token": 4.999999999999999,
+        "job_dispatch_ms_per_output_token": 3.3152173913043477,
+        "cpu_experts_ms_per_output_token": 1.451086956521739
+      },
+      "pcie20-b1": {
+        "window_ms_per_output_token": 16.901477832512317,
+        "gpu_reach_wait_ms_per_output_token": 9.309644670050762,
+        "host_ms_per_output_token": 3.1550802139037435,
+        "job_dispatch_ms_per_output_token": 1.032085561497326,
+        "cpu_experts_ms_per_output_token": 1.413793103448276
+      },
+      "pcie20-b2": {
+        "window_ms_per_output_token": 16.967914438502675,
+        "gpu_reach_wait_ms_per_output_token": 9.97860962566845,
+        "host_ms_per_output_token": 2.566844919786096,
+        "job_dispatch_ms_per_output_token": 0.7967914438502673,
+        "cpu_experts_ms_per_output_token": 1.3882978723404256
+      },
+      "pcie-auto-a2": null
+    },
+    "split_diagnostics_note": "Overlapping timings; never add host and GPU waits. Normalized by rounded useful tokens/window.",
+    "promotion": false,
+    "limitations": "One ABBA; allocation can change CPU/GPU rounding; independent quality and endurance pending",
+    "candidate_percent": 20
+  },
+  "pcie20_quality": {
+    "status": "complete",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "variant": "pcie20",
+    "candidate_percent": 20,
+    "total": 12,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "control_correct": 8,
+    "candidate_correct": 9,
+    "regressed_cases": [],
+    "improved_cases": [
+      "trace_loop"
+    ],
+    "sources": [
+      "output/verification/20261009-163454-iq3-memory-quality-pcie20-base-tasks.json",
+      "output/verification/20261009-163454-iq3-memory-quality-pcie20-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired set of twelve tasks; no general quality or endurance claim"
+  },
+  "qfuse_comparison": {
+    "status": "complete",
+    "stamp": "20261009-181642",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-09T18:17:24Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 55.85,
+        "candidate": 59.45,
+        "change_percent": 6.44583706356312
+      },
+      "prefill_tok_s": {
+        "control": 176.65,
+        "candidate": 176.10000000000002,
+        "change_percent": -0.31135012737050216
+      },
+      "wall_s": {
+        "control": 11.057369250001102,
+        "candidate": 10.813846550000562,
+        "change_percent": -2.2023565867669292
+      },
+      "wall_tok_s": {
+        "control": 23.15198182610218,
+        "candidate": 23.673384917486008,
+        "change_percent": 2.252088375414951
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "qfuse-base-a1": {
+        "decode_tok_s": 55.7,
+        "prefill_tok_s": 176.8,
+        "wall_s": 11.059755300000688,
+        "wall_tok_s": 23.146985901214656
+      },
+      "qfuse-b1": {
+        "decode_tok_s": 59.4,
+        "prefill_tok_s": 175.4,
+        "wall_s": 10.826523600000655,
+        "wall_tok_s": 23.64563265718873
+      },
+      "qfuse-b2": {
+        "decode_tok_s": 59.5,
+        "prefill_tok_s": 176.8,
+        "wall_s": 10.80116950000047,
+        "wall_tok_s": 23.701137177783284
+      },
+      "qfuse-base-a2": {
+        "decode_tok_s": 56.6,
+        "prefill_tok_s": 176.5,
+        "wall_s": 11.054983200001516,
+        "wall_tok_s": 23.1569777509897
+      }
+    },
+    "exact_response_pairs": 0,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": 1.6157989228007263,
+      "prefill_tok_s": -0.16968325791856254
+    },
+    "confounded": false
+  },
+  "qfuse_quality": {
+    "status": "complete",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 8,
+    "candidate_correct": 8,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "regressed_cases": [],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261009-182723-iq3-memory-quality-qfuse-base-tasks.json",
+      "output/verification/20261009-182723-iq3-memory-quality-qfuse-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired task set; no overall quality claim"
+  },
+  "qfuse-pcie20_comparison": {
+    "status": "complete",
+    "stamp": "20261009-183558",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-09T18:36:38Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 58.7,
+        "candidate": 56.9,
+        "change_percent": -3.066439522998299
+      },
+      "prefill_tok_s": {
+        "control": 176.6,
+        "candidate": 176.95,
+        "change_percent": 0.19818799546997834
+      },
+      "wall_s": {
+        "control": 10.799982200000159,
+        "candidate": 10.955115950000618,
+        "change_percent": 1.4364259785581535
+      },
+      "wall_tok_s": {
+        "control": 23.703977754673936,
+        "candidate": 23.36833414661538,
+        "change_percent": -1.4159801006072725
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "qfuse-pcie20-base-a1": {
+        "decode_tok_s": 58.5,
+        "prefill_tok_s": 176.5,
+        "wall_s": 10.843054999999367,
+        "wall_tok_s": 23.609582354789765
+      },
+      "qfuse-pcie20-b1": {
+        "decode_tok_s": 57.3,
+        "prefill_tok_s": 177.1,
+        "wall_s": 10.918820000000778,
+        "wall_tok_s": 23.445756959083653
+      },
+      "qfuse-pcie20-b2": {
+        "decode_tok_s": 56.5,
+        "prefill_tok_s": 176.8,
+        "wall_s": 10.991411900000458,
+        "wall_tok_s": 23.290911334147104
+      },
+      "qfuse-pcie20-base-a2": {
+        "decode_tok_s": 58.9,
+        "prefill_tok_s": 176.7,
+        "wall_s": 10.74101139999948,
+        "wall_tok_s": 23.83388216122854
+      }
+    },
+    "exact_response_pairs": 0,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": 0.6837606837606813,
+      "prefill_tok_s": 0.11331444759206111
+    },
+    "confounded": false
+  },
+  "qfuse-pcie20_quality": {
+    "status": "complete",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 9,
+    "candidate_correct": 9,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "regressed_cases": [],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261009-184651-iq3-memory-quality-qfuse-pcie20-base-tasks.json",
+      "output/verification/20261009-184651-iq3-memory-quality-qfuse-pcie20-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired task set; no overall quality claim"
+  },
+  "device-plan_comparison": {
+    "status": "complete",
+    "stamp": "20261009-192418",
+    "optimization": "STRATA_VERIFY_DEVICE_PLAN",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-09T19:24:44Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 57.9,
+        "candidate": 51.2,
+        "change_percent": -11.571675302245243
+      },
+      "prefill_tok_s": {
+        "control": 176.55,
+        "candidate": 171.7,
+        "change_percent": -2.7470971396205135
+      },
+      "wall_s": {
+        "control": 10.84345409999969,
+        "candidate": 11.653604500000256,
+        "change_percent": 7.471331482839849
+      },
+      "wall_tok_s": {
+        "control": 23.60871343009886,
+        "candidate": 21.967650125120183,
+        "change_percent": -6.951091637575124
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "device-plan-base-a1": {
+        "decode_tok_s": 57.4,
+        "prefill_tok_s": 176.7,
+        "wall_s": 10.84390329999951,
+        "wall_tok_s": 23.607735417560534
+      },
+      "device-plan-b1": {
+        "decode_tok_s": 52.5,
+        "prefill_tok_s": 174.0,
+        "wall_s": 11.419677600000796,
+        "wall_tok_s": 22.417445480245622
+      },
+      "device-plan-b2": {
+        "decode_tok_s": 50.9,
+        "prefill_tok_s": 169.1,
+        "wall_s": 11.79647440000008,
+        "wall_tok_s": 21.701399190931003
+      },
+      "device-plan-base-a2": {
+        "decode_tok_s": 58.6,
+        "prefill_tok_s": 176.3,
+        "wall_s": 10.843004899999869,
+        "wall_tok_s": 23.60969144263719
+      }
+    },
+    "exact_response_pairs": 3,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": 2.0905923344947785,
+      "prefill_tok_s": -0.22637238256931758
+    },
+    "confounded": false
+  },
+  "fill-workers_comparison": {
+    "status": "complete",
+    "stamp": "20261009-211211",
+    "optimization": "STRATA_FETCH_PERSISTENT",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-09T21:12:59Z",
+    "binary_sha256": "eb9e928c736f87b6e84f0d77ad877142ac1e64d74789935c65286630e5918b57",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 57.0,
+        "candidate": 59.25,
+        "change_percent": 3.9473684210526327
+      },
+      "prefill_tok_s": {
+        "control": 175.2,
+        "candidate": 176.45,
+        "change_percent": 0.7134703196347125
+      },
+      "wall_s": {
+        "control": 10.965404599999601,
+        "candidate": 10.790256100000988,
+        "change_percent": -1.5972826027652376
+      },
+      "wall_tok_s": {
+        "control": 23.346172220014815,
+        "candidate": 23.725254746739502,
+        "change_percent": 1.6237459535216603
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "fill-workers-base-a1": {
+        "decode_tok_s": 58.8,
+        "prefill_tok_s": 175.0,
+        "wall_s": 10.939226800001052,
+        "wall_tok_s": 23.4020196016025
+      },
+      "fill-workers-b1": {
+        "decode_tok_s": 59.9,
+        "prefill_tok_s": 175.4,
+        "wall_s": 10.763494200000423,
+        "wall_tok_s": 23.784097918684246
+      },
+      "fill-workers-b2": {
+        "decode_tok_s": 58.2,
+        "prefill_tok_s": 176.9,
+        "wall_s": 10.817018000001553,
+        "wall_tok_s": 23.666411574794758
+      },
+      "fill-workers-base-a2": {
+        "decode_tok_s": 55.3,
+        "prefill_tok_s": 175.3,
+        "wall_s": 11.007884200000262,
+        "wall_tok_s": 23.256058598435647
+      }
+    },
+    "exact_response_pairs": 1,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "Control arms differ by more than 5%; pooled change is descriptive, not a stable causal gain. Independent confirmation, quality and sustained stability required.",
+    "control_drift_percent": {
+      "decode_tok_s": -5.952380952380953,
+      "prefill_tok_s": 0.17142857142857792
+    },
+    "confounded": true
+  },
+  "fill-workers_quality": {
+    "status": "complete",
+    "optimization": "STRATA_FETCH_PERSISTENT",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 9,
+    "candidate_correct": 8,
+    "binary_sha256": "eb9e928c736f87b6e84f0d77ad877142ac1e64d74789935c65286630e5918b57",
+    "regressed_cases": [
+      "trace_loop"
+    ],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261009-212329-iq3-memory-quality-fill-workers-base-tasks.json",
+      "output/verification/20261009-212329-iq3-memory-quality-fill-workers-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired task set; no overall quality claim"
+  },
+  "qfuse-draft_comparison": {
+    "status": "complete",
+    "stamp": "20261010-101530",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-10T10:16:18Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 62.3,
+        "candidate": 63.4,
+        "change_percent": 1.7656500802568198
+      },
+      "prefill_tok_s": {
+        "control": 176.85000000000002,
+        "candidate": 176.75,
+        "change_percent": -0.05654509471304525
+      },
+      "wall_s": {
+        "control": 10.561148649998358,
+        "candidate": 10.460188249999192,
+        "change_percent": -0.955960410605361
+      },
+      "wall_tok_s": {
+        "control": 24.242791258499842,
+        "candidate": 24.473945318485185,
+        "change_percent": 0.9534960620687594
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "qfuse-draft-base-a1": {
+        "decode_tok_s": 63.1,
+        "prefill_tok_s": 176.0,
+        "wall_s": 10.41766269999789,
+        "wall_tok_s": 24.573650287223433
+      },
+      "qfuse-draft-b1": {
+        "decode_tok_s": 64.6,
+        "prefill_tok_s": 178.1,
+        "wall_s": 10.396521799993934,
+        "wall_tok_s": 24.623619795627164
+      },
+      "qfuse-draft-b2": {
+        "decode_tok_s": 62.0,
+        "prefill_tok_s": 175.9,
+        "wall_s": 10.489970199996606,
+        "wall_tok_s": 24.4042637985838
+      },
+      "qfuse-draft-base-a2": {
+        "decode_tok_s": 60.4,
+        "prefill_tok_s": 176.9,
+        "wall_s": 10.70013780001318,
+        "wall_tok_s": 23.924925527565136
+      }
+    },
+    "exact_response_pairs": 1,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": -4.278922345483361,
+      "prefill_tok_s": 0.5113636363636376
+    },
+    "confounded": false
+  },
+  "qfuse-draft_quality": {
+    "status": "complete",
+    "optimization": "STRATA_QFUSE",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 8,
+    "candidate_correct": 8,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "regressed_cases": [],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261010-103251-iq3-memory-quality-qfuse-draft-base-tasks.json",
+      "output/verification/20261010-103251-iq3-memory-quality-qfuse-draft-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired task set; no overall quality claim"
+  },
+  "tsum-draft_comparison": {
+    "status": "complete",
+    "stamp": "20261010-103801",
+    "optimization": "STRATA_TSUM",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-10T10:38:42Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 62.3,
+        "candidate": 62.8,
+        "change_percent": 0.8025682182985605
+      },
+      "prefill_tok_s": {
+        "control": 178.35000000000002,
+        "candidate": 178.5,
+        "change_percent": 0.0841042893187316
+      },
+      "wall_s": {
+        "control": 10.486813099996652,
+        "candidate": 10.472878549997404,
+        "change_percent": -0.1328768794330193
+      },
+      "wall_tok_s": {
+        "control": 24.41166561139086,
+        "candidate": 24.444125871949137,
+        "change_percent": 0.13297028181120663
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "tsum-draft-base-a1": {
+        "decode_tok_s": 62.3,
+        "prefill_tok_s": 177.8,
+        "wall_s": 10.471100299997488,
+        "wall_tok_s": 24.448242559577185
+      },
+      "tsum-draft-b1": {
+        "decode_tok_s": 62.7,
+        "prefill_tok_s": 179.4,
+        "wall_s": 10.485323999993852,
+        "wall_tok_s": 24.41507768383219
+      },
+      "tsum-draft-b2": {
+        "decode_tok_s": 63.8,
+        "prefill_tok_s": 178.2,
+        "wall_s": 10.345589400007157,
+        "wall_tok_s": 24.74484440681774
+      },
+      "tsum-draft-base-a2": {
+        "decode_tok_s": 62.3,
+        "prefill_tok_s": 178.5,
+        "wall_s": 10.502525899995817,
+        "wall_tok_s": 24.37508866320453
+      }
+    },
+    "exact_response_pairs": 0,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": 0.0,
+      "prefill_tok_s": 0.3937007874015741
+    },
+    "confounded": false
+  },
+  "minp70_comparison": {
+    "status": "complete",
+    "stamp": "20261009-200641",
+    "optimization": "--spec-min-p",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-09T20:07:01Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 55.35,
+        "candidate": 60.85,
+        "change_percent": 9.936766034327004
+      },
+      "prefill_tok_s": {
+        "control": 153.3,
+        "candidate": 176.64999999999998,
+        "change_percent": 15.231572080887123
+      },
+      "wall_s": {
+        "control": 12.283406499998819,
+        "candidate": 10.630745200000092,
+        "change_percent": -13.454421621550061
+      },
+      "wall_tok_s": {
+        "control": 20.964862198760173,
+        "candidate": 24.081100980012316,
+        "change_percent": 14.864103334943124
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "minp70-base-a1": {
+        "decode_tok_s": 54.5,
+        "prefill_tok_s": 130.6,
+        "wall_s": 13.3816568000002,
+        "wall_tok_s": 19.13066549427543
+      },
+      "minp70-b1": {
+        "decode_tok_s": 61.0,
+        "prefill_tok_s": 176.6,
+        "wall_s": 10.626110699999117,
+        "wall_tok_s": 24.091599196310018
+      },
+      "minp70-b2": {
+        "decode_tok_s": 60.7,
+        "prefill_tok_s": 176.7,
+        "wall_s": 10.64210230000026,
+        "wall_tok_s": 24.055397400191666
+      },
+      "minp70-base-a2": {
+        "decode_tok_s": 60.9,
+        "prefill_tok_s": 177.0,
+        "wall_s": 10.70308500000101,
+        "wall_tok_s": 23.918337563419875
+      }
+    },
+    "exact_response_pairs": 1,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "Control arms differ by more than 5%; pooled change is descriptive, not a stable causal gain. Independent confirmation, quality and sustained stability required.",
+    "control_drift_percent": {
+      "decode_tok_s": 11.743119266055047,
+      "prefill_tok_s": 35.52833078101072
+    },
+    "confounded": true
+  },
+  "minp70_quality": {
+    "status": "complete",
+    "optimization": "--spec-min-p",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "total": 12,
+    "control_correct": 8,
+    "candidate_correct": 8,
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "regressed_cases": [],
+    "improved_cases": [],
+    "sources": [
+      "output/verification/20261009-201720-iq3-memory-quality-minp70-base-tasks.json",
+      "output/verification/20261009-201720-iq3-memory-quality-minp70-candidate-tasks.json"
+    ],
+    "promotion": false,
+    "limitations": "One paired task set; no overall quality claim"
+  },
+  "iq3-spec3_comparison": {
+    "status": "complete",
+    "stamp": "20261010-050932",
+    "optimization": "--spec",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "measured_at": "2026-10-10T05:10:18Z",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "protocol": {
+      "warmup": 5,
+      "runs": 5,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-chunk-v1"
+    },
+    "expert_slots": 8706,
+    "pooled": {
+      "decode_tok_s": {
+        "control": 60.650000000000006,
+        "candidate": 60.349999999999994,
+        "change_percent": -0.4946413849958975
+      },
+      "prefill_tok_s": {
+        "control": 182.14999999999998,
+        "candidate": 181.85000000000002,
+        "change_percent": -0.16469942355199496
+      },
+      "wall_s": {
+        "control": 10.482236649997503,
+        "candidate": 10.515645849998691,
+        "change_percent": 0.31872205443097545
+      },
+      "wall_tok_s": {
+        "control": 24.422269373504342,
+        "candidate": 24.344814615013256,
+        "change_percent": -0.31714808032998754
+      }
+    },
+    "measured_requests": 20,
+    "warmup_requests": 20,
+    "arm_medians": {
+      "iq3-spec3-base-a1": {
+        "decode_tok_s": 60.7,
+        "prefill_tok_s": 183.0,
+        "wall_s": 10.48049059999903,
+        "wall_tok_s": 24.426337446457296
+      },
+      "iq3-spec3-b1": {
+        "decode_tok_s": 59.8,
+        "prefill_tok_s": 182.4,
+        "wall_s": 10.490630000000237,
+        "wall_tok_s": 24.402728911418496
+      },
+      "iq3-spec3-b2": {
+        "decode_tok_s": 60.9,
+        "prefill_tok_s": 181.8,
+        "wall_s": 10.540661699997145,
+        "wall_tok_s": 24.28690031860802
+      },
+      "iq3-spec3-base-a2": {
+        "decode_tok_s": 60.1,
+        "prefill_tok_s": 182.1,
+        "wall_s": 10.519453599998087,
+        "wall_tok_s": 24.335864744918553
+      }
+    },
+    "exact_response_pairs": 1,
+    "response_pairs": 10,
+    "promotion": false,
+    "limitations": "One ABBA; independent quality and sustained stability required",
+    "control_drift_percent": {
+      "decode_tok_s": -0.9884678747940745,
+      "prefill_tok_s": -0.4918032786885296
+    },
+    "confounded": false
+  },
+  "minp70_confirmation": {
+    "status": "complete",
+    "stamp": "20261009-202641",
+    "model": "qwen3.8-flash-next-iq3_xxs",
+    "control": 62.25,
+    "candidate": 62.8,
+    "change_percent": 0.8835341365461824,
+    "median_paired_change_percent": 0.3975545427800209,
+    "paired_changes_percent": [
+      -0.3231017770597644,
+      1.1182108626198062,
+      -4.210526315789465,
+      3.3726812816188945,
+      -1.4240506329114,
+      6.91399662731873
+    ],
+    "candidate_wins": 3,
+    "pairs": 6,
+    "promotion": false,
+    "source": "output/verification/20261009-202641-iq3-memory-minp70-interleaved-results.json",
+    "limitations": "One paired same-instance confirmation; speedup below the 3% calibration threshold. No promotion.",
+    "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+    "expert_slots": 8706,
+    "measured_at": "2026-10-09T20:27:19Z",
+    "protocol": {
+      "warmup": 5,
+      "runs": 6,
+      "tokens": 256,
+      "paragraphs": 24,
+      "prompt_set": "iq3-minp-interleaved-v1",
+      "interleaved": true,
+      "settings": [
+        0.5,
+        0.7
+      ],
+      "order": "alternating AB/BA pairs",
+      "prompt_cache": false
+    },
+    "pooled": {
+      "decode_tok_s": {
+        "control": 62.25,
+        "candidate": 62.8,
+        "change_percent": 0.8835341365461824
+      },
+      "prefill_tok_s": {
+        "control": 177.7,
+        "candidate": 177.5,
+        "change_percent": -0.11254924029262536
+      },
+      "wall_s": {
+        "control": 10.52736410000034,
+        "candidate": 10.488044299998364,
+        "change_percent": -0.3735009032505565
+      },
+      "wall_tok_s": {
+        "control": 24.31759262867852,
+        "candidate": 24.40874868952036,
+        "change_percent": 0.37485643514867384
+      }
+    }
+  },
+  "campaigns": [
+    {
+      "title": "Esperti residenti in RAM",
+      "stamp": "20261009-012250",
+      "control": 47.55,
+      "candidate": 47.5,
+      "change_percent": -0.1051524710830698,
+      "quality": null,
+      "state": "Beneficio sul prefill",
+      "limitations": [
+        "One ABBA cycle; no statistical significance claim",
+        "Functional quality and endurance require separate checks",
+        "Decode differs from end-to-end throughput"
+      ],
+      "confounded": false
+    },
+    {
+      "title": "Vocabolario draft italiano",
+      "stamp": "20261010-004659",
+      "control": 58.7,
+      "candidate": 62.15,
+      "change_percent": 5.877342419080067,
+      "quality": null,
+      "state": "Da confermare",
+      "limitations": [
+        "One ABBA cycle, no statistical significance claim",
+        "Static technical Italian task; quality and other workloads require separate checks"
+      ],
+      "confounded": false
+    },
+    {
+      "title": "Somme raggruppate",
+      "stamp": "20261009-024314",
+      "control": 56.599999999999994,
+      "candidate": 57.95,
+      "change_percent": 2.3851590106007237,
+      "quality": {
+        "status": "complete",
+        "optimization": "STRATA_TSUM",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-025332-iq3-memory-quality-tsum-base-tasks.json",
+          "output/verification/20261009-025332-iq3-memory-quality-tsum-it-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One pair of twelve tasks; no general quality or endurance claim"
+      },
+      "state": "Da confermare",
+      "limitations": "One ABBA campaign; task quality and endurance require separate validation",
+      "confounded": false
+    },
+    {
+      "title": "Cache appresa",
+      "stamp": "20261009-030858",
+      "control": 56.8,
+      "candidate": 56.099999999999994,
+      "change_percent": -1.232394366197187,
+      "quality": {
+        "status": "complete",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "candidate_sha256": "eeb9b0c6c74762ff437145f743881623ca5a5e87b0a466fc2d494028643c6ed5",
+        "total": 12,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "control_correct": 8,
+        "candidate_correct": 9,
+        "regressed_cases": [],
+        "improved_cases": [
+          "trace_loop"
+        ],
+        "sources": [
+          "output/verification/20261009-031908-iq3-memory-quality-profile-base-tasks.json",
+          "output/verification/20261009-031908-iq3-memory-quality-profile-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired set of twelve tasks; no general quality or endurance claim"
+      },
+      "state": "Non adottata",
+      "limitations": "Small synthetic training corpus; independent evaluation prompts; one ABBA; quality and endurance pending",
+      "confounded": false
+    },
+    {
+      "title": "Quota PCIe 55%",
+      "stamp": "20261009-033015",
+      "control": 57.2,
+      "candidate": 54.849999999999994,
+      "change_percent": -4.108391608391626,
+      "quality": null,
+      "state": "Non adottata",
+      "limitations": "One ABBA; allocation can change CPU/GPU rounding; independent quality and endurance pending",
+      "confounded": false
+    },
+    {
+      "title": "Quota PCIe 20%",
+      "stamp": "20261009-175635",
+      "control": 50.849999999999994,
+      "candidate": 59.05,
+      "change_percent": 16.12586037364798,
+      "quality": {
+        "status": "complete",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "variant": "pcie20",
+        "candidate_percent": 20,
+        "total": 12,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "control_correct": 8,
+        "candidate_correct": 9,
+        "regressed_cases": [],
+        "improved_cases": [
+          "trace_loop"
+        ],
+        "sources": [
+          "output/verification/20261009-163454-iq3-memory-quality-pcie20-base-tasks.json",
+          "output/verification/20261009-163454-iq3-memory-quality-pcie20-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired set of twelve tasks; no general quality or endurance claim"
+      },
+      "state": "Da confermare",
+      "limitations": "One ABBA; allocation can change CPU/GPU rounding; independent quality and endurance pending",
+      "confounded": false
+    },
+    {
+      "title": "QFUSE",
+      "stamp": "20261009-181642",
+      "control": 55.85,
+      "candidate": 59.45,
+      "change_percent": 6.44583706356312,
+      "quality": {
+        "status": "complete",
+        "optimization": "STRATA_QFUSE",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-182723-iq3-memory-quality-qfuse-base-tasks.json",
+          "output/verification/20261009-182723-iq3-memory-quality-qfuse-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Da confermare",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "QFUSE su PCIe 20%",
+      "stamp": "20261009-183558",
+      "control": 58.7,
+      "candidate": 56.9,
+      "change_percent": -3.066439522998299,
+      "quality": {
+        "status": "complete",
+        "optimization": "STRATA_QFUSE",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 9,
+        "candidate_correct": 9,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-184651-iq3-memory-quality-qfuse-pcie20-base-tasks.json",
+          "output/verification/20261009-184651-iq3-memory-quality-qfuse-pcie20-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Non adottata",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "Pianificazione GPU dei gruppi residenti",
+      "stamp": "20261009-192418",
+      "control": 57.9,
+      "candidate": 51.2,
+      "change_percent": -11.571675302245243,
+      "quality": null,
+      "state": "Non adottata",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "Soglia del draft 70%",
+      "stamp": "20261009-200641",
+      "control": 55.35,
+      "candidate": 60.85,
+      "change_percent": 9.936766034327004,
+      "quality": {
+        "status": "complete",
+        "optimization": "--spec-min-p",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-201720-iq3-memory-quality-minp70-base-tasks.json",
+          "output/verification/20261009-201720-iq3-memory-quality-minp70-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Da verificare",
+      "limitations": "Control arms differ by more than 5%; pooled change is descriptive, not a stable causal gain. Independent confirmation, quality and sustained stability required.",
+      "confounded": true
+    },
+    {
+      "title": "Thread di lettura persistenti",
+      "stamp": "20261009-211211",
+      "control": 57.0,
+      "candidate": 59.25,
+      "change_percent": 3.9473684210526327,
+      "quality": {
+        "status": "complete",
+        "optimization": "STRATA_FETCH_PERSISTENT",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 9,
+        "candidate_correct": 8,
+        "binary_sha256": "eb9e928c736f87b6e84f0d77ad877142ac1e64d74789935c65286630e5918b57",
+        "regressed_cases": [
+          "trace_loop"
+        ],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-212329-iq3-memory-quality-fill-workers-base-tasks.json",
+          "output/verification/20261009-212329-iq3-memory-quality-fill-workers-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Non adottata",
+      "limitations": "Control arms differ by more than 5%; pooled change is descriptive, not a stable causal gain. Independent confirmation, quality and sustained stability required.",
+      "confounded": true
+    },
+    {
+      "title": "Finestra speculativa 3 su IQ3_XXS",
+      "stamp": "20261010-050932",
+      "control": 60.650000000000006,
+      "candidate": 60.349999999999994,
+      "change_percent": -0.4946413849958975,
+      "quality": null,
+      "state": "Non adottata",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "QFUSE con draft italiano su IQ3_XXS",
+      "stamp": "20261010-101530",
+      "control": 62.3,
+      "candidate": 63.4,
+      "change_percent": 1.7656500802568198,
+      "quality": {
+        "status": "complete",
+        "optimization": "STRATA_QFUSE",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261010-103251-iq3-memory-quality-qfuse-draft-base-tasks.json",
+          "output/verification/20261010-103251-iq3-memory-quality-qfuse-draft-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Da confermare",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "Somme raggruppate con draft italiano",
+      "stamp": "20261010-103801",
+      "control": 62.3,
+      "candidate": 62.8,
+      "change_percent": 0.8025682182985605,
+      "quality": null,
+      "state": "Non adottata",
+      "limitations": "One ABBA; independent quality and sustained stability required",
+      "confounded": false
+    },
+    {
+      "title": "Conferma alternata della soglia draft",
+      "stamp": "20261009-202641",
+      "control": 62.25,
+      "candidate": 62.8,
+      "change_percent": 0.8835341365461824,
+      "quality": {
+        "status": "complete",
+        "optimization": "--spec-min-p",
+        "model": "qwen3.8-flash-next-iq3_xxs",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-201720-iq3-memory-quality-minp70-base-tasks.json",
+          "output/verification/20261009-201720-iq3-memory-quality-minp70-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "state": "Non adottata",
+      "limitations": "One paired same-instance confirmation; speedup below the 3% calibration threshold. No promotion.",
+      "confounded": false
+    }
+  ],
+  "alternative_trials": [
+    {
+      "title": "Qwen3.8 Flash Next Hybrid",
+      "model": "qwen3.8-flash-next-hf_85a248b2_q2_0",
+      "quant": "IQ3/Q2",
+      "core_parameters": 125743653760,
+      "summary": {
+        "decode_tok_s": {
+          "median": 65.0,
+          "min": 63.5,
+          "max": 68.8,
+          "n": 5
+        },
+        "prefill_tok_s": {
+          "median": 242.1,
+          "min": 238.6,
+          "max": 247.0,
+          "n": 5
+        },
+        "wall_tok_s": {
+          "median": 29.618169043671735,
+          "min": 29.294574962833046,
+          "max": 30.397041284983796,
+          "n": 5
+        },
+        "wall_s": {
+          "median": 8.643343199997616,
+          "min": 8.421872300001269,
+          "max": 8.738819400001375,
+          "n": 5
+        }
+      },
+      "protocol": {
+        "warmup": 5,
+        "runs": 5,
+        "tokens": 256,
+        "paragraphs": 24,
+        "prompt_set": "iq3-chunk-v1"
+      },
+      "quality": {
+        "correct": 8,
+        "total": 12,
+        "source": "output/verification/20261009-222854-iq3-memory-quality-hybrid-tasks.json"
+      },
+      "source": "data/benchmarks/20261009-222549-iq3-memory-hybrid-measure.json",
+      "status": "Modello alternativo · non adottato come riferimento",
+      "limitations": "Single measured series; not a paired speedup against IQ3_XXS. No broad quality or endurance claim."
+    }
+  ],
+  "alternative_comparisons": [
+    {
+      "title": "Draft italiano su Hybrid",
+      "comparison": {
+        "status": "complete",
+        "stamp": "20261010-001342",
+        "optimization": "--mtp-draft-vocab",
+        "model": "qwen3.8-flash-next-hf_85a248b2_q2_0",
+        "measured_at": "2026-10-10T00:14:30Z",
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "protocol": {
+          "warmup": 5,
+          "runs": 5,
+          "tokens": 256,
+          "paragraphs": 24,
+          "prompt_set": "iq3-chunk-v1"
+        },
+        "expert_slots": 10000,
+        "pooled": {
+          "decode_tok_s": {
+            "control": 67.0,
+            "candidate": 68.95,
+            "change_percent": 2.910447761194024
+          },
+          "prefill_tok_s": {
+            "control": 231.75,
+            "candidate": 231.3,
+            "change_percent": -0.1941747572815511
+          },
+          "wall_s": {
+            "control": 8.75651944999845,
+            "candidate": 8.653416599998309,
+            "change_percent": -1.1774409979773304
+          },
+          "wall_tok_s": {
+            "control": 29.2355065657758,
+            "candidate": 29.586348532943372,
+            "change_percent": 1.2000543461705648
+          }
+        },
+        "measured_requests": 20,
+        "warmup_requests": 20,
+        "arm_medians": {
+          "hybrid-it-base-a1": {
+            "decode_tok_s": 68.0,
+            "prefill_tok_s": 231.4,
+            "wall_s": 8.736924999997427,
+            "wall_tok_s": 29.300926813504223
+          },
+          "hybrid-it-b1": {
+            "decode_tok_s": 69.5,
+            "prefill_tok_s": 231.5,
+            "wall_s": 8.571398899999622,
+            "wall_tok_s": 29.866770055470326
+          },
+          "hybrid-it-b2": {
+            "decode_tok_s": 68.4,
+            "prefill_tok_s": 229.0,
+            "wall_s": 8.754083899999387,
+            "wall_tok_s": 29.24349399941414
+          },
+          "hybrid-it-base-a2": {
+            "decode_tok_s": 66.1,
+            "prefill_tok_s": 232.0,
+            "wall_s": 8.788588399998844,
+            "wall_tok_s": 29.12868237179405
+          }
+        },
+        "exact_response_pairs": 0,
+        "response_pairs": 10,
+        "promotion": false,
+        "limitations": "One ABBA; independent quality and sustained stability required",
+        "control_drift_percent": {
+          "decode_tok_s": -2.794117647058836,
+          "prefill_tok_s": 0.2592912705272177
+        },
+        "confounded": false
+      },
+      "quality": {
+        "status": "complete",
+        "optimization": "--mtp-draft-vocab",
+        "model": "qwen3.8-flash-next-hf_85a248b2_q2_0",
+        "total": 12,
+        "control_correct": 8,
+        "candidate_correct": 8,
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "regressed_cases": [],
+        "improved_cases": [],
+        "sources": [
+          "output/verification/20261009-231401-iq3-memory-quality-hybrid-it-base-tasks.json",
+          "output/verification/20261009-231401-iq3-memory-quality-hybrid-it-candidate-tasks.json"
+        ],
+        "promotion": false,
+        "limitations": "One paired task set; no overall quality claim"
+      },
+      "status": "Da confermare; configurazione del modello invariata"
+    },
+    {
+      "title": "Soglia draft 0,3 su Hybrid",
+      "comparison": {
+        "status": "complete",
+        "stamp": "20261009-232240",
+        "optimization": "--spec-min-p",
+        "model": "qwen3.8-flash-next-hf_85a248b2_q2_0",
+        "measured_at": "2026-10-09T23:23:06Z",
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "protocol": {
+          "warmup": 5,
+          "runs": 5,
+          "tokens": 256,
+          "paragraphs": 24,
+          "prompt_set": "iq3-chunk-v1"
+        },
+        "expert_slots": 10000,
+        "pooled": {
+          "decode_tok_s": {
+            "control": 74.5,
+            "candidate": 70.2,
+            "change_percent": -5.771812080536909
+          },
+          "prefill_tok_s": {
+            "control": 231.2,
+            "candidate": 231.9,
+            "change_percent": 0.3027681660899617
+          },
+          "wall_s": {
+            "control": 8.350256249999802,
+            "candidate": 8.546326300000146,
+            "change_percent": 2.3480722522778663
+          },
+          "wall_tok_s": {
+            "control": 30.657741877555992,
+            "candidate": 29.954481959802166,
+            "change_percent": -2.2939064480436144
+          }
+        },
+        "measured_requests": 20,
+        "warmup_requests": 20,
+        "arm_medians": {
+          "hybrid-minp03-base-a1": {
+            "decode_tok_s": 73.1,
+            "prefill_tok_s": 231.1,
+            "wall_s": 8.451821399998153,
+            "wall_tok_s": 30.28932911432037
+          },
+          "hybrid-minp03-b1": {
+            "decode_tok_s": 71.1,
+            "prefill_tok_s": 232.3,
+            "wall_s": 8.531437400000868,
+            "wall_tok_s": 30.006666871865455
+          },
+          "hybrid-minp03-b2": {
+            "decode_tok_s": 70.0,
+            "prefill_tok_s": 231.5,
+            "wall_s": 8.561215199999424,
+            "wall_tok_s": 29.90229704773888
+          },
+          "hybrid-minp03-base-a2": {
+            "decode_tok_s": 75.6,
+            "prefill_tok_s": 231.3,
+            "wall_s": 8.333498600000894,
+            "wall_tok_s": 30.719390773038892
+          }
+        },
+        "exact_response_pairs": 0,
+        "response_pairs": 10,
+        "promotion": false,
+        "limitations": "One ABBA; independent quality and sustained stability required",
+        "control_drift_percent": {
+          "decode_tok_s": 3.4199726402188713,
+          "prefill_tok_s": 0.08654262224145892
+        },
+        "confounded": false
+      },
+      "quality": null,
+      "status": "Scartato: nessun vantaggio misurato"
+    },
+    {
+      "title": "Finestra draft 3 su Hybrid",
+      "comparison": {
+        "status": "complete",
+        "stamp": "20261009-233920",
+        "optimization": "--spec",
+        "model": "qwen3.8-flash-next-hf_85a248b2_q2_0",
+        "measured_at": "2026-10-09T23:39:49Z",
+        "binary_sha256": "773677146c15ae7ded8006332e48984f08a3c26841f2043905035e2493c8ac44",
+        "protocol": {
+          "warmup": 5,
+          "runs": 5,
+          "tokens": 256,
+          "paragraphs": 24,
+          "prompt_set": "iq3-chunk-v1"
+        },
+        "expert_slots": 10000,
+        "pooled": {
+          "decode_tok_s": {
+            "control": 71.44999999999999,
+            "candidate": 75.1,
+            "change_percent": 5.108467459762078
+          },
+          "prefill_tok_s": {
+            "control": 232.35000000000002,
+            "candidate": 228.65,
+            "change_percent": -1.5924252205724243
+          },
+          "wall_s": {
+            "control": 8.502045699999144,
+            "candidate": 8.43092389999947,
+            "change_percent": -0.8365257316798491
+          },
+          "wall_tok_s": {
+            "control": 30.113067482585606,
+            "candidate": 30.364894532677994,
+            "change_percent": 0.8362716625864186
+          }
+        },
+        "measured_requests": 20,
+        "warmup_requests": 20,
+        "arm_medians": {
+          "hybrid-spec3-base-a1": {
+            "decode_tok_s": 68.4,
+            "prefill_tok_s": 229.4,
+            "wall_s": 8.726677299997391,
+            "wall_tok_s": 29.33533476711423
+          },
+          "hybrid-spec3-b1": {
+            "decode_tok_s": 70.5,
+            "prefill_tok_s": 226.6,
+            "wall_s": 8.514286000001448,
+            "wall_tok_s": 30.067113084991092
+          },
+          "hybrid-spec3-b2": {
+            "decode_tok_s": 76.6,
+            "prefill_tok_s": 229.3,
+            "wall_s": 8.336716800000431,
+            "wall_tok_s": 30.70753225058416
+          },
+          "hybrid-spec3-base-a2": {
+            "decode_tok_s": 74.0,
+            "prefill_tok_s": 233.1,
+            "wall_s": 8.375669400000334,
+            "wall_tok_s": 30.56472119111934
+          }
+        },
+        "exact_response_pairs": 0,
+        "response_pairs": 10,
+        "promotion": false,
+        "limitations": "Control arms differ by more than 5%; pooled change is descriptive, not a stable causal gain. Independent confirmation, quality and sustained stability required.",
+        "control_drift_percent": {
+          "decode_tok_s": 8.187134502923964,
+          "prefill_tok_s": 1.6129032258064502
+        },
+        "confounded": true
+      },
+      "quality": null,
+      "status": "Confronto instabile: da ripetere"
+    }
+  ]
+}

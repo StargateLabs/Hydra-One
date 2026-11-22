@@ -1,0 +1,16 @@
+/* One native scrollbar standard, shared with Benchmark history.
+   Native controls retain keyboard, touch and platform arrow behavior. */
+:root{--app-scrollbar-thumb:var(--st-accent,#2dcc9b)}
+html,body,body *{
+ scrollbar-width:thin!important;
+ scrollbar-color:var(--app-scrollbar-thumb) transparent!important;
+}
+/* Restore bars hidden by older component-specific rules. Modern Chromium
+   uses the native properties above; these are the WebKit fallback. */
+html::-webkit-scrollbar,body::-webkit-scrollbar,body *::-webkit-scrollbar{
+ display:block!important;width:8px;height:8px;
+}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--app-scrollbar-thumb);border-radius:8px}
+::-webkit-scrollbar-corner{background:transparent}
+@media(forced-colors:active){html,body,body *{scrollbar-color:auto!important}}

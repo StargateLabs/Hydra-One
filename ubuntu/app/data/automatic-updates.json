@@ -1,0 +1,550 @@
+{
+  "enabled": true,
+  "state": "ready",
+  "items": [
+    {
+      "id": "colibri",
+      "name": "colibri",
+      "installed_version": null,
+      "version": "v2.2.0",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "colibri",
+        "kind": "engine",
+        "update_method": "isolated_archive",
+        "automatic": true,
+        "validation": "startup",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Isolated Colibri runtime; a validated copy is selected, the previous one stays."
+      }
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "installed_version": null,
+      "version": "2.15.0",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "pytorch",
+        "kind": "library",
+        "update_method": "verified_channel",
+        "automatic": false,
+        "validation": "explicit",
+        "rollback": "selection",
+        "reason": "build_channel_not_verified",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Custom ROCm build: only a matching, verified build channel may update it."
+      }
+    },
+    {
+      "id": "strata",
+      "name": "strata",
+      "installed_version": null,
+      "version": "v0.2.19",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "strata",
+        "kind": "engine",
+        "update_method": "isolated_engine",
+        "automatic": false,
+        "validation": "gpu_explicit",
+        "rollback": "selection",
+        "reason": "engine_requires_operator_validation",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Native engine: startup/libraries can be checked, full GPU inference needs explicit approval."
+      }
+    },
+    {
+      "id": "transformers",
+      "name": "Transformers",
+      "installed_version": null,
+      "version": "5.24.0",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "transformers",
+        "kind": "library",
+        "update_method": "managed_environment",
+        "automatic": false,
+        "validation": "environment",
+        "rollback": "selection",
+        "reason": "managed_by_compatible_environment",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Updated only together with its owning Python environment."
+      }
+    },
+    {
+      "id": "airllm",
+      "name": "AirLLM",
+      "installed_version": null,
+      "version": "4.0.0",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "airllm",
+        "kind": "app",
+        "update_method": "isolated_environment",
+        "automatic": true,
+        "validation": "startup",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Isolated AirLLM candidate; the current environment is preserved."
+      }
+    },
+    {
+      "id": "voicestudio",
+      "name": "voicestudio",
+      "installed_version": null,
+      "version": "v0.5.8",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "voicestudio",
+        "kind": "app",
+        "update_method": "vendor_installer",
+        "automatic": false,
+        "validation": "explicit",
+        "rollback": "manual",
+        "reason": "desktop_installer_not_integrated",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Vendor desktop installer; no safe in-place integration yet."
+      }
+    },
+    {
+      "id": "llama.cpp",
+      "name": "llama.cpp",
+      "installed_version": null,
+      "version": "b12631-mix-acc0843",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "llama.cpp",
+        "kind": "engine",
+        "update_method": "isolated_archive",
+        "automatic": true,
+        "validation": "gpu",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Bounded GPU proof; the verified package is selected, previous kept."
+      }
+    },
+    {
+      "id": "unsloth",
+      "name": "unsloth",
+      "installed_version": null,
+      "version": "v0.1.922-beta",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "unsloth",
+        "kind": "app",
+        "update_method": "vendor_installer",
+        "automatic": false,
+        "validation": "explicit",
+        "rollback": "manual",
+        "reason": "desktop_installer_not_integrated",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Unsloth desktop installer; update only after vendor integration and validation."
+      }
+    },
+    {
+      "id": "soup",
+      "name": "soup",
+      "installed_version": null,
+      "version": "v0.78.0",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "soup",
+        "kind": "app",
+        "update_method": "isolated_archive",
+        "automatic": false,
+        "validation": "training",
+        "rollback": "selection",
+        "reason": "release_requires_training_validation",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Soup releases require a training validation before selection."
+      }
+    },
+    {
+      "id": "whisper.cpp",
+      "name": "whisper.cpp",
+      "installed_version": null,
+      "version": "v1.9.5-unsloth.26",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "whisper.cpp",
+        "kind": "engine",
+        "update_method": "isolated_archive",
+        "automatic": true,
+        "validation": "cpu",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [
+          "matching_runtime_variant"
+        ],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "CPU transcription proof; needs the release variant that matches the installed build."
+      }
+    },
+    {
+      "id": "audio.cpp",
+      "name": "audio.cpp",
+      "installed_version": null,
+      "version": "v0.9.5-unsloth.1",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "audio.cpp",
+        "kind": "engine",
+        "update_method": "isolated_archive",
+        "automatic": true,
+        "validation": "cpu",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Bounded CPU TTS proof; the verified copy is selected, previous kept."
+      }
+    },
+    {
+      "id": "opencode",
+      "name": "opencode",
+      "installed_version": null,
+      "version": "2.3.2",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "opencode",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Isolated npm candidate; session home is backed up and preserved."
+      }
+    },
+    {
+      "id": "dsh",
+      "name": "dsh",
+      "installed_version": null,
+      "version": "0.2.2-rc.5",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "dsh",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Isolated npm candidate; session home is backed up and preserved."
+      }
+    },
+    {
+      "id": "trueforge",
+      "name": "trueforge",
+      "installed_version": null,
+      "version": "0.185.1",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "trueforge",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Isolated npm candidate; session home is backed up and preserved."
+      }
+    },
+    {
+      "id": "browser",
+      "name": "browser",
+      "installed_version": null,
+      "version": "0.0.86",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "browser",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [
+          "mcp_tool_call"
+        ],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "MCP candidate must answer a real browser tool call before selection."
+      }
+    },
+    {
+      "id": "memory",
+      "name": "memory",
+      "installed_version": null,
+      "version": "2.2.1",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "memory",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [
+          "mcp_tool_call"
+        ],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "MCP candidate must answer a real memory tool call before selection."
+      }
+    },
+    {
+      "id": "hermes",
+      "name": "hermes",
+      "installed_version": null,
+      "version": "0.23.3",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "hermes",
+        "kind": "harness",
+        "update_method": "isolated_harness",
+        "automatic": true,
+        "validation": "ui",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [
+          "node>=26",
+          "mcp_http"
+        ],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Hermes 0.23 needs Node >= 26; use a portable Node candidate, never replace the system Node."
+      }
+    },
+    {
+      "id": "claude",
+      "name": "claude",
+      "installed_version": null,
+      "version": "2.1.330",
+      "state": "not_installed",
+      "type": "archive",
+      "reason": "not_installed",
+      "policy": {
+        "id": "claude",
+        "kind": "harness",
+        "update_method": "isolated_native",
+        "automatic": true,
+        "validation": "cli",
+        "rollback": "selection",
+        "reason": null,
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Signed native CLI; version and signature are checked before selection."
+      }
+    },
+    {
+      "id": "runtime:node",
+      "name": "Node.js",
+      "type": "runtime",
+      "version": "24.22.3",
+      "installed_version": "24.19.0",
+      "state": "protected",
+      "reason": "runtime_compatibility_not_verified",
+      "policy": {
+        "id": "runtime:node",
+        "kind": "runtime",
+        "update_method": "portable_runtime",
+        "automatic": false,
+        "validation": "contract",
+        "rollback": "pointer",
+        "reason": "runtime_compatibility_not_verified",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Use a side-by-side portable Node; never replace the system Node in place."
+      }
+    },
+    {
+      "id": "runtime:git",
+      "name": "Git",
+      "type": "runtime",
+      "version": "2.56.1",
+      "installed_version": "2.55.0",
+      "state": "protected",
+      "reason": "runtime_compatibility_not_verified",
+      "policy": {
+        "id": "runtime:git",
+        "kind": "runtime",
+        "update_method": "portable_runtime",
+        "automatic": false,
+        "validation": "contract",
+        "rollback": "pointer",
+        "reason": "runtime_compatibility_not_verified",
+        "safe_leaf_only": false,
+        "requires": [],
+        "preserve": [
+          "mods",
+          "HYDRA",
+          "data"
+        ],
+        "description": "Use a side-by-side portable Git; never replace the system Git in place."
+      }
+    }
+  ],
+  "checked_at": 1795389532.5369318,
+  "last_error": null,
+  "operation": {
+    "state": "idle",
+    "component": null,
+    "bytes": null,
+    "total": null,
+    "error": null
+  },
+  "harness_operation": {
+    "state": "idle",
+    "kind": null,
+    "error": null
+  },
+  "waiting_check": false
+}

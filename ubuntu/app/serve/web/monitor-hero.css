@@ -1,0 +1,14 @@
+/* The user's lab photo, centrally cropped. All monitor controls stay inside the hero. */
+#view-monitor .mon-hero{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:26px;min-height:290px;padding:30px 28px;border:1px solid #9dc4eb38;border-radius:24px 24px 8px 8px;overflow:hidden;background-color:#071127;background-image:linear-gradient(90deg,#04101bd9 0%,#05101b9e 36%,#07112714 76%),linear-gradient(0deg,#020b18a8,transparent 70%),url('monitor-lab-photo.webp');background-size:cover;background-position:center center;background-repeat:no-repeat}
+#view-monitor .mon-hero>div:first-child{position:relative;max-width:700px}
+#view-monitor .mon-hero h1{color:#f2f7ff;margin-top:0}
+#view-monitor .mon-hero .mon-lead{color:#d1ddeb}
+#view-monitor .mon-hero .mon-feed{position:relative;margin:0;padding:12px 16px;border:1px solid #d5e8ff2e;border-radius:13px;background:#06101e70;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);gap:16px;box-shadow:0 4px 20px #00000015}
+#view-monitor .mon-hero .mon-source-control>span,#view-monitor .mon-hero .mon-source-control>.st-icon,#view-monitor .mon-hero #monitor-source-label,#view-monitor .mon-hero .mon-feed-freshness b{color:#d5e2f2}
+#view-monitor .mon-hero .mon-feed[data-stale=true]{border-color:#e8b46d8c}
+#view-monitor .mon-hero .mon-feed[data-stale=true] .mon-feed-freshness b{color:#ffd08c}
+#view-monitor .mon-hero #monitor-source-label{overflow-wrap:anywhere;line-height:1.5}
+@media(max-width:1000px){#view-monitor .mon-hero .mon-feed{gap:12px 18px}#view-monitor .mon-hero #monitor-source-label{order:3;flex-basis:100%}}
+@media(max-width:600px){#view-monitor .mon-hero{padding:24px 20px;gap:28px;min-height:290px;background-position:center center}#view-monitor .mon-hero .mon-feed{padding:13px;gap:12px}#view-monitor .mon-hero .mon-source-control{flex-wrap:wrap;align-items:center;gap:9px;min-width:0}#view-monitor .mon-hero .mon-source-control .premium-select{flex:1;min-width:0}#view-monitor .mon-hero .mon-source-control>span{font-size:11px}#view-monitor .mon-hero #monitor-source-label{order:2;flex-basis:100%;font-size:11px}#view-monitor .mon-hero .mon-feed-freshness{order:3;margin-left:0}}
+
+#view-monitor .mon-hero .mon-feed .premium-select-button{background:rgba(12,23,36,.40);border-color:rgba(213,232,255,.20)}

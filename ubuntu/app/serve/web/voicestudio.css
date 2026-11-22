@@ -1,0 +1,31 @@
+.voicestudio-panel{margin-top:var(--st-s-6);padding-top:var(--st-s-6);border-top:1px solid var(--st-line);color:var(--st-ink)}
+.voicestudio-header{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--st-s-4)}
+.voicestudio-header h3{margin:0;font-size:var(--st-fs-xl)}
+.voicestudio-header p{margin:var(--st-s-2) 0;color:var(--st-ink-muted);max-width:65ch}
+.voicestudio-actions{display:flex;flex-wrap:wrap;gap:var(--st-s-2);margin:var(--st-s-4) 0}
+.voicestudio-workspace{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--st-s-5)}
+.voicestudio-workspace form{display:flex;flex-direction:column;gap:var(--st-s-3)}
+.voicestudio-workspace small,.voicestudio-workspace aside p{color:var(--st-ink-muted);line-height:var(--st-lh-body)}
+.voicestudio-workspace audio{width:100%;margin:var(--st-s-3) 0}
+#vs-mcp{overflow-wrap:anywhere;font-family:var(--st-font-mono);font-size:var(--st-fs-xs)}
+#vs-text{resize:vertical;min-height:110px}
+#voicestudio-panel [hidden]{display:none!important}
+.voicestudio-panel .unified-model-details{border:1px solid var(--st-line);border-radius:12px;padding:12px;margin:12px 0;min-width:0}
+.voicestudio-panel .unified-model-details>summary{cursor:pointer;font-weight:600;padding:4px 0}
+.voicestudio-panel .unified-model-details[open]>summary{margin-bottom:12px}
+.voicestudio-panel .generation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.voicestudio-panel .generation-grid label{display:flex;flex-direction:column;gap:8px;min-width:0}
+.voicestudio-panel .generation-grid .st-input{box-sizing:border-box;width:100%;min-width:0;min-height:44px}
+.voicestudio-library p{overflow-wrap:anywhere}
+.voicestudio-library .st-btn{margin:4px 8px 4px 0;min-height:44px;white-space:normal}
+.voicestudio-library select{max-width:100%;width:100%;margin:8px 0}
+@media(max-width:760px){.voicestudio-panel .generation-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.voicestudio-workspace{grid-template-columns:1fr}.voicestudio-header{flex-direction:column}.voicestudio-actions .st-btn{min-height:44px}}
+
+.voicestudio-embedded{margin-top:24px;border:1px solid var(--st-line);border-radius:16px;overflow:hidden;scroll-margin-top:90px}
+.voicestudio-embedded>header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--st-surface)}
+.voicestudio-embedded iframe{display:block;width:100%;height:min(85dvh,1000px);min-height:560px;border:0;background:#15121a}
+.voicestudio-embedded[hidden]{display:none!important}
+@media(max-width:700px){.voicestudio-embedded iframe{min-height:480px;height:80dvh}.voicestudio-embedded>header{padding:10px}}
+.voicestudio-native iframe{width:100%;height:min(780px,80vh);min-height:420px;border:1px solid var(--st-border,#30393c);border-radius:12px;background:var(--st-surface,#171c1e);display:block;margin-top:12px}
+.voicestudio-native iframe[hidden]{display:none}

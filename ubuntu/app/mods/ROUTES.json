@@ -1,0 +1,811 @@
+{
+  "base": "v0.1.42",
+  "source": "serve/server.py",
+  "target": "v0.2.9",
+  "blocks": {
+    "GET": [
+      {
+        "line": 2831,
+        "condition": "os.environ.get('HYDRA_LAB_MODE') != '1' and path.startswith('/lab/benchmarks/api/')",
+        "paths": [
+          "/lab/benchmarks/api/"
+        ],
+        "sha256": "b6b9d3e43f26ed1c1b8f397df58e58699730e99b69ec8b335dda61370f26976d"
+      },
+      {
+        "line": 2837,
+        "condition": "os.environ.get('HYDRA_LAB_MODE') == '1' and path.startswith('/lab/benchmarks/')",
+        "paths": [
+          "/lab/benchmarks/"
+        ],
+        "sha256": "230d1a515398503f230dd47c5d7929c7cad840162be399fa882459d16c2fe798"
+      },
+      {
+        "line": 2843,
+        "condition": "hydra_native_route(self, svc, path)",
+        "paths": [],
+        "sha256": "916dd3db7aefe862f5df9dbef1e74f59d0e4c3f82ff5dfe8d5b4b8dfd274da03"
+      },
+      {
+        "line": 2845,
+        "condition": "codex_original_route(self, svc, path)",
+        "paths": [],
+        "sha256": "70654f0e483bce6af66558be00cbb6f79b20eaf11e6731760a9cb0d4971a4f9b"
+      },
+      {
+        "line": 2847,
+        "condition": "groq_voice_route(self, svc, path)",
+        "paths": [],
+        "sha256": "d6fd8b43a2f2c0d1aa41ea3ea7a47ea8bba78550abeb3d87a2465afae51efd62"
+      },
+      {
+        "line": 2849,
+        "condition": "cloud_provider_route(self, svc, path)",
+        "paths": [],
+        "sha256": "b1d3db9ee03b731dbef775a56af52da377b8f8d10dc5b85d5f3d18a3df6b9ace"
+      },
+      {
+        "line": 2851,
+        "condition": "original_get(self, svc, path)",
+        "paths": [],
+        "sha256": "b28ac5d77e1d2da55b01d5b8cb2b9608d47032ef9e5b84e481028b5467abe63b"
+      },
+      {
+        "line": 2853,
+        "condition": "generation_get(self, svc, path)",
+        "paths": [],
+        "sha256": "30d2dceb47059653837d45b26e45800e515618d40d44b660a1008e0b0d150a97"
+      },
+      {
+        "line": 2855,
+        "condition": "native_get(self, svc, path)",
+        "paths": [],
+        "sha256": "4c3a006c5fb2589e178338009d40eaf494251b9aba63d18461f6c183b2f23369"
+      },
+      {
+        "line": 2857,
+        "condition": "automatic_get(self, svc, path)",
+        "paths": [],
+        "sha256": "ec1835cc75baf60fd64e8aa480c23c7fb4da6696b5c91717daf3bbd8238eedbb"
+      },
+      {
+        "line": 2859,
+        "condition": "model_engine_get(self, svc, path)",
+        "paths": [],
+        "sha256": "bdfa35eb33354fd0f237f4cfe412d69900465ab32e4aeebdafe5c059d733be2d"
+      },
+      {
+        "line": 2860,
+        "condition": "path == '/multimedia-capabilities'",
+        "paths": [
+          "/multimedia-capabilities"
+        ],
+        "sha256": "048a84b3ad6cc1ae0e3bbc59f34c09a09f1e4c5907ebb68b954ec4b9dc66d824"
+      },
+      {
+        "line": 2865,
+        "condition": "path == '/inference-backends'",
+        "paths": [
+          "/inference-backends"
+        ],
+        "sha256": "81eded89652e08f74b3c6c562f5f386d18235e9e8c8d194877dd72aa93bd22d0"
+      },
+      {
+        "line": 2868,
+        "condition": "path == '/local-separation'",
+        "paths": [
+          "/local-separation"
+        ],
+        "sha256": "7290f21b996498a02dcbba5edd4fd6e486c35908c6c49c3df7a2ef4b8f5e6eb4"
+      },
+      {
+        "line": 2871,
+        "condition": "path == '/local-speech'",
+        "paths": [
+          "/local-speech"
+        ],
+        "sha256": "18e7e34e0ce2c571a97c25708a7a51678967a7ec2255f4c961bf4b99dd5ceb37"
+      },
+      {
+        "line": 2874,
+        "condition": "path == '/local-speech/library' or path.startswith('/local-speech/artifact/')",
+        "paths": [
+          "/local-speech/library",
+          "/local-speech/artifact/"
+        ],
+        "sha256": "9b5f77cfe42c25ec8c4380a96bed6253e137895c1c5c3b83f19f550b6e2318db"
+      },
+      {
+        "line": 2885,
+        "condition": "path == '/local-audio'",
+        "paths": [
+          "/local-audio"
+        ],
+        "sha256": "61e97b6450385e8b4953be1f2d2619d3101337d58fddc0976f63d758a61f989f"
+      },
+      {
+        "line": 2888,
+        "condition": "path == '/voicestudio/engines'",
+        "paths": [
+          "/voicestudio/engines"
+        ],
+        "sha256": "36ba1e41baa569f60c940e06e861279f2c7b662e45932f50caae4b8ae6433d8d"
+      },
+      {
+        "line": 2892,
+        "condition": "path == '/open-webui/documents'",
+        "paths": [
+          "/open-webui/documents"
+        ],
+        "sha256": "aac12e2fdf9f1109803c66eddea9752f30eb406cbab4f623e2fb680a21231478"
+      },
+      {
+        "line": 2895,
+        "condition": "path == '/open-webui'",
+        "paths": [
+          "/open-webui"
+        ],
+        "sha256": "464bad96cccdaadaa87f2422d1847146ee1865d1faa46edfb7ee276acb9b29c4"
+      },
+      {
+        "line": 2898,
+        "condition": "path == '/airllm'",
+        "paths": [
+          "/airllm"
+        ],
+        "sha256": "c4cd3a92ed68ad72cc733459d21574d1a24e6486f9baf2d6300e61fab0f58d92"
+      },
+      {
+        "line": 2901,
+        "condition": "path == '/voicestudio/workspace'",
+        "paths": [
+          "/voicestudio/workspace"
+        ],
+        "sha256": "ac16b193a54abac5683ebb08d74e66adf91341d00487d4103c43940ef8b9dd66"
+      },
+      {
+        "line": 2906,
+        "condition": "path == '/voicestudio/activities'",
+        "paths": [
+          "/voicestudio/activities"
+        ],
+        "sha256": "d861e68b88496c8626b6d59327b7f4a81ce9af13e7f27884c91669346c9f2190"
+      },
+      {
+        "line": 2911,
+        "condition": "path in ('/voicestudio', '/voicestudio/voices', '/voicestudio/setup')",
+        "paths": [
+          "/voicestudio",
+          "/voicestudio/voices",
+          "/voicestudio/setup"
+        ],
+        "sha256": "f5d38eb31ac1922ca6cfbb333a4d0ca67af31fa103aa9ff29b547ab9ad735507"
+      },
+      {
+        "line": 2916,
+        "condition": "path == '/harness/antigravity/status'",
+        "paths": [
+          "/harness/antigravity/status"
+        ],
+        "sha256": "f8fe4db8a2bb2c2a251c343581bb327553eff1c086cc1de9a8c862b54dd8d6bc"
+      },
+      {
+        "line": 2921,
+        "condition": "path == '/local-training'",
+        "paths": [
+          "/local-training"
+        ],
+        "sha256": "60ced16bfd3a9f2fafb32801d1b66c616db57f92b57805846591e99d3daa6b57"
+      },
+      {
+        "line": 2924,
+        "condition": "path == '/updates/health'",
+        "paths": [
+          "/updates/health"
+        ],
+        "sha256": "f7b413e8dbb40205845c2a8fa7bde54facdecf32558190991891b4264f4aac22"
+      },
+      {
+        "line": 2927,
+        "condition": "path == '/updates'",
+        "paths": [
+          "/updates"
+        ],
+        "sha256": "bdd6df1d19e2b0f164ff1f5c32a98cc1ba65821a94a4df551607e75740740629"
+      },
+      {
+        "line": 2930,
+        "condition": "path == '/local-export'",
+        "paths": [
+          "/local-export"
+        ],
+        "sha256": "91792c620d08cb86e3c59fcc913ce56836cf4f61c201810a6eeb6e07c9870322"
+      },
+      {
+        "line": 2933,
+        "condition": "path == '/optional-catalogue'",
+        "paths": [
+          "/optional-catalogue"
+        ],
+        "sha256": "dff5d5795d4b44a999493fde05be00d62643ba7f22a81e752197bcbfce4b85f0"
+      },
+      {
+        "line": 2936,
+        "condition": "path == '/benchmark-lab'",
+        "paths": [
+          "/benchmark-lab"
+        ],
+        "sha256": "bf28ce3a2edc703b114c1269f3ce9f71214a131ebbbd256fcaff5653b9bd7e03"
+      },
+      {
+        "line": 3016,
+        "condition": "path == '/power'",
+        "paths": [
+          "/power"
+        ],
+        "sha256": "ba30be258cdd350787959537943c5fa110c8675766b2bc2e88060f9107a828e8"
+      },
+      {
+        "line": 3030,
+        "condition": "path == '/catalogue'",
+        "paths": [
+          "/catalogue"
+        ],
+        "sha256": "a460dd419353d28c31cefc1af7d036649327841f11934232e15aa0ba78cbc355"
+      },
+      {
+        "line": 3034,
+        "condition": "path == '/benchmarks'",
+        "paths": [
+          "/benchmarks"
+        ],
+        "sha256": "25e705c125db7ec3760223c91b0df99d8f790fc06fd53b2d46cf067a98b0e0f6"
+      },
+      {
+        "line": 3058,
+        "condition": "path in ('/harness/mcp', '/harness/browser-mcp', '/harness/memory-mcp')",
+        "paths": [
+          "/harness/mcp",
+          "/harness/browser-mcp",
+          "/harness/memory-mcp"
+        ],
+        "sha256": "e81495f5b4c54068747cd49b88bd811fe2375f8c59b441c13fcd15a0264c7e1d"
+      },
+      {
+        "line": 3060,
+        "condition": "path.startswith('/harness/')",
+        "paths": [
+          "/harness/"
+        ],
+        "sha256": "c9802143613c2b0fdc2850f871026c715d2e24d9b6b0d296fd39b39b4ff35715"
+      },
+      {
+        "line": 3072,
+        "condition": "path in ('/updates/restart-pending', '/updates/restart', '/updates/restart-dismiss')",
+        "paths": [
+          "/updates/restart-pending",
+          "/updates/restart",
+          "/updates/restart-dismiss"
+        ],
+        "sha256": "6989a86f2884a8906764e0516052b9f607180991b30ccc33c6773a05dd658dcc"
+      },
+      {
+        "line": 3091,
+        "condition": "path == '/chat/archive'",
+        "paths": [
+          "/chat/archive"
+        ],
+        "sha256": "60351b3af8b677f33754de275be89b803c29e77841d4f4604ebf11ff827992b8"
+      },
+      {
+        "line": 3108,
+        "condition": "path == '' or (path == '/api-monitor' and svc.api_monitor)",
+        "paths": [
+          "/api-monitor"
+        ],
+        "sha256": "0ae95cc2d673ee8b74818d9e5bb3d62506758ade7a07ab12b20ed0c170d10e0a"
+      },
+      {
+        "line": 3145,
+        "condition": "path in ('/v1/models', '/models')",
+        "paths": [
+          "/v1/models",
+          "/models"
+        ],
+        "sha256": "5d28fe5a9850b9dcc22498a0b8bd79fc80cd39bd3fbf4a5d3e479dfb0de04769"
+      },
+      {
+        "line": 3025,
+        "condition": "path == '/config'",
+        "paths": [
+          "/config"
+        ],
+        "sha256": "8c11ebd1a4c3e78a8f118aa1cb9d84c2c9e2aa4286faabd160c09d7351f4bf9b"
+      },
+      {
+        "line": 2967,
+        "condition": "path.startswith('/web/')",
+        "paths": [
+          "/web/"
+        ],
+        "sha256": "e54049f643e7d6aa7948d8c5152a25fe4790e44f0a055d6e851ff2d69be7b8fd"
+      }
+    ],
+    "POST": [
+      {
+        "line": 3196,
+        "condition": "os.environ.get('HYDRA_LAB_MODE') == '1' and path.startswith('/lab/benchmarks/')",
+        "paths": [
+          "/lab/benchmarks/"
+        ],
+        "sha256": "3975c029314efa70a5b36c989d2419f380cc7230cb9c069ccc01be253f73d24d"
+      },
+      {
+        "line": 3202,
+        "condition": "hydra_native_route(self, svc, path, post=True)",
+        "paths": [],
+        "sha256": "4c0a22b5eafb7afc72c4b9b8b90c731696ab4a3af4b96e01f439027d333f71c9"
+      },
+      {
+        "line": 3204,
+        "condition": "hydra_control_route(self, svc, path)",
+        "paths": [],
+        "sha256": "5009566635d7be85a20859b7cf89e9f6e5f8602a4b38ae6064a6fa7734d39f26"
+      },
+      {
+        "line": 3206,
+        "condition": "codex_original_route(self, svc, path, post=True)",
+        "paths": [],
+        "sha256": "6643dad2526d0e7e53f35c3028233dc97c08754d7f8fd2781983138e98e6abda"
+      },
+      {
+        "line": 3208,
+        "condition": "groq_voice_route(self, svc, path, post=True)",
+        "paths": [],
+        "sha256": "d85d85d503ed7782d1a057d676fe2fbd41efed1a21807aa9f7ffe375119d8525"
+      },
+      {
+        "line": 3210,
+        "condition": "cloud_provider_route(self, svc, path, post=True)",
+        "paths": [],
+        "sha256": "e44620f2bce0c1ddbf488f34709694e86806bf37e55e905ddf260d3914c75c23"
+      },
+      {
+        "line": 3212,
+        "condition": "original_post(self, svc, path)",
+        "paths": [],
+        "sha256": "525e3808464f07c5dec3296cdddf619410e011475cd7530dc57191ee12762eb7"
+      },
+      {
+        "line": 3214,
+        "condition": "generation_post(self, svc, path)",
+        "paths": [],
+        "sha256": "9a8e91adb30cde006102b33f512801dc98d830279b63fc06744aa607a8bbb427"
+      },
+      {
+        "line": 3216,
+        "condition": "native_post(self, svc, path)",
+        "paths": [],
+        "sha256": "f06e491eb3017435d2f76c7bf8f04ae8d6e46bc843bf1d88c29ae30a3d15a747"
+      },
+      {
+        "line": 3218,
+        "condition": "automatic_post(self, svc, path)",
+        "paths": [],
+        "sha256": "5f06414e297b69e58ba8944bbbeb1c7ac3af5721e367ae8e6651049efada7f38"
+      },
+      {
+        "line": 3219,
+        "condition": "path == '/open-webui/prepare'",
+        "paths": [
+          "/open-webui/prepare"
+        ],
+        "sha256": "43ad11095317a109f34fa732fa82c940617e38545b8d831b69a1a84c1575d9b5"
+      },
+      {
+        "line": 3228,
+        "condition": "path in ('/open-webui/documents/upload', '/open-webui/documents/metadata', '/open-webui/documents/read', '/open-webui/documents/search-library', '/open-webui/documents/search', '/open-webui/documents/remove', '/open-webui/documents/attach', '/open-webui/documents/cancel', '/open-webui/documents/import-embedding', '/open-webui/context')",
+        "paths": [
+          "/open-webui/documents/upload",
+          "/open-webui/documents/metadata",
+          "/open-webui/documents/read",
+          "/open-webui/documents/search-library",
+          "/open-webui/documents/search",
+          "/open-webui/documents/remove",
+          "/open-webui/documents/attach",
+          "/open-webui/documents/cancel",
+          "/open-webui/documents/import-embedding",
+          "/open-webui/context"
+        ],
+        "sha256": "306cd5dff1ef474e806f51a5b4fef8e1dd72438836306e32d765b239c5e490cb"
+      },
+      {
+        "line": 3243,
+        "condition": "path in ('/airllm/prepare', '/airllm/rollback')",
+        "paths": [
+          "/airllm/prepare",
+          "/airllm/rollback"
+        ],
+        "sha256": "c0c535d59e08dc9495780c06d276eb0fac29d60102732551bdb7e2a7fceb6e57"
+      },
+      {
+        "line": 3251,
+        "condition": "path == '/chat/context/compact'",
+        "paths": [
+          "/chat/context/compact"
+        ],
+        "sha256": "5a14d854c699f589680ef7102e861c5e79f442084037ba1beb04ec89ae0f2fa3"
+      },
+      {
+        "line": 3260,
+        "condition": "path == '/voicestudio/audiobook/render'",
+        "paths": [
+          "/voicestudio/audiobook/render"
+        ],
+        "sha256": "5a8910144de42834cec74066bffff313e0089393f54ee23f8b8beef55c46db61"
+      },
+      {
+        "line": 3267,
+        "condition": "path == '/voicestudio/audiobook/cancel'",
+        "paths": [
+          "/voicestudio/audiobook/cancel"
+        ],
+        "sha256": "dcdcd56fd0d95d0795e10e9f5288bd90a7a144f426d498fea1f3710d043febe2"
+      },
+      {
+        "line": 3275,
+        "condition": "path in ('/voicestudio/launch', '/voicestudio/speech', '/voicestudio/connect-mcp', '/voicestudio/install', '/voicestudio/engine/select', '/voicestudio/web/start', '/voicestudio/stop', '/voicestudio/pronunciation', '/voicestudio/profile', '/voicestudio/job')",
+        "paths": [
+          "/voicestudio/launch",
+          "/voicestudio/speech",
+          "/voicestudio/connect-mcp",
+          "/voicestudio/install",
+          "/voicestudio/engine/select",
+          "/voicestudio/web/start",
+          "/voicestudio/stop",
+          "/voicestudio/pronunciation",
+          "/voicestudio/profile",
+          "/voicestudio/job"
+        ],
+        "sha256": "4d270cac06c9bae70088f78c8228ae5738bb2b1b1ed14d2c29323c6204747c7a"
+      },
+      {
+        "line": 3309,
+        "condition": "path == '/harness/antigravity/web/start'",
+        "paths": [
+          "/harness/antigravity/web/start"
+        ],
+        "sha256": "7d2cdccb0e720ad0daa8b9c67a730460e484eb337fa4af465d6d532e0e8061e4"
+      },
+      {
+        "line": 3314,
+        "condition": "path == '/harness/antigravity/web/stop'",
+        "paths": [
+          "/harness/antigravity/web/stop"
+        ],
+        "sha256": "8deb5d83f65e64b0ef8705b149a8df6c6dbac467cdd42d6e25d0fccb4f84d255"
+      },
+      {
+        "line": 3317,
+        "condition": "path == '/harness/antigravity/desktop'",
+        "paths": [
+          "/harness/antigravity/desktop"
+        ],
+        "sha256": "3e173161da6d6e71179c087be256bee0deded18eeb87cf9ffbe3cda94e81c9c1"
+      },
+      {
+        "line": 3324,
+        "condition": "path == '/local-separation/stop'",
+        "paths": [
+          "/local-separation/stop"
+        ],
+        "sha256": "b8bd5e79d68317d37a94081f4cdd319dea3ca8a903b66e830d6f1f85f876788f"
+      },
+      {
+        "line": 3327,
+        "condition": "path == '/local-separation/run'",
+        "paths": [
+          "/local-separation/run"
+        ],
+        "sha256": "207998cb5bbad72f1e9dd0bfb9e9d3c5bd1a39f9cd3ea10f10cb239007999b9d"
+      },
+      {
+        "line": 3336,
+        "condition": "path == '/local-speech/library/import'",
+        "paths": [
+          "/local-speech/library/import"
+        ],
+        "sha256": "79db6f264782804326ac72422423df11ce876de48579036cd33d566302cde0e1"
+      },
+      {
+        "line": 3344,
+        "condition": "path == '/local-speech/library/export'",
+        "paths": [
+          "/local-speech/library/export"
+        ],
+        "sha256": "e3536b40018d3f2c757325819a4ce4fce8005d5cdb52671ccdb119bedd3ff1da"
+      },
+      {
+        "line": 3354,
+        "condition": "path == '/local-speech/library/edit'",
+        "paths": [
+          "/local-speech/library/edit"
+        ],
+        "sha256": "11dfb6717a790a87c45090077d4a5538da7fba4920abec0f2638692e2270dd52"
+      },
+      {
+        "line": 3363,
+        "condition": "path == '/local-speech/library/delete'",
+        "paths": [
+          "/local-speech/library/delete"
+        ],
+        "sha256": "90e9cecbd6034ed84253c27491273c757ead1286340ae773fc90511942b50006"
+      },
+      {
+        "line": 3373,
+        "condition": "path == '/updates/vendor-allowlist'",
+        "paths": [
+          "/updates/vendor-allowlist"
+        ],
+        "sha256": "5d24eb4488013ac2ad1601f3f2e6f6c92edcda41f3183d19cf36a8f2f95d1f4e"
+      },
+      {
+        "line": 3380,
+        "condition": "path in ('/updates/harness-install', '/updates/harness-activate', '/updates/harness-rollback')",
+        "paths": [
+          "/updates/harness-install",
+          "/updates/harness-activate",
+          "/updates/harness-rollback"
+        ],
+        "sha256": "1881b93159a1e36fbd2f7712223f3a6f397350056c065660b4501ac5015ee0f5"
+      },
+      {
+        "line": 3400,
+        "condition": "path in ('/updates/health-check', '/updates/repair-missing')",
+        "paths": [
+          "/updates/health-check",
+          "/updates/repair-missing"
+        ],
+        "sha256": "90a51506c054266e32255ce898940f1cab90cd72eed02e5b08e023de41859579"
+      },
+      {
+        "line": 3410,
+        "condition": "path in ('/updates/validate-visual-python', '/updates/select-visual-python', '/updates/rollback-visual-python', '/updates/validate-document-python', '/updates/select-document-python', '/updates/rollback-document-python', '/updates/validate-inference-python', '/updates/validate-audio-python', '/updates/select-audio-python', '/updates/rollback-audio-python', '/updates/select-inference-python', '/updates/rollback-inference-python', '/updates/llama-gpu-activate', '/updates/llama-gpu-rollback', '/updates/soup-prepare', '/updates/soup-activate', '/updates/soup-rollback', '/updates/check', '/updates/stage', '/updates/cancel', '/updates/prepare', '/updates/validate', '/updates/activate', '/updates/rollback', '/updates/dependencies', '/updates/install-dependencies', '/updates/select-python', '/updates/rollback-python', '/updates/validate-python', '/updates/validate-inference')",
+        "paths": [
+          "/updates/validate-visual-python",
+          "/updates/select-visual-python",
+          "/updates/rollback-visual-python",
+          "/updates/validate-document-python",
+          "/updates/select-document-python",
+          "/updates/rollback-document-python",
+          "/updates/validate-inference-python",
+          "/updates/validate-audio-python",
+          "/updates/select-audio-python",
+          "/updates/rollback-audio-python",
+          "/updates/select-inference-python",
+          "/updates/rollback-inference-python",
+          "/updates/llama-gpu-activate",
+          "/updates/llama-gpu-rollback",
+          "/updates/soup-prepare",
+          "/updates/soup-activate",
+          "/updates/soup-rollback",
+          "/updates/check",
+          "/updates/stage",
+          "/updates/cancel",
+          "/updates/prepare",
+          "/updates/validate",
+          "/updates/activate",
+          "/updates/rollback",
+          "/updates/dependencies",
+          "/updates/install-dependencies",
+          "/updates/select-python",
+          "/updates/rollback-python",
+          "/updates/validate-python",
+          "/updates/validate-inference"
+        ],
+        "sha256": "0fa3c664ad28bd2de8fbcda08f011d957f863ba3901b9c5c8e6b22ff7535ce76"
+      },
+      {
+        "line": 3421,
+        "condition": "path in ('/local-export/preflight', '/local-export/start', '/local-export/stop')",
+        "paths": [
+          "/local-export/preflight",
+          "/local-export/start",
+          "/local-export/stop"
+        ],
+        "sha256": "5cdd1dae9e6303aa2b4913ed90c63c717d366a6be0ba94c1975424d06e64d8f0"
+      },
+      {
+        "line": 3435,
+        "condition": "path in ('/local-speech/start', '/local-speech/stop', '/local-speech/generate', '/v1/audio/speech')",
+        "paths": [
+          "/local-speech/start",
+          "/local-speech/stop",
+          "/local-speech/generate",
+          "/v1/audio/speech"
+        ],
+        "sha256": "4c9a5049cbd89229dd1d33dcc1bcf29292a510bb485f55e33b5970de1fc885ea"
+      },
+      {
+        "line": 3458,
+        "condition": "path == '/local-audio/process'",
+        "paths": [
+          "/local-audio/process"
+        ],
+        "sha256": "9aa9770fe06faef7cb18916181087c028d03d9de74d401e49c973f64e695e59a"
+      },
+      {
+        "line": 3470,
+        "condition": "path in ('/local-audio/start', '/local-audio/stop', '/local-audio/transcribe', '/v1/audio/transcriptions', '/v1/audio/translations')",
+        "paths": [
+          "/local-audio/start",
+          "/local-audio/stop",
+          "/local-audio/transcribe",
+          "/v1/audio/transcriptions",
+          "/v1/audio/translations"
+        ],
+        "sha256": "6406b274bd0507a12520b34019231f3d424bb0bfbfe6ab906185b31e4ed0ec01"
+      },
+      {
+        "line": 3509,
+        "condition": "path in ('/local-training/start', '/local-training/stop', '/local-training/preflight', '/local-training/upload', '/local-training/split', '/local-training/session')",
+        "paths": [
+          "/local-training/start",
+          "/local-training/stop",
+          "/local-training/preflight",
+          "/local-training/upload",
+          "/local-training/split",
+          "/local-training/session"
+        ],
+        "sha256": "be3c3f64654a672483ce81ce03388f2402cc29b71fb4b0703099d1781491bb0e"
+      },
+      {
+        "line": 3520,
+        "condition": "path in ('/optional-catalogue/search', '/optional-catalogue/download', '/optional-catalogue/cancel', '/optional-catalogue/details', '/optional-catalogue/delete')",
+        "paths": [
+          "/optional-catalogue/search",
+          "/optional-catalogue/download",
+          "/optional-catalogue/cancel",
+          "/optional-catalogue/details",
+          "/optional-catalogue/delete"
+        ],
+        "sha256": "26c714595435d75f8ced6d5a03c163eb78cb8be9e4299723c1bb38a2cb4bfac8"
+      },
+      {
+        "line": 3536,
+        "condition": "path in ('/harness/mcp', '/harness/browser-mcp', '/harness/memory-mcp')",
+        "paths": [
+          "/harness/mcp",
+          "/harness/browser-mcp",
+          "/harness/memory-mcp"
+        ],
+        "sha256": "456e7413251cbda122914b28df1eef552d08debfc66e248e316a3b4ef094acbe"
+      },
+      {
+        "line": 3547,
+        "condition": "path == '/harness/claude/desktop'",
+        "paths": [
+          "/harness/claude/desktop"
+        ],
+        "sha256": "5bd824a3dc409bc235fa096f8d0158754ccdc398fdc243c16db3cf36fd6f43ba"
+      },
+      {
+        "line": 3554,
+        "condition": "path in ('/harness/claude/run', '/harness/claude/new-session')",
+        "paths": [
+          "/harness/claude/run",
+          "/harness/claude/new-session"
+        ],
+        "sha256": "adf9b0b8bb35d47ebf6eb0c6398f631ac10ca3598b8782bff7c38f09ed4b05ad"
+      },
+      {
+        "line": 3571,
+        "condition": "path.startswith('/harness/')",
+        "paths": [
+          "/harness/"
+        ],
+        "sha256": "8d6b3f7f94a058fc79583cb9849fd58fd5debeaee3c2d3e194db84e056e9abc3"
+      },
+      {
+        "line": 3583,
+        "condition": "path in ('/inference-backends/start', '/inference-backends/stop', '/inference-backends/chat', '/inference-backends/probe', '/inference-backends/context-plan', '/inference-backends/fit', '/inference-backends/rescan')",
+        "paths": [
+          "/inference-backends/start",
+          "/inference-backends/stop",
+          "/inference-backends/chat",
+          "/inference-backends/probe",
+          "/inference-backends/context-plan",
+          "/inference-backends/fit",
+          "/inference-backends/rescan"
+        ],
+        "sha256": "42b4d788cbff8c7d87d29ad908d20a568f420f57201dd0153be9e7e956577da3"
+      },
+      {
+        "line": 3615,
+        "condition": "path in ('/benchmark-lab/start', '/benchmark-lab/stop')",
+        "paths": [
+          "/benchmark-lab/start",
+          "/benchmark-lab/stop"
+        ],
+        "sha256": "140974e6adbff71fc654e9958990e7653cf591234ae15d6e8af71e831ad972e7"
+      },
+      {
+        "line": 3637,
+        "condition": "path == '/power'",
+        "paths": [
+          "/power"
+        ],
+        "sha256": "9239aeb12ad2fe64ca50505273535a4cd270bb18cd5342ccab3b892f4e02f2ca"
+      },
+      {
+        "line": 3661,
+        "condition": "path in ('/config', '/setup-download', '/switch-model', '/catalogue-inspect', '/catalogue-search', '/catalogue-fetch') and (not self._own_page('resources and models can be changed'))",
+        "paths": [
+          "/config",
+          "/setup-download",
+          "/switch-model",
+          "/catalogue-inspect",
+          "/catalogue-search",
+          "/catalogue-fetch"
+        ],
+        "sha256": "26d37666444df7f7bd94b726d1eed3501873303e535d7db517414a98417cfdc6"
+      },
+      {
+        "line": 3663,
+        "condition": "path == '/config'",
+        "paths": [
+          "/config"
+        ],
+        "sha256": "59cc0791a723717d6cad80933135259723468b4d0202090513e168bcbad5d769"
+      },
+      {
+        "line": 3684,
+        "condition": "path == '/setup-download'",
+        "paths": [
+          "/setup-download"
+        ],
+        "sha256": "134ad5b8667b5d5088381422c8eefb89256db4ca3a1d97c53ed86d17fdf19513"
+      },
+      {
+        "line": 3694,
+        "condition": "path == '/catalogue-inspect'",
+        "paths": [
+          "/catalogue-inspect"
+        ],
+        "sha256": "4a9e841282a6ff391c5a071bb4abbbc7ee46cd6542e957fc20ba8c1da71cee34"
+      },
+      {
+        "line": 3702,
+        "condition": "path == '/catalogue-search'",
+        "paths": [
+          "/catalogue-search"
+        ],
+        "sha256": "1ddeb596b1cc7047849f15204ec0cfd7fa7729e18d9baba753ea0f152a409420"
+      },
+      {
+        "line": 3709,
+        "condition": "path == '/catalogue-fetch'",
+        "paths": [
+          "/catalogue-fetch"
+        ],
+        "sha256": "e15e28dfad37c31da975d291ba1aab044bb23b3e9daa39a881d803030a27f1a9"
+      },
+      {
+        "line": 3719,
+        "condition": "path == '/switch-model'",
+        "paths": [
+          "/switch-model"
+        ],
+        "sha256": "79d1dd61076114d893ab4cf5384572039b2f63b451abe1e1d41c3724d0bab5a5"
+      },
+      {
+        "line": 0,
+        "condition": "path == \"/chat/archive\"",
+        "paths": [
+          "/chat/archive"
+        ],
+        "sha256": "c3aac4a35a63e5a008a039677dba738acc0002585816b1045e5f482963218ea5"
+      }
+    ]
+  }
+}

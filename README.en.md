@@ -1,5 +1,19 @@
 <p align="center"><img src="assets/hero.svg" alt="Hydra One — original Hydra One and Stargate Labs branding" width="1280"></p>
 
+
+
+
+# Hydra One
+
+> **Ubuntu sources:** the experimental Linux snapshot is available in [ubuntu/](ubuntu/README.md), separate from the Windows desktop source. See setup, prerequisites and verification limits.
+
+**Hybrid inference. Local models. A controlled laboratory.**
+
+[Italiano](README.md) · [English](README.en.md) · [Installation](docs/INSTALL.en.md) · [Features](docs/FEATURES.md) · [Credits](docs/CREDITS.en.md)
+
+[![Beta](https://img.shields.io/badge/status-beta-16c9e8?style=flat-square)](docs/FEATURES.md) [![License](https://img.shields.io/badge/license-MIT-8faac0?style=flat-square)](LICENSE) [![Stars](https://img.shields.io/github/stars/StargateLabs/Hydra-One?style=flat-square&color=16c9e8)](https://github.com/StargateLabs/Hydra-One/stargazers)
+
+
 <!-- architecture-story:start -->
 
 ## What we built and how it works
@@ -47,15 +61,6 @@ Comparable reports and exports support decisions about changes. Response checks 
 [Tutte le funzioni, parametri e vincoli / All features, parameters and gates](docs/FEATURES.md)
 
 <!-- architecture-story:end -->
-
-
-# Hydra One
-
-**Hybrid inference. Local models. A controlled laboratory.**
-
-[Italiano](README.md) · [English](README.en.md) · [Installation](docs/INSTALL.en.md) · [Features](docs/FEATURES.md) · [Credits](docs/CREDITS.en.md)
-
-[![Beta](https://img.shields.io/badge/status-beta-16c9e8?style=flat-square)](docs/FEATURES.md) [![License](https://img.shields.io/badge/license-MIT-8faac0?style=flat-square)](LICENSE) [![Stars](https://img.shields.io/github/stars/StargateLabs/Hydra-One?style=flat-square&color=16c9e8)](https://github.com/StargateLabs/Hydra-One/stargazers)
 
 <!-- logo-directory:start -->
 

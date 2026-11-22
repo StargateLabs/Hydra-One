@@ -1,0 +1,7 @@
+/* One horizontal frame for the five system views. Chat is deliberately excluded. */
+:is(#view-monitor,#view-about,#view-control,#view-tuning,#view-benchmark){--workspace-width:1440px;--workspace-gutter:28px;overflow-y:auto;scrollbar-gutter:stable}
+#view-monitor>.monitor,#view-about>.about-console,#view-control>.control-shell,#view-tuning>.perf-suite,#view-benchmark>.bench-suite{width:100%;max-width:var(--workspace-width);min-width:0;box-sizing:border-box;margin-left:auto;margin-right:auto;padding-left:var(--workspace-gutter);padding-right:var(--workspace-gutter)}
+#view-control{width:100%;max-width:none;margin:0;padding:0}
+#view-control>.control-shell{flex:none;padding-bottom:32px}
+#view-benchmark>.bench-suite{flex:0 0 auto;margin-top:0;margin-bottom:0;padding-bottom:max(40px,calc(env(safe-area-inset-bottom,0px) + 24px))}
+@media(max-width:760px){:is(#view-monitor,#view-about,#view-control,#view-tuning,#view-benchmark){--workspace-gutter:16px}#view-control>.control-shell{padding-bottom:24px}}

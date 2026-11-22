@@ -1,0 +1,61 @@
+/* Two independent layers: liquid inside the control, optical flow in its letters. */
+.st-header .st-nav-energy {
+  --nav-energy-mint: #b1f9da;
+  --nav-energy-green: #4ce2a7;
+  --nav-energy-cyan: #a5f0f5;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+html:not([data-theme=dark]) .st-header .st-nav-energy {
+  --nav-energy-mint: #086247;
+  --nav-energy-green: #08764f;
+  --nav-energy-cyan: #086379;
+}
+.st-header .st-nav-energy > .st-icon { position: relative; }
+.st-header .st-nav-energy-label {
+  position: relative;
+  color: inherit;
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .st-header .st-nav-energy-label {
+    background-image: linear-gradient(108deg,
+      currentColor 0%, currentColor 35%, var(--nav-energy-mint) 43%,
+      var(--nav-energy-green) 48%, var(--nav-energy-cyan) 53%,
+      var(--nav-energy-mint) 58%, currentColor 66%, currentColor 100%);
+    background-size: 350% 100%;
+    background-position: 135% 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: st-nav-text-flow 10s ease-in-out infinite;
+    animation-delay: var(--nav-energy-delay, 0s);
+  }
+}
+.st-header .st-nav-energy:focus-visible {
+  outline: 2px solid var(--nav-energy-green);
+  outline-offset: -2px;
+}
+@keyframes st-nav-text-flow {
+  0%, 22% { background-position: 135% 0; }
+  65%, 100% { background-position: -35% 0; }
+}
+@keyframes st-nav-liquid {
+  to { transform: translateX(12%) rotate(12deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .st-header .st-nav-energy::before,
+  .st-header .st-nav-energy-label { animation: none; transition: none; }
+  .st-header .st-nav-energy-label {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+@media (forced-colors: active) {
+  .st-header .st-nav-energy::before { display: none; }
+  .st-header .st-nav-energy-label { background: none; -webkit-text-fill-color: currentColor; }
+  .st-header .st-nav-energy:focus-visible { outline-color: Highlight; }
+}
+
+.st-header .st-edition-brand__name>span{color:#7eddb3}.st-header .st-edition-brand__ai{color:#62c7f5}html:not([data-theme=dark]) .st-header .st-edition-brand__name>span{color:#107450}html:not([data-theme=dark]) .st-header .st-edition-brand__ai{color:#086b9b}
+

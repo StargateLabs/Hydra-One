@@ -1,0 +1,20 @@
+{
+  "sora-wght.ttf": {
+    "source": "https://github.com/google/fonts/blob/main/ofl/sora/Sora[wght].ttf",
+    "git_blob_sha1": "3b93d661fa07f5948799ba29979009b409cd4740",
+    "sha256": "84ff7096ae3ec6c8be47d906d1a0ba4de7f2ce78c615275c77301964a316e16c",
+    "bytes": 111400
+  },
+  "Sora-OFL.txt": {
+    "source": "https://github.com/google/fonts/blob/main/ofl/sora/OFL.txt",
+    "git_blob_sha1": "f1d9d6af7ba46af6c2da765fa123d93239c913f5",
+    "sha256": "ba0b9729c9428ba79a0459ab8ec575791b51509dbec213e383d0316d37fec299",
+    "bytes": 4385
+  },
+  "sora-wght.woff2": {
+    "source": "https://fonts.gstatic.com/s/sora/v17/xMQbuFFYT72XzQUpDg.woff2",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap",
+    "sha256": "fa26406eeda9a3c6ec3d9ea8813c3045d6dc755e30c716d5c094e8ef43be5a7f",
+    "bytes": 33652
+  }
+}

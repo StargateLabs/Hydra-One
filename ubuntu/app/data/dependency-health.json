@@ -1,0 +1,75 @@
+{
+  "state": "attention",
+  "checked_at": 1795389624.479375,
+  "checks": [
+    {
+      "id": "core",
+      "name": "Dashboard Python",
+      "state": "missing",
+      "missing": [
+        "PIL",
+        "huggingface_hub"
+      ],
+      "repair": "core"
+    },
+    {
+      "id": "training",
+      "name": "Training",
+      "state": "missing",
+      "missing": [
+        "transformers",
+        "trl",
+        "peft",
+        "datasets",
+        "accelerate",
+        "safetensors"
+      ],
+      "python": "/home/stargate/Scrivania/ARA/.venv-linux312/bin/python",
+      "repair": "compatible_environment"
+    },
+    {
+      "id": "visual",
+      "name": "Visual",
+      "state": "missing",
+      "missing": [
+        "diffusers",
+        "PIL"
+      ],
+      "python": "/home/stargate/Scrivania/ARA/.venv-linux312/bin/python",
+      "repair": "compatible_environment"
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "state": "missing",
+      "missing": [
+        "soundfile"
+      ],
+      "python": "/home/stargate/Scrivania/ARA/.venv-linux312/bin/python",
+      "repair": "compatible_environment"
+    },
+    {
+      "id": "hydra-external",
+      "name": "HYDRA: protocolli e implementazioni esterne",
+      "state": "missing",
+      "missing": [
+        "/home/stargate/Documenti/ChatGPT/ARA/StargateLabs-repos/Hydra-One/ubuntu/HYDRA/experimental_validation_v7_20261018_095534/feature-matrix.json",
+        "/home/stargate/Documenti/ChatGPT/ARA/StargateLabs-repos/Hydra-One/ubuntu/HYDRA/cpu_fastpath_v15/protocol-v15.1.json",
+        "/home/stargate/Documenti/ChatGPT/ARA/StargateLabs-repos/Hydra-One/ubuntu/HYDRA/performance_optimization_e2e_v1_retest_20261018_012618/protocol.json",
+        "/home/stargate/Documenti/ChatGPT/ARA/StargateLabs-repos/Hydra-One/ubuntu/HYDRA/hydra_lab/graph_hybrid.py",
+        "/home/stargate/Documenti/ChatGPT/ARA/StargateLabs-repos/Hydra-One/ubuntu/HYDRA/engine_completion_v22/prism-loader-manifest.json"
+      ],
+      "repair": "recover_original_backup",
+      "automatic_download": false
+    }
+  ],
+  "scope": "Dependency discovery and selected file integrity; runtime execution requires feature validation.",
+  "official_sources": [
+    "https://pypi.org/simple",
+    "https://github.com/Niko1221/Strata",
+    "https://github.com/MakazhanAlpamys/Soup",
+    "https://pytorch.org",
+    "https://rocm.docs.amd.com"
+  ],
+  "automatic_model_download": false
+}

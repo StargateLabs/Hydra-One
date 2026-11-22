@@ -1,0 +1,47 @@
+/* A wider workbench for the original configuration form. */
+#backend-config-dialog{width:min(1480px,calc(100vw - 28px));max-width:none;max-height:96dvh;border:1px solid color-mix(in srgb,var(--st-accent) 24%,var(--st-line));border-radius:22px;box-shadow:0 30px 120px #0009;--config-blue:#79d8ed;--config-purple:#c2a3ff;--config-green:#52dfa7;--config-amber:#efc36c}
+#backend-config-dialog[open]{height:min(1100px,96dvh);display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto minmax(0,1fr) auto;overflow:hidden}
+#backend-config-dialog>.catalogue-dialog-head{grid-row:1;grid-column:1;padding:22px 28px 16px;background:linear-gradient(110deg,color-mix(in srgb,var(--st-accent) 7%,var(--st-surface)),var(--st-surface));border-bottom:0}
+#backend-config-dialog .catalogue-dialog-head h2{font-size:clamp(22px,2.2vw,30px);letter-spacing:-.035em;line-height:1.2;margin:0}
+#backend-config-dialog #backend-config-model{font-size:13px;line-height:1.5;color:var(--st-ink-muted);margin:7px 0 0;overflow-wrap:anywhere}
+.backend-config-status-strip{grid-row:2;grid-column:1;display:flex;gap:8px;flex-wrap:wrap;padding:0 28px 18px;background:var(--st-surface)}
+.backend-config-chip{display:flex;align-items:center;gap:8px;min-width:0;padding:7px 10px;border:1px solid color-mix(in srgb,var(--chip-tone) 28%,var(--st-line));border-radius:8px;background:color-mix(in srgb,var(--chip-tone) 5%,var(--st-surface-2));--chip-tone:var(--config-blue)}
+.backend-config-chip small{font-size:10px;color:var(--st-ink-muted);white-space:nowrap}.backend-config-chip strong{font-size:11px;color:var(--chip-tone);font-weight:650;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.backend-config-chip[data-kind=device]{--chip-tone:var(--config-green)}.backend-config-chip[data-kind=context]{--chip-tone:var(--config-purple)}.backend-config-chip[data-kind=save]{--chip-tone:var(--config-amber)}
+#backend-config-dialog>.backend-config-nav{grid-row:3;grid-column:1;padding:12px 28px;gap:10px;background:var(--st-surface-2);border-block:1px solid var(--st-line)}
+#backend-config-dialog .backend-config-nav button{position:relative;min-height:62px;border-radius:11px;padding:12px 14px;gap:12px;border:1px solid var(--st-line);background:var(--st-surface)}
+#backend-config-dialog .backend-config-nav button[aria-pressed=true]{border-color:color-mix(in srgb,var(--config-tone) 82%,white);background:color-mix(in srgb,var(--config-tone) 11%,var(--st-surface));box-shadow:inset 0 -2px var(--config-tone),0 0 16px color-mix(in srgb,var(--config-tone) 12%,transparent)}
+#backend-config-dialog .backend-config-nav i{display:grid;place-items:center;flex:none;width:32px;height:32px;color:var(--config-tone);background:color-mix(in srgb,var(--config-tone) 9%,var(--st-surface-2));border:1px solid color-mix(in srgb,var(--config-tone) 25%,var(--st-line));border-radius:9px}
+#backend-config-dialog .backend-config-nav b{font-size:13px;line-height:1.3}.backend-config-dialog .backend-config-nav small{font-size:11px;line-height:1.4}
+#backend-config-dialog>.backend-config-scroll{grid-row:4;grid-column:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,330px);gap:22px 28px;padding:24px 28px 30px;min-height:0;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--st-accent) transparent}
+#backend-config-dialog .backend-config-guide{grid-column:1/-1;padding:20px 22px;gap:24px;border-radius:15px;background:linear-gradient(110deg,color-mix(in srgb,var(--config-tone) 10%,var(--st-surface-2)),var(--st-surface-2));border:1px solid color-mix(in srgb,var(--config-tone) 30%,var(--st-line))}
+#backend-config-dialog #backend-guide-kicker{font-size:10px;letter-spacing:.08em;color:var(--config-tone)}
+#backend-config-dialog #backend-guide-title{font-size:22px;letter-spacing:-.025em;margin:8px 0;line-height:1.25}
+#backend-config-dialog #backend-guide-description{font-size:13px;line-height:1.65;max-width:76ch}
+#backend-config-dialog .backend-config-support-note{font-size:11px;line-height:1.5;color:var(--st-ink-muted);margin:10px 0 0}
+#backend-config-dialog .backend-guide-actions{min-width:190px;gap:8px}.backend-config-dialog .backend-guide-actions button{min-height:44px}
+#backend-config-dialog .backend-config-page{grid-column:1;grid-row:2;gap:18px;min-width:0}
+#backend-config-dialog .backend-config-group{padding:20px;border:1px solid color-mix(in srgb,var(--config-tone) 24%,var(--st-line));border-radius:14px;background:var(--st-surface-2)}
+#backend-config-dialog .backend-config-group legend{font-size:14px;font-weight:700;padding-inline:7px;line-height:1.5}
+#backend-config-dialog .backend-config-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+#backend-config-dialog label{font-size:12px;line-height:1.5;min-width:0}
+#backend-config-dialog label>span:first-child{font-weight:650;color:var(--st-ink)}
+#backend-config-dialog input:not([type=checkbox]):not([type=range]),#backend-config-dialog select{height:46px;border-radius:10px;font-size:13px;background:var(--st-surface)}
+#backend-config-dialog textarea{min-height:100px;border-radius:10px;font-size:13px}
+#backend-config-dialog .backend-field-reference,#backend-config-dialog label>small{font-size:11px;line-height:1.6;color:var(--st-ink-muted)}
+#backend-config-dialog #backend-context-field{padding:20px;border-radius:14px;background:var(--st-surface-2)}
+#backend-config-dialog #backend-context-field>span{font-size:15px}
+#backend-config-dialog .backend-estimate-panel{grid-column:2;grid-row:2;position:sticky;top:0;align-self:start;min-width:0;border-radius:15px;border:1px solid var(--st-line);background:var(--st-surface-2);box-shadow:0 12px 28px #0002}
+#backend-config-dialog .backend-estimate-panel summary{padding:18px 20px}.backend-config-dialog .backend-estimate-panel summary b{font-size:30px;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#backend-config-dialog .backend-estimate-content{padding:0 16px 16px}
+#backend-config-dialog .backend-budget-card{background:var(--st-surface);border:1px solid var(--st-line);border-left-width:3px;border-radius:10px;padding:14px}
+#backend-config-dialog .backend-budget-card>b{font-variant-numeric:tabular-nums;letter-spacing:-.035em}
+#backend-config-dialog>.backend-config-footer{grid-row:5;grid-column:1;padding:16px 28px;border-top:1px solid var(--st-line);background:var(--st-surface);box-shadow:0 -8px 24px #0002}
+#backend-config-dialog .backend-config-footer>p{font-size:11px;line-height:1.5;color:var(--st-ink-muted)}
+#backend-config-dialog .backend-config-footer>button{min-height:44px;border-radius:11px}
+html[data-theme=light] #backend-config-dialog{--config-blue:#08778f;--config-purple:#7753af;--config-green:#087c54;--config-amber:#90601b}
+@media(min-width:1500px){#backend-config-dialog .backend-config-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){#backend-config-dialog>.backend-config-scroll{grid-template-columns:minmax(0,1fr) minmax(240px,280px);gap:18px;padding:18px}.backend-config-status-strip{padding-inline:18px}#backend-config-dialog .backend-config-guide{padding:18px;gap:15px}#backend-config-dialog>.backend-config-nav{padding:10px 18px}.backend-config-chip{padding:6px 8px}#backend-config-dialog .backend-config-group{padding:16px}#backend-config-dialog .backend-guide-actions{min-width:155px}}
+@media(max-width:700px){#backend-config-dialog{width:calc(100vw - 12px);border-radius:16px}#backend-config-dialog[open]{height:97dvh;max-height:97dvh}#backend-config-dialog>.catalogue-dialog-head{padding:17px 16px 12px}.backend-config-status-strip{padding:0 16px 12px;gap:6px}.backend-config-chip{flex:1 1 auto;justify-content:space-between}.backend-config-chip[data-kind=save]{display:none}#backend-config-dialog>.backend-config-nav{padding:8px 12px;gap:6px;grid-template-columns:repeat(4,minmax(0,1fr))}#backend-config-dialog .backend-config-nav button{padding:9px 5px;min-height:48px;justify-content:center}#backend-config-dialog .backend-config-nav i,#backend-config-dialog .backend-config-nav small{display:none}#backend-config-dialog .backend-config-nav b{font-size:11px}#backend-config-dialog>.backend-config-scroll{display:flex;flex-direction:column;padding:14px;gap:16px}#backend-config-dialog .backend-config-guide{order:0;flex-direction:column;align-items:stretch;width:100%;box-sizing:border-box}#backend-config-dialog .backend-guide-actions{display:flex;flex-wrap:wrap;min-width:0}#backend-config-dialog .backend-guide-actions button{flex:1}#backend-config-dialog .backend-config-page{order:1;width:100%}#backend-config-dialog .backend-estimate-panel{order:2;position:static;width:100%}#backend-config-dialog .backend-config-grid{grid-template-columns:minmax(0,1fr)}#backend-config-dialog>.backend-config-footer{padding:12px 14px;gap:9px}#backend-config-dialog .backend-config-footer>button{flex:1 1 180px}#backend-config-dialog #backend-guide-title{font-size:20px}}
+@media(forced-colors:active){.backend-config-chip,#backend-config-dialog .backend-config-nav button{border-color:CanvasText;background:Canvas;box-shadow:none}.backend-config-chip strong{color:CanvasText}}
+#backend-config-dialog[open]{grid-template-rows:auto auto minmax(86px,auto) minmax(0,1fr) auto!important}

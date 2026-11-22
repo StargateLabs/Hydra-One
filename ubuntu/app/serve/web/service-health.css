@@ -1,0 +1,17 @@
+#service-health-dialog{box-sizing:border-box;position:fixed;inset:0;margin:auto;width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 40px);padding:0;overflow:auto;border:1px solid var(--st-line,#344348);border-radius:22px;background:var(--st-surface,#151e21);color:var(--st-ink,#eef5f5);box-shadow:0 32px 100px #0008;font:inherit}
+#service-health-dialog::backdrop{background:#060d12b8;backdrop-filter:blur(8px)}
+#service-health-dialog>header{display:flex;align-items:center;gap:16px;padding:26px 28px 22px;border-bottom:1px solid var(--st-line,#344348)}
+#service-health-dialog h2{margin:3px 0 0;font-size:24px;line-height:1.2;letter-spacing:-.03em}
+.service-health-eyebrow{margin:0;color:var(--st-ink-muted,#a5b5bc);font-size:12px}
+.service-health-mark{display:grid;place-items:center;width:48px;height:48px;flex:none;border:1px solid #35d6ad55;border-radius:15px;color:#35d6ad;background:#35d6ad0d}
+.service-health-mark svg{width:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}
+#service-health-dialog[data-state=error] .service-health-mark{color:#ff8390;border-color:#ff839066;background:#ff83900d}
+.service-health-close{margin-left:auto;width:36px;height:36px;flex:none;border:1px solid var(--st-line,#344348);border-radius:50%;color:inherit;background:transparent;font:inherit;font-size:24px;cursor:pointer}
+.service-health-body{padding:22px 28px}.service-health-summary{margin:0 0 20px;color:var(--st-ink-muted,#a5b5bc);line-height:1.6}
+.service-health-model{display:grid;gap:7px;padding:16px 18px;border-left:3px solid #35d6ad;background:#35d6ad08;border-radius:0 12px 12px 0;overflow-wrap:anywhere}
+.service-health-model small{font-size:11px;color:var(--st-ink-muted,#a5b5bc)}.service-health-model strong{font-size:15px;line-height:1.5}
+.service-health-facts{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:18px 0 0}.service-health-facts>div{min-width:0;padding:13px 0;border-bottom:1px solid var(--st-line,#344348)}.service-health-facts dt{font-size:11px;color:var(--st-ink-muted,#a5b5bc)}.service-health-facts dd{margin:5px 0 0;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.service-health-body details{margin-top:20px}.service-health-body summary{cursor:pointer;font-size:13px;padding:10px 0}.service-health-note{font-size:12px;color:var(--st-ink-muted,#a5b5bc)}
+#service-health-dialog>footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 28px;border-top:1px solid var(--st-line,#344348)}.service-health-time{font-size:11px;color:var(--st-ink-muted,#a5b5bc)}
+#service-health-dialog button:focus-visible,#service-health-dialog summary:focus-visible{outline:2px solid #35d6ad;outline-offset:4px}
+@media(max-width:480px){#service-health-dialog>header,.service-health-body,#service-health-dialog>footer{padding:20px}#service-health-dialog h2{font-size:21px}.service-health-facts{gap:0 16px}#service-health-dialog>footer{flex-wrap:wrap}}
